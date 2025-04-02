@@ -112,25 +112,60 @@ h3 {
 }
 
 
+.section-ttl {
+  color: #3071b9;
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  padding: 0 0 0 80px;
+
+  &::before {
+    content: url(../img/top/ttl-dec.png);
+    position: absolute;
+    top: -54px;
+    left: -29px;
+    transform: scale(0.4);
+  }
+
+  @include tab{
+    font-size: 24px;
+  padding: 0 0 0 40px;
+
+  &::before {
+    content: url(../img/top/ttl-dec.png);
+    position: absolute;
+    top: -55px;
+    left: -46px;
+    transform: scale(0.2);
+  }
+  }
+}
+
+
 // ヘッダーボタン
-.header-arrow-button{
-  /* ボタンのCSS */
-  background-color: #3071b9;
+.arrow-button{
+  background-color: #fff;
   border-radius: 50px;
-  color: #fff;
-  display: block;
-  padding: 8px;
+  color: #3071b9;
+  display: inline-block;
+  padding: 16px 8px 13px 0;
   position: relative; /* position: relative;で矢印の位置を基点とさせます */
   text-align: center;
   text-decoration: none;
-  width: 200px;
+  width: 280px;
+  border: #3071b9 2px solid;
+
+  @include tab{
+    width: 240px;
+
+  }
 
   &:after{
     /* 擬似要素で矢印アイコンをつくる */
     content: '';
     border: 0;
-    border-top: solid 2px #fff;
-    border-right: solid 2px #fff;
+    border-top: solid 2px #3071b9;
+    border-right: solid 2px #3071b9;
     display: inline-block;
     width: 10px;
     height: 10px;

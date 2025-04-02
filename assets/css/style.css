@@ -87,24 +87,57 @@ h3 {
   }
 }
 
-.header-arrow-button {
-  /* ボタンのCSS */
-  background-color: #3071b9;
+.section-ttl {
+  color: #3071b9;
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  padding: 0 0 0 80px;
+}
+.section-ttl::before {
+  content: url(../img/top/ttl-dec.png);
+  position: absolute;
+  top: -54px;
+  left: -29px;
+  transform: scale(0.4);
+}
+@media (max-width: 780px) {
+  .section-ttl {
+    font-size: 24px;
+    padding: 0 0 0 40px;
+  }
+  .section-ttl::before {
+    content: url(../img/top/ttl-dec.png);
+    position: absolute;
+    top: -55px;
+    left: -46px;
+    transform: scale(0.2);
+  }
+}
+
+.arrow-button {
+  background-color: #fff;
   border-radius: 50px;
-  color: #fff;
-  display: block;
-  padding: 8px;
+  color: #3071b9;
+  display: inline-block;
+  padding: 16px 8px 13px 0;
   position: relative; /* position: relative;で矢印の位置を基点とさせます */
   text-align: center;
   text-decoration: none;
-  width: 200px;
+  width: 280px;
+  border: #3071b9 2px solid;
 }
-.header-arrow-button:after {
+@media (max-width: 780px) {
+  .arrow-button {
+    width: 240px;
+  }
+}
+.arrow-button:after {
   /* 擬似要素で矢印アイコンをつくる */
   content: "";
   border: 0;
-  border-top: solid 2px #fff;
-  border-right: solid 2px #fff;
+  border-top: solid 2px #3071b9;
+  border-right: solid 2px #3071b9;
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -115,7 +148,7 @@ h3 {
   transform: translateY(-50%) rotate(45deg); /* rotate(45deg)で矢印を回転（向きを変更）させる */
   transition: all 0.5s;
 }
-.header-arrow-button:hover:after {
+.arrow-button:hover:after {
   right: 15px;
 }
 
@@ -5762,6 +5795,240 @@ TOP
 /* =================================
 ニュース
  ================================= */
+.top-news {
+  padding: 80px 0;
+}
+@media (max-width: 780px) {
+  .top-news {
+    padding: 40px 0;
+  }
+}
+.top-news__inner-bg {
+  background-color: rgba(214, 240, 241, 0.5);
+  margin: 0 0 0 5%;
+  padding: 60px 60px 60px 120px;
+  border-radius: 40px 0 0 40px;
+}
+@media (max-width: 1120px) {
+  .top-news__inner-bg {
+    margin: 0 0 0 2%;
+    padding: 60px 12px 24px 12px;
+    border-radius: 12px 0 0 12px;
+  }
+}
+@media (max-width: 780px) {
+  .top-news__inner-bg {
+    margin: 0 0 0 2%;
+    padding: 24px 12px 24px 12px;
+    border-radius: 12px 0 0 12px;
+  }
+}
+.top-news__inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.top-news__ttl {
+  margin: 0 0 60px;
+}
+@media (max-width: 780px) {
+  .top-news__ttl {
+    margin: 0 0 32px;
+  }
+}
+.top-news__tab {
+  display: flex;
+  padding: 24px 80px 24px;
+}
+@media (max-width: 780px) {
+  .top-news__tab {
+    padding: 0 12px 24px;
+    justify-content: center;
+  }
+}
+.top-news__tab-item {
+  margin: 0 40px 0 0;
+  padding: 0 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+  position: relative;
+}
+.top-news__tab-item:last-child {
+  margin: 0;
+}
+@media (max-width: 780px) {
+  .top-news__tab-item {
+    margin: 0 12px 0 0;
+    padding: 0 0 18px;
+  }
+}
+.top-news__tab-item.active {
+  font-weight: bold;
+}
+.top-news__tab-item.active::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/top/header-dot.png);
+  bottom: 0px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(0.4);
+}
+@media (max-width: 780px) {
+  .top-news__tab-item.active::before {
+    bottom: -8px;
+  }
+}
+.top-news__box-item {
+  display: none;
+}
+.top-news__box-item.active {
+  display: block;
+}
+.top-news__article {
+  display: flex;
+  margin: 0 0 32px;
+  align-items: center;
+}
+@media (max-width: 1120px) {
+  .top-news__article {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 780px) {
+  .top-news__article {
+    border-bottom: #9d9b9b 1px solid;
+    margin: 0;
+    padding: 18px;
+    margin: 0;
+    background-color: #fff;
+    position: relative;
+  }
+  .top-news__article::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 1px;
+    background-color: #fff;
+    bottom: -1px;
+    right: 0;
+  }
+  .top-news__article::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 1px;
+    background-color: #fff;
+    bottom: -1px;
+    left: 0;
+  }
+}
+.top-news__article-date {
+  width: 160px;
+  white-space: nowrap;
+}
+.top-news__article-span {
+  display: block;
+  margin: 0 24px 0 0;
+  background-color: #3071b9;
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  width: 90px;
+  text-align: center;
+}
+@media (max-width: 780px) {
+  .top-news__article-span {
+    margin: 0;
+  }
+}
+.top-news__article-link {
+  display: inline-block;
+  width: 650px;
+}
+@media (max-width: 1120px) {
+  .top-news__article-link {
+    width: 100%;
+    margin: 12px 0 0 0;
+  }
+}
+.top-news__link {
+  display: block;
+}
+.top-news__info-wrap {
+  background-color: #fff;
+  padding: 8px;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  margin: 0 0 12px 0;
+  border-radius: 8px;
+  position: relative;
+  max-width: 880px;
+}
+.top-news__info-wrap:after {
+  /* 擬似要素で矢印アイコンをつくる */
+  content: "";
+  border: 0;
+  border-top: solid 2px #3071b9;
+  border-right: solid 2px #3071b9;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  /* 矢印アイコンの位置を設定 */
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) rotate(45deg);
+  /* rotate(45deg)で矢印を回転（向きを変更）させる */
+  transition: all 0.5s;
+}
+@media (max-width: 780px) {
+  .top-news__info-wrap:after {
+    display: none;
+  }
+}
+.top-news__info-wrap:hover:after {
+  right: 15px;
+}
+.top-news__info-right {
+  width: 350px;
+  margin: 0 0 0 24px;
+}
+@media (max-width: 780px) {
+  .top-news__info-right {
+    width: 300px;
+    margin: 8px 0 0 0;
+  }
+}
+@media (max-width: 780px) {
+  .top-news__info-right-top {
+    text-align: center;
+  }
+}
+.top-news__info-date {
+  border-right: #9d9b9b 1px solid;
+  padding: 0 12px 0 0;
+}
+.top-news__info-cat {
+  padding: 0 0 0 12px;
+}
+@media (max-width: 780px) {
+  .top-news__info-ttl {
+    text-align: center;
+  }
+}
+.top-news__link-wrap {
+  text-align: center;
+  margin: 60px 0 0;
+}
+@media (max-width: 780px) {
+  .top-news__link-wrap {
+    margin: 24px 0 0;
+  }
+}
 /* =================================
 
  ================================= */

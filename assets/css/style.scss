@@ -181,8 +181,6 @@ header（PC）
         left: 50%;
         transform: translateX(-50%)scale(0.4);
 
-
-
       }
     }
   }
@@ -788,38 +786,286 @@ flex-wrap: wrap;
  ================================= */
 
  .top-news {
+  padding: 80px 0;
 
-  &__ {}
+  @include tab{
+    padding: 40px 0;
 
-  &__ {}
+  }
 
-  &__ {}
+  &__inner-bg {
+    background-color:rgb(214 240 241 / 50%);
+    margin: 0 0 0 5%;
+    padding: 60px 60px 60px 120px;
+    border-radius: 40px 0 0 40px;
 
-  &__ {}
+    @include pc{
+      margin: 0 0 0 2%;
+      padding: 60px 12px 24px 12px;
+      border-radius: 12px 0 0 12px;
+    }
 
-  &__ {}
+    @include tab{
+      margin: 0 0 0 2%;
+      padding: 24px 12px 24px 12px;
+      border-radius: 12px 0 0 12px;
+    }
 
-  &__ {}
+  }
 
-  &__ {}
+  &__inner {
+max-width: 980px;
+margin: 0 auto;
 
-  &__ {}
 
-  &__ {}
+  }
+  
 
-  &__ {}
 
-  &__ {}
 
-  &__ {}
+  &__ttl {
+    margin: 0 0 60px;
 
-  &__ {}
+    @include tab{
+      margin: 0 0 32px;
+    }
+  }
 
-  &__ {}
+  &__tab {
+    display: flex;
+    padding: 24px 80px 24px;
 
-  &__ {}
+    @include tab{
+      padding: 0 12px 24px;
+      justify-content: center;
 
-  &__ {}
+    }
+  }
+
+  &__tab-item {
+    margin: 0 40px 0 0;
+    padding: 0 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: relative;
+
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @include tab {
+      margin: 0 12px 0 0;
+      padding: 0 0 18px;
+    }
+
+    &.active {
+      font-weight: bold;
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../img/top/header-dot.png);
+        bottom: 0px;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%)scale(0.4);
+
+        @include tab{
+          bottom: -8px;
+  
+        }
+      }
+    }
+  }
+
+  &__box {
+
+  }
+
+  &__box-item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+
+
+  &__article {
+    display: flex;
+    margin: 0 0 32px;
+    align-items: center;
+
+    @include pc {
+      flex-wrap: wrap;
+    }
+
+    @include tab {
+      border-bottom: #9d9b9b 1px solid;
+      margin: 0;
+      padding: 18px;
+      margin: 0;
+      background-color: #fff;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 1px;
+        background-color: #fff;
+        bottom: -1px;
+        right: 0;
+
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 1px;
+        background-color: #fff;
+        bottom: -1px;
+        left: 0;
+      }
+
+    }
+  }
+
+  &__article-date {
+    width: 160px;
+    white-space: nowrap;
+
+  }
+
+
+
+  &__article-span {
+    display: block;
+    margin: 0 24px 0 0;
+    background-color: #3071b9;
+    color: #fff;
+    font-size: 12px;
+    white-space: nowrap;
+    width: 90px;
+    text-align: center;
+
+    @include tab {
+      margin: 0;
+    }
+  }
+
+  &__article-link {
+    display: inline-block;
+    width: 650px;
+
+    @include pc {
+      width: 100%;
+      margin: 12px 0 0 0;
+    }
+
+
+  }
+
+  &__article-cat {}
+
+  &__link {
+
+    display: block;
+
+  }
+
+  &__info-wrap {
+    background-color: #fff;
+    padding: 8px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    margin: 0 0 12px 0;
+    border-radius: 8px;
+    position: relative;
+    max-width: 880px;
+
+
+    &:after {
+      /* 擬似要素で矢印アイコンをつくる */
+      content: '';
+      border: 0;
+      border-top: solid 2px #3071b9;
+      border-right: solid 2px #3071b9;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      /* 矢印アイコンの位置を設定 */
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%) rotate(45deg);
+      /* rotate(45deg)で矢印を回転（向きを変更）させる */
+      transition: all 0.5s;
+
+      @include tab{
+      display: none;
+      }
+    }
+  
+  
+    &:hover {
+      &:after {
+        right: 15px;
+      }
+    }
+
+  }
+
+
+  &__info-right {
+    width: 350px;
+    margin: 0 0 0 24px;
+
+    @include tab{
+    width: 300px;
+    margin: 8px 0 0 0;
+    }
+  }
+
+  &__info-right-top {
+
+    @include tab{
+    text-align: center;
+    }
+  }
+
+  &__info-date {
+    border-right: #9d9b9b 1px solid;
+    padding: 0 12px 0 0;
+
+  }
+
+  &__info-cat {
+     padding: 0 0 0 12px;
+  }
+
+
+  &__info-ttl {
+    @include tab{
+      text-align: center;
+      }
+  }
+
+  &__link-wrap {
+    text-align: center;
+    margin: 60px 0 0 ;
+
+    @include tab{
+      margin: 24px 0 0 ;
+
+    }
+  }
 
   &__ {}
 

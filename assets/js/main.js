@@ -148,12 +148,12 @@ $(".open-btn-js02").on("click", function(){
   });
 
   // PC インフォメーション　タブ切り替え
-  $(".top-information__tab-item").on("click", function () {
+  $(".top-news__tab-item").on("click", function () {
     var i = $(this).index();
-    $(".top-information__tab-item").removeClass("active");
-    $(".top-information__box-item").removeClass("active");
-    $(".top-information__tab-item").eq(i).addClass("active");
-    $(".top-information__box-item").eq(i).addClass("active");
+    $(".top-news__tab-item").removeClass("active");
+    $(".top-news__box-item").removeClass("active");
+    $(".top-news__tab-item").eq(i).addClass("active");
+    $(".top-news__box-item").eq(i).addClass("active");
   });
 
   // PC ニュースページ　タブ切り替え
