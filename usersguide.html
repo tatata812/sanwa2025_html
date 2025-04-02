@@ -1,0 +1,448 @@
+<!-- <?php
+  $des="サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。"
+  ; ?> -->
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>三和　サイトについて</title>
+    <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+    <meta name="robots" content="none">
+  <meta name="description" content="<?php echo $des; ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20230308">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+
+  <div class="header-wrap">
+
+    <header class="header">
+      <div class="header__breadcrumb-wrap pc-block">
+        <div class="header__breadcrumb">ホーム　＞　〇〇〇〇</div>
+      </div>
+      <div class="header__inner">
+
+
+        <nav class="header__global-wrap">
+          <ul class="header__global-list">
+            <li class="header__global-menu header__global-menu--ttl">
+              <h1 class="header__global-ttl"><a href="index.html"><img src="assets/img/top/header_logo.png"
+                    alt="株式会社　三和" class="pc-block"><img src="assets/img/top/header_logo-sp.png" alt="株式会社　三和"
+                    class="sp-block"></a>
+              </h1>
+            </li>
+            <li class="header__global-menu hover-menu-js pc-block">
+              <a href="company.html" class="header__global-link">会社案内</a>
+            </li>
+
+            <li class="header__global-menu hover-menu-js pc-block">
+              <a href="newsrelease.html" class="header__global-link">ニュース</a>
+            </li>
+
+            <li class="header__global-menu hover-menu-js pc-block">
+              <a href="inquiry.html" class="header__global-link">お問い合わせ</a>
+            </li>
+
+            <li class="header__global-menu hover-menu-js pc-block">
+              <a href="recruit.html" class="header__global-link">採用情報</a>
+            </li>
+          </ul>
+          <!-- ホバーメニュー -->
+          <div class="header__global-child-wrap">
+            <div class="header__global-child-inner child-menu">
+              <div class="child-menu__content">
+                <div class="child-menu__item">
+                  <a href="company.html" class="child-menu__link btn-arrow">会社案内</a>
+                </div>
+                <div class="child-menu__item">
+                  <a href="message.html" class="child-menu__link btn-arrow">社長メッセージ</a>
+                  <a href="outline.html" class="child-menu__link btn-arrow">会社概要</a>
+                  <a href="vision.html" class="child-menu__link btn-arrow">企業理念</a> <a href="history.html"
+                    class="child-menu__link btn-arrow">沿革</a>
+                  <a href="services.html" class="child-menu__link btn-arrow">事業案内</a>
+                  <a href="materials.html" class="child-menu__link">建材販売</a>
+                  <a href="interior.html" class="child-menu__link">家具・インテリア</a>
+                  <a href="logistics.html" class="child-menu__link">物流</a>
+                  <a href="construction.html" class="child-menu__link">施工</a>
+                </div>
+                <div class="child-menu__item">
+                  <a href="office.html" class="child-menu__link btn-arrow">営業所</a>
+                  <a href="head.html" class="child-menu__link">本社</a>
+                  <a href="tokuyama.html" class="child-menu__link">徳山営業所</a>
+                  <a href="hofu.html" class="child-menu__link">防府営業所</a>
+                  <a href="ogori.html" class="child-menu__link">小郡営業所</a>
+                  <a href="ube.html" class="child-menu__link">宇部営業所</a>
+                  <a href="gallery_ube.html" class="child-menu__link">Gallery 宇部</a>
+                  <a href="shimonoseki.html" class="child-menu__link">下関営業所</a>
+                  <a href="fukuoka.html" class="child-menu__link">福岡営業所</a>
+                </div>
+                <div class="child-menu__item">
+                  <a href="beetecs.html" class="child-menu__link btn-arrow">株式会社ビーテクス</a>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="open-btn-wrap">
+        <div class="open-btn">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+  </div>
+
+
+  <div class="slide-menu">
+    <div class="slide-menu__btn-wrap">
+      <div class="slide-menu__btn">
+      </div>
+    </div>
+    <div class="slide-menu__inner">
+      <a class="slide-menu__logo" href="index.html">
+        <img src="assets/img/top/header_logo.png" alt="">
+      </a>
+      <div class="slide-menu__search-wrap">
+        <form id="form" action="自分のサイトURL" method="get">
+          <input id="s-box" name="s" type="text" placeholder="キーワードを入力" />
+          <button type="submit" id="s-btn-area">
+            <div id="s-btn">検索</div>
+          </button>
+        </form>
+      </div>
+      <div class="slide-menu__toggle-contents slide-menu__toggle-contents--first">
+        <dt class="slide-menu__toggle-title">会社案内</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="message.html" class="slide-menu__toggle-item">社長メッセージ</a>
+          <a href="outline.html" class="slide-menu__toggle-item">会社概要</a>
+          <a href="vision.html" class="slide-menu__toggle-item">企業理念</a>
+          <a href="history.html" class="slide-menu__toggle-item">沿革</a> <a href="beetecs.html"
+            class="slide-menu__toggle-item">関連会社ビーテクス</a>
+        </dd>
+      </div>
+      <div class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">事業案内</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="services.html" class="slide-menu__toggle-item">事業案内</a>
+          <a href="materials.html" class="slide-menu__toggle-item">建材販売</a>
+          <a href="interior.html" class="slide-menu__toggle-item">家具・インテリア</a>
+          <a href="logistics.html" class="slide-menu__toggle-item">物流</a>
+          <a href="construction.html" class="slide-menu__toggle-item">施工</a>
+        </dd>
+      </div>
+      <dl class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">営業所</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="office.html" class="slide-menu__toggle-item">一覧</a>
+          <a href="head.html" class="slide-menu__toggle-item">本社</a>
+          <a href="tokuyama.html" class="slide-menu__toggle-item">徳山営業所</a>
+          <a href="hofu.html" class="slide-menu__toggle-item">防府営業所</a>
+          <a href="ogori.html" class="slide-menu__toggle-item">小郡営業所</a>
+          <a href="ube.html" class="slide-menu__toggle-item">宇部営業所</a>
+          <a href="gallery_ube.html" class="slide-menu__toggle-item">Gallery 宇部</a>
+          <a href="shimonoseki.html" class="slide-menu__toggle-item">下関営業所</a>
+          <a href="fukuoka.html" class="slide-menu__toggle-item">福岡営業所</a>
+        </dd>
+      </dl>
+      <dl class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">お知らせ</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="newsrelease.html" class="slide-menu__toggle-item">お知らせ</a>
+          <a href="#" class="slide-menu__toggle-item">イベント</a>
+          <a href="#" class="slide-menu__toggle-item">リクルート</a>
+        </dd>
+      </dl>
+      <dl class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">採用情報</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="recruit.html" class="slide-menu__toggle-item">採用情報</a>
+          <a href="#" class="slide-menu__toggle-item">三和リクルートサイト</a>
+        </dd>
+      </dl>
+      <dl class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">お問い合わせ</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="inquiry.html" class="slide-menu__toggle-item">お問い合わせ</a>
+          <a href="employment.html" class="slide-menu__toggle-item">採用に関するお問い合わせ</a>
+          <a href="business.html" class="slide-menu__toggle-item">法人様向けお問い合わせ</a>
+          <a href="personal.html" class="slide-menu__toggle-item">一般向けお問い合わせ</a>
+        </dd>
+      </dl>
+      <dl class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">サイトについて</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="usersguide.html" class="slide-menu__toggle-item">サイトについて</a>
+          <a href="privacy.html" class="slide-menu__toggle-item">プライバシーポリシー</a>
+          <a href="sitemap.html" class="slide-menu__toggle-item">サイトマップ</a>
+          <a href="link.html" class="slide-menu__toggle-item">リンク</a>
+          <a href="renofa.html" class="slide-menu__toggle-item">レノファ山口FCスポンサード</a>
+        </dd>
+      </dl>
+    </div>
+  </div>
+
+
+
+
+  <div class="main page-style">
+
+    <section class="section page-style__section">
+      <h1 class="page-style__ttl">サイトについて</h1>
+
+      <div class="page-style__content content-style">
+
+        <div class="content-style__block">
+          <p>
+            株式会社三和のホームページ (以下「本ホームページ」といいます) は株式会社三和 (以下「当社」といいます) が運営しています。<br>
+            本ホームページのご利用に際しては、以下のご利用条件をお読みいただき、これらの条件にご同意の上ご利用ください。<br>
+            ※なお、サイトポリシーおよび関連する規定類は、予告なく内容を変更させていただく場合がございますので、あらかじめご了承ください。
+          </p>
+        </div>
+
+        <div class="content-style__block">
+          <h2>免責事項</h2>
+          <p>
+            当社は、本ホームページに記載された情報の完全性・正確性に対して一切の保証を与えるものではありません。当社は予告なしに、本ホームページ掲載されている情報を変更することがあります。
+          </p>
+          <p>
+            当社およびその関連会社は、本ホームページに含まれる情報もしくは内容を利用することで直接・間接的に生じた損失に関し一切責任を負わないものとします。
+          </p>
+        </div>
+
+        <div class="content-style__block">
+          <h2>著作権</h2>
+          <p>
+            本ホームページに掲載されている文章、イラスト、ロゴ、写真、動画、ソフトウェア、その他のすべての情報は、当社又は第三者が著作権を有しております。
+          </p>
+          <p>
+            個人的な利用など著作権法によって認められる場合を除き、著作権者の事前の許可なく、これらの情報を利用 (複製、改変、配布、公衆送信等を含みます。) することはできません。
+          </p>
+        </div>
+
+        <div class="content-style__block">
+          <h2>リンク</h2>
+          <p>本ホームページへのリンクをご希望の方は、下記の注意事項をよくお読みください。</p>
+          <h3>リンク先設定について</h3>
+          <p>リンク先として設定するURLは、原則として本ホームページのトップページ (下記) とさせていただきます。これ以外の下層のページに直接リンクを張ることはお断りします。</p>
+          <ol>
+            <li>https://www.sanwa-co.jp/ (株式会社三和)</li>
+          </ol>
+          <p>
+            当社が保有するロゴやマークなどの登録商標を無断で用いてリンクを張ることは、認められません。 情報発信元を誤認させるような形でリンクを張ることは、お断りします。
+          </p>
+          <p>
+            本ホームページのURLを変更する場合があり、貴サイトに通知することが不可能な場合がありますが、ご了承ください。
+          </p>
+          <p>
+            次に該当するホームページからのリンクは固くお断りいたします。
+          </p>
+          <ol>
+            <li>当社、または他社 (者)・他団体を誹謗中傷したり、信用失墜を意図する内容を含んだホームページ。</li>
+            <li>当社、または他社 (者)・他団体の著作権、商標権等の知的財産権、財産、プライバシーもしくは肖像権その他の権利を侵害する行為、または侵害するおそれのあるホームページ。</li>
+            <li>フレーム内で本ホームページが展開されるなど、当社のコンテンツであることが不明確となり、第三者に誤解を与える可能性があるホームページ
+              (必ず画面が完全に本ホームページに切り替わるか、新しいブラウザウインドウが開いて、本ホームページが表示される形でリンクを設定してください)。</li>
+            <li>上記各項目の他、法律、条例、規則を含む法令または公序良俗に違反する行為、本ホームページサービスの運営を妨害行為するおそれのあるホームページ。</li>
+          </ol>
+          <h3>その他</h3>
+          <p>
+            リンクに関連した賠償、苦情などに関して、当社は何ら責任を負いませんのでご了承ください。
+          </p>
+        </div>
+
+        <div class="content-style__block">
+          <h2>セキュリティ</h2>
+          <p>
+            当社は、情報セキュリティに関わる基本方針に基づき、「セキュリティ・ステートメント (宣言書)」を定め、社内外に公開するとともに、「個人情報保護方針」の遵守とあわせ、これに従うことを宣言いたします。
+          </p>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+
+        <div class="content-style__block">
+          <h2>推奨環境</h2>
+          <p>
+            本ホームページでは、より安全で快適にご利用いただくために下記のブラウザを推奨致します。
+          </p>
+          <h3>Windowsをご利用の場合</h3>
+          <ol>
+            <li>Microsoft Internet Explorer 11以上</li>
+            <li>Microsoft Edge 最新版</li>
+            <li>Mozilla Firefox 最新版</li>
+            <li>Google Chrome 最新版</li>
+          </ol>
+          <h3>Macintoshをご利用の場合</h3>
+          <ol>
+            <li>Mozilla Firefox 最新版</li>
+            <li>Google Chrome 最新版</li>
+            <li>Safari 最新版</li>
+          </ol>
+        </div>
+
+        <div class="content-style__block">
+          <h2>プラグイン</h2>
+          <p>
+            本ホームページ内の一部のページでは、Adobe Flash Player (Flash Player 8.0以上) が必要となります。
+          </p>
+          <p>
+            また、PDFファイルを閲覧・印刷する場合にはAdobe Reader (Acrobat Reader 7.0以上)、動画を視聴する場合には、RealPlayer・RealOne PlayerまたはMicrosoft
+            Windows Media Playerなどが必要となります。
+          </p>
+          <p>
+            ※ 一部のページにおいて、最新バージョンが必要となります。
+          </p>
+        </div>
+
+        <div class="content-style__block">
+          <h2>クッキー (Cookie)</h2>
+          <p>
+            本ホームページでは、お客さまが訪問された際、より便利に閲覧していただくため、また継続的にホームページを改善するための情報を取得するなどの目的で、Cookieを使用しております。
+          </p>
+          <p>
+            Cookieは、本ホームページの運用に関連するサーバから、お客さまのブラウザに送信する情報で、お客さまのコンピューターに記録されます。<br>
+            ただし、記録される情報には、お客さまの氏名、ご住所、電話番号など個人を特定する情報は一切含まれておりません。。<br>
+            また、お客さまのコンピューターへ直接的な悪影響を及ぼすことはございません。
+          </p>
+          <p>
+            各ページのアクセス状況を把握するため、当社が業務委託を行う第三者企業のCookieを使用する場合もございます
+          </p>
+          <p>
+            お客さまご自身でブラウザの設定を操作することで、Cookieの受信を拒否することも可能です。その場合でも本ホームページの閲覧に大きな支障を来すことはございません。ブラウザの設定方法は各ソフトのヘルプページもしくは製造元へお問い合わせください。
+          </p>
+        </div>
+
+        <div class="content-style__block">
+          <h2>アクセスデータについて</h2>
+          <p>
+            本ホームページでは、お客さまのご利用 (アクセス)
+            状況を集計するための、収集タグを埋め込んでいるページがあります。集計したアクセスデータは、お客さまの利便性向上および本ホームページの品質維持・向上のため、利用させていただきます。
+          </p>
+        </div>
+
+        <div class="content-style__block">
+          <h2>JavaScript</h2>
+          <p>
+            本ホームページでは、より快適にご利用いただくため一部のコンテンツにおいてJavaScriptを使用しています。
+          </p>
+          <p>
+            ご使用のブラウザ設定においてJavaScriptをオン (有効) にされていない場合に、正しく表示されないまたは操作ができない場合がありますので、ご了承ください。
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div><!-- main -->
+
+
+
+  <footer class="footer">
+    <div class="footer__top pc-block">
+      <div class="footer__top-inner">
+        <div class="footer__top-item">
+          <a href="company.html" class="footer__top-link">会社案内</a>
+          <ul class="footer__top-list">
+            <li><a href="outline.html">会社概要</a></li>
+            <li><a href="history.html">沿革</a></li>
+            <li><a href="services.html">事業案内</a></li>
+            <li><a href="office.html">営業所</a></li>
+            <li><a href="beetecs.html">関連会社</a></li>
+          </ul>
+        </div>
+        <div class="footer__top-item">
+          <a href="newsrelease.html" class="footer__top-link">ニュース</a>
+          <ul class="footer__top-list">
+            <li><a href="archive.html">2023年</a></li>
+            <li><a href="archive.html">2022年</a></li>
+            <li><a href="archive.html">2021年</a></li>
+            <li><a href="archive.html">2020年</a></li>
+            <li><a href="archive.html">2019年</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__top-item">
+          <a href="inquiry.html" class="footer__top-link">お問い合わせ</a>
+          <ul class="footer__top-list">
+            <li><a href="employment.html">採用に関するお問い合わせ</a></li>
+            <li><a href="business.html">法人に関するお問い合わせ</a></li>
+            <li><a href="personal.html">一般向けお問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__top-item">
+          <a href="recruit.html" class="footer__top-link">採用案内</a>
+        </div>
+
+        <div class="footer__top-item">
+          <ul class="footer__top-list">
+            <li><a href="usersguide.html">サイトについて</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+            <li><a href="sitemap.html">サイトマップ</a></li>
+            <li><a href="link.html">リンク</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class=" sp-block">
+
+      <div class="footer__top-sp">
+        <a href="company.html" class="footer__top-link-sp">会社案内</a>
+        <a href="recruit.html" class="footer__top-link-sp">採用案内</a>
+        <a href="newsrelease.html" class="footer__top-link-sp">ニュース</a>
+        <a href="sitemap.html" class="footer__top-link-sp">サイトマップ</a>
+        <a href="inquiry.html" class="footer__top-link-sp">お問い合わせ</a>
+        <a href="privacy.html" class="footer__top-link-sp">個人情報保護方針</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      三和は建材、住宅設備機器、家具インテリア等の販売を通じて、<br class="sp-block">快適空間づくりに貢献します。
+    </div>
+
+
+
+    <div class="footer__scroll-btn"><img src="assets/img/top/scroll-btn.png" alt="TOPへ"></div>
+  </footer>
+
+
+
+
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/main.js">
+  </script>
+
+</body>
+
+
+
+</html>

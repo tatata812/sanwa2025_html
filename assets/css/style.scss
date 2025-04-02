@@ -1,0 +1,1590 @@
+@use "config";
+@use "company";
+@use "other";
+
+@mixin sp {
+  @media (max-width:(520px)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width:(780px)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width:(1120px)) {
+    @content;
+  }
+}
+
+.main {
+  margin: 91px 0 0 0;
+  position: relative;
+
+
+  @include tab {
+    margin: 61px 0 0 0;
+    overflow: hidden;
+  }
+
+}
+
+/* =================================
+header（PC）
+ ================================= */
+
+.header-wrap {
+  position: relative;
+  z-index: 99;
+}
+
+.header {
+
+  background-color: #fff;
+  border-bottom: #eee 1px solid;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  @include tab {
+    height: 64px;
+  }
+
+  &__breadcrumb-wrap {
+    height: 29px;
+    position: fixed;
+    top: 62px;
+    width: 100%;
+    background-color: #fff;
+    line-height: 32px;
+    font-size: 13px;
+    color: rgb(92, 92, 92);
+  }
+
+  &__breadcrumb {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
+  &__inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
+  &__global-wrap {
+    width: 100%;
+    display: block;
+    margin: 0 80px 0 0;
+    color: #333;
+    background: #fff;
+  }
+
+  &__global-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 80px;
+
+    @include tab {
+      height: 63px;
+    }
+  }
+
+  &__global-menu {
+
+    &:hover+.header__global-child-wrap {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+    &--ttl {
+      width: 40%;
+
+      @include pc {
+        width: 30%;
+      }
+
+      @include tab {
+        width: 70%;
+
+      }
+    }
+
+    &:last-child {
+      margin: 0 80px 0 0;
+    }
+  }
+
+  &__global-ttl {
+    max-width: 200px;
+  }
+
+  &__global-link {
+    display: block;
+    padding: 16px 10px;
+    color: #000;
+    position: relative;
+
+
+
+    &:hover {
+      text-decoration: none;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../img/top/header-line.png);
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &.active {
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../img/top/header-line.png);
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+
+
+
+  }
+
+  &__global-child-wrap {
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    padding: 20px 12px 40px;
+    color: #333;
+    background: rgba(16, 16, 16, 0.9);
+    visibility: hidden;
+    opacity: 0;
+    /* 不透明度を最小に */
+    transition: 0.3s;
+    /* アニメーション設定 */
+    z-index: 99;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__global-child-inner {}
+
+  &__global-child-link {
+    display: block;
+    padding: 10px 30px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.child-menu {
+
+  &__content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+
+    @media screen and (max-width: 1100px) {
+      max-width: 800px;
+
+    }
+
+  }
+
+  &__item {
+
+    border-right: 1px solid #fff;
+    padding: 0 120px 0 32px;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    @media screen and (max-width: 1100px) {
+      padding: 0 40px 0 32px;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    display: block;
+    margin: 0 0 10px 18px;
+    white-space: nowrap;
+  }
+}
+
+
+.open-btn-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+
+}
+
+.open-btn {
+  position: relative;
+  z-index: 99;
+  background: #333;
+  cursor: pointer;
+  width: 70px;
+  height: 91px;
+
+  span {
+    display: inline-block;
+    transition: all 0.4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 20px;
+    height: 2px;
+    border-radius: 5px;
+    background: #fff;
+    width: 45%;
+    z-index: 99;
+
+
+    &:nth-of-type(1) {
+      top: 24px;
+    }
+
+    &:nth-of-type(2) {
+      top: 32px;
+    }
+
+    &:nth-of-type(3) {
+      top: 40px;
+    }
+
+    &:nth-of-type(3)::after {
+      content: "MENU";
+      /*3つ目の要素のafterにMenu表示を指定*/
+      position: absolute;
+      top: 5px;
+      left: 0px;
+      color: #fff;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      width: 42px;
+
+    }
+  }
+
+  /*.active が付与された時の挙動*/
+  &.active span:nth-of-type(1) {
+    top: 24px;
+    left: 22px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 40%;
+    perspective: 1000;
+  }
+
+  &.active.active span:nth-of-type(2) {
+    opacity: 0;
+    perspective: 1000;
+  }
+
+  &.active span:nth-of-type(3) {
+    top: 36px;
+    left: 22px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 40%;
+    perspective: 1000;
+  }
+
+  &.active span:nth-of-type(3)::after {
+    content: "";
+
+  }
+
+
+  @include tab {
+    position: relative;
+    z-index: 99;
+    background: #333;
+    cursor: pointer;
+    width: 70px;
+    height: 64px;
+
+
+
+    span {
+
+      &:nth-of-type(3)::after {
+        content: "";
+        /*3つ目の要素のafterにMenu表示を指定*/
+      }
+    }
+
+  }
+}
+
+
+
+/* =================================
+slide-menu
+ ================================= */
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 500px;
+  background-color: #000;
+  right: -120%;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 100;
+  overflow-y: scroll;
+  perspective: 1000;
+
+  @include sp {
+    width: 100%;
+  }
+
+  &.open-menu {
+    transition: all 0.5s;
+    right: 0;
+    opacity: 1;
+    perspective: 1000;
+  }
+
+  &__btn-wrap {
+    position: fixed;
+    top: 31px;
+    right: 19px;
+    cursor: pointer;
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      display: inline-block;
+      background: #fff;
+      border-radius: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      display: inline-block;
+      background: #fff;
+      border-radius: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    margin: 100px auto 40px;
+
+    @include sp {
+      margin: 80px auto 40px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    background-color: #fff;
+    padding: 11px;
+    position: absolute;
+    top: 8px;
+    left: 90px;
+    width: 237px;
+
+    @include sp {
+      width: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  }
+
+  &__search-wrap {
+    margin: 0 auto 24px;
+    text-align: center;
+
+    button {
+      padding: 5px 15px;
+      margin-left: -5px;
+    }
+
+    input {
+      width: 380px;
+      padding: 8px;
+
+      @include sp {
+        width: 200px;
+      }
+    }
+
+  }
+
+  &__toggle-contents {
+    border-bottom: 1px solid #9d9b9b;
+    color: #fff;
+
+    &--first {
+      border-top: 1px solid #9d9b9b;
+    }
+
+  }
+
+  &__toggle-title {
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.4;
+    position: relative;
+
+    &::after {
+      border-right: solid 2px #fff;
+      border-top: solid 2px #fff;
+      content: "";
+      display: block;
+      height: 8px;
+      position: absolute;
+      right: 25px;
+      top: 38%;
+      transform: rotate(135deg);
+      transition: transform .3s ease-in-out, top .3s ease-in-out;
+      width: 8px;
+    }
+
+    &.open::after {
+      top: 45%;
+      transform: rotate(-45deg);
+    }
+
+  }
+
+  &__toggle-box {
+    display: none;
+    border-top: dotted 1px #9d9b9b;
+    border-bottom: dotted 1px #9d9b9b;
+    margin: 0 40px 24px;
+    padding: 8px 8px 2px 8px;
+
+  }
+
+  &__toggle-item {
+    color: #9d9b9b;
+    display: block;
+    font-size: 14px;
+    margin: 0 0 6px;
+
+    &:hover {
+      background-color: #9d9b9b;
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  &__ {}
+
+}
+
+/* =================================
+TOP 
+ ================================= */
+
+.page-top {
+
+  &__main-visual {
+
+    margin: 0 0 200px;
+
+
+    @include tab {
+      margin: 0 0 24px;
+    }
+
+    @include sp {
+      margin: 0 0 14px;
+    }
+  }
+
+  &__top-information {
+    margin: 0 0 120px;
+
+    @include tab {
+      margin: 0 0 40px;
+    }
+
+
+
+  }
+
+  &__top-about {
+    margin: 0 0 120px;
+
+    @include tab {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__top-support {
+    margin: 0 0 120px;
+
+    @include tab {
+      margin: 0 0 18px;
+    }
+
+  }
+
+  &__top-vision {
+    margin: 0 0 120px;
+
+
+    @include tab {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__ {}
+}
+
+
+
+/* =================================
+TOP 
+ ================================= */
+
+.main-visual {
+  position: relative;
+
+  &__slider-wrap {}
+
+  &__slider {
+
+    .slick-next {
+      right: 0 !important;
+    }
+
+    .slick-prev {
+      left: 0 !important;
+    }
+
+    .slick-next:before {
+      background: url(../img/top/main-visual-arrow_l.png) !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+    }
+
+    .slick-prev:before {
+      background: url(../img/top/main-visual-arrow_r.png) !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+    }
+
+    .slick-arrow {
+      z-index: 2 !important;
+      width: 35px !important;
+      height: 100px !important;
+
+      @include sp {
+        width: 25px !important;
+        height: 80px !important;
+      }
+    }
+
+    .slick-arrow:before {
+      content: "" !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1 !important;
+
+      @include sp {
+        top: 10px;
+      }
+    }
+  }
+
+  &__slider-video {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+  }
+
+  &__slider-item {
+    max-height: 540px;
+    overflow: hidden;
+
+    img {
+
+      @media screen and (max-width: 1400px) {
+        width: auto;
+      }
+
+      @include tab {
+        width: 120%;
+      }
+    }
+
+    @include pc {
+      max-height: 430px;
+    }
+
+    @include tab {
+      max-height: 340px;
+    }
+
+    @include sp {
+      max-height: 240px;
+    }
+  }
+
+  &__lead-img {
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 380px;
+
+    @include pc {
+      width: 300px;
+      top: 150px;
+    }
+
+    @include tab {
+      width: 240px;
+      top: 100px;
+    }
+
+    @include sp {
+      width: 200px;
+      top: 45px;
+    }
+
+  }
+
+  &__bnr-wrap {
+    position: absolute;
+    z-index: 10;
+    width: 640px;
+    left: 50%;
+    bottom: -100px;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: #fff;
+    padding: 18px;
+    justify-content: space-between;
+
+
+
+    @include tab {
+      position: static;
+      width: auto;
+      transform: translateX(0);
+      padding: 8px;
+      margin: -18px 0 0 0;
+
+
+    }
+  }
+
+  &__bnr {
+    display: block;
+    width: 48%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  &__slider-dots {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 88px;
+    transform: translateX(-50%);
+
+    @include tab {
+      bottom: 18px;
+    }
+
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+
+      button {
+        position: relative;
+        text-indent: -9999px;
+        background: none;
+        border: none;
+        outline: none;
+        padding: 0 7px;
+
+        &::before {
+          background-image: url(../img/top/slick-dots.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          content: "";
+          cursor: pointer;
+          height: 20px;
+          left: 0;
+          margin: auto;
+          position: absolute;
+          right: 0;
+          top: 16px;
+          width: 12px;
+        }
+      }
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 4px;
+
+      &.slick-active {
+        button {
+          position: relative;
+          text-indent: -9999px;
+
+          &::before {
+            background-image: url(../img/top/slick-dots-active.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: "";
+            cursor: pointer;
+            height: 20px;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 16px;
+            width: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.top-information {
+
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 30%, #eaf7fc 30%, #eaf7fc 100%);
+  padding: 0 0 60px;
+
+  @include tab {
+    background: #eaf7fc;
+    padding: 24px 0;
+  }
+
+
+
+  &__ttl {
+    width: 240px;
+    margin: 0 0 32px;
+
+    @include tab {
+      width: 120px;
+    }
+  }
+
+  &__content {
+    max-width: 1080px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+
+    @include tab {
+      box-shadow: none;
+    }
+  }
+
+  &__tab {
+    display: flex;
+    padding: 24px 80px 0;
+    border-bottom: #9d9b9b 1px solid;
+
+
+    @include tab {
+      background: #eaf7fc;
+      padding: 0 12px 0;
+      border-bottom: none;
+    }
+
+    @include sp {
+      padding: 0 8px 0;
+    }
+
+    @media screen and (max-width: 360px) {
+      font-size: 12px;
+    }
+  }
+
+  &__tab-item {
+    margin: 0 40px 0 0;
+    padding: 0 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @include tab {
+      margin: 0 16px 0 0;
+      padding: 0 0 8px;
+
+    }
+
+
+    &:hover {
+      color: #3071b9;
+    }
+
+    &.active {
+      color: #3071b9;
+      border-bottom: 2px solid #3071b9;
+
+    }
+  }
+
+  &__box {
+
+    @include tab {
+      background: #eaf7fc;
+
+    }
+  }
+
+  &__box-item {
+    display: none;
+
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__article-wrap {
+    padding: 40px 80px;
+
+    @include pc {
+      padding: 40px;
+    }
+
+    @include tab {
+      border-top: #9d9b9b 1px solid;
+      padding: 0;
+
+
+    }
+  }
+
+  &__article {
+    display: flex;
+    margin: 0 0 32px;
+    align-items: center;
+
+    @include pc {
+      flex-wrap: wrap;
+    }
+
+    @include tab {
+      border-bottom: #9d9b9b 1px solid;
+      margin: 0;
+      padding: 18px;
+      margin: 0;
+      background-color: #fff;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 1px;
+        background-color: #fff;
+        bottom: -1px;
+        right: 0;
+
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 1px;
+        background-color: #fff;
+        bottom: -1px;
+        left: 0;
+      }
+
+    }
+  }
+
+  &__article-date {
+    width: 160px;
+    white-space: nowrap;
+
+  }
+
+
+
+  &__article-span {
+    display: block;
+    margin: 0 24px 0 0;
+    background-color: #3071b9;
+    color: #fff;
+    font-size: 12px;
+    white-space: nowrap;
+    width: 90px;
+    text-align: center;
+
+    @include tab {
+      margin: 0;
+    }
+  }
+
+  &__article-link {
+    display: inline-block;
+    width: 650px;
+
+    @include pc {
+      width: 100%;
+      margin: 12px 0 0 0;
+    }
+
+
+  }
+
+  &__article-cat {}
+
+  &__link {
+
+    display: block;
+
+  }
+
+  &__link-wrap {
+    margin: 48px 0 0 18px;
+
+    @include tab {
+      width: 200px;
+      margin: 48px auto 18px;
+      border: #9d9b9b 1px solid;
+      padding: 8px 0 8px 48px;
+      background-color: #fff;
+
+    }
+  }
+}
+
+
+.top-about {
+
+  &__ttl {
+    width: 240px;
+    margin: 0 0 60px;
+
+    @include tab {
+      width: 180px;
+      margin: 0 0 20px;
+
+    }
+  }
+
+  &__lead {
+
+    width: 600px;
+    margin: 0 0 80px 80px;
+  }
+
+  &__lead-sp {
+
+    margin: 0 0 24px;
+
+  }
+
+  &__img {
+    font-size: 32px;
+  }
+
+  &__btn {
+    margin: 60px auto 0;
+
+    @include sp{
+      margin: 40px auto 0;
+    }
+  }
+}
+
+.top-support {
+
+
+  @include tab {
+    padding: 0 24px;
+  }
+
+  &__ttl {
+    width: 680px;
+    margin: 0 auto 80px;
+  }
+
+  &__ttl-sp {
+    font-size: 18px;
+    color: #3071b9;
+    margin: 0 0 24px;
+    text-align: center;
+  }
+
+  &__content {}
+
+  &__box {
+
+    display: flex;
+    margin: 0 0 80px;
+
+    @include tab {
+      flex-direction: column;
+      margin: 0;
+
+    }
+
+  }
+
+  &__item {
+    width: 50%;
+
+    @include tab {
+      width: 100%;
+    }
+  }
+
+}
+
+.support-item {
+  &--kenzai {
+    background: linear-gradient(180deg, #fff 0%, #fff 25%, #ffede2 25%, #ffede2 100%);
+
+
+    @include tab {
+      background: #fff;
+    }
+  }
+
+  &--interior {
+
+    background: linear-gradient(180deg, #fff 0%, #fff 25%, #ffe4f7 25%, #ffe4f7 100%);
+
+    @include tab {
+      background: #fff;
+    }
+  }
+
+  &--logistics {
+    background: linear-gradient(180deg, #fff 0%, #fff 25%, #e5fcfb 25%, #e5fcfb 100%);
+
+    @include tab {
+      background: #fff;
+    }
+  }
+
+  &--construction {
+    background: linear-gradient(180deg, #fff 0%, #fff 25%, #ffdede 25%, #ffdede 100%);
+
+    @include tab {
+      background: #fff;
+    }
+  }
+
+
+  &__box {
+    max-width: 580px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 0 32px 48px auto;
+    background-color: #fff;
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    &--left {
+      margin: 0 auto 48px 32px;
+    }
+
+
+
+    @media screen and (max-width: 1240px) {
+      margin: 0 12px 48px;
+
+      &--left {
+        margin: 0 12px 48px;
+      }
+
+    }
+
+    @include tab {
+      margin: 0 auto 28px;
+
+      &--left {
+        margin: 0 auto 28px;
+      }
+    }
+
+    &:hover {
+      transition: none;
+      filter: brightness(110%);
+
+    }
+  }
+
+
+  &__box-img {}
+
+  &__box-inner {
+    padding: 12px 24px 24px 24px;
+
+    @include tab {
+      display: none;
+    }
+  }
+
+  &__box-ttl {
+    margin: 0 0 32px;
+    height: 80px;
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 0 0 24px;
+
+
+    &--kenzai {
+      width: 200px;
+    }
+
+    &--interior {
+      width: 280px;
+
+    }
+
+    &--logistics {
+      width: 180px;
+    }
+
+    &--construction {
+      width: 180px;
+    }
+  }
+
+  &__box-text-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 1240px) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+  }
+
+  &__box-text {
+
+    @media screen and (max-width: 1240px) {
+      margin: 0 0 12px;
+    }
+  }
+
+  &__box-btn {
+    width: 120px;
+  }
+
+  &__box-sp-ttl {
+    width: 180px;
+  }
+
+}
+
+.top-vision {
+
+  background: linear-gradient(180deg, #eaf7fc 0%, #eaf7fc 55%, #fff 55%, #fff 100%);
+  padding: 0 0 60px;
+  padding: 80px 0 0;
+
+  @include tab {
+    background: linear-gradient(180deg, #eaf7fc 0%, #eaf7fc 25%, #fff 25%, #fff 100%);
+    padding: 40px 0 0;
+
+  }
+
+  &__ttl {
+    width: 240px;
+    margin: 0 0 60px;
+
+    @include tab {
+      width: 180px;
+      margin: 0 0 20px;
+
+    }
+  }
+
+  &__lead {
+
+    max-width: 780px;
+    margin: 0 0 80px 80px;
+  }
+
+  &__lead-sp {
+
+    margin: 0 0 24px;
+
+  }
+
+  &__content {
+    display: flex;
+    margin: 0 0 120px;
+
+    @include tab {
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 16px;
+
+    }
+  }
+
+  &__item {
+
+    @include tab {
+      position: relative;
+      margin: 0 0 28px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+
+    }
+  }
+
+  &__item-img {
+    margin: 0 0 32px;
+
+    @include tab {
+      margin: 0;
+    }
+  }
+
+  &__item-ttl {
+    position: relative;
+    margin: 0 0 32px 18px;
+    font-size: 18px;
+
+    @include tab {
+      margin: 0;
+      font-size: 13px;
+      margin: 0 12px;
+
+    }
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      left: -20px;
+      font-size: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: right 0.3s;
+      width: 8px;
+      height: 8px;
+      border-top: solid 2px currentColor;
+      border-right: solid 2px currentColor;
+      transform: translateY(-50%) rotate(45deg);
+      color: #3071b9;
+      transition: all 0.3s;
+    }
+  }
+
+  &__item-text {}
+
+  &__btn {
+    margin: 0 auto;
+  }
+}
+
+.bnr-section {
+
+
+  &__top {
+    background: #eaf7fc;
+    padding: 60px 12px;
+
+    @include sp {
+      padding: 24px 24px;
+    }
+  }
+
+  &__renofa {
+    display: block;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+
+  &__bottom {
+    padding: 60px 16px;
+
+    @include sp {
+      padding: 24px 12px 12px;
+    }
+  }
+
+  &__holiday-wrap {
+    display: flex;
+    max-width: 640px;
+    margin: 0 auto 80px;
+    justify-content: space-between;
+
+    @include sp {
+      margin: 0 auto 32px;
+    }
+  }
+
+  &__holiday-bnr {
+    border: #9d9b9b solid 1px;
+    text-align: center;
+    padding: 12px;
+    width: 45%;
+
+    @include sp {
+      font-size: 13px;
+      padding: 8px;
+      width: 47%;
+      line-height: 20px;
+
+
+    }
+  }
+
+  &__external-wrap {
+    display: flex;
+    max-width: 980px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  &__external-bnr {
+    width: 23%;
+    margin: 0 9px 18px;
+  }
+
+  &__external-wrap-sp {
+    width: 65%;
+    margin: 0 auto;
+    max-width: 320px;
+
+
+    // 矢印設定
+    .slick-next {
+      right: -30px !important;
+    }
+
+    .slick-prev {
+      left: -30px !important;
+    }
+
+    .slick-next:before {
+      background: url(../img/top/external-bnr-arrow_l.png) !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+    }
+
+    .slick-prev:before {
+      background: url(../img/top/external-bnr-arrow_r.png) !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+    }
+
+    .slick-arrow {
+      z-index: 2 !important;
+      width: 20px !important;
+      height: 20px !important;
+    }
+
+    .slick-arrow:before {
+      content: "" !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      opacity: 1 !important;
+    }
+
+
+
+  }
+
+  &__external-bnr-sp {
+    width: 23%;
+    margin: 0 9px 18px;
+  }
+
+  &__ {}
+
+  &__ {}
+}
+
+
+
+/* =================================
+footer 
+ ================================= */
+
+
+
+.footer {
+
+  position: relative;
+
+  &__top {
+    background-color: #eee;
+  }
+
+
+  &__top-inner {
+    display: flex;
+    max-width: 1020px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 40px 0;
+  }
+
+  &__top-item {
+    margin: 0 56px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    ul {}
+
+    li {
+
+      a {}
+    }
+  }
+
+  &__top-link {
+    display: block;
+    margin: 0 0 18px;
+  }
+
+  &__top-sp {
+    background-color: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: #9d9b9b solid 1px;
+
+  }
+
+  &__top-link-sp {
+    width: 50%;
+    border-bottom: #9d9b9b solid 1px;
+    padding: 8px;
+
+    &:nth-of-type(odd) {
+      border-right: #9d9b9b solid 1px;
+    }
+  }
+
+
+  &__bottom {
+    background-color: #000;
+    border-bottom: #9d9b9b solid 1px;
+    text-align: center;
+    padding: 16px 8px;
+    color: #fff;
+    font-size: 14px;
+
+    @include sp {
+      font-size: 10px;
+      padding: 4px 8px;
+
+    }
+  }
+
+  // スクロールボタン
+  &__scroll-btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: 57px;
+    right: 0;
+    width: 41px;
+    display: none;
+
+    @include sp {
+      display: block;
+    }
+  }
+
+
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+}
+
+
+/* =================================
+TOP （SP）
+ ================================= */
+
+
+.sp-footer {
+  display: none;
+
+  @include tab {
+    display: block;
+  }
+}

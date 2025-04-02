@@ -1,0 +1,566 @@
+<!-- <?php
+  $des="サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。"
+  ; ?> -->
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>三和　営業所</title>
+    <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+    <meta name="robots" content="none">
+  <meta name="description" content="<?php echo $des; ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20230308">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+
+  <div class="header-wrap">
+
+    <header class="header">
+      <div class="header__breadcrumb-wrap pc-block">
+        <div class="header__breadcrumb">ホーム　＞　〇〇〇〇</div>
+      </div>
+      <div class="header__inner">
+
+
+        <nav class="header__global-wrap">
+          <ul class="header__global-list">
+            <li class="header__global-menu header__global-menu--ttl">
+              <h1 class="header__global-ttl"><a href="index.html"><img src="assets/img/top/header_logo.png"
+                    alt="株式会社　三和" class="pc-block"><img src="assets/img/top/header_logo-sp.png" alt="株式会社　三和"
+                    class="sp-block"></a>
+              </h1>
+            </li>
+            <li class="header__global-menu hover-menu-js pc-block">
+              <a href="company.html" class="header__global-link active">会社案内</a>
+            </li>
+
+            <li class="header__global-menu hover-menu-js pc-block">
+              <a href="newsrelease.html" class="header__global-link">ニュース</a>
+            </li>
+
+            <li class="header__global-menu hover-menu-js pc-block">
+              <a href="inquiry.html" class="header__global-link">お問い合わせ</a>
+            </li>
+
+            <li class="header__global-menu hover-menu-js pc-block">
+              <a href="recruit.html" class="header__global-link">採用情報</a>
+            </li>
+          </ul>
+          <!-- ホバーメニュー -->
+          <div class="header__global-child-wrap">
+            <div class="header__global-child-inner child-menu">
+              <div class="child-menu__content">
+                <div class="child-menu__item">
+                  <a href="company.html" class="child-menu__link btn-arrow">会社案内</a>
+                </div>
+                <div class="child-menu__item">
+                  <a href="message.html" class="child-menu__link btn-arrow">社長メッセージ</a>
+                  <a href="outline.html" class="child-menu__link btn-arrow">会社概要</a>
+                  <a href="vision.html" class="child-menu__link btn-arrow">企業理念</a> <a href="history.html"
+                    class="child-menu__link btn-arrow">沿革</a>
+                  <a href="services.html" class="child-menu__link btn-arrow">事業案内</a>
+                  <a href="materials.html" class="child-menu__link">建材販売</a>
+                  <a href="interior.html" class="child-menu__link">家具・インテリア</a>
+                  <a href="logistics.html" class="child-menu__link">物流</a>
+                  <a href="construction.html" class="child-menu__link">施工</a>
+                  <a href="materials.html" class="child-menu__link">建材販売</a>
+                  <a href="interior.html" class="child-menu__link">家具・インテリア</a>
+                  <a href="gallery.html" class="child-menu__link">ギャラリー</a>
+                  <a href="others.html" class="child-menu__link">その他</a>
+                </div>
+                <div class="child-menu__item">
+                  <a href="office.html" class="child-menu__link btn-arrow">営業所</a>
+                  <a href="head.html" class="child-menu__link">本社</a>
+                  <a href="tokuyama.html" class="child-menu__link">徳山営業所</a>
+                  <a href="hofu.html" class="child-menu__link">防府営業所</a>
+                  <a href="ogori.html" class="child-menu__link">小郡営業所</a>
+                  <a href="ube.html" class="child-menu__link">宇部営業所</a>
+                  <a href="gallery_ube.html" class="child-menu__link">Gallery 宇部</a>
+                  <a href="shimonoseki.html" class="child-menu__link">下関営業所</a>
+                  <a href="fukuoka.html" class="child-menu__link">福岡営業所</a>
+                </div>
+                <div class="child-menu__item">
+                  <a href="beetecs.html" class="child-menu__link btn-arrow">株式会社ビーテクス</a>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="open-btn-wrap">
+        <div class="open-btn">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+  </div>
+
+
+  <div class="slide-menu">
+    <div class="slide-menu__btn-wrap">
+      <div class="slide-menu__btn">
+      </div>
+    </div>
+    <div class="slide-menu__inner">
+      <a class="slide-menu__logo" href="index.html">
+        <img src="assets/img/top/header_logo.png" alt="">
+      </a>
+      <div class="slide-menu__search-wrap">
+        <form id="form" action="自分のサイトURL" method="get">
+          <input id="s-box" name="s" type="text" placeholder="キーワードを入力" />
+          <button type="submit" id="s-btn-area">
+            <div id="s-btn">検索</div>
+          </button>
+        </form>
+      </div>
+      <div class="slide-menu__toggle-contents slide-menu__toggle-contents--first">
+        <dt class="slide-menu__toggle-title">会社案内</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="message.html" class="slide-menu__toggle-item">社長メッセージ</a>
+          <a href="outline.html" class="slide-menu__toggle-item">会社概要</a>
+          <a href="vision.html" class="slide-menu__toggle-item">企業理念</a>
+          <a href="history.html" class="slide-menu__toggle-item">沿革</a> <a href="beetecs.html"
+            class="slide-menu__toggle-item">関連会社ビーテクス</a>
+        </dd>
+      </div>
+      <div class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">事業案内</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="services.html" class="slide-menu__toggle-item">事業案内</a>
+          <a href="materials.html" class="slide-menu__toggle-item">建材販売</a>
+          <a href="interior.html" class="slide-menu__toggle-item">家具・インテリア</a>
+          <a href="logistics.html" class="slide-menu__toggle-item">物流</a>
+          <a href="construction.html" class="slide-menu__toggle-item">施工</a>
+        </dd>
+      </div>
+      <dl class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">営業所</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="office.html" class="slide-menu__toggle-item">一覧</a>
+          <a href="head.html" class="slide-menu__toggle-item">本社</a>
+          <a href="tokuyama.html" class="slide-menu__toggle-item">徳山営業所</a>
+          <a href="hofu.html" class="slide-menu__toggle-item">防府営業所</a>
+          <a href="ogori.html" class="slide-menu__toggle-item">小郡営業所</a>
+          <a href="ube.html" class="slide-menu__toggle-item">宇部営業所</a>
+          <a href="gallery_ube.html" class="slide-menu__toggle-item">Gallery 宇部</a>
+          <a href="shimonoseki.html" class="slide-menu__toggle-item">下関営業所</a>
+          <a href="fukuoka.html" class="slide-menu__toggle-item">福岡営業所</a>
+        </dd>
+      </dl>
+      <dl class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">お知らせ</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="newsrelease.html" class="slide-menu__toggle-item">お知らせ</a>
+          <a href="#" class="slide-menu__toggle-item">イベント</a>
+          <a href="#" class="slide-menu__toggle-item">リクルート</a>
+        </dd>
+      </dl>
+      <dl class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">採用情報</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="recruit.html" class="slide-menu__toggle-item">採用情報</a>
+          <a href="#" class="slide-menu__toggle-item">三和リクルートサイト</a>
+        </dd>
+      </dl>
+      <dl class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">お問い合わせ</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="inquiry.html" class="slide-menu__toggle-item">お問い合わせ</a>
+          <a href="employment.html" class="slide-menu__toggle-item">採用に関するお問い合わせ</a>
+          <a href="business.html" class="slide-menu__toggle-item">法人様向けお問い合わせ</a>
+          <a href="personal.html" class="slide-menu__toggle-item">一般向けお問い合わせ</a>
+        </dd>
+      </dl>
+      <dl class="slide-menu__toggle-contents">
+        <dt class="slide-menu__toggle-title">サイトについて</dt>
+        <dd class="slide-menu__toggle-box">
+          <a href="usersguide.html" class="slide-menu__toggle-item">サイトについて</a>
+          <a href="privacy.html" class="slide-menu__toggle-item">プライバシーポリシー</a>
+          <a href="sitemap.html" class="slide-menu__toggle-item">サイトマップ</a>
+          <a href="link.html" class="slide-menu__toggle-item">リンク</a>
+          <a href="renofa.html" class="slide-menu__toggle-item">レノファ山口FCスポンサード</a>
+        </dd>
+      </dl>
+    </div>
+  </div>
+
+
+
+
+  <div class="main page-office">
+
+    <h1 class="page-office__ttl">営業所</h1>
+    <div class="page-office__top-img pc-block">
+      <img src="assets/img/company/page-office-top.png" usemap="#ImageMap" alt="" />
+      <map name="ImageMap">
+        <area shape="rect" coords="580,332,707,363" href="fukuoka.html" alt="福岡営業所" />
+        <area shape="rect" coords="767,157,889,189" href="shimonoseki.html" alt="下関営業所" />
+        <area shape="rect" coords="945,81,1124,116" href="head.html" alt="本社" />
+        <area shape="rect" coords="946,122,1120,156" href="ogori.html" alt="小郡営業所" />
+        <area shape="rect" coords="1018,283,1152,319" href="ube.html" alt="宇部営業所" />
+        <area shape="rect" coords="1020,324,1154,359" href="gallery_ube.html" alt="Gallery宇部" />
+        <area shape="rect" coords="1173,168,1297,203" href="hofu.html" alt="防府営業所" />
+        <area shape="rect" coords="1246,275,1371,310" href="tokuyama.html" alt="徳山営業所" />
+      </map>
+    </div>
+    <div class="page-office__top-img-sp sp-block">
+      <img src="assets/img/company/page-office-top-sp.png" usemap="#ImageMap2" alt="" />
+      <map name="ImageMap2">
+        <area shape="rect" coords="60,325,183,359" href="fukuoka.html" alt="福岡営業所" />
+        <area shape="rect" coords="239,147,370,190" href="shimonoseki.html" alt="下関営業所" />
+        <area shape="rect" coords="422,57,601,108" href="head.html" alt="本社" />
+        <area shape="rect" coords="425,116,601,154" href="ogori.html" alt="小郡営業所" />
+        <area shape="rect" coords="497,275,634,318" href="ube.html" alt="宇部営業所" />
+        <area shape="rect" coords="500,320,629,359" href="gallery_ube.html" alt="Gallery宇部" />
+        <area shape="rect" coords="649,162,776,204" href="hofu.html" alt="防府営業所" />
+        <area shape="rect" coords="725,269,848,302" href="tokuyama.html" alt="徳山営業所" />
+      </map>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+    <script>
+      imageMapResize();
+    </script>
+
+    <section class="section page-office__section">
+      <div class="page-office__top-content">
+        <p class="page-office__lead">明日の「すまう」実現へ、<br class="sp-block">「すまう人」と「つくる人」をつなぐ建材流通ネットワーク</p>
+        <div class="page-office__text-box">
+          <p class="page-office__text">
+            三和は、山口県ナンバーワンのシェアと山口県下をジャストタイムでカバーする営業拠点により、200社を超えるメーカーと1000社を超える得意先とを結ぶ建材流通の拠点としての機能を果たしています。</p>
+          <p class="page-office__text">また、建材の流通には「情報」も含めた「商流」と「物流」、必要な場合は「施工」、さらに「営業サポート」などの多様な機能も要求されます。</p>
+          <p class="page-office__text">
+            明日の「すまう」を実現するため、三和はその全ての機能を兼ね備えた「すまう人」と「つくる人」をつなぐ建材流通ネットワークで、「より快適で安心な空間づくり」に貢献していきます。</p>
+        </div>
+      </div>
+
+
+      <div class="page-office__bottom-content">
+        <div class="page-office__item">
+          <a href="head.html" class="page-office__item-img hover-img">
+            <img src="assets/img/company/page-office01.jpg" alt="">
+          </a>
+          <a href="head.html" class="page-office__link-wrap-sp sp-block sp-box-ttl">
+            <div class="btn-arrow page-services__link">株式会社三和　本社</div>
+          </a>
+          <div class="page-office__item-text-box pc-block">
+            <a href="head.html" class="page-office__item-ttl">
+              <p class="btn-arrow__item btn-arrow">株式会社三和　本社</p>
+            </a>
+            <div class="page-office__item-text">
+              山口県山口市小郡下郷796-5<br>
+              TEL <a href="tel:0839732829">(083)973-2829</a><br>
+              FAX (083)973-5321
+            </div>
+          </div>
+        </div>
+
+        <div class="page-office__item">
+          <a href="ogori.html" class="page-office__item-img hover-img">
+            <img src="assets/img/company/page-office02.jpg" alt="">
+          </a>
+          <a href="ogori.html" class="page-office__link-wrap-sp sp-block sp-box-ttl">
+            <div class="btn-arrow page-services__link">小郡営業所</div>
+          </a>
+          <div class="page-office__item-text-box pc-block">
+            <a href="ogori.html" class="page-office__item-ttl">
+              <p class="btn-arrow__item btn-arrow">小郡営業所</p>
+            </a>
+            <div class="page-office__item-text">
+              山口県山口市小郡下郷796-5<br>
+              TEL <a href="tel:0839731133">(083)973-1133</a><br>
+              FAX (083)973-1642
+            </div>
+          </div>
+        </div>
+
+        <div class="page-office__item">
+          <a href="hofu.html" class="page-office__item-img hover-img">
+            <img src="assets/img/company/page-office03.jpg" alt="">
+          </a>
+          <a href="hofu.html" class="page-office__link-wrap-sp sp-block sp-box-ttl">
+            <div class="btn-arrow page-services__link">防府営業所</div>
+          </a>
+          <div class="page-office__item-text-box pc-block">
+            <a href="hofu.html" class="page-office__item-ttl">
+              <p class="btn-arrow__item btn-arrow">防府営業所</p>
+            </a>
+            <div class="page-office__item-text">
+              山口県防府市植松551-2<br>
+              TEL <a href="tel:0835241233">(0835)24-1233</a><br>
+              FAX (0835)24-3113
+            </div>
+          </div>
+        </div>
+
+        <div class="page-office__item">
+          <a href="tokuyama.html" class="page-office__item-img hover-img">
+            <img src="assets/img/company/page-office04.jpg" alt="">
+          </a>
+          <a href="tokuyama.html" class="page-office__link-wrap-sp sp-block sp-box-ttl">
+            <div class="btn-arrow page-services__link">徳山営業所</div>
+          </a>
+          <div class="page-office__item-text-box pc-block">
+            <a href="tokuyama.html" class="page-office__item-ttl">
+              <p class="btn-arrow__item btn-arrow">徳山営業所</p>
+            </a>
+            <div class="page-office__item-text">
+              山口県周南市鼓海2-118-57<br>
+              TEL <a href="tel:083426-1133">(0834)26-1133</a><br>
+              FAX (0834)26-1134
+            </div>
+          </div>
+        </div>
+        <div class="page-office__item">
+          <a href="ube.html" class="page-office__item-img hover-img">
+            <img src="assets/img/company/page-office05.jpg" alt="">
+          </a>
+          <a href="ube.html" class="page-office__link-wrap-sp sp-block sp-box-ttl">
+            <div class="btn-arrow page-services__link">宇部営業所</div>
+          </a>
+          <div class="page-office__item-text-box pc-block">
+            <a href="ube.html" class="page-office__item-ttl">
+              <p class="btn-arrow__item btn-arrow">宇部営業所</p>
+            </a>
+            <div class="page-office__item-text">
+              山口県宇部市西岐波区<br>
+              宇部臨空頭脳パーク13 番<br>
+              TEL <a href="tel:0836395534">(0836)39-5534</a><br>
+              FAX (0836)39-5381
+            </div>
+          </div>
+        </div>
+        <div class="page-office__item">
+          <a href="gallery_ube.html" class="page-office__item-img hover-img">
+            <img src="assets/img/company/page-office06.jpg" alt="">
+          </a>
+          <a href="gallery_ube.html" class="page-office__link-wrap-sp sp-block sp-box-ttl">
+            <div class="btn-arrow page-services__link">Gallery 宇部</div>
+          </a>
+          <div class="page-office__item-text-box pc-block">
+            <a href="gallery_ube.html" class="page-office__item-ttl">
+              <p class="btn-arrow__item btn-arrow">Gallery 宇部</p>
+            </a>
+            <div class="page-office__item-text">
+              山口県宇部市西岐波区<br>
+              宇部臨空頭脳パーク13 番<br>
+              TEL <a href="tel:0836541130">(0836)54-1130</a><br>
+              FAX (0836)54-1131
+            </div>
+          </div>
+        </div>
+        <div class="page-office__item">
+          <a href="shimonoseki.html" class="page-office__item-img hover-img">
+            <img src="assets/img/company/page-office07.jpg" alt="">
+          </a>
+          <a href="shimonoseki.html" class="page-office__link-wrap-sp sp-block sp-box-ttl">
+            <div class="btn-arrow page-services__link">下関営業所</div>
+          </a>
+          <div class="page-office__item-text-box pc-block">
+            <a href="shimonoseki.html" class="page-office__item-ttl">
+              <p class="btn-arrow__item btn-arrow">下関営業所</p>
+            </a>
+            <div class="page-office__item-text">
+              山口県下関市一の宮5-9-10<br>
+              TEL <a href="tel:0832563331">(083)256-3331</a><br>
+              FAX (083)256-0505
+            </div>
+          </div>
+        </div>
+        <div class="page-office__item">
+          <a href="fukuoka.html" class="page-office__item-img hover-img">
+            <img src="assets/img/company/page-office08.jpg" alt="">
+          </a>
+          <a href="fukuoka.html" class="page-office__link-wrap-sp sp-block sp-box-ttl">
+            <div class="btn-arrow page-services__link">福岡営業所</div>
+          </a>
+          <div class="page-office__item-text-box pc-block">
+            <a href="fukuoka.html" class="page-office__item-ttl">
+              <p class="btn-arrow__item btn-arrow">福岡営業所</p>
+            </a>
+            <div class="page-office__item-text">
+              福岡県古賀市川原989－2<br>
+              TEL <a href="tel:0924104210">(092)410-4210</a><br>
+              FAX (092)410-421
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+    <section class="company-footer section">
+      <div class="company-footer__content section__inner">
+        <a href="message.html" class="company-footer__item hover-cad ">
+          <div class="company-footer__img hover-img pc-block">
+            <img src="assets/img/company/page-company01.jpg">
+          </div>
+          <div class="company-footer__ttl">
+            <p class="btn-arrow__item btn-arrow">社長メッセージ</p>
+          </div>
+        </a>
+        <a href="outline.html" class="company-footer__item hover-cad">
+          <div class="company-footer__img hover-img pc-block">
+            <img src="assets/img/company/page-company02.jpg">
+          </div>
+          <div class="company-footer__ttl">
+            <p class="btn-arrow__item btn-arrow">会社概要</p>
+          </div>
+        </a>
+        <a href="history.html" class="company-footer__item hover-cad">
+          <div class="company-footer__img hover-img pc-block">
+            <img src="assets/img/company/page-company03.jpg">
+          </div>
+          <div class="company-footer__ttl">
+            <p class="btn-arrow__item btn-arrow">沿革</p>
+          </div>
+        </a>
+        <a href="services.html" class="company-footer__item hover-cad">
+          <div class="company-footer__img hover-img pc-block">
+            <img src="assets/img/company/page-company04.jpg">
+          </div>
+          <div class="company-footer__ttl">
+            <p class="btn-arrow__item btn-arrow">事業案内</p>
+          </div>
+        </a>
+        <a href="office.html" class="company-footer__item hover-cad">
+          <div class="company-footer__img hover-img pc-block">
+            <img src="assets/img/company/page-company05.jpg">
+          </div>
+          <div class="company-footer__ttl">
+            <p class="btn-arrow__item btn-arrow">営業所</p>
+          </div>
+        </a>
+        <a href="beetecs.html" class="company-footer__item hover-cad">
+          <div class="company-footer__img hover-img pc-block">
+            <img src="assets/img/company/page-company06.jpg">
+          </div>
+          <div class="company-footer__ttl">
+            <p class="btn-arrow__item btn-arrow">関連会社</p>
+          </div>
+        </a>
+      </div>
+
+
+    </section>
+  </div><!-- main -->
+
+
+
+  <footer class="footer">
+    <div class="footer__top pc-block">
+      <div class="footer__top-inner">
+        <div class="footer__top-item">
+          <a href="company.html" class="footer__top-link">会社案内</a>
+          <ul class="footer__top-list">
+            <li><a href="outline.html">会社概要</a></li>
+            <li><a href="history.html">沿革</a></li>
+            <li><a href="services.html">事業案内</a></li>
+            <li><a href="office.html">営業所</a></li>
+            <li><a href="beetecs.html">関連会社</a></li>
+          </ul>
+        </div>
+        <div class="footer__top-item">
+          <a href="newsrelease.html" class="footer__top-link">ニュース</a>
+          <ul class="footer__top-list">
+            <li><a href="archive.html">2023年</a></li>
+            <li><a href="archive.html">2022年</a></li>
+            <li><a href="archive.html">2021年</a></li>
+            <li><a href="archive.html">2020年</a></li>
+            <li><a href="archive.html">2019年</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__top-item">
+          <a href="inquiry.html" class="footer__top-link">お問い合わせ</a>
+          <ul class="footer__top-list">
+            <li><a href="employment.html">採用に関するお問い合わせ</a></li>
+            <li><a href="business.html">法人に関するお問い合わせ</a></li>
+            <li><a href="personal.html">一般向けお問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__top-item">
+          <a href="recruit.html" class="footer__top-link">採用案内</a>
+        </div>
+
+        <div class="footer__top-item">
+          <ul class="footer__top-list">
+            <li><a href="usersguide.html">サイトについて</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+            <li><a href="sitemap.html">サイトマップ</a></li>
+            <li><a href="link.html">リンク</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class=" sp-block">
+
+      <div class="footer__top-sp">
+        <a href="company.html" class="footer__top-link-sp">会社案内</a>
+        <a href="recruit.html" class="footer__top-link-sp">採用案内</a>
+        <a href="newsrelease.html" class="footer__top-link-sp">ニュース</a>
+        <a href="sitemap.html" class="footer__top-link-sp">サイトマップ</a>
+        <a href="inquiry.html" class="footer__top-link-sp">お問い合わせ</a>
+        <a href="privacy.html" class="footer__top-link-sp">個人情報保護方針</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      三和は建材、住宅設備機器、家具インテリア等の販売を通じて、<br class="sp-block">快適空間づくりに貢献します。
+    </div>
+
+
+
+    <div class="footer__scroll-btn"><img src="assets/img/top/scroll-btn.png" alt="TOPへ"></div>
+  </footer>
+
+
+
+
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/main.js">
+  </script>
+
+</body>
+
+
+
+</html>
