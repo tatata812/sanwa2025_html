@@ -103,7 +103,7 @@ $(".open-btn-js02").on("click", function(){
     fade: true, // スライドをフェードイン・フェードアウト
     cssEase: 'linear', // アニメーション
     speed: 1000, // フェードアニメーションの速度設定
-    dots: true,
+    dots: false,
     arrows: true,
     slidesToShow: 1,
     dotsClass: "main-visual__slider-dots",
