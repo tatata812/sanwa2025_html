@@ -111,6 +111,55 @@ h3 {
   }
 }
 
+
+// ヘッダーボタン
+.header-arrow-button{
+  /* ボタンのCSS */
+  background-color: #3071b9;
+  border-radius: 50px;
+  color: #fff;
+  display: block;
+  padding: 8px;
+  position: relative; /* position: relative;で矢印の位置を基点とさせます */
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+
+  &:after{
+    /* 擬似要素で矢印アイコンをつくる */
+    content: '';
+    border: 0;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    /* 矢印アイコンの位置を設定 */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%) rotate(45deg); /* rotate(45deg)で矢印を回転（向きを変更）させる */
+    transition: all 0.5s;
+  }
+
+
+  &:hover {
+    &:after{
+      right: 15px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+// 2025
+
 //section
 
 .section {
@@ -339,6 +388,53 @@ h3 {
     opacity: 1;
   }
 }
+
+
+.text-animation {
+  color: #3071b9;
+  span {
+    animation-name: blur;
+    animation-fill-mode: both;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    display: block;
+    line-height: 1.5;
+    font-weight: bold;
+    opacity: 0;
+
+  }
+  
+  span:nth-child(1) {
+    font-size: 52px;
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+  }
+  span:nth-child(2) {
+    font-size: 52px;
+    animation-delay: 0.8s;
+    margin: 0 0 0 100px;
+  }
+  span:nth-child(3) {
+    font-size: 20px;
+    animation-delay: 1.5s;
+    margin: 0 12px 0 200px;
+
+  }
+
+}
+  
+  @keyframes blur {
+    0%    {text-shadow:  0 0 100px #fff; opacity:0;}
+    5%    {text-shadow:  0 0 90px #fff;}
+    20%   {text-shadow:  0 0 0px #fff;}
+    80%   {text-shadow:  0 0 0px #fff;}
+    95%   {text-shadow:  0 0 90px #fff;}
+    100%  {text-shadow:  0 0 100px #fff;opacity: 1; }
+  }
+  
+ 
 
 /* =================================
 下層ページ共通

@@ -8,22 +8,93 @@ $(function () {
   })
 
 
-  // PCハンバーガーメニュー
-  $(".open-btn").click(function () {
-    $(this).toggleClass("active"); //ボタン自身に activeクラスを付与し
-    $(".slide-menu").toggleClass("open-menu"); //ナビゲーションにクラスを付与
+// ヘッダーメニューactiveの付け替え
+  $(".open-btn-js").on("click", function () {
+    $(".search-menu").toggleClass("active");
+  });
+  $(".open-btn-js02").on("click", function () {
+    $(".slide-menu").toggleClass("active");
   });
 
-  $(".slide-menu__btn-wrap").click(function () {
-    $(".slide-menu").toggleClass("open-menu"); //ナビゲーションにクラスを付与
-    $(".open-btn").toggleClass("active");
-  });
+
+  // 画像の切り替え
+  $(".open-btn-js").on("click", function(){
+    let img1 = $(".open-btn-js-img");
+    let img2 = $(".open-btn-js02-img");
+
+    let currentSrc1 = img1.attr("src");
+    let currentSrc2 = img2.attr("src");
+
+    let newSrc1 = (currentSrc1 === "assets/img/top/search-btn.png") ? "assets/img/top/search-btn-batsu.png" : "assets/img/top/search-btn.png";
+    let newSrc2 = (currentSrc2 === "assets/img/top/hamburger-btn.png") ? "assets/img/top/hamburger-btn-gray.png" : "assets/img/top/hamburger-btn.png";
+
+    img1.attr("src", newSrc1);
+    img2.attr("src", newSrc2);
+});
+
+  // 画像の切り替え
+  $(".open-btn-js02").on("click", function(){
+    let img1 = $(".open-btn-js-img");
+    let img2 = $(".open-btn-js02-img");
+
+    let currentSrc1 = img1.attr("src");
+    let currentSrc2 = img2.attr("src");
+
+    let newSrc1 = (currentSrc1 === "assets/img/top/search-btn.png") ? "assets/img/top/search-btn-gray.png" : "assets/img/top/search-btn.png";
+    let newSrc2 = (currentSrc2 === "assets/img/top/hamburger-btn.png") ? "assets/img/top/hamburger-btn-batsu.png" : "assets/img/top/hamburger-btn.png";
+
+    img1.attr("src", newSrc1);
+    img2.attr("src", newSrc2);
+});
+
+
+// クリックでさわれない
+$(".open-btn-js").on("click", function(){
+  $(this).toggleClass("active");
+
+  // .activeがあるとき、.open-btn-js02を無効化
+  if ($(this).hasClass("active")) {
+      $(".open-btn-js02").addClass("disabled");
+  } else {
+      $(".open-btn-js02").removeClass("disabled");
+  }
+});
+
+$(".open-btn-js02").on("click", function(){
+  $(this).toggleClass("active");
+
+  // .activeがあるとき、.open-btn-js02を無効化
+  if ($(this).hasClass("active")) {
+      $(".open-btn-js").addClass("disabled");
+  } else {
+      $(".open-btn-js").removeClass("disabled");
+  }
+});
+
+
 
   // スライドメニュー　アコーディオン
   $('.slide-menu__toggle-title').click(function () {
     $(this).toggleClass('open');
     $(this).next().slideToggle(200).toggleClass('active');
   });
+
+
+  // ヘッダー隠れる動き
+
+  let startPos = 0;
+  let winScrollTop = 0;
+  const Header = $('.header');
+  $(window).on('scroll', function () {
+    winScrollTop = $(this).scrollTop();
+    if (winScrollTop >= startPos && winScrollTop > 100) { // ここにコードを追加
+      $(Header).addClass('active');
+    } else {
+      $(Header).removeClass('active');
+    }
+    startPos = winScrollTop;
+  });
+
 
   // メインビジュアル　スライダー
   $(".top-slider-js").slick({

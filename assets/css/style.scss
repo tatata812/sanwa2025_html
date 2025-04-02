@@ -21,7 +21,6 @@
 }
 
 .main {
-  margin: 91px 0 0 0;
   position: relative;
 
 
@@ -42,15 +41,24 @@ header（PC）
 }
 
 .header {
-
-  background-color: #fff;
-  border-bottom: #eee 1px solid;
+  background-color: rgba(255, 255, 255, 0);
   position: fixed;
   top: 0;
   width: 100%;
+  transition: all 1s;
+  height: 79px;
+
 
   @include tab {
     height: 64px;
+    border-bottom: #eee 1px solid;
+
+  }
+
+
+  &.active {
+    background-color: rgba(255, 255, 255, 1);
+
   }
 
   &__breadcrumb-wrap {
@@ -58,7 +66,6 @@ header（PC）
     position: fixed;
     top: 62px;
     width: 100%;
-    background-color: #fff;
     line-height: 32px;
     font-size: 13px;
     color: rgb(92, 92, 92);
@@ -71,24 +78,43 @@ header（PC）
   }
 
   &__inner {
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
     padding: 0 12px;
+
+    @media screen and (max-width: 1250px) {
+      margin: 0 0 0 40px;
+    }
+
+    @media screen and (max-width: 1150px) {
+      max-width: 880px;
+      
+          }
+
+
+          @include tab{
+            margin: 0 0 0 12px;
+
+          }
+
+
   }
 
   &__global-wrap {
     width: 100%;
     display: block;
-    margin: 0 80px 0 0;
+    margin: 0 40px 0 0;
     color: #333;
-    background: #fff;
+
+
   }
 
   &__global-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 80px;
+    margin-right: 12px;
+    height: 79px;
 
     @include tab {
       height: 63px;
@@ -102,12 +128,20 @@ header（PC）
       opacity: 1;
     }
 
+    &--none {
+      @media screen and (max-width: 1050px) {
+        display: none;
+        
+            }
+    }
+
 
     &--ttl {
-      width: 40%;
+      width: 30%;
+
 
       @include pc {
-        width: 30%;
+        width: 20%;
       }
 
       @include tab {
@@ -117,49 +151,43 @@ header（PC）
     }
 
     &:last-child {
-      margin: 0 80px 0 0;
+      margin: 0 20px 0 0;
     }
   }
 
   &__global-ttl {
     max-width: 200px;
+
+    @include tab{
+      max-width: 160px;
+    }
   }
 
   &__global-link {
     display: block;
-    padding: 16px 10px;
     color: #000;
     position: relative;
-
-
 
     &:hover {
       text-decoration: none;
 
-      &::before {
-        position: absolute;
-        content: "";
-        background-image: url(../img/top/header-line.png);
-        bottom: 0;
-        width: 50px;
-        height: 2px;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
     }
 
     &.active {
       &::before {
         position: absolute;
         content: "";
-        background-image: url(../img/top/header-line.png);
-        bottom: 0;
-        width: 50px;
-        height: 2px;
+        background-image: url(../img/top/header-dot.png);
+        bottom: -24px;
+        width: 32px;
+        height: 32px;
+        position: absolute;
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%)scale(0.4);
+
+
+
       }
     }
 
@@ -202,6 +230,44 @@ header（PC）
   }
 }
 
+// ヘッダーボタン（採用のご案内）
+.header-arrow-button{
+  /* ボタンのCSS */
+  background-color: #3071b9;
+  border-radius: 50px;
+  color: #fff;
+  display: block;
+  padding: 12px;
+  position: relative; /* position: relative;で矢印の位置を基点とさせます */
+  text-align: center;
+  text-decoration: none;
+  width: 180px;
+
+  &:after{
+    /* 擬似要素で矢印アイコンをつくる */
+    content: '';
+    border: 0;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    /* 矢印アイコンの位置を設定 */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%) rotate(45deg); /* rotate(45deg)で矢印を回転（向きを変更）させる */
+    transition: all 0.5s;
+  }
+
+
+  &:hover {
+    &:after{
+      right: 15px;
+    }
+  }
+}
+
 .child-menu {
 
   &__content {
@@ -240,288 +306,80 @@ header（PC）
 }
 
 
-.open-btn-wrap {
+.open-btn {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 99;
+  display: flex;
+
+
+  &__item {
+    width: 79px;
+
+    @include tab{
+      width: 64px;
+
+    }
+  }
 
 }
 
-.open-btn {
-  position: relative;
+.search-menu {
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  position: absolute;
+  top: 79px;
+  left: 0;
+  padding: 20px 12px 40px;
+  color: #333;
+  background: rgb(128 128 128);
+  visibility: hidden;
+  opacity: 0;
+  /* 不透明度を最小に */
+  transition: 0.3s;
+  /* アニメーション設定 */
   z-index: 99;
-  background: #333;
-  cursor: pointer;
-  width: 70px;
-  height: 91px;
 
-  span {
-    display: inline-block;
-    transition: all 0.4s;
-    /*アニメーションの設定*/
-    position: absolute;
-    left: 20px;
-    height: 2px;
-    border-radius: 5px;
-    background: #fff;
-    width: 45%;
-    z-index: 99;
-
-
-    &:nth-of-type(1) {
-      top: 24px;
-    }
-
-    &:nth-of-type(2) {
-      top: 32px;
-    }
-
-    &:nth-of-type(3) {
-      top: 40px;
-    }
-
-    &:nth-of-type(3)::after {
-      content: "MENU";
-      /*3つ目の要素のafterにMenu表示を指定*/
-      position: absolute;
-      top: 5px;
-      left: 0px;
-      color: #fff;
-      font-size: 0.6rem;
-      text-transform: uppercase;
-      width: 42px;
-
-    }
-  }
-
-  /*.active が付与された時の挙動*/
-  &.active span:nth-of-type(1) {
-    top: 24px;
-    left: 22px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 40%;
-    perspective: 1000;
-  }
-
-  &.active.active span:nth-of-type(2) {
-    opacity: 0;
-    perspective: 1000;
-  }
-
-  &.active span:nth-of-type(3) {
-    top: 36px;
-    left: 22px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 40%;
-    perspective: 1000;
-  }
-
-  &.active span:nth-of-type(3)::after {
-    content: "";
-
-  }
-
-
-  @include tab {
-    position: relative;
-    z-index: 99;
-    background: #333;
-    cursor: pointer;
-    width: 70px;
-    height: 64px;
-
-
-
-    span {
-
-      &:nth-of-type(3)::after {
-        content: "";
-        /*3つ目の要素のafterにMenu表示を指定*/
-      }
-    }
-
+  &.active {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
-
-
-/* =================================
-slide-menu
- ================================= */
 
 .slide-menu {
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  width: 500px;
-  background-color: #000;
-  right: -120%;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  position: absolute;
+  top: 79px;
+  left: 0;
+  padding: 20px 12px 40px;
+  color: #333;
+  background: rgb(48 113 185);
+  visibility: hidden;
   opacity: 0;
-  transition: all 0.5s;
-  z-index: 100;
-  overflow-y: scroll;
-  perspective: 1000;
+  /* 不透明度を最小に */
+  transition: 0.3s;
+  /* アニメーション設定 */
+  z-index: 99;
 
-  @include sp {
-    width: 100%;
-  }
-
-  &.open-menu {
-    transition: all 0.5s;
-    right: 0;
+  &.active {
+    visibility: visible;
     opacity: 1;
-    perspective: 1000;
   }
-
-  &__btn-wrap {
-    position: fixed;
-    top: 31px;
-    right: 19px;
-    cursor: pointer;
-  }
-
-  &__btn {
-    width: 30px;
-    height: 30px;
-    position: relative;
-
-    &::before {
-      content: "";
-      width: 100%;
-      height: 2px;
-      display: inline-block;
-      background: #fff;
-      border-radius: 2px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      content: "";
-      width: 100%;
-      height: 2px;
-      display: inline-block;
-      background: #fff;
-      border-radius: 2px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(-45deg);
-    }
-  }
-
-  &__inner {
-    width: 100%;
-    margin: 100px auto 40px;
-
-    @include sp {
-      margin: 80px auto 40px;
-    }
-  }
-
-  &__logo {
-    display: block;
-    background-color: #fff;
-    padding: 11px;
-    position: absolute;
-    top: 8px;
-    left: 90px;
-    width: 237px;
-
-    @include sp {
-      width: 200px;
-      left: 50%;
-      transform: translateX(-50%);
-
-    }
-  }
-
-  &__search-wrap {
-    margin: 0 auto 24px;
-    text-align: center;
-
-    button {
-      padding: 5px 15px;
-      margin-left: -5px;
-    }
-
-    input {
-      width: 380px;
-      padding: 8px;
-
-      @include sp {
-        width: 200px;
-      }
-    }
-
-  }
-
-  &__toggle-contents {
-    border-bottom: 1px solid #9d9b9b;
-    color: #fff;
-
-    &--first {
-      border-top: 1px solid #9d9b9b;
-    }
-
-  }
-
-  &__toggle-title {
-    padding: 14px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 1.4;
-    position: relative;
-
-    &::after {
-      border-right: solid 2px #fff;
-      border-top: solid 2px #fff;
-      content: "";
-      display: block;
-      height: 8px;
-      position: absolute;
-      right: 25px;
-      top: 38%;
-      transform: rotate(135deg);
-      transition: transform .3s ease-in-out, top .3s ease-in-out;
-      width: 8px;
-    }
-
-    &.open::after {
-      top: 45%;
-      transform: rotate(-45deg);
-    }
-
-  }
-
-  &__toggle-box {
-    display: none;
-    border-top: dotted 1px #9d9b9b;
-    border-bottom: dotted 1px #9d9b9b;
-    margin: 0 40px 24px;
-    padding: 8px 8px 2px 8px;
-
-  }
-
-  &__toggle-item {
-    color: #9d9b9b;
-    display: block;
-    font-size: 14px;
-    margin: 0 0 6px;
-
-    &:hover {
-      background-color: #9d9b9b;
-      color: #000;
-      text-decoration: none;
-    }
-  }
-
-  &__ {}
-
 }
+
+
+.disabled {
+  pointer-events: none;
+}
+
+
+
+
+
+
 
 /* =================================
 TOP 
@@ -531,7 +389,8 @@ TOP
 
   &__main-visual {
 
-    margin: 0 0 200px;
+    max-width: 1200px;
+    margin: 0 auto 200px;
 
 
     @include tab {
@@ -589,8 +448,52 @@ TOP
 TOP 
  ================================= */
 
+
+.top-main-visual {
+
+}
+
 .main-visual {
+  padding: 120px 12px 0;
   position: relative;
+  background-image: url(../img/top/main-visual-gb.jpg);
+
+  &__inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__text-wrap {
+
+  }
+
+  &__info-wrap {
+background-color: #fff;
+padding: 12px;
+  }
+
+
+  &__info-left {}
+
+  &__info-right {}
+
+  &__info-right-top {}
+
+  &__info-date {}
+
+  &__info-ca {}
+
+
+  &__info-ttl {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
   &__slider-wrap {}
 
