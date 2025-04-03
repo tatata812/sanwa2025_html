@@ -82,18 +82,26 @@ $(".open-btn-js02").on("click", function(){
 
   // ヘッダー隠れる動き
 
-  let startPos = 0;
-  let winScrollTop = 0;
-  const Header = $('.header');
-  $(window).on('scroll', function () {
-    winScrollTop = $(this).scrollTop();
-    if (winScrollTop >= startPos && winScrollTop > 100) { // ここにコードを追加
-      $(Header).addClass('active');
+  // let startPos = 0;
+  // let winScrollTop = 0;
+  // const Header = $('.header');
+  // $(window).on('scroll', function () {
+  //   winScrollTop = $(this).scrollTop();
+  //   if (winScrollTop >= startPos && winScrollTop > 100) { // ここにコードを追加
+  //     $(Header).addClass('active');
+  //   } else {
+  //     $(Header).removeClass('active');
+  //   }
+  //   startPos = winScrollTop;
+  // });
+
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 100) {
+        $(".header").addClass("active");
     } else {
-      $(Header).removeClass('active');
+        $(".header").removeClass("active");
     }
-    startPos = winScrollTop;
-  });
+});
 
 
   // メインビジュアル　スライダー

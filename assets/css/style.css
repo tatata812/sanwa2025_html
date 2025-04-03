@@ -5168,7 +5168,7 @@ header（PC）
   position: fixed;
   top: 0;
   width: 100%;
-  transition: all 1s;
+  transition: all 0.3s;
   height: 79px;
 }
 @media (max-width: 780px) {

@@ -39,7 +39,7 @@ header（PC）
   position: fixed;
   top: 0;
   width: 100%;
-  transition: all 1s;
+  transition: all 0.3s;
   height: 79px;
 
 
@@ -95,8 +95,6 @@ header（PC）
     display: block;
     margin: 0 40px 0 0;
     color: #333;
-
-
   }
 
   &__global-list {
@@ -121,7 +119,6 @@ header（PC）
     &--none {
       @media screen and (max-width: 1050px) {
         display: none;
-
       }
     }
 
