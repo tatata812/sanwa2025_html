@@ -22,12 +22,7 @@
 
 .main {
   position: relative;
-
-
-  @include tab {
-    overflow: hidden;
-  }
-
+  overflow: hidden;
 }
 
 /* =================================
@@ -337,7 +332,7 @@ header（PC）
     opacity: 1;
   }
 
-  @include tab{
+  @include tab {
     top: 62px;
   }
 }
@@ -364,7 +359,7 @@ header（PC）
     opacity: 1;
   }
 
-  @include tab{
+  @include tab {
     top: 62px;
   }
 }
@@ -457,7 +452,7 @@ TOP
   background-repeat: no-repeat;
   background-size: cover;
 
-  @include tab{
+  @include tab {
     padding: 100px 8px 40px;
   }
 
@@ -467,7 +462,7 @@ TOP
     display: flex;
     align-items: flex-start;
 
-    @include pc{
+    @include pc {
       flex-direction: column;
       align-items: center;
       gap: 40px;
@@ -501,11 +496,11 @@ TOP
       margin: 0 0 0 -280px;
     }
 
-    @include pc{
-      margin:0;
+    @include pc {
+      margin: 0;
     }
 
-    @include tab{
+    @include tab {
       flex-direction: column;
     }
 
@@ -526,12 +521,12 @@ TOP
       /* rotate(45deg)で矢印を回転（向きを変更）させる */
       transition: all 0.5s;
 
-      @include tab{
-      display: none;
+      @include tab {
+        display: none;
       }
     }
-  
-  
+
+
     &:hover {
       &:after {
         right: 15px;
@@ -548,7 +543,7 @@ TOP
     height: 50px;
     line-height: 50px;
 
-    @include tab{
+    @include tab {
       border-right: none;
       border-bottom: #9d9b9b 1px solid;
       width: 100%;
@@ -559,16 +554,16 @@ TOP
     width: 350px;
     margin: 0 0 0 24px;
 
-    @include tab{
-    width: 300px;
-    margin: 8px 0 0 0;
+    @include tab {
+      width: 300px;
+      margin: 8px 0 0 0;
     }
   }
 
   &__info-right-top {
 
-    @include tab{
-    text-align: center;
+    @include tab {
+      text-align: center;
     }
   }
 
@@ -579,14 +574,14 @@ TOP
   }
 
   &__info-cat {
-     padding: 0 0 0 12px;
+    padding: 0 0 0 12px;
   }
 
 
   &__info-ttl {
-    @include tab{
+    @include tab {
       text-align: center;
-      }
+    }
   }
 
   // スライダー
@@ -596,7 +591,7 @@ TOP
     margin: 0 auto 120px;
     border-radius: 30px;
 
-    @include pc{
+    @include pc {
       max-width: 880px;
       margin: 0 auto 40px;
     }
@@ -604,7 +599,8 @@ TOP
 
   &__slider {
 
-    img,video {
+    img,
+    video {
       border-radius: 28px;
     }
 
@@ -683,23 +679,23 @@ TOP
 
 
   &__link-wrap {
-display: flex;
-gap: 32px;
-max-width: 980px;
-margin: 0 auto;
+    display: flex;
+    gap: 32px;
+    max-width: 980px;
+    margin: 0 auto;
 
 
-@include tab{
-justify-content: center;
-gap: 24px;
-flex-wrap: wrap;
-}
+    @include tab {
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
   }
 
 
   &__link {
-    @include tab{
-   width: calc((100% - 24px) / 2);
+    @include tab {
+      width: calc((100% - 24px) / 2);
     }
   }
 
@@ -708,6 +704,7 @@ flex-wrap: wrap;
 
 .text-animation {
   color: #3071b9;
+
   span {
     animation-name: blur;
     animation-fill-mode: both;
@@ -721,17 +718,19 @@ flex-wrap: wrap;
     opacity: 0;
 
   }
-  
+
   span:nth-child(1) {
     font-size: 52px;
     animation-delay: 0.1s;
     -webkit-animation-delay: 0.1s;
   }
+
   span:nth-child(2) {
     font-size: 52px;
     animation-delay: 1s;
     margin: 0 0 0 100px;
   }
+
   span:nth-child(3) {
     font-size: 20px;
     animation-delay: 1.8s;
@@ -739,45 +738,68 @@ flex-wrap: wrap;
 
   }
 
-  @include pc{
+  @include pc {
     span:nth-child(1) {
       font-size: 42px;
     }
+
     span:nth-child(2) {
       font-size: 42px;
       margin: 0 0 0 60px;
     }
+
     span:nth-child(3) {
       font-size: 18px;
       margin: 12px 0 0 120px;
-  
+
     }
   }
 
-  @include tab{
+  @include tab {
     span:nth-child(1) {
       font-size: 32px;
     }
+
     span:nth-child(2) {
       font-size: 32px;
       margin: 0 0 0 0px;
     }
+
     span:nth-child(3) {
       font-size: 18px;
       margin: 12px 0 0 0;
-  
+
     }
   }
 }
-  
-  @keyframes blur {
-    0%    {text-shadow:  0 0 100px #fff; opacity:0;}
-    5%    {text-shadow:  0 0 90px #fff;}
-    20%   {text-shadow:  0 0 0px #fff;}
-    80%   {text-shadow:  0 0 0px #fff;}
-    95%   {text-shadow:  0 0 90px #fff;}
-    100%  {text-shadow:  0 0 100px #fff;opacity: 1; }
+
+@keyframes blur {
+  0% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 0;
   }
+
+  5% {
+    text-shadow: 0 0 90px #fff;
+  }
+
+  20% {
+    text-shadow: 0 0 0px #fff;
+  }
+
+  80% {
+    text-shadow: 0 0 0px #fff;
+  }
+
+  95% {
+    text-shadow: 0 0 90px #fff;
+  }
+
+  100% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 1;
+  }
+}
 
 
 
@@ -785,27 +807,28 @@ flex-wrap: wrap;
 ニュース
  ================================= */
 
- .top-news {
+.top-news {
   padding: 80px 0;
+  position: relative;
+  z-index: 0;
 
-  @include tab{
+  @include tab {
     padding: 40px 0;
-
   }
 
   &__inner-bg {
-    background-color:rgb(214 240 241 / 50%);
+    background-color: rgb(214 240 241 / 50%);
     margin: 0 0 0 5%;
     padding: 60px 60px 60px 120px;
     border-radius: 40px 0 0 40px;
 
-    @include pc{
+    @include pc {
       margin: 0 0 0 2%;
       padding: 60px 12px 24px 12px;
       border-radius: 12px 0 0 12px;
     }
 
-    @include tab{
+    @include tab {
       margin: 0 0 0 2%;
       padding: 24px 12px 24px 12px;
       border-radius: 12px 0 0 12px;
@@ -814,19 +837,19 @@ flex-wrap: wrap;
   }
 
   &__inner {
-max-width: 980px;
-margin: 0 auto;
+    max-width: 980px;
+    margin: 0 auto;
 
 
   }
-  
+
 
 
 
   &__ttl {
     margin: 0 0 60px;
 
-    @include tab{
+    @include tab {
       margin: 0 0 32px;
     }
   }
@@ -835,7 +858,7 @@ margin: 0 auto;
     display: flex;
     padding: 24px 80px 24px;
 
-    @include tab{
+    @include tab {
       padding: 0 12px 24px;
       justify-content: center;
 
@@ -861,6 +884,7 @@ margin: 0 auto;
 
     &.active {
       font-weight: bold;
+
       &::before {
         position: absolute;
         content: "";
@@ -873,17 +897,15 @@ margin: 0 auto;
         left: 50%;
         transform: translateX(-50%)scale(0.4);
 
-        @include tab{
+        @include tab {
           bottom: -8px;
-  
+
         }
       }
     }
   }
 
-  &__box {
-
-  }
+  &__box {}
 
   &__box-item {
     display: none;
@@ -1008,12 +1030,12 @@ margin: 0 auto;
       /* rotate(45deg)で矢印を回転（向きを変更）させる */
       transition: all 0.5s;
 
-      @include tab{
-      display: none;
+      @include tab {
+        display: none;
       }
     }
-  
-  
+
+
     &:hover {
       &:after {
         right: 15px;
@@ -1027,16 +1049,16 @@ margin: 0 auto;
     width: 350px;
     margin: 0 0 0 24px;
 
-    @include tab{
-    width: 300px;
-    margin: 8px 0 0 0;
+    @include tab {
+      width: 300px;
+      margin: 8px 0 0 0;
     }
   }
 
   &__info-right-top {
 
-    @include tab{
-    text-align: center;
+    @include tab {
+      text-align: center;
     }
   }
 
@@ -1047,27 +1069,50 @@ margin: 0 auto;
   }
 
   &__info-cat {
-     padding: 0 0 0 12px;
+    padding: 0 0 0 12px;
   }
 
 
   &__info-ttl {
-    @include tab{
+    @include tab {
       text-align: center;
-      }
+    }
   }
 
   &__link-wrap {
     text-align: center;
-    margin: 60px 0 0 ;
+    margin: 60px 0 0;
 
-    @include tab{
-      margin: 24px 0 0 ;
+    @include tab {
+      margin: 24px 0 0;
 
     }
   }
 
-  &__ {}
+  &__bg-left {
+    top: -80px;
+    left: -300px;
+
+    @include pc {
+      top: -80px;
+      left: -100px;
+    }
+
+    @include tab{
+      top: -20px;
+      left: -60px;
+    }
+  }
+
+  &__bg-right {
+    bottom: -150px;
+    right: 0;
+
+    @include pc {
+      bottom: -10px;
+      right: -30px;
+    }
+  }
 
 
 }
@@ -1077,94 +1122,7 @@ margin: 0 auto;
 
  ================================= */
 
- .aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-
-/* =================================
-
- ================================= */
-
- .aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
- .aaa {
+.aaa {
 
   &__ {}
 
@@ -1208,7 +1166,94 @@ margin: 0 auto;
 
  ================================= */
 
- .aaa {
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+
+/* =================================
+
+ ================================= */
+
+.aaa {
 
   &__ {}
 

@@ -185,6 +185,16 @@ h3 {
   }
 }
 
+.top-bg {
+  position: absolute;
+  width: 800px;
+  z-index: -1;
+
+  @include pc{
+  width: 60%;
+  }
+}
+
 
 
 
