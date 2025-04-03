@@ -173,6 +173,20 @@ $(".open-btn-js02").on("click", function(){
     $(".page-newsrelease__box-item").eq(i).addClass("active");
   });
 
+  // トップページのパララックス
+  $(window).scroll(function () {
+		$('.contents div').each(function () {
+			boxNum = $(this).attr("class"),
+			scrollTop = $(window).scrollTop();
+			areaTop = $(this).offset().top;
+			if (scrollTop > areaTop) {
+				$('.images .' + boxNum).addClass('active');
+			} else{
+				$('.images .' + boxNum).removeClass('active');
+			}
+		});
+	});
+
   $(".footer__scroll-btn").click(function () {
     $("body,html").animate({
         scrollTop: 0 //ページトップまでスクロール
