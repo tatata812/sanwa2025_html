@@ -248,6 +248,20 @@ header（PC）
       right: 15px;
     }
   }
+
+  &--long {
+    width: 480px;
+    padding: 24px;
+    font-size: 24px;
+
+    @include tab{
+      width: 280px;
+      padding: 16px;
+      font-size: 20px;
+    }
+
+
+  }
 }
 
 .child-menu {
@@ -1621,8 +1635,13 @@ position: relative;
   padding: 80px 12px;
   position: relative;
 
+  @include tab{
+    padding: 80px 12px 40px;
+
+  }
+
   &__wrap {
-    max-width: 800px;
+    max-width: 760px;
     margin: 0 auto;
     border: #eaf7fc 2px solid;
     border-radius: 12px;
@@ -1646,12 +1665,11 @@ position: relative;
 
   &__item {
     padding: 12px;
-    max-width: 300px;
+    max-width: 280px;
   }
 
   &__img {
     border-radius: 12px 12px 0 0;
-
   }
 
   &__ {}
@@ -1682,10 +1700,307 @@ position: relative;
     @include pc {
       bottom: -10px;
     }
+
+    @include tab{
+    display: none;
+    }
   }
   &__ {}
 
   &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+リクルート
+ ================================= */
+
+ .top-recruit {
+
+  padding: 80px 0;
+  position: relative;
+  z-index: 0;
+
+  @include tab {
+    padding: 40px 0 80px;
+  }
+
+  &__bg {
+    background-color: rgb(214 240 241 / 50%);
+    margin: 0 5% 0 0;
+    padding: 60px 60px 60px 120px;
+    border-radius: 0 40px 40px 0 ;
+
+    @include pc {
+      margin: 0 0 0 2%;
+      padding: 60px 12px 24px 12px;
+      border-radius: 12px 0 0 12px;
+    }
+
+    @include tab {
+      margin: 0 0 0 2%;
+      padding: 24px 12px 24px 12px;
+      border-radius: 12px 0 0 12px;
+    }
+
+  }
+
+  &__ttl-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 0 0 60px 5%;
+
+    @include tab{
+      gap: 24px;
+    flex-direction: column;
+    margin: 0 0 24px 0;
+
+    }
+  }
+
+  &__ttl {
+    margin: 0 0 0 -198px;
+
+    @include pc{
+      margin: 0;
+
+    }
+  }
+
+  &__link-wrap {
+    display: flex;
+    gap: 32px;
+    max-width: 980px;
+    margin: 0 auto;
+    justify-content: center;
+
+
+
+    @include tab {
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  }
+
+
+  &__link {
+    @include tab {
+      width: calc((100% - 16px) / 2);
+    }
+
+    &:nth-of-type(1) {
+  order: 2;
+    }
+  }
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+地域貢献
+ ================================= */
+
+ .top-contribution {
+  padding: 0 12px 80px;
+
+  @include tab{
+    padding: 0 12px 40px;
+
+  }
+
+  &__inner {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  &__wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    border: #eaf7fc 2px solid;
+    border-radius: 12px;
+
+  }
+
+  &__ttl {
+    margin: 0 0 80px;
+
+    @include tab{
+      margin: 0 0 24px;
+
+    }
+  }
+
+  &__item-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    @include sp{
+    flex-direction: column;
+    gap: 4px;
+
+    }
+  }
+
+  &__item {
+    padding: 24px 60px;
+
+    @include tab{
+      padding: 24px 8px 20px;
+
+    }
+  }
+
+  &__img {
+    border-radius: 12px 12px 0 0;
+  }
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+バナー郡
+ ================================= */
+
+ .top-bnr {
+
+  padding: 80px 0 0;
+  position: relative;
+  z-index: 0;
+
+  @include tab {
+    padding: 40px 0 0;
+  }
+
+  &__bg {
+    background-color: rgb(214 240 241 / 50%);
+    margin: 0 0 0 5%;
+    padding: 60px 60px 60px 120px;
+    border-radius: 40px 0 0 0;
+
+    @include pc {
+      margin: 0 0 0 2%;
+      padding: 60px 12px 24px 12px;
+      border-radius: 12px 0 0 0;
+    }
+
+    @include tab {
+      margin: 0 0 0 2%;
+      padding: 40px 12px 12px 12px;
+      border-radius: 12px 0 0 0;
+    }
+
+  }
+
+  &__box {
+    max-width: 1080px;
+    margin: 0 auto;
+
+  }
+
+  &__ttl {
+    color: #3071b9;
+    margin: 0 0 24px;
+    font-size: 22px;
+    font-weight: bold;
+
+    @include tab{
+      font-size: 18px;
+
+    }
+  }
+
+  &__link-wrap {
+    display: flex;
+    gap: 32px;
+    margin: 0 0 60px;
+
+
+    &--bottom {
+      margin: 0;
+
+    }
+
+
+    @include tab {
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__link {
+    @include tab {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
 
   &__ {}
 
