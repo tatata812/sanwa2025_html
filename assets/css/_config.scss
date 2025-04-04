@@ -243,7 +243,15 @@ input[type="text"] {
     position: relative;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+
+
+    @media screen and (max-width: 1520px) {
+      height: 500px;
+      background-size: contain;
+
+
+    }
 
     @include pc {
       height: 400px;

@@ -150,7 +150,7 @@
     padding: 0 16px;
 
     @include pc{
-      gap: 24px;
+      gap: 16px;
 
     }
   }
@@ -160,12 +160,12 @@
     margin: 0 0 40px;
 
     @include pc{
-      width: calc((100% - 48px) / 3);
+      width: calc((100% - 32px) / 3);
 
     }
 
     @include tab{
-      width: calc((100% - 24px) / 2);
+      width: calc((100% - 20px) / 2);
       margin: 0 0 12px;
 
     }
