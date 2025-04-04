@@ -80,7 +80,7 @@
 
 
           <!-- ホバーメニュー -->
-          <div class="header__global-child-wrap">
+          <!-- <div class="header__global-child-wrap">
             <div class="header__global-child-inner child-menu">
               <div class="child-menu__content">
                 <div class="child-menu__item">
@@ -115,7 +115,7 @@
 
               </div>
             </div>
-          </div>
+          </div> -->
         </nav>
       </div>
       <div class="open-btn">
@@ -130,117 +130,77 @@
       <!-- 検索メニュー -->
       <div class="search-menu">
         <div class="search-menu__inner">
-          <form id="form" action="自分のサイトURL" method="get">
-            <input id="s-box" name="s" type="text" placeholder="キーワードを入力" />
-            <button type="submit" id="s-btn-area">
-              <div id="s-btn">検索</div>
-            </button>
-          </form>
+          <div class="search-menu__input-wrap">
+            <form id="form" action="自分のサイトURL" method="get">
+              <input id="s-box" name="s" type="text" placeholder="検索ワードを入力" />
+              <button type="submit" id="s-btn-area">
+                <div id="s-btn">検索</div>
+              </button>
+            </form>
+          </div>
+
         </div>
       </div>
       <!-- スライドメニュー -->
       <div class="slide-menu">
-        <div class="search-menu__inner">
+        <div class="slide-menu__inner">
+          <div class="slide-menu__top">
+            <div class="slide-menu__top-item">
+              <p class="slide-menu__top-ttl">会社案内</p>
+              <a href="" class="slide-menu__top-link">会社概要</a>
+              <a href="" class="slide-menu__top-link">企業理念</a>
+              <a href="" class="slide-menu__top-link">沿革</a>
+              <p href="" class="slide-menu__top-link slide-menu__top-link--arrow top-link-js">事業案内</p>
+              <div class="slide-menu__top-link-content">
+                <a href="" class="slide-menu__top-link">建材販売</a>
+                <a href="" class="slide-menu__top-link">家具・インテリア</a>
+                <a href="" class="slide-menu__top-link">物流</a>
+                <a href="" class="slide-menu__top-link">施工</a>
+              </div>
+              <p href="" class="slide-menu__top-link slide-menu__top-link--arrow top-link-js">営業所</p>
+              <div class="slide-menu__top-link-content">
+                <a href="" class="slide-menu__top-link">一覧</a>
+                <a href="" class="slide-menu__top-link">本社</a>
+                <a href="" class="slide-menu__top-link">徳山営業所</a>
+                <a href="" class="slide-menu__top-link">防府営業所</a>
+                <a href="" class="slide-menu__top-link">小郡営業所</a>
+                <a href="" class="slide-menu__top-link">宇部営業所</a>
+                <a href="" class="slide-menu__top-link">Gallery 宇部</a>
+                <a href="" class="slide-menu__top-link">下関営業所</a>
+                <a href="" class="slide-menu__top-link">福岡営業所</a>
+              </div>
+              <a href="" class="slide-menu__top-link">株式会社ビーテクス</a>
+            </div>
+            <div class="slide-menu__top-item">
+              <p class="slide-menu__top-ttl">ニュース</p>
+              <a href="" class="slide-menu__top-link">お知らせ</a>
+              <a href="" class="slide-menu__top-link">イベント</a>
+              <a href="" class="slide-menu__top-link">リクルート</a>
+            </div>
+            <div class="slide-menu__top-item">
+              <p class="slide-menu__top-ttl">お問い合わせ</p>
+              <a href="" class="slide-menu__top-link">採用に関するお問い合わせ</a>
+              <a href="" class="slide-menu__top-link">法人様向けお問い合わせ</a>
+              <a href="" class="slide-menu__top-link">一般向けお問い合わせ</a>
+            </div>
+            <div class="slide-menu__top-item">
+              <p class="slide-menu__top-ttl">採用情報</p>
+              <a href="" class="slide-menu__top-link">リクルート動画</a>
+            </div>
+          </div>
+          <div class="slide-menu__bottom">
+            <a href="" class="slide-menu__bottom-link">サイトについて</a>
+            <a href="" class="slide-menu__bottom-link">プライバシーポリシー</a>
+            <a href="" class="slide-menu__bottom-link">サイトマップ</a>
+            <a href="" class="slide-menu__bottom-link">リンクレノファ</a>
+            <a href="" class="slide-menu__bottom-link">山口 FC オフィシャルパートナー</a>
+          </div>
         </div>
       </div>
     </header>
   </div>
 
-
-  <!-- <div class="slide-menu">
-    <div class="slide-menu__btn-wrap">
-      <div class="slide-menu__btn">
-      </div>
-    </div>
-    <div class="slide-menu__inner">
-      <a class="slide-menu__logo" href="index.html">
-        <img src="assets/img/top/header_logo.png" alt="">
-      </a>
-      <div class="slide-menu__search-wrap">
-        <form id="form" action="自分のサイトURL" method="get">
-          <input id="s-box" name="s" type="text" placeholder="キーワードを入力" />
-          <button type="submit" id="s-btn-area">
-            <div id="s-btn">検索</div>
-          </button>
-        </form>
-      </div>
-      <div class="slide-menu__toggle-contents slide-menu__toggle-contents--first">
-        <dt class="slide-menu__toggle-title">会社案内</dt>
-        <dd class="slide-menu__toggle-box">
-          <a href="message.html" class="slide-menu__toggle-item">社長メッセージ</a>
-          <a href="outline.html" class="slide-menu__toggle-item">会社概要</a>
-          <a href="vision.html" class="slide-menu__toggle-item">企業理念</a>
-          <a href="history.html" class="slide-menu__toggle-item">沿革</a> <a href="beetecs.html"
-            class="slide-menu__toggle-item">関連会社ビーテクス</a>
-        </dd>
-      </div>
-      <div class="slide-menu__toggle-contents">
-        <dt class="slide-menu__toggle-title">事業案内</dt>
-        <dd class="slide-menu__toggle-box">
-          <a href="services.html" class="slide-menu__toggle-item">事業案内</a>
-          <a href="materials.html" class="slide-menu__toggle-item">建材販売</a>
-          <a href="interior.html" class="slide-menu__toggle-item">家具・インテリア</a>
-          <a href="logistics.html" class="slide-menu__toggle-item">物流</a>
-          <a href="construction.html" class="slide-menu__toggle-item">施工</a>
-        </dd>
-      </div>
-      <dl class="slide-menu__toggle-contents">
-        <dt class="slide-menu__toggle-title">営業所</dt>
-        <dd class="slide-menu__toggle-box">
-          <a href="office.html" class="slide-menu__toggle-item">一覧</a>
-          <a href="head.html" class="slide-menu__toggle-item">本社</a>
-          <a href="tokuyama.html" class="slide-menu__toggle-item">徳山営業所</a>
-          <a href="hofu.html" class="slide-menu__toggle-item">防府営業所</a>
-          <a href="ogori.html" class="slide-menu__toggle-item">小郡営業所</a>
-          <a href="ube.html" class="slide-menu__toggle-item">宇部営業所</a>
-          <a href="gallery_ube.html" class="slide-menu__toggle-item">Gallery 宇部</a>
-          <a href="shimonoseki.html" class="slide-menu__toggle-item">下関営業所</a>
-          <a href="fukuoka.html" class="slide-menu__toggle-item">福岡営業所</a>
-        </dd>
-      </dl>
-      <dl class="slide-menu__toggle-contents">
-        <dt class="slide-menu__toggle-title">お知らせ</dt>
-        <dd class="slide-menu__toggle-box">
-          <a href="" class="slide-menu__toggle-item">お知らせ</a>
-          <a href="#" class="slide-menu__toggle-item">イベント</a>
-          <a href="#" class="slide-menu__toggle-item">リクルート</a>
-        </dd>
-      </dl>
-      <dl class="slide-menu__toggle-contents">
-        <dt class="slide-menu__toggle-title">採用情報</dt>
-        <dd class="slide-menu__toggle-box">
-          <a href="" class="slide-menu__toggle-item">採用情報</a>
-          <a href="#" class="slide-menu__toggle-item">三和リクルートサイト</a>
-        </dd>
-      </dl>
-      <dl class="slide-menu__toggle-contents">
-        <dt class="slide-menu__toggle-title">お問い合わせ</dt>
-        <dd class="slide-menu__toggle-box">
-          <a href="inquiry.html" class="slide-menu__toggle-item">お問い合わせ</a>
-          <a href="employment.html" class="slide-menu__toggle-item">採用に関するお問い合わせ</a>
-          <a href="business.html" class="slide-menu__toggle-item">法人様向けお問い合わせ</a>
-          <a href="personal.html" class="slide-menu__toggle-item">一般向けお問い合わせ</a>
-        </dd>
-      </dl>
-      <dl class="slide-menu__toggle-contents">
-        <dt class="slide-menu__toggle-title">サイトについて</dt>
-        <dd class="slide-menu__toggle-box">
-          <a href="usersguide.html" class="slide-menu__toggle-item">サイトについて</a>
-          <a href="privacy.html" class="slide-menu__toggle-item">プライバシーポリシー</a>
-          <a href="sitemap.html" class="slide-menu__toggle-item">サイトマップ</a>
-          <a href="link.html" class="slide-menu__toggle-item">リンク</a>
-          <a href="renofa.html" class="slide-menu__toggle-item">レノファ山口FCスポンサード</a>
-        </dd>
-      </dl>
-
-    </div>
-  </div> -->
-
-
-
-
   <div class="main page-top">
-
     <section class="main-visual">
       <div class="main-visual__inner">
         <p class="main-visual__text-wrap text-animation">
@@ -491,9 +451,9 @@
           <p class="top-role__text">明日の「すまう」を実現するため、「すまう人」と「つくる人」をつないで<br>
             「より快適で安心な空間づくり」に貢献していきます。</p>
         </div>
-  
-  
-  
+
+
+
         <!-- パララックス -->
         <div class="wrapper">
           <!-- 画像のブロック -->
@@ -521,7 +481,7 @@
                 安定した仕入れが可能です。</p>
               <p class="scroll-box-text">仕入先も複数あるため<br>
                 建材不足になることもありません。</p>
-  
+
             </div>
             <div class="scroll-box03">
               <p class="scroll-box-lead">三和の役割</p>
@@ -536,11 +496,11 @@
               <p class="scroll-box-text">関連会社ビーテクスによる<br>
                 ジャストインタイムでの運搬、施工も<br>
                 サポートしています。</p>
-  
+
             </div>
             <div class="scroll-box04">
               <p class="scroll-box-lead">三和の役割</p>
-  
+
               <h2 class="scroll-box-ttl">ショールーム</h2>
               <p class="scroll-box-ttl-en"><img src="assets/img/top/top-role-ttl04-en.png" alt=""></p>
               <p class="scroll-box-text">三和のショールームでは<br>
@@ -571,14 +531,10 @@
           住宅はもとより全ての建築物を対象に「快適安心空間」を最適条件で実現していきます。</p>
       </div>
       <div class="top-about__link-wrap">
-        <a href="" class="top-about__link"><img
-            src="assets/img/top/top-about-link01.png" alt="建材販売"></a>
-        <a href="" class="top-about__link"><img
-            src="assets/img/top/top-about-link02.png" alt="家具・インテリア"></a>
-        <a href="" class="top-about__link"><img
-            src="assets/img/top/top-about-link03.png" alt="物流"></a>
-            <a href="" class="top-about__link"><img
-              src="assets/img/top/top-about-link04.png" alt="施工"></a>
+        <a href="" class="top-about__link"><img src="assets/img/top/top-about-link01.png" alt="建材販売"></a>
+        <a href="" class="top-about__link"><img src="assets/img/top/top-about-link02.png" alt="家具・インテリア"></a>
+        <a href="" class="top-about__link"><img src="assets/img/top/top-about-link03.png" alt="物流"></a>
+        <a href="" class="top-about__link"><img src="assets/img/top/top-about-link04.png" alt="施工"></a>
       </div>
 
 
@@ -590,14 +546,14 @@
     <section class="top-calendar">
 
       <div class="top-calendar__wrap">
-        <img src="assets/img/top/top-calendar01.jpg" alt=""  class="top-calendar__img">
+        <img src="assets/img/top/top-calendar01.jpg" alt="" class="top-calendar__img">
         <div class="top-calendar__item-wrap">
           <a href="" class="top-calendar__item"><img src="assets/img/top/top-calendar-item01.png" alt=""></a>
           <a href="" class="top-calendar__item"><img src="assets/img/top/top-calendar-item02.png" alt=""></a>
-        
+
         </div>
 
-      
+
       </div>
       <div class="top-calendar__bg-left top-bg">
         <img src="assets/img/top/bg-left.png" alt="">
@@ -616,9 +572,9 @@
           <a href="" class="header-arrow-button header-arrow-button--long">採用のご案内</a>
         </div>
         <div class="top-recruit__link-wrap">
-          <a href=""  class="top-recruit__link"><img src="assets/img/top/top-recruit01.png" alt="youtube"></a>
-          <a href=""  class="top-recruit__link"><img src="assets/img/top/top-recruit02.png" alt="マイナビ2026年卒"></a>
-          <a href=""  class="top-recruit__link"><img src="assets/img/top/top-recruit03.png" alt="マイナビ2027年卒"></a>
+          <a href="" class="top-recruit__link"><img src="assets/img/top/top-recruit01.png" alt="youtube"></a>
+          <a href="" class="top-recruit__link"><img src="assets/img/top/top-recruit02.png" alt="マイナビ2026年卒"></a>
+          <a href="" class="top-recruit__link"><img src="assets/img/top/top-recruit03.png" alt="マイナビ2027年卒"></a>
         </div>
       </div>
     </section>
@@ -628,15 +584,15 @@
       <div class="top-contribution__inner">
         <h2 class="section-ttl top-contribution__ttl">地域貢献</h2>
         <div class="top-contribution__wrap">
-          <img src="assets/img/top/top-contribution01.jpg" alt=""  class="top-contribution__img">
+          <img src="assets/img/top/top-contribution01.jpg" alt="" class="top-contribution__img">
           <div class="top-contribution__item-wrap">
             <a href="" class="top-contribution__item">
               <img src="assets/img/top/top-contribution-text-img.png" alt="株式会社三和はレノファ山口FCを応援しています" class="pc-block">
               <img src="assets/img/top/top-contribution-text-img-sp.png" alt="株式会社三和はレノファ山口FCを応援しています" class="sp-block">
 
-            </a>          
-          </div>      
-        </div>      
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -646,17 +602,17 @@
         <div class="top-bnr__box">
           <p class="top-bnr__ttl">外部LINK（一般の方向け）</p>
           <div class="top-bnr__link-wrap">
-            <a href=""  class="top-bnr__link"><img src="assets/img/top/top-bnr01.png" alt="Sanwa Gallery Ube"></a>
-            <a href=""  class="top-bnr__link"><img src="assets/img/top/top-bnr02.png" alt="マエコ・セ・トラ"></a>
-            <a href=""  class="top-bnr__link"><img src="assets/img/top/top-bnr03.png" alt="じゅうmado"></a>
+            <a href="" class="top-bnr__link"><img src="assets/img/top/top-bnr01.png" alt="Sanwa Gallery Ube"></a>
+            <a href="" class="top-bnr__link"><img src="assets/img/top/top-bnr02.png" alt="マエコ・セ・トラ"></a>
+            <a href="" class="top-bnr__link"><img src="assets/img/top/top-bnr03.png" alt="じゅうmado"></a>
           </div>
         </div>
         <div class="top-bnr__box top-bnr__box--bottom">
           <p class="top-bnr__ttl">外部LINK（一般の方向け）</p>
           <div class="top-bnr__link-wrap">
-            <a href=""  class="top-bnr__link"><img src="assets/img/top/top-bnr04.png" alt="Sanwa Gallery Ube"></a>
-            <a href=""  class="top-bnr__link"><img src="assets/img/top/top-bnr05.png" alt="マエコ・セ・トラ"></a>
-            <a href=""  class="top-bnr__link"><img src="assets/img/top/top-bnr06.png" alt="じゅうmado"></a>
+            <a href="" class="top-bnr__link"><img src="assets/img/top/top-bnr04.png" alt="Sanwa Gallery Ube"></a>
+            <a href="" class="top-bnr__link"><img src="assets/img/top/top-bnr05.png" alt="マエコ・セ・トラ"></a>
+            <a href="" class="top-bnr__link"><img src="assets/img/top/top-bnr06.png" alt="じゅうmado"></a>
           </div>
         </div>
 
@@ -678,73 +634,80 @@
 
 
 
-  <!-- <footer class="footer">
-    <div class="footer__top pc-block">
-      <div class="footer__top-inner">
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
         <div class="footer__top-item">
-          <a href="company.html" class="footer__top-link">会社案内</a>
-          <ul class="footer__top-list">
-            <li><a href="outline.html">会社概要</a></li>
-            <li><a href="history.html">沿革</a></li>
-            <li><a href="services.html">事業案内</a></li>
-            <li><a href="office.html">営業所</a></li>
-            <li><a href="beetecs.html">関連会社</a></li>
-          </ul>
+          <p class="footer__top-ttl">会社案内</p>
+          <div class="footer__top-content">
+            <div class="footer__top-content-item">
+              <a href="" class="footer__top-link">社長メッセージ</a>
+              <a href="" class="footer__top-link">会社概要</a>
+              <a href="" class="footer__top-link">企業理念</a>
+              <a href="" class="footer__top-link">沿革</a>
+            </div>
+            <div class="footer__top-content-item">
+              <p href="" class="footer__top-link">事業案内</p>
+              <div class="footer__top-link-box">
+                <a href="" class="footer__top-link">建材販売</a>
+                <a href="" class="footer__top-link">家具・インテリア</a>
+                <a href="" class="footer__top-link">物流</a>
+                <a href="" class="footer__top-link">施工</a>
+              </div>
+            </div>
+            <div class="footer__top-content-item">
+              <p href="" class="footer__top-link">営業所</p>
+              <div class="footer__top-link-box">
+                <a href="" class="footer__top-link">一覧</a>
+                <a href="" class="footer__top-link">本社</a>
+                <a href="" class="footer__top-link">徳山営業所</a>
+                <a href="" class="footer__top-link">防府営業所</a>
+                <a href="" class="footer__top-link">小郡営業所</a>
+                <a href="" class="footer__top-link">宇部営業所</a>
+                <a href="" class="footer__top-link">Gallery 宇部</a>
+                <a href="" class="footer__top-link">下関営業所</a>
+                <a href="" class="footer__top-link">福岡営業所</a>
+              </div>
+              <a href="" class="footer__top-link">株式会社ビーテクス</a>
+            </div>
+          </div>
         </div>
         <div class="footer__top-item">
-          <a href="" class="footer__top-link">ニュース</a>
-          <ul class="footer__top-list">
-            <li><a href="archive.html">2023年</a></li>
-            <li><a href="archive.html">2022年</a></li>
-            <li><a href="archive.html">2021年</a></li>
-            <li><a href="archive.html">2020年</a></li>
-            <li><a href="archive.html">2019年</a></li>
-          </ul>
-        </div>
+          <p class="footer__top-ttl">ニュース</p>
+          <a href="" class="footer__top-link">お知らせ</a>
+          <a href="" class="footer__top-link">イベント</a>
+          <a href="" class="footer__top-link footer__top-link--margin">リクルート</a>
+          <a href="" class="footer__top-link">2025年</a>
+          <a href="" class="footer__top-link">2024年</a>
+          <a href="" class="footer__top-link">2023年</a>
+          <a href="" class="footer__top-link">2022年</a>
+          <a href="" class="footer__top-link">2021年</a>
 
-        <div class="footer__top-item">
-          <a href="inquiry.html" class="footer__top-link">お問い合わせ</a>
-          <ul class="footer__top-list">
-            <li><a href="employment.html">採用に関するお問い合わせ</a></li>
-            <li><a href="business.html">法人に関するお問い合わせ</a></li>
-            <li><a href="personal.html">一般向けお問い合わせ</a></li>
-          </ul>
-        </div>
 
-        <div class="footer__top-item">
-          <a href="" class="footer__top-link">採用案内</a>
         </div>
-
         <div class="footer__top-item">
-          <ul class="footer__top-list">
-            <li><a href="usersguide.html">サイトについて</a></li>
-            <li><a href="privacy.html">プライバシーポリシー</a></li>
-            <li><a href="sitemap.html">サイトマップ</a></li>
-            <li><a href="link.html">リンク</a></li>
-          </ul>
+          <p class="footer__top-ttl">お問い合わせ</p>
+          <a href="" class="footer__top-link">採用に関するお問い合わせ</a>
+          <a href="" class="footer__top-link">法人様向けお問い合わせ</a>
+          <a href="" class="footer__top-link">一般向けお問い合わせ</a>
+        </div>
+        <div class="footer__top-item">
+          <p class="footer__top-ttl">採用情報</p>
+          <a href="" class="footer__top-link">リクルート動画</a>
         </div>
       </div>
-    </div>
-    <div class=" sp-block">
-
-      <div class="footer__top-sp">
-        <a href="company.html" class="footer__top-link-sp">会社案内</a>
-        <a href="" class="footer__top-link-sp">採用案内</a>
-        <a href="" class="footer__top-link-sp">ニュース</a>
-        <a href="sitemap.html" class="footer__top-link-sp">サイトマップ</a>
-        <a href="inquiry.html" class="footer__top-link-sp">お問い合わせ</a>
-        <a href="privacy.html" class="footer__top-link-sp">個人情報保護方針</a>
+      <div class="footer__bottom">
+        <a href="" class="footer__bottom-link">サイトについて</a>
+        <a href="" class="footer__bottom-link">プライバシーポリシー</a>
+        <a href="" class="footer__bottom-link">サイトマップ</a>
+        <a href="" class="footer__bottom-link">リンクレノファ</a>
+        <a href="" class="footer__bottom-link">山口 FC オフィシャルパートナー</a>
       </div>
     </div>
-
-    <div class="footer__bottom">
-      三和は建材、住宅設備機器、家具インテリア等の販売を通じて、<br class="sp-block">快適空間づくりに貢献します。
-    </div>
-
 
 
     <div class="footer__scroll-btn"><img src="assets/img/top/scroll-btn.png" alt="TOPへ"></div>
-  </footer> -->
+  </footer>
 
 
 
