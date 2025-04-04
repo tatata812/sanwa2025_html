@@ -16,108 +16,182 @@
   }
 }
 
+
+/* =================================
+下層共通
+ ================================= */
+ .sub-page {
+
+ 
+ }
+
 /* =================================
 会社案内（company）
  ================================= */
 .page-company {
 
-  &__top-visual {
-    margin: 0 0 80px;
+  &__section01 {
+    padding: 120px 16px 240px;
+    position: relative;
 
-    @include tab {
-      margin: 0 0 40px;
-    }
 
-    @include sp {
-      margin: 0;
-    }
-  }
-
-  &__section {
-    margin: 0 0 24px;
-
-    @include tab {
-      margin: 0 0 40px;
-    }
-
-    @include sp {
-      background-color: #e5fcfb;
-      padding: 40px 0;
-      margin: 0;
+    @include tab{
+      padding: 40px 16px 60px;
 
     }
   }
 
-  &__content {
+  &__section01-inner {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  &__section01-ttl {
+    margin: 0 0 72px;
+
+    @include tab{
+      margin: 0 0 24px;
+
+    }
+  }
+
+  &__section01-lead {
+    font-size: 48px;
+    font-weight: bold;
+    color: #8e8e8e;
+    margin: 0 0 60px 40px;
+
+    @include tab{
+      font-size: 24px;
+      margin: 0 0 40px 24px;
+
+    }
+
+  }
+
+  &__section01-flex {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 56px;
 
-    @include tab {
-      flex-direction: column;
-      align-items: center;
+    @include pc{
+      gap: 24px;
+    }
+
+    @include tab{
+    flex-direction: column;
+    align-items: center;
     }
   }
 
+  &__section01-left {
+    max-width: 500px;
+    width: 60%;
 
-  &__item {
-    width: 32%;
-    margin: 0 0 80px;
-
-    @include tab {
-      width: 100%;
-      max-width: 480px;
-      position: relative;
-      margin: 0 0 16px;
-      overflow: hidden;
-
+    @include pc{
+      max-width: 400px;
+      width: 50%;
     }
 
-
-  }
-
-  &__ttl {
-    margin: 8px 0 16px;
-    font-size: 20px;
-
-    @include tab {
-      font-size: 14px;
-      width: 160px;
-      bottom: -1px;
-
-      &--sp {
-        color: #fff;
-        width: 100%;
-        background-color: #3071b9;
-        padding: 10px;
-        margin: 0 0 24px;
-
-        p {
-          &::after {
-            color: #fff;
-          }
-        }
-      }
+    @include tab{
+    width: 100%;
     }
   }
 
-  &__img {
-    margin: 0 0 16px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
+  &__section01-right {
+    flex: 1;
   }
 
-  &__text {
+  &__section01-text {
+    margin: 0 0 24px;
+  }
+
+  &__section01-name-wrap {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__section01-name-left {
+    font-size: 12px;
     line-height: 1.5;
   }
 
-  &-- {}
+  &__section01-name-right {
+    font-size: 26px;
+  }
 
-  &-- {}
+  &__bg-right {
+    bottom: 0px;
+    right: 0;
 
-  &-- {}
+    @include pc {
+      bottom: -10px;
+    }
+  }
 
-  &-- {}
+  &__section02 {
+    padding: 0 0 120px;
+    position: relative;
+
+
+    @include tab{
+      padding: 0 0 60px;
+
+    }
+  }
+
+  &__section02-box {
+    display: flex;
+    max-width: 1120px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 16px;
+
+    @include pc{
+      gap: 24px;
+
+    }
+  }
+
+  &__section02-item {
+    width: calc((100% - 80px) / 3);
+    margin: 0 0 40px;
+
+    @include pc{
+      width: calc((100% - 48px) / 3);
+
+    }
+
+    @include tab{
+      width: calc((100% - 24px) / 2);
+      margin: 0 0 12px;
+
+    }
+  }
+
+  &__section02-img {
+    margin: 0 0 24px;
+
+    @include tab{
+      margin: 0 0 12px;
+
+    }
+  }
+
+  &__section02-ttl {
+    margin: 0 0 0 4px;
+  }
+
+  &__bg-left {
+    bottom: 0;
+    width: 24%;
+  }
+
+  &__ {}
+
+  &__ {}
 }
 
 /* =================================

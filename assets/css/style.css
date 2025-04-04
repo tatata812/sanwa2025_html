@@ -121,7 +121,8 @@ h3 {
   color: #3071b9;
   display: inline-block;
   padding: 16px 8px 13px 0;
-  position: relative; /* position: relative;で矢印の位置を基点とさせます */
+  position: relative;
+  /* position: relative;で矢印の位置を基点とさせます */
   text-align: center;
   text-decoration: none;
   width: 280px;
@@ -145,7 +146,8 @@ h3 {
   position: absolute;
   top: 50%;
   right: 20px;
-  transform: translateY(-50%) rotate(45deg); /* rotate(45deg)で矢印を回転（向きを変更）させる */
+  transform: translateY(-50%) rotate(45deg);
+  /* rotate(45deg)で矢印を回転（向きを変更）させる */
   transition: all 0.5s;
 }
 .arrow-button:hover:after {
@@ -173,6 +175,178 @@ input[type=text] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.sub-page__ttl {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  left: 80px;
+  color: #3071b9;
+  font-size: 40px;
+  font-weight: bold;
+}
+@media (max-width: 1120px) {
+  .sub-page__ttl {
+    font-size: 32px;
+    left: 60px;
+  }
+}
+@media (max-width: 780px) {
+  .sub-page__ttl {
+    font-size: 26px;
+    left: 30px;
+    top: 62px;
+  }
+}
+.sub-page__main-visual {
+  height: 600px;
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 1120px) {
+  .sub-page__main-visual {
+    height: 400px;
+  }
+}
+@media (max-width: 780px) {
+  .sub-page__main-visual {
+    height: 300px;
+  }
+}
+@media (max-width: 520px) {
+  .sub-page__main-visual {
+    height: 200px;
+  }
+}
+.sub-page__main-visual--company {
+  background-image: url(../img/company/main-visual-company.jpg);
+}
+.sub-page__main-visual-top {
+  position: absolute;
+  top: 0;
+}
+.sub-page__main-visual-bottom {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+}
+
+.sub-page-ttl {
+  color: #3071b9;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+  padding: 0 0 0 40px;
+}
+.sub-page-ttl::before {
+  content: url(../img/top/ttl-dec.png);
+  position: absolute;
+  top: -57px;
+  left: -56px;
+  transform: scale(0.2);
+}
+.sub-page-ttl--section02 {
+  font-size: 20px;
+  display: inline-block;
+}
+.sub-page-ttl--section02::before {
+  content: url(../img/top/ttl-dec.png);
+  position: absolute;
+}
+.sub-page-ttl--section02:after {
+  /* 擬似要素で矢印アイコンをつくる */
+  content: "";
+  border: 0;
+  border-top: solid 2px #3071b9;
+  border-right: solid 2px #3071b9;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  /* 矢印アイコンの位置を設定 */
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%) rotate(45deg);
+  /* rotate(45deg)で矢印を回転（向きを変更）させる */
+  transition: all 0.5s;
+}
+.sub-page-ttl--section02:after:hover {
+  transform: translateY(-50%) rotate(45deg) translateX(5px);
+}
+.sub-page-ttl--section02 {
+  font-size: 20px;
+  display: inline-block;
+}
+@media (max-width: 780px) {
+  .sub-page-ttl--section02 {
+    font-size: 16px;
+    padding: 0 0 0 32px;
+  }
+}
+.sub-page-ttl--section02::before {
+  content: url(../img/top/ttl-dec.png);
+  position: absolute;
+}
+@media (max-width: 780px) {
+  .sub-page-ttl--section02::before {
+    top: -57px;
+    left: -56px;
+    transform: scale(0.15);
+  }
+}
+.sub-page-ttl--section02:after {
+  /* 擬似要素で矢印アイコンをつくる */
+  content: "";
+  border: 0;
+  border-top: solid 2px #3071b9;
+  border-right: solid 2px #3071b9;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  /* 矢印アイコンの位置を設定 */
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%) rotate(45deg);
+  /* rotate(45deg)で矢印を回転（向きを変更）させる */
+  transition: all 0.5s;
+}
+.sub-page-ttl--section02-external {
+  font-size: 20px;
+  display: inline-block;
+}
+@media (max-width: 780px) {
+  .sub-page-ttl--section02-external {
+    font-size: 16px;
+    padding: 0 0 0 32px;
+  }
+}
+.sub-page-ttl--section02-external::before {
+  content: url(../img/top/ttl-dec.png);
+  position: absolute;
+}
+@media (max-width: 780px) {
+  .sub-page-ttl--section02-external::before {
+    top: -45px;
+    left: -56px;
+    transform: scale(0.15);
+  }
+}
+.sub-page-ttl--section02-external:after {
+  content: url(../img/company/external-link.png);
+  position: absolute;
+  top: 0;
+  right: -26px;
+  transform: scale(1);
+}
+@media (max-width: 780px) {
+  .sub-page-ttl--section02-external:after {
+    top: 2px;
+    right: -24px;
+  }
 }
 
 .section__inner {
@@ -486,87 +660,153 @@ input[type=text] {
 }
 
 /* =================================
+下層共通
+ ================================= */
+/* =================================
 会社案内（company）
  ================================= */
-.page-company__top-visual {
-  margin: 0 0 80px;
+.page-company__section01 {
+  padding: 120px 16px 240px;
+  position: relative;
 }
 @media (max-width: 780px) {
-  .page-company__top-visual {
-    margin: 0 0 40px;
+  .page-company__section01 {
+    padding: 40px 16px 60px;
   }
 }
-@media (max-width: 520px) {
-  .page-company__top-visual {
-    margin: 0;
-  }
+.page-company__section01-inner {
+  max-width: 980px;
+  margin: 0 auto;
 }
-.page-company__section {
-  margin: 0 0 24px;
+.page-company__section01-ttl {
+  margin: 0 0 72px;
 }
 @media (max-width: 780px) {
-  .page-company__section {
-    margin: 0 0 40px;
+  .page-company__section01-ttl {
+    margin: 0 0 24px;
   }
 }
-@media (max-width: 520px) {
-  .page-company__section {
-    background-color: #e5fcfb;
-    padding: 40px 0;
-    margin: 0;
+.page-company__section01-lead {
+  font-size: 48px;
+  font-weight: bold;
+  color: #8e8e8e;
+  margin: 0 0 60px 40px;
+}
+@media (max-width: 780px) {
+  .page-company__section01-lead {
+    font-size: 24px;
+    margin: 0 0 40px 24px;
   }
 }
-.page-company__content {
+.page-company__section01-flex {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 56px;
+}
+@media (max-width: 1120px) {
+  .page-company__section01-flex {
+    gap: 24px;
+  }
 }
 @media (max-width: 780px) {
-  .page-company__content {
+  .page-company__section01-flex {
     flex-direction: column;
     align-items: center;
   }
 }
-.page-company__item {
-  width: 32%;
-  margin: 0 0 80px;
+.page-company__section01-left {
+  max-width: 500px;
+  width: 60%;
+}
+@media (max-width: 1120px) {
+  .page-company__section01-left {
+    max-width: 400px;
+    width: 50%;
+  }
 }
 @media (max-width: 780px) {
-  .page-company__item {
+  .page-company__section01-left {
     width: 100%;
-    max-width: 480px;
-    position: relative;
-    margin: 0 0 16px;
-    overflow: hidden;
   }
 }
-.page-company__ttl {
-  margin: 8px 0 16px;
-  font-size: 20px;
+.page-company__section01-right {
+  flex: 1;
 }
-@media (max-width: 780px) {
-  .page-company__ttl {
-    font-size: 14px;
-    width: 160px;
-    bottom: -1px;
-  }
-  .page-company__ttl--sp {
-    color: #fff;
-    width: 100%;
-    background-color: #3071b9;
-    padding: 10px;
-    margin: 0 0 24px;
-  }
-  .page-company__ttl--sp p::after {
-    color: #fff;
-  }
+.page-company__section01-text {
+  margin: 0 0 24px;
 }
-.page-company__img {
-  margin: 0 0 16px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.page-company__section01-name-wrap {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
 }
-.page-company__text {
+.page-company__section01-name-left {
+  font-size: 12px;
   line-height: 1.5;
+}
+.page-company__section01-name-right {
+  font-size: 26px;
+}
+.page-company__bg-right {
+  bottom: 0px;
+  right: 0;
+}
+@media (max-width: 1120px) {
+  .page-company__bg-right {
+    bottom: -10px;
+  }
+}
+.page-company__section02 {
+  padding: 0 0 120px;
+  position: relative;
+}
+@media (max-width: 780px) {
+  .page-company__section02 {
+    padding: 0 0 60px;
+  }
+}
+.page-company__section02-box {
+  display: flex;
+  max-width: 1120px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 0 16px;
+}
+@media (max-width: 1120px) {
+  .page-company__section02-box {
+    gap: 24px;
+  }
+}
+.page-company__section02-item {
+  width: calc((100% - 80px) / 3);
+  margin: 0 0 40px;
+}
+@media (max-width: 1120px) {
+  .page-company__section02-item {
+    width: calc((100% - 48px) / 3);
+  }
+}
+@media (max-width: 780px) {
+  .page-company__section02-item {
+    width: calc((100% - 24px) / 2);
+    margin: 0 0 12px;
+  }
+}
+.page-company__section02-img {
+  margin: 0 0 24px;
+}
+@media (max-width: 780px) {
+  .page-company__section02-img {
+    margin: 0 0 12px;
+  }
+}
+.page-company__section02-ttl {
+  margin: 0 0 0 4px;
+}
+.page-company__bg-left {
+  bottom: 0;
+  width: 24%;
 }
 /* =================================
 下層共通

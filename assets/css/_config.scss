@@ -112,6 +112,7 @@ h3 {
 }
 
 
+// トップページのセクションタイトル
 .section-ttl {
   color: #3071b9;
   font-size: 40px;
@@ -127,40 +128,41 @@ h3 {
     transform: scale(0.4);
   }
 
-  @include tab{
+  @include tab {
     font-size: 24px;
-  padding: 0 0 0 40px;
+    padding: 0 0 0 40px;
 
-  &::before {
-    content: url(../img/top/ttl-dec.png);
-    position: absolute;
-    top: -55px;
-    left: -46px;
-    transform: scale(0.2);
-  }
+    &::before {
+      content: url(../img/top/ttl-dec.png);
+      position: absolute;
+      top: -55px;
+      left: -46px;
+      transform: scale(0.2);
+    }
   }
 }
 
 
-// ヘッダーボタン
-.arrow-button{
+// ボタン
+.arrow-button {
   background-color: #fff;
   border-radius: 50px;
   color: #3071b9;
   display: inline-block;
   padding: 16px 8px 13px 0;
-  position: relative; /* position: relative;で矢印の位置を基点とさせます */
+  position: relative;
+  /* position: relative;で矢印の位置を基点とさせます */
   text-align: center;
   text-decoration: none;
   width: 280px;
   border: #3071b9 2px solid;
 
-  @include tab{
+  @include tab {
     width: 240px;
 
   }
 
-  &:after{
+  &:after {
     /* 擬似要素で矢印アイコンをつくる */
     content: '';
     border: 0;
@@ -173,40 +175,247 @@ h3 {
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translateY(-50%) rotate(45deg); /* rotate(45deg)で矢印を回転（向きを変更）させる */
+    transform: translateY(-50%) rotate(45deg);
+    /* rotate(45deg)で矢印を回転（向きを変更）させる */
     transition: all 0.5s;
   }
 
 
   &:hover {
-    &:after{
+    &:after {
       right: 15px;
     }
   }
 }
 
+//  装飾
 .top-bg {
   position: absolute;
   width: 800px;
   z-index: -1;
 
-  @include pc{
-  width: 60%;
+  @include pc {
+    width: 60%;
   }
 }
 
 
 // inputのリセットcss
 input[type="text"] {
-	margin: 0;
-	padding: 0;
-	background: none;
-	border: none;
-	border-radius: 0;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+// 下層ページ
+.sub-page {
+
+  &__ttl {
+    position: absolute;
+    z-index: 1;
+    top: 90px;
+    left: 80px;
+    color: #3071b9;
+    font-size: 40px;
+    font-weight: bold;
+
+    @include pc {
+      font-size: 32px;
+      left: 60px;
+    }
+
+    @include tab {
+      font-size: 26px;
+      left: 30px;
+      top: 62px;
+
+    }
+  }
+
+  &__main-visual {
+    height: 600px;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include pc {
+      height: 400px;
+    }
+
+    @include tab {
+      height: 300px;
+    }
+
+    @include sp {
+      height: 200px;
+
+    }
+
+    &--company {
+      background-image: url(../img/company/main-visual-company.jpg);
+    }
+  }
+
+  &__main-visual-top {
+    position: absolute;
+    top: 0;
+  }
+
+  &__main-visual-bottom {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+  }
+
+
+
+}
+
+// 下層タイトル
+.sub-page-ttl {
+  color: #3071b9;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+  padding: 0 0 0 40px;
+
+  &::before {
+    content: url(../img/top/ttl-dec.png);
+    position: absolute;
+    top: -57px;
+    left: -56px;
+    transform: scale(0.2);
+  }
+
+  &--section02 {
+    font-size: 20px;
+    display: inline-block;
+
+  
+    &::before {
+      content: url(../img/top/ttl-dec.png);
+      position: absolute;
+
+
+
+    }
+
+    &:after {
+      /* 擬似要素で矢印アイコンをつくる */
+      content: '';
+      border: 0;
+      border-top: solid 2px #3071b9;
+      border-right: solid 2px #3071b9;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      /* 矢印アイコンの位置を設定 */
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%) rotate(45deg);
+      /* rotate(45deg)で矢印を回転（向きを変更）させる */
+      transition: all 0.5s;
+
+      &:hover {
+        transform: translateY(-50%) rotate(45deg) translateX(5px);
+
+      }
+    }
+
+  }
+
+
+  &--section02 {
+    font-size: 20px;
+    display: inline-block;
+
+
+    @include tab{
+      font-size: 16px;
+      padding: 0 0 0 32px;
+
+    }
+
+  
+    &::before {
+      content: url(../img/top/ttl-dec.png);
+      position: absolute;
+
+      @include tab{
+        top: -57px;
+        left: -56px;
+        transform: scale(0.15);
+      }
+    }
+
+    &:after {
+      /* 擬似要素で矢印アイコンをつくる */
+      content: '';
+      border: 0;
+      border-top: solid 2px #3071b9;
+      border-right: solid 2px #3071b9;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      /* 矢印アイコンの位置を設定 */
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%) rotate(45deg);
+      /* rotate(45deg)で矢印を回転（向きを変更）させる */
+      transition: all 0.5s;
+
+
+    }
+  }
+
+  &--section02-external {
+    font-size: 20px;
+    display: inline-block;
+
+    @include tab{
+      font-size: 16px;
+      padding: 0 0 0 32px;
+
+    }
+
+  
+    &::before {
+      content: url(../img/top/ttl-dec.png);
+      position: absolute;
+
+      @include tab{
+        top: -45px;
+        left: -56px;
+        transform: scale(0.15);
+      }
+
+    }
+
+    &:after {
+      content: url(../img/company/external-link.png);
+      position: absolute;
+      top: 0;
+      right: -26px;
+      transform: scale(1);
+
+      @include tab{
+        top: 2px;
+        right: -24px;
+
+      }
+    }
+  }
+
+  
 }
 
 
@@ -265,7 +474,7 @@ input[type="text"] {
     }
   }
 
-  @include sp{
+  @include sp {
     margin: 0 0 0 16px;
   }
 
@@ -450,8 +659,8 @@ input[type="text"] {
 
 
 
-  
- 
+
+
 
 /* =================================
 下層ページ共通
@@ -474,30 +683,29 @@ input[type="text"] {
     letter-spacing: 0.7rem;
     text-shadow: 5px 2px 3px rgba(0, 0, 0, 0.3);
 
-    @include pc{
+    @include pc {
       width: auto;
       left: 20px;
       transform: translate(0, -50%);
     }
 
-    @include tab{
+    @include tab {
       top: 40%;
-    
+
     }
 
-    @include sp{
+    @include sp {
       font-size: 22px;
     }
 
   }
 
   &__breadcrumb-wrap {
-    padding: 12px 16px;  
+    padding: 12px 16px;
 
   }
 
-  &__breadcrumb {
-  }
+  &__breadcrumb {}
 }
 
 // エディタースタイル
@@ -507,7 +715,7 @@ input[type="text"] {
   &__block {
     margin: 0 0 60px;
 
-    @include sp{
+    @include sp {
       margin: 0 0 40px;
     }
   }
