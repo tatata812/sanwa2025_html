@@ -199,6 +199,23 @@ $(function () {
     e.preventDefault(); // もしaタグなどの場合、デフォルトの挙動を防ぐ
     $('html, body').animate({ scrollTop: 0 }, 800); // 0.5秒でトップへ
   });
+
+  $( window ).bind( 'scroll', function() {
+    scrolled = $( window ).scrollTop();
+    weight1 = 0.1;
+    weight2 = 0.1;
+    $( '.parallax3' ).css( 'top', 800 - scrolled * weight1 + 'px' );
+    $( '.parallax4' ).css( 'top', 1000 - scrolled * weight2 + 'px' );
+  });
+
+
+  $(window).on('scroll', function() {
+    var scrollPosition = $(this).scrollTop();
+  
+    // パララックスを適用したい要素の動きを設定
+    $('.parallax1').css('transform', 'translateY(' + scrollPosition * 0.4 + 'px)');
+    $('.parallax2').css('transform', 'translateY(' + scrollPosition * 0.1 + 'px)');
+  });
  
 
 
