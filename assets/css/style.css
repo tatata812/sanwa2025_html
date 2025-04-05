@@ -2891,7 +2891,7 @@ header（PC）
   .slide-menu {
     top: 62px;
     height: calc(100vh - 62px);
-    padding: 40px 12px 120px;
+    padding: 40px 12px 140px;
   }
 }
 .slide-menu__inner {
