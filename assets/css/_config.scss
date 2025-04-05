@@ -179,7 +179,6 @@ h3 {
     transition: all 0.5s;
   }
 
-
   &:hover {
     &:after {
       right: 15px;
@@ -212,7 +211,9 @@ input[type="text"] {
   appearance: none;
 }
 
-// 下層ページ
+/* =================================
+下層ページ
+ ================================= */
 .sub-page {
 
   &__ttl {
@@ -248,8 +249,6 @@ input[type="text"] {
     @media screen and (max-width: 1520px) {
       height: 500px;
       background-size: contain;
-
-
     }
 
     @include pc {
@@ -262,7 +261,6 @@ input[type="text"] {
 
     @include sp {
       height: 200px;
-
     }
 
     &--company {
@@ -284,8 +282,6 @@ input[type="text"] {
     bottom: -1px;
     right: 0;
   }
-
-
 
 }
 
@@ -313,9 +309,6 @@ input[type="text"] {
     &::before {
       content: url(../img/top/ttl-dec.png);
       position: absolute;
-
-
-
     }
 
     &:after {
@@ -337,12 +330,9 @@ input[type="text"] {
 
       &:hover {
         transform: translateY(-50%) rotate(45deg) translateX(5px);
-
       }
     }
-
   }
-
 
   &--section02 {
     font-size: 20px;
@@ -352,10 +342,8 @@ input[type="text"] {
     @include tab{
       font-size: 16px;
       padding: 0 0 0 32px;
-
     }
 
-  
     &::before {
       content: url(../img/top/ttl-dec.png);
       position: absolute;
@@ -383,8 +371,6 @@ input[type="text"] {
       transform: translateY(-50%) rotate(45deg);
       /* rotate(45deg)で矢印を回転（向きを変更）させる */
       transition: all 0.5s;
-
-
     }
   }
 
@@ -395,7 +381,6 @@ input[type="text"] {
     @include tab{
       font-size: 16px;
       padding: 0 0 0 32px;
-
     }
 
   
@@ -408,7 +393,6 @@ input[type="text"] {
         left: -56px;
         transform: scale(0.15);
       }
-
     }
 
     &:after {
@@ -425,126 +409,7 @@ input[type="text"] {
       }
     }
   }
-
-  
 }
-
-
-
-
-
-
-
-
-
-// 2025
-
-//section
-
-.section {
-
-  &__inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-}
-
-// ボタン　矢印
-
-.btn-arrow {
-  position: relative;
-  margin: 0 0 0 28px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: -20px;
-    font-size: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: right 0.3s;
-    width: 6px;
-    height: 6px;
-    border-top: solid 2px currentColor;
-    border-right: solid 2px currentColor;
-    transform: translateY(-50%) rotate(45deg);
-    color: #3071b9;
-    transition: all 0.3s;
-  }
-
-  &:hover {
-    text-decoration: none;
-
-    &:after {
-      left: -15px;
-    }
-  }
-
-  @include sp {
-    margin: 0 0 0 16px;
-  }
-
-}
-
-
-//ボタン
-
-.btn-set {
-  display: block;
-  width: 340px;
-  background-color: #000;
-  text-align: center;
-  color: #fff;
-  font-size: 18px;
-  padding: 16px 0;
-
-  @include tab {
-    width: 260px;
-    font-size: 13px;
-    padding: 8px 0;
-
-
-  }
-
-  &:hover {
-    text-decoration: none;
-
-    .btn-arrow {
-
-      &:after {
-        left: -15px;
-      }
-    }
-  }
-
-  .btn-arrow {
-    margin: 0 0 0 26px;
-    z-index: 1;
-
-
-    &::after {
-      width: 8px;
-      height: 8px;
-      border-top: solid 3px currentColor;
-      border-right: solid 3px;
-    }
-
-    &:hover {
-      text-decoration: none;
-
-      &:after {
-        left: -15px;
-      }
-    }
-
-  }
-}
-
 
 // ホバー写真拡大
 .hover-img {
@@ -564,18 +429,6 @@ input[type="text"] {
 
   &:hover img {
     transform: scale(1.1);
-  }
-}
-
-
-.sp-box-ttl {
-  @include tab {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    padding: 8px 0 8px 16px;
-    font-size: 13px;
   }
 }
 
@@ -666,57 +519,6 @@ input[type="text"] {
   @include tab {
     opacity: 1;
   }
-}
-
-
-
-
-
-
-/* =================================
-下層ページ共通
- ================================= */
-
-.top-visual {
-  max-height: 400px;
-  overflow: hidden;
-  position: relative;
-
-  &__ttl {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1040px;
-    margin: 0 auto;
-    font-size: 28px;
-    letter-spacing: 0.7rem;
-    text-shadow: 5px 2px 3px rgba(0, 0, 0, 0.3);
-
-    @include pc {
-      width: auto;
-      left: 20px;
-      transform: translate(0, -50%);
-    }
-
-    @include tab {
-      top: 40%;
-
-    }
-
-    @include sp {
-      font-size: 22px;
-    }
-
-  }
-
-  &__breadcrumb-wrap {
-    padding: 12px 16px;
-
-  }
-
-  &__breadcrumb {}
 }
 
 // エディタースタイル
