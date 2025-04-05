@@ -388,6 +388,7 @@ header（PC）
   z-index: 99;
   overflow-y: scroll;
   scrollbar-width: none;
+  height: 100%;
 
   &.active {
     visibility: visible;
@@ -396,6 +397,7 @@ header（PC）
 
   @include tab {
     top: 62px;
+    height:  calc(100vh - 62px);;
   }
 
   &__inner {

@@ -2881,6 +2881,7 @@ header（PC）
   z-index: 99;
   overflow-y: scroll;
   scrollbar-width: none;
+  height: 100%;
 }
 .slide-menu.active {
   visibility: visible;
@@ -2889,6 +2890,7 @@ header（PC）
 @media (max-width: 780px) {
   .slide-menu {
     top: 62px;
+    height: calc(100vh - 62px);
   }
 }
 .slide-menu__inner {

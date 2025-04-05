@@ -209,12 +209,31 @@ $(function () {
   });
 
 
+  // パララックス
   $(window).on('scroll', function() {
     var scrollPosition = $(this).scrollTop();
   
     // パララックスを適用したい要素の動きを設定
     $('.parallax1').css('transform', 'translateY(' + scrollPosition * 0.4 + 'px)');
     $('.parallax2').css('transform', 'translateY(' + scrollPosition * 0.1 + 'px)');
+  });
+
+
+   // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+   $(".open-btn-js02").click(function () {
+
+    // 現在のbodyタグのoverflowスタイルを確認
+    if ($("body").css("overflow") === "hidden") {
+
+      // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+      $("body").css({ height: "", overflow: "" });
+
+    } else {
+
+      // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+      $("body").css({ height: "100%", overflow: "hidden" });
+
+    }
   });
  
 
