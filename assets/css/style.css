@@ -2751,7 +2751,6 @@ header（PC）
   z-index: 99;
   overflow-y: scroll;
   scrollbar-width: none;
-  height: 100%;
 }
 .slide-menu.active {
   visibility: visible;

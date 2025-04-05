@@ -219,20 +219,17 @@ $(function () {
   });
 
 
-   // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+   // スマホの時はスクロールさせない
    $(".open-btn-js02").click(function () {
-
-    // 現在のbodyタグのoverflowスタイルを確認
-    if ($("body").css("overflow") === "hidden") {
-
-      // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
-      $("body").css({ height: "", overflow: "" });
-
-    } else {
-
-      // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
-      $("body").css({ height: "100%", overflow: "hidden" });
-
+    if ($(window).width() <= 768) { // スマホサイズ
+      const body = $("body");
+      const isLocked = body.css("overflow") === "hidden";
+  
+      if (isLocked) {
+        body.css({ height: "", overflow: "" });
+      } else {
+        body.css({ height: "100%", overflow: "hidden" });
+      }
     }
   });
  
