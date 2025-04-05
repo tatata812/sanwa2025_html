@@ -2917,6 +2917,7 @@ header（PC）
   border-bottom: 1px solid #fff;
   padding: 0 0 8px;
   margin: 0 0 16px;
+  display: block;
 }
 .slide-menu__top-link {
   color: #fff;
@@ -2942,16 +2943,20 @@ header（PC）
   height: 5px;
   /* 矢印アイコンの位置を設定 */
   position: absolute;
-  top: 50%;
+  top: 43%;
   right: 50px;
   transform: translateY(-50%) rotate(135deg);
   /* rotate(45deg)で矢印を回転（向きを変更）させる */
   transition: all 0.5s;
 }
+.slide-menu__top-link-content {
+  margin: 0 0 12px 12px;
+}
 .slide-menu__bottom {
   display: flex;
   gap: 20px;
   margin: 24px 0 0;
+  line-height: 1;
 }
 @media (max-width: 1120px) {
   .slide-menu__bottom {
@@ -4257,10 +4262,18 @@ footer
 }
 @media (max-width: 780px) {
   .footer__top {
-    flex-direction: column;
-    gap: 32px;
+    flex-wrap: wrap;
+    gap: 20px;
     margin: 0 auto 40px;
     max-width: 400px;
+  }
+}
+@media (max-width: 780px) {
+  .footer__top-item {
+    width: 53%;
+  }
+  .footer__top-item:nth-of-type(even) {
+    width: 38%;
   }
 }
 .footer__top-ttl {
@@ -4268,6 +4281,7 @@ footer
   border-bottom: 1px solid #fff;
   padding: 0 0 8px;
   margin: 0 0 16px;
+  display: block;
 }
 .footer__top-link {
   color: #fff;
@@ -4298,6 +4312,7 @@ footer
   gap: 20px;
   margin: 24px 0 0;
   justify-content: center;
+  line-height: 1;
 }
 @media (max-width: 1120px) {
   .footer__bottom {

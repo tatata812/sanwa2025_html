@@ -426,6 +426,7 @@ header（PC）
     border-bottom: 1px solid #fff;
     padding: 0 0 8px;
     margin: 0 0 16px;
+    display: block;
   }
 
   &__top-link {
@@ -453,7 +454,7 @@ header（PC）
         height: 5px;
         /* 矢印アイコンの位置を設定 */
         position: absolute;
-        top: 50%;
+        top: 43%;
         right: 50px;
         transform: translateY(-50%) rotate(135deg);
         /* rotate(45deg)で矢印を回転（向きを変更）させる */
@@ -463,12 +464,15 @@ header（PC）
 
   }
 
-  &__top-link-content {}
+  &__top-link-content {
+    margin: 0 0 12px 12px;
+  }
 
   &__bottom {
     display: flex;
     gap: 20px;
     margin: 24px 0 0;
+    line-height: 1;
 
     @include pc {
       gap: 12px;
@@ -2169,20 +2173,32 @@ footer
     }
 
     @include tab {
-      flex-direction: column;
-      gap: 32px;
+      flex-wrap: wrap;
+      gap: 20px;
       margin: 0 auto 40px;
       max-width: 400px;
     }
   }
 
-  &__top-item {}
+  &__top-item {
+
+    @include tab{
+      width: 53%;
+
+      &:nth-of-type(even){
+        width: 38%;
+  
+      }
+    }
+
+  }
 
   &__top-ttl {
     color: #fff;
     border-bottom: 1px solid #fff;
     padding: 0 0 8px;
     margin: 0 0 16px;
+    display: block;
   }
 
   &__top-link {
@@ -2217,6 +2233,7 @@ footer
     gap: 20px;
     margin: 24px 0 0;
     justify-content: center;
+    line-height: 1;
 
     @include pc {
       gap: 12px;
