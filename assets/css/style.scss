@@ -41,11 +41,9 @@ header（PC）
   transition: all 0.3s;
   height: 79px;
 
-
   @include tab {
     height: 63px;
   }
-
 
   &.active {
     background-color: rgba(255, 255, 255, 1);
@@ -80,13 +78,9 @@ header（PC）
       max-width: 880px;
     }
 
-
     @include tab {
       margin: 0 0 0 12px;
-
     }
-
-
   }
 
   &__global-wrap {
@@ -125,7 +119,6 @@ header（PC）
     &--ttl {
       width: 30%;
 
-
       @include pc {
         width: 20%;
       }
@@ -156,7 +149,6 @@ header（PC）
 
     &:hover {
       text-decoration: none;
-
     }
 
     &.active {
@@ -171,7 +163,6 @@ header（PC）
         position: absolute;
         left: 50%;
         transform: translateX(-50%)scale(0.4);
-
       }
     }
   }
@@ -259,8 +250,6 @@ header（PC）
       padding: 16px;
       font-size: 20px;
     }
-
-
   }
 }
 
@@ -274,9 +263,7 @@ header（PC）
 
     @media screen and (max-width: 1100px) {
       max-width: 800px;
-
     }
-
   }
 
   &__item {
@@ -319,7 +306,6 @@ header（PC）
 
     }
   }
-
 }
 
 .search-menu {
@@ -464,7 +450,6 @@ header（PC）
         transition: all 0.5s;
       }
     }
-
   }
 
   &__top-link-content {
@@ -489,8 +474,6 @@ header（PC）
   }
 
   &__scroll-btn {}
-
-  &__ {}
 }
 
 
@@ -515,7 +498,6 @@ TOP
     max-width: 1200px;
     margin: 0 auto 200px;
 
-
     @include tab {
       margin: 0 0 24px;
     }
@@ -531,9 +513,6 @@ TOP
     @include tab {
       margin: 0 0 40px;
     }
-
-
-
   }
 
   &__top-about {
@@ -550,7 +529,6 @@ TOP
     @include tab {
       margin: 0 0 18px;
     }
-
   }
 
   &__top-vision {
@@ -561,8 +539,6 @@ TOP
       margin: 0 0 40px;
     }
   }
-
-  &__ {}
 }
 
 
@@ -570,9 +546,6 @@ TOP
 /* =================================
 メインビジュアル
  ================================= */
-
-
-.top-main-visual {}
 
 .main-visual {
   padding: 120px 12px;
@@ -619,7 +592,6 @@ TOP
     @media screen and (max-width: 1350px) {
       margin: 0 0 0 -150px;
     }
-
 
     @media screen and (max-width: 1250px) {
       margin: 0 0 0 -280px;
@@ -699,7 +671,6 @@ TOP
   &__info-date {
     border-right: #9d9b9b 1px solid;
     padding: 0 12px 0 0;
-
   }
 
   &__info-cat {
@@ -793,7 +764,6 @@ TOP
 
       @include pc {
         left: 10px;
-
       }
     }
   }
@@ -803,9 +773,6 @@ TOP
     display: block;
     width: 100%;
   }
-
-
-
 
   &__link-wrap {
     display: flex;
@@ -827,7 +794,6 @@ TOP
       width: calc((100% - 16px) / 2);
     }
   }
-
 }
 
 
@@ -962,14 +928,11 @@ TOP
       padding: 24px 12px 24px 12px;
       border-radius: 12px 0 0 12px;
     }
-
   }
 
   &__inner {
     max-width: 980px;
     margin: 0 auto;
-
-
   }
 
 
@@ -978,7 +941,6 @@ TOP
 
     @include pc {
       margin: 0 0 60px 0px;
-
     }
 
     @include tab {
@@ -993,7 +955,6 @@ TOP
     @include tab {
       padding: 0 12px 24px;
       justify-content: center;
-
     }
   }
 
@@ -1031,7 +992,6 @@ TOP
 
         @include tab {
           bottom: -8px;
-
         }
       }
     }
@@ -1046,8 +1006,6 @@ TOP
       display: block;
     }
   }
-
-
 
   &__article {
     display: flex;
@@ -1074,7 +1032,6 @@ TOP
         background-color: #fff;
         bottom: -1px;
         right: 0;
-
       }
 
       &::after {
