@@ -107,7 +107,7 @@ $(function () {
   // メインビジュアル　スライダー
   $(".top-slider-js").slick({
     autoplay: true,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 5000,
     fade: true, // スライドをフェードイン・フェードアウト
     cssEase: 'linear', // アニメーション
     speed: 1000, // フェードアニメーションの速度設定
@@ -115,7 +115,18 @@ $(function () {
     arrows: true,
     slidesToShow: 1,
     dotsClass: "main-visual__slider-dots",
-
+  })
+  .on("afterChange", function(event, slick, currentSlide, nextSlide) {
+    switch (currentSlide){
+      case 0:
+        // 1枚目のスライド
+        $(this).slick("slickSetOption", "autoplaySpeed", 9000);
+        break;
+      default:
+        // その他のスライド
+        $(this).slick("slickSetOption", "autoplaySpeed", 3000);
+        break;
+    }
   });
 
   // バナー　スライダー
@@ -127,7 +138,6 @@ $(function () {
     dots: false,
     arrows: true,
     slidesToShow: 1,
-
   });
 
   //営業所スライダー
@@ -253,8 +263,8 @@ $(function () {
       $images.eq(current).removeClass('active');
       current = (current + 1) % imageCount;
       $images.eq(current).addClass('active');
-    }, 3000); // 切り替え間隔も1.5秒
-  }, 1500); // ← これが開始までの遅延
+    }, 4000); // 切り替え間隔も1.5秒
+  }, 0); // ← これが開始までの遅延
 
 
   const $images2 = $('.main-visual-bottom-js img');
@@ -265,8 +275,11 @@ $(function () {
     $images2.eq(current2).removeClass('active');
     current2 = (current2 + 1) % imageCount2;
     $images2.eq(current2).addClass('active');
-  }, 3000);
+  }, 4000);
 
+
+
+  
 
 
 })
