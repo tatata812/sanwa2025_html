@@ -3118,6 +3118,9 @@ TOP
     width: calc((100% - 16px) / 2);
   }
 }
+.main-visual__link img {
+  filter: drop-shadow(5px 5px 5px #aaa);
+}
 .main-visual__top img {
   position: absolute;
   bottom: -100px;
@@ -3874,6 +3877,9 @@ TOP
     width: calc((100% - 16px) / 2);
   }
 }
+.top-about__link img {
+  filter: drop-shadow(5px 5px 5px #aaa);
+}
 .top-about__link-wrap02 {
   text-align: center;
   margin: 80px 0 0;
@@ -4034,6 +4040,9 @@ TOP
 .top-recruit__link:nth-of-type(1) {
   order: 2;
 }
+.top-recruit__link img {
+  filter: drop-shadow(5px 5px 5px #aaa);
+}
 
 /* =================================
 地域貢献
@@ -4156,6 +4165,9 @@ TOP
     width: 100%;
     max-width: 400px;
   }
+}
+.top-bnr__link img {
+  filter: drop-shadow(5px 5px 5px #aaa);
 }
 
 /* =================================

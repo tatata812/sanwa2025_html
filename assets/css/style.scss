@@ -781,6 +781,7 @@ TOP
     margin: 0 auto;
 
 
+
     @include tab {
       justify-content: center;
       gap: 16px;
@@ -789,8 +790,13 @@ TOP
   }
 
   &__link {
+
     @include tab {
       width: calc((100% - 16px) / 2);
+    }
+
+    img {
+      filter: drop-shadow(5px 5px 5px #aaa);
     }
   }
 
@@ -1636,6 +1642,10 @@ TOP
     @include tab {
       width: calc((100% - 16px) / 2);
     }
+
+    img {
+      filter: drop-shadow(5px 5px 5px #aaa);
+    }
   }
 
 
@@ -1807,6 +1817,10 @@ TOP
     &:nth-of-type(1) {
       order: 2;
     }
+
+    img {
+      filter: drop-shadow(5px 5px 5px #aaa);
+    }
   }
 }
 
@@ -1938,6 +1952,10 @@ TOP
     @include tab {
       width: 100%;
       max-width: 400px;
+    }
+
+    img {
+      filter: drop-shadow(5px 5px 5px #aaa);
     }
   }
 }
