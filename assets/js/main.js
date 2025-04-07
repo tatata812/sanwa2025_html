@@ -107,7 +107,7 @@ $(function () {
   // メインビジュアル　スライダー
   $(".top-slider-js").slick({
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 27000,
     fade: true, // スライドをフェードイン・フェードアウト
     cssEase: 'linear', // アニメーション
     speed: 1000, // フェードアニメーションの速度設定
@@ -120,7 +120,7 @@ $(function () {
     switch (currentSlide){
       case 0:
         // 1枚目のスライド
-        $(this).slick("slickSetOption", "autoplaySpeed", 9000);
+        $(this).slick("slickSetOption", "autoplaySpeed", 27000);
         break;
       default:
         // その他のスライド
@@ -128,6 +128,33 @@ $(function () {
         break;
     }
   });
+
+  const $images = $('.main-visual-top-js img');
+  let current = 0;
+  const imageCount = $images.length;
+
+  // 初回の切り替えを1.5秒後にスタート
+  setTimeout(() => {
+    // その後は通常通り繰り返し
+    setInterval(() => {
+      $images.eq(current).removeClass('active');
+      current = (current + 1) % imageCount;
+      $images.eq(current).addClass('active');
+    }, 4000); // 切り替え間隔も1.5秒
+  }, 0); // ← これが開始までの遅延
+
+
+  const $images2 = $('.main-visual-bottom-js img');
+  let current2 = 0;
+  const imageCount2 = $images2.length;
+
+  setInterval(() => {
+    $images2.eq(current2).removeClass('active');
+    current2 = (current2 + 1) % imageCount2;
+    $images2.eq(current2).addClass('active');
+  }, 4000);
+
+  
 
   // バナー　スライダー
   $(".external-bnr-js").slick({
@@ -252,30 +279,7 @@ $(function () {
   });
 
 
-  const $images = $('.main-visual-top-js img');
-  let current = 0;
-  const imageCount = $images.length;
 
-  // 初回の切り替えを1.5秒後にスタート
-  setTimeout(() => {
-    // その後は通常通り繰り返し
-    setInterval(() => {
-      $images.eq(current).removeClass('active');
-      current = (current + 1) % imageCount;
-      $images.eq(current).addClass('active');
-    }, 4000); // 切り替え間隔も1.5秒
-  }, 0); // ← これが開始までの遅延
-
-
-  const $images2 = $('.main-visual-bottom-js img');
-  let current2 = 0;
-  const imageCount2 = $images2.length;
-
-  setInterval(() => {
-    $images2.eq(current2).removeClass('active');
-    current2 = (current2 + 1) % imageCount2;
-    $images2.eq(current2).addClass('active');
-  }, 4000);
 
 
 
