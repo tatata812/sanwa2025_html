@@ -382,7 +382,7 @@ header（PC）
 
   @include tab {
     top: 62px;
-    height:  calc(100vh - 62px);
+    height: calc(100vh - 62px);
     padding: 40px 12px 140px;
   }
 
@@ -689,6 +689,7 @@ TOP
     max-width: 1020px;
     margin: 0 auto 120px;
     border-radius: 30px;
+    position: relative;
 
     @include pc {
       max-width: 880px;
@@ -787,12 +788,68 @@ TOP
     }
   }
 
-
   &__link {
     @include tab {
       width: calc((100% - 16px) / 2);
     }
   }
+
+  &__top {
+
+    img {
+      position: absolute;
+      bottom: -100px;
+      left: -200px;
+      width: 300px;
+      border-radius: 20px;
+      opacity: 0;
+      transition: opacity 1s ease;
+
+      &.active {
+        opacity: 1;
+      }
+
+      @media screen and (max-width: 1400px) {
+        left: -50px;
+      }
+
+      @include pc{
+      display: none;
+      }
+    }
+  }
+
+  &__bottom {
+
+    img {
+      position: absolute;
+      top: -100px;
+      right: -200px;
+      width: 300px;
+      border-radius: 20px;
+      opacity: 0;
+      transition: opacity 1s ease;
+
+      &.active {
+        opacity: 1;
+      }
+
+      @media screen and (max-width: 1400px) {
+        right: -50px;
+
+      }
+
+      @include pc{
+        display: none;
+        }
+    }
+  }
+
+
+
+  &__ {}
+
+  &__ {}
 }
 
 
@@ -1896,7 +1953,7 @@ footer
   background-color: #3071b9;
   padding: 40px 12px;
   font-size: 14px;
- position: relative;
+  position: relative;
 
   &__inner {
     max-width: 1120px;
@@ -1922,10 +1979,10 @@ footer
 
   &__top-item {
 
-    @include tab{
+    @include tab {
       width: 53%;
 
-      &:nth-of-type(even){
+      &:nth-of-type(even) {
         width: 38%;
       }
     }
@@ -1961,6 +2018,7 @@ footer
 
   &__top-link-box {
     margin: 0 0 18px 12px;
+
     a {
       color: rgb(255 255 255 / 50%);
     }

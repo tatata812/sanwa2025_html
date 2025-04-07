@@ -189,50 +189,84 @@ $(function () {
 
   // スライドメニューにアコーディオン
   $('.slide-menu__top-link-content').hide(); // 初めに非表示
-  $('.top-link-js').on('click', function(){
-      $(this).next('.slide-menu__top-link-content').slideToggle();
+  $('.top-link-js').on('click', function () {
+    $(this).next('.slide-menu__top-link-content').slideToggle();
   });
 
 
   // トップに戻るボタン
-  $('.footer__scroll-btn').click(function(e) {
+  $('.footer__scroll-btn').click(function (e) {
     e.preventDefault(); // もしaタグなどの場合、デフォルトの挙動を防ぐ
-    $('html, body').animate({ scrollTop: 0 }, 800); // 0.5秒でトップへ
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800); // 0.5秒でトップへ
   });
 
-  $( window ).bind( 'scroll', function() {
-    scrolled = $( window ).scrollTop();
+  $(window).bind('scroll', function () {
+    scrolled = $(window).scrollTop();
     weight1 = 0.1;
     weight2 = 0.1;
-    $( '.parallax3' ).css( 'top', 800 - scrolled * weight1 + 'px' );
-    $( '.parallax4' ).css( 'top', 1000 - scrolled * weight2 + 'px' );
+    $('.parallax3').css('top', 800 - scrolled * weight1 + 'px');
+    $('.parallax4').css('top', 1000 - scrolled * weight2 + 'px');
   });
 
 
   // パララックス
-  $(window).on('scroll', function() {
+  $(window).on('scroll', function () {
     var scrollPosition = $(this).scrollTop();
-  
+
     // パララックスを適用したい要素の動きを設定
     $('.parallax1').css('transform', 'translateY(' + scrollPosition * 0.4 + 'px)');
     $('.parallax2').css('transform', 'translateY(' + scrollPosition * 0.1 + 'px)');
   });
 
 
-   // スマホの時はスクロールさせない
-   $(".open-btn-js02").click(function () {
+  // スマホの時はスクロールさせない
+  $(".open-btn-js02").click(function () {
     if ($(window).width() <= 768) { // スマホサイズ
       const body = $("body");
       const isLocked = body.css("overflow") === "hidden";
-  
+
       if (isLocked) {
-        body.css({ height: "", overflow: "" });
+        body.css({
+          height: "",
+          overflow: ""
+        });
       } else {
-        body.css({ height: "100%", overflow: "hidden" });
+        body.css({
+          height: "100%",
+          overflow: "hidden"
+        });
       }
     }
   });
- 
+
+
+  const $images = $('.main-visual-top-js img');
+  let current = 0;
+  const imageCount = $images.length;
+
+  // 初回の切り替えを1.5秒後にスタート
+  setTimeout(() => {
+    // その後は通常通り繰り返し
+    setInterval(() => {
+      $images.eq(current).removeClass('active');
+      current = (current + 1) % imageCount;
+      $images.eq(current).addClass('active');
+    }, 3000); // 切り替え間隔も1.5秒
+  }, 1500); // ← これが開始までの遅延
+
+
+  const $images2 = $('.main-visual-bottom-js img');
+  let current2 = 0;
+  const imageCount2 = $images2.length;
+
+  setInterval(() => {
+    $images2.eq(current2).removeClass('active');
+    current2 = (current2 + 1) % imageCount2;
+    $images2.eq(current2).addClass('active');
+  }, 3000);
+
 
 
 })

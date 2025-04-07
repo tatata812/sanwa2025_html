@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>ふわっと画像切り替え</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #slider img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+    #slider {
+      position: relative;
+      width: 500px; /* お好きなサイズに調整 */
+      height: 300px;
+
+    }
+  </style>
+</head>
+<body>
+  <div id="slider">
+    <img src="/assets/img/company/company-section02_01.png" alt="Image 1" style="display: block;">
+    <img src="/assets/img/company/company-section02_02.png" alt="Image 2">
+    <img src="/assets/img/company/company-section02_03.png" alt="Image 3">
+  </div>
+
+  <script>
+    $(function() {
+      let $images = $('#slider img');
+      let current = 0;
+
+      setInterval(function() {
+        let next = (current + 1) % $images.length;
+
+        $images.eq(current).fadeOut(1000);
+        $images.eq(next).fadeIn(1000);
+
+        current = next;
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
