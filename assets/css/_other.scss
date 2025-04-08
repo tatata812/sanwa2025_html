@@ -23,7 +23,7 @@
 .page-newsrelease {
   padding: 160px 12px;
 
-  @include tab{
+  @include tab {
     padding: 80px 12px 72px;
 
   }
@@ -35,8 +35,8 @@
     font-weight: bold;
     font-size: 43px;
 
-    @include tab{
-    font-size: 28px;
+    @include tab {
+      font-size: 28px;
     }
   }
 
@@ -47,11 +47,11 @@
     border-radius: 40px;
     padding: 80px 120px;
 
-    @include pc{
+    @include pc {
       padding: 40px 40px;
     }
 
-    @include tab{
+    @include tab {
       padding: 24px 16px;
       border-radius: 12px;
 
@@ -63,10 +63,10 @@
     display: flex;
     justify-content: space-between;
 
-    @include tab{
+    @include tab {
       flex-direction: column;
     }
-    
+
   }
 
   &__tab {
@@ -122,7 +122,7 @@
     display: flex;
     gap: 24px;
 
-    @include tab{
+    @include tab {
       justify-content: flex-end;
       margin: 0 0 12px;
     }
@@ -132,17 +132,14 @@
     }
   }
 
-  &__select {
-  }
+  &__select {}
 
-  &__pager {
-
-  }
+  &__pager {}
 
   &__box {
     margin: 0 0 40px;
 
-    @include tab{
+    @include tab {
       margin: 0 0 16px;
 
     }
@@ -336,7 +333,62 @@
     }
   }
 
-  &__ {}
+}
+
+
+
+/* =================================
+記事ページ
+ ================================= */
+
+.single {
+  padding: 160px 12px;
+
+  @include tab {
+    padding: 80px 12px 72px;
+
+  }
+
+  &__ttl-wrap {
+    max-width: 1120px;
+    margin: 0 auto 60px;
+    
+    @include tab{
+      margin: 0 auto 40px;
+
+    }
+  }
+
+
+  &__info-right-top {
+    font-size: 12px;
+
+  }
+
+  &__info-date {
+    border-right: #9d9b9b 1px solid;
+    padding: 0 12px 0 0;
+  }
+
+  &__info-cat {
+    padding: 0 0 0 12px;
+  }
+
+  &__ttl {
+    font-size: 24px;
+    color: #3071b9;
+    font-weight: bold;
+  }
+
+  &__section {
+    max-width: 1040px;
+    margin: 0 auto 60px;
+
+    @include tab{
+      margin: 0 auto 40px;
+
+    }
+  }
 
   &__ {}
 
@@ -358,11 +410,6 @@
 
   &__ {}
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 }
 
 

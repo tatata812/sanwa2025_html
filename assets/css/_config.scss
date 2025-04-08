@@ -570,9 +570,10 @@ input[type="text"] {
 
   h2 {
     font-size: 20px;
-    border-bottom: #cccccc 1px solid;
     padding: 0 0 12px;
     margin: 0 0 24px;
+    color: #3071b9;
+    font-weight: bold;
 
     @include sp {
       font-size: 18px;
