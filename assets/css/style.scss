@@ -52,15 +52,27 @@ header（PC）
   &__breadcrumb-wrap {
     height: 29px;
     position: fixed;
-    top: 62px;
+    top: 80px;
     width: 100%;
     line-height: 32px;
     font-size: 13px;
     color: rgb(92, 92, 92);
+    opacity: 0;
+    transition: all 0.3s;
+
+
+    &.active {
+      opacity: 1;
+    }
+
+    @include tab{
+      top: 62px;
+
+    }
   }
 
   &__breadcrumb {
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
     padding: 0 12px;
   }
@@ -921,7 +933,7 @@ TOP
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      
+
       &-01 {
         background-image: url('../img/top/top-slider01.jpg');
       }
