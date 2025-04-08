@@ -3752,7 +3752,7 @@ TOP
     width: 100%;
   }
   .top-role .contents div {
-    padding-top: 40px;
+    padding-top: 100px;
   }
   .top-role .contents div:last-child {
     padding-bottom: 0;
@@ -3761,7 +3761,8 @@ TOP
     scroll-snap-align: start;
     height: 100vh;
     width: 100%;
-    padding: 100px 12px;
+    padding: 100px 12px 0;
+    border: 1px solid #3071b9;
   }
 }
 .top-role .images {
