@@ -211,52 +211,7 @@ $(function () {
   });
 
   // トップページのパララックス　三和の役割（PC）
-  let isFixed = false;
-  const $window = $(window);
-  const $contents = $('.contents');
 
-  function checkScroll() {
-    const scrollTop = $window.scrollTop();
-    const contentsTop = $contents.offset().top;
-
-    if (scrollTop >= contentsTop && !isFixed) {
-      // .contentsが画面上部に達したら固定
-      $contents.css({
-        position: 'fixed',
-        top: 0,
-        left: $contents.offset().left,
-        width: $contents.outerWidth()
-      });
-      isFixed = true;
-      $window.scrollTop(contentsTop); // スクロールを停止
-    } else if (scrollTop < contentsTop && isFixed) {
-      // .contentsが画面上部から離れたら固定解除
-      resetContentsStyle();
-      isFixed = false;
-    }
-
-    if (isFixed) {
-      // .contentsが固定されている間、内部コンテンツのスクロールを監視
-      const contentsScrollTop = $window.scrollTop() - contentsTop;
-      const contentsScrollHeight = $contents[0].scrollHeight;
-      const contentsClientHeight = $contents[0].clientHeight;
-
-      // 内部コンテンツが最後までスクロールされたら固定解除
-      if (contentsScrollTop + contentsClientHeight >= contentsScrollHeight) {
-        resetContentsStyle();
-        isFixed = false;
-      }
-    }
-    function resetContentsStyle() {
-      $contents.css({
-        position: 'static',
-        top: '',
-        left: '',
-        width: ''
-      });
-    }
-  
-    $window.on('scroll touchmove', checkScroll);
 
   // スマホスクロール時に .contents で止める
   $(window).on('scroll', function () {
