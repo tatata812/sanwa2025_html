@@ -1501,17 +1501,10 @@ TOP
 
   @include tab {
     .contents {
-      width: 100vw;
       overflow: auto;
-      scroll-snap-type: y proximity;
+      scroll-snap-type: y mandatory;
       height: 100vh;
-      overflow: auto; /* スクロール機能はあり */
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* Internet Explorer/Edge */
-
-
-
-
+      width: 100%;
     }
 
     .contents div {
@@ -1523,9 +1516,11 @@ TOP
     }
 
     .scroll-box {
-      scroll-snap-align: start;
-      height: 100vh;
-      padding: 60px 12px 0;
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100%;
+  padding: 100px 12px;
+
     }
   }
 

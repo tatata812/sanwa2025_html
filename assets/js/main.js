@@ -211,73 +211,98 @@ $(function () {
   });
 
   // トップページのパララックス　三和の役割（PC）
+  $(window).on('scroll', function () {
+    if ($(window).width() >= 780) {
+      const scrollTop = $(window).scrollTop();
+      const windowHeight = $(window).height();
+  
+      $('.contents div').each(function () {
+        const $this = $(this);
+        const boxNum = $this.attr("class");
+        const areaTop = $this.offset().top;
+  
+        if (scrollTop + windowHeight / 2 > areaTop) {
+          $('.images .' + boxNum).addClass('active');
+        } else {
+          $('.images .' + boxNum).removeClass('active');
+        }
+      });
+    } else {
+      // 780px未満のときは active クラスを全部外す（任意）
+      $('.images .active').removeClass('active');
+    }
+  });
 
-
-  // スマホスクロール時に .contents で止める
-  おっしゃる通り、スマホのフリック操作などでは、意図せずスクロールが行き過ぎてしまうことがありますね。せっかく .contents が画面上部で止まっても、すぐに解除されてしまうのは困ります。
-
-  この問題を解決するために、いくつかアプローチが考えられます。
-  
-  考えられる対策:
-  
-  固定解除の条件に少し余裕を持たせる: 内部コンテンツの最下部に達した「直後」ではなく、少しスクロールバックした時点で解除するように条件を調整する。
-  固定時間を設ける: .contents が画面上部に固定された後、一定時間経過するまでは解除しないようにする（先ほどの例でご紹介した方法の応用）。
-  スローダウン効果やバウンド効果を検討する: CSSやJavaScriptで、スクロールの勢いを弱めたり、最下部で少しバウンドするような効果を加えることで、行き過ぎを抑制する。
-  ここでは、1番目の「固定解除の条件に少し余裕を持たせる」方法でコードを修正してみます。
-  
-  JavaScript
-  
-  $(function() {
-    let isFixed = false;
-    const $window = $(window);
-    const $contents = $('.contents');
-    const releaseOffset = 50; // 解除のオフセット値（ピクセル）
-  
-    function checkScroll() {
-      const scrollTop = $window.scrollTop();
-      const contentsTop = $contents.offset().top;
-  
-      if (scrollTop >= contentsTop && !isFixed) {
-        // .contentsが画面上部に達したら固定
-        $contents.css({
-          position: 'fixed',
-          top: 0,
-          left: $contents.offset().left,
-          width: $contents.outerWidth()
-        });
-        isFixed = true;
-        $window.scrollTop(contentsTop); // スクロールを停止
-      } else if (scrollTop < contentsTop && isFixed) {
-        // .contentsが画面上部から離れたら固定解除
-        resetContentsStyle();
-        isFixed = false;
-      }
-  
-      if (isFixed) {
-        // .contentsが固定されている間、内部コンテンツのスクロールを監視
-        const contentsScrollTop = $window.scrollTop() - contentsTop;
-        const contentsScrollHeight = $contents[0].scrollHeight;
-        const contentsClientHeight = $contents[0].clientHeight;
-  
-        // 内部コンテンツがほぼ最後までスクロールされたら固定解除（少し手前で解除）
-        if (contentsScrollTop + contentsClientHeight >= contentsScrollHeight - releaseOffset) {
-          resetContentsStyle();
+    // トップページのパララックス　三和の役割（SP）
+    $(function() {
+      let isFixed = false;
+      const $window = $(window);
+      const $scrollBoxWrap = $('.scroll-box-wrap');
+      let scrollBoxWrapTop;
+      let scrollBoxWrapHeight;
+    
+      // 初期位置と高さを記憶
+      $(window).on('load resize', function() {
+        scrollBoxWrapTop = $scrollBoxWrap.offset().top;
+        scrollBoxWrapHeight = $scrollBoxWrap.outerHeight();
+      });
+    
+      $window.on('scroll touchmove', function() {
+        const scrollTop = $window.scrollTop();
+        const windowHeight = $window.height();
+    
+        // .scroll-box-wrap が画面上部に達したら固定
+        if (scrollTop >= scrollBoxWrapTop && !isFixed) {
+          $scrollBoxWrap.css({
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            overflow: 'auto' // 内部要素がスクロールできるように
+          });
+          isFixed = true;
+        } else if (scrollTop < scrollBoxWrapTop && isFixed) {
+          // .scroll-box-wrap が画面上部から離れたら固定解除
+          resetScrollBoxWrapStyle();
           isFixed = false;
         }
-      }
-    }
-  
-    function resetContentsStyle() {
-      $contents.css({
-        position: 'static',
-        top: '',
-        left: '',
-        width: ''
+    
+        // 固定中の処理：
+        if (isFixed) {
+          const wrapScrollTop = $window.scrollTop() - scrollBoxWrapTop;
+          const wrapScrollHeight = $scrollBoxWrap[0].scrollHeight;
+          const wrapClientHeight = $scrollBoxWrap[0].clientHeight;
+    
+          // 内部要素がスクロールし終わったら固定解除
+          if (wrapScrollTop + wrapClientHeight >= wrapScrollHeight) {
+            resetScrollBoxWrapStyle();
+            isFixed = false;
+          }
+    
+          // .scroll-box-wrap の領域を過ぎたら固定解除
+          if (scrollTop > scrollBoxWrapTop + scrollBoxWrapHeight) {
+            resetScrollBoxWrapStyle();
+            isFixed = false;
+          }
+        }
       });
-    }
-  
-    $window.on('scroll touchmove', checkScroll);
-  });
+    
+      function resetScrollBoxWrapStyle() {
+        $scrollBoxWrap.css({
+          position: 'static',
+          top: '',
+          left: '',
+          width: '',
+          height: '',
+          overflow: ''
+        });
+        // 固定解除後のスクロール位置を調整（必要に応じて）
+        $window.scrollTop(scrollBoxWrapTop + scrollBoxWrapHeight - $window.height());
+      }
+    });
+
+
 
   // スライドメニューにアコーディオン
   $('.slide-menu__top-link-content').hide(); // 初めに非表示
@@ -364,5 +389,8 @@ $(function () {
     }
   }, 3000);
 })
+
+
+// GSAP
 
 
