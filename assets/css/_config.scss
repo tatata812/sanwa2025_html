@@ -28,6 +28,7 @@ body {
   line-height: 1.8rem;
   letter-spacing: 0.1em;
   color: #656565;
+  scroll-behavior: smooth;
 
   @include sp {
     font-size: 13px;
