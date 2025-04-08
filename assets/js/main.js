@@ -210,18 +210,27 @@ $(function () {
     $(".page-newsrelease__box-item").eq(i).addClass("active");
   });
 
-  // トップページのパララックス
-  $(window).scroll(function () {
-    $('.contents div').each(function () {
-      boxNum = $(this).attr("class"),
-        scrollTop = $(window).scrollTop();
-      areaTop = $(this).offset().top;
-      if (scrollTop > areaTop) {
-        $('.images .' + boxNum).addClass('active');
-      } else {
-        $('.images .' + boxNum).removeClass('active');
-      }
-    });
+  // トップページのパララックス　三和の役割（PC）
+  $(window).on('scroll', function () {
+    if ($(window).width() >= 780) {
+      const scrollTop = $(window).scrollTop();
+      const windowHeight = $(window).height();
+  
+      $('.contents div').each(function () {
+        const $this = $(this);
+        const boxNum = $this.attr("class");
+        const areaTop = $this.offset().top;
+  
+        if (scrollTop + windowHeight / 2 > areaTop) {
+          $('.images .' + boxNum).addClass('active');
+        } else {
+          $('.images .' + boxNum).removeClass('active');
+        }
+      });
+    } else {
+      // 780px未満のときは active クラスを全部外す（任意）
+      $('.images .active').removeClass('active');
+    }
   });
 
   // スライドメニューにアコーディオン
@@ -278,12 +287,63 @@ $(function () {
     }
   });
 
+  // 大切なお知らせスライダー
+  const $slides = $('.main-visual-info-js');
+  const $slide = $('.main-visual__info-right-item');
+  const slideCount = $slide.length;
+  const slideWidth = $slide.outerWidth();
 
+  let currentIndex = 0;
 
+  // 最初と最後をつなぐためにクローンを追加
+  $slides.append($slide.first().clone());
 
+  setInterval(function() {
+    currentIndex++;
+    $slides.css('transform', 'translateX(' + (-slideWidth * currentIndex) + 'px)');
 
+    // 最後のクローンに到達したら
+    if (currentIndex === slideCount) {
+      setTimeout(function() {
+        // アニメーションなしでリセット
+        $slides.css('transition', 'none');
+        $slides.css('transform', 'translateX(0)');
+        currentIndex = 0;
 
-  
-
-
+        // 再び transition を有効に
+        setTimeout(function() {
+          $slides.css('transition', 'transform 0.5s ease');
+        }, 50);
+      }, 500); // スライドの transition 時間
+    }
+  }, 3000);
 })
+
+
+// 三和の役割（SP）
+
+
+// Intersection Observer
+const sections = document.querySelectorAll(".scroll-box");
+const observerRoot = document.querySelector(".fullPageScroll");
+const options = {
+  root: observerRoot,
+  rootMargin: "-50% 0px",
+  threshold: 0
+};
+const observer = new IntersectionObserver(doWhenIntersect, options);
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+/**
+ * 交差したときに呼び出す関数
+ * @param entries - IntersectionObserverEntry IntersectionObserverが交差したときに渡されるオブジェクトです。
+ */
+function doWhenIntersect(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      activatePagination(entry.target);
+    }
+  });
+}
