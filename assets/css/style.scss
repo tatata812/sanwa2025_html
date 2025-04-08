@@ -838,8 +838,8 @@ TOP
         left: -50px;
       }
 
-      @include pc{
-      display: none;
+      @include pc {
+        display: none;
       }
     }
   }
@@ -865,9 +865,9 @@ TOP
 
       }
 
-      @include pc{
+      @include pc {
         display: none;
-        }
+      }
     }
   }
 
@@ -1405,7 +1405,6 @@ TOP
     margin: 0 auto 80px;
 
     @include tab {
-      padding: 0 12px;
       margin: 0 auto 40px;
     }
   }
@@ -1483,10 +1482,10 @@ TOP
     width: 50%;
 
 
-    @include tab{
-    &:-webkit-scrollbar {
-      display: none;
-    }
+    @include tab {
+      &:-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 
@@ -1498,20 +1497,18 @@ TOP
     padding-bottom: 50vh;
   }
 
+
   @include tab {
     .contents {
       width: 100%;
-      margin: 0 auto;
-      padding: 0 24px;
+      overflow: auto;
+      scroll-snap-type: y proximity;
       height: 100vh;
-      scroll-snap-type: y mandatory;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
       overflow: auto; /* スクロール機能はあり */
       scrollbar-width: none; /* Firefox */
       -ms-overflow-style: none; /* Internet Explorer/Edge */
 
-      
+
     }
 
     .contents div {
@@ -1523,9 +1520,9 @@ TOP
     }
 
     .scroll-box {
-      width: 100%;
-      height: 100vh;
       scroll-snap-align: start;
+      height: 100vh;
+      padding: 60px 12px 0;
     }
   }
 

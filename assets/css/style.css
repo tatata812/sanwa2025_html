@@ -3658,7 +3658,6 @@ TOP
 }
 @media (max-width: 780px) {
   .top-role__inner {
-    padding: 0 12px;
     margin: 0 auto 40px;
   }
 }
@@ -3747,12 +3746,9 @@ TOP
 @media (max-width: 780px) {
   .top-role .contents {
     width: 100%;
-    margin: 0 auto;
-    padding: 0 24px;
+    overflow: auto;
+    scroll-snap-type: y proximity;
     height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
     overflow: auto; /* スクロール機能はあり */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer/Edge */
@@ -3764,9 +3760,9 @@ TOP
     padding-bottom: 0;
   }
   .top-role .scroll-box {
-    width: 100%;
-    height: 100vh;
     scroll-snap-align: start;
+    height: 100vh;
+    padding: 60px 12px 0;
   }
 }
 .top-role .images {
