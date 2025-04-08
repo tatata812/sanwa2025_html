@@ -894,9 +894,8 @@ TOP
 // GSAPメインビジュアル
 .gsap-main {
 
-
   &__skip-btn {
-    position: absolute;
+    position: fixed;
     bottom: 200px;
     right: 20px;
     font-size: 22px;

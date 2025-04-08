@@ -3245,7 +3245,7 @@ TOP
   }
 }
 .gsap-main__skip-btn {
-  position: absolute;
+  position: fixed;
   bottom: 200px;
   right: 20px;
   font-size: 22px;

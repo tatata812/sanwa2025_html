@@ -336,6 +336,7 @@ $(function () {
       }, 800, 'swing'); // スムーズスクロールのアニメーション（durationとeasingは調整可能）
     }
   });
+
 })
 
 
@@ -364,5 +365,27 @@ if(wrapper) {
         }
     })
 }
+
+
+
+// スキップボタン
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.create({
+  trigger: '.main-visual',
+  end: "top",
+  markers: true,
+  onEnter: () => {
+    document.querySelector('.page-top-fixed').style.display = 'none';
+  },
+  onLeaveBack: () => {
+    document.querySelector('.page-top-fixed').style.display = 'block';
+  }
+});
+
+
+
+
+
+
 
 
