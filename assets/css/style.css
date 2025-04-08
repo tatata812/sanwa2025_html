@@ -3745,7 +3745,7 @@ TOP
 }
 @media (max-width: 780px) {
   .top-role .contents {
-    width: 100%;
+    width: 100vw;
     overflow: auto;
     scroll-snap-type: y proximity;
     height: 100vh;

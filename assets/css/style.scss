@@ -1500,13 +1500,15 @@ TOP
 
   @include tab {
     .contents {
-      width: 100%;
+      width: 100vw;
       overflow: auto;
       scroll-snap-type: y proximity;
       height: 100vh;
       overflow: auto; /* スクロール機能はあり */
       scrollbar-width: none; /* Firefox */
       -ms-overflow-style: none; /* Internet Explorer/Edge */
+
+
 
 
     }

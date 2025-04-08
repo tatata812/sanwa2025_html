@@ -211,25 +211,66 @@ $(function () {
   });
 
   // トップページのパララックス　三和の役割（PC）
-  $(window).on('scroll', function () {
-    if ($(window).width() >= 780) {
-      const scrollTop = $(window).scrollTop();
-      const windowHeight = $(window).height();
-  
-      $('.contents div').each(function () {
-        const $this = $(this);
-        const boxNum = $this.attr("class");
-        const areaTop = $this.offset().top;
-  
-        if (scrollTop + windowHeight / 2 > areaTop) {
-          $('.images .' + boxNum).addClass('active');
-        } else {
-          $('.images .' + boxNum).removeClass('active');
-        }
+  let isFixed = false;
+  const $window = $(window);
+  const $contents = $('.contents');
+
+  function checkScroll() {
+    const scrollTop = $window.scrollTop();
+    const contentsTop = $contents.offset().top;
+
+    if (scrollTop >= contentsTop && !isFixed) {
+      // .contentsが画面上部に達したら固定
+      $contents.css({
+        position: 'fixed',
+        top: 0,
+        left: $contents.offset().left,
+        width: $contents.outerWidth()
       });
-    } else {
-      // 780px未満のときは active クラスを全部外す（任意）
-      $('.images .active').removeClass('active');
+      isFixed = true;
+      $window.scrollTop(contentsTop); // スクロールを停止
+    } else if (scrollTop < contentsTop && isFixed) {
+      // .contentsが画面上部から離れたら固定解除
+      resetContentsStyle();
+      isFixed = false;
+    }
+
+    if (isFixed) {
+      // .contentsが固定されている間、内部コンテンツのスクロールを監視
+      const contentsScrollTop = $window.scrollTop() - contentsTop;
+      const contentsScrollHeight = $contents[0].scrollHeight;
+      const contentsClientHeight = $contents[0].clientHeight;
+
+      // 内部コンテンツが最後までスクロールされたら固定解除
+      if (contentsScrollTop + contentsClientHeight >= contentsScrollHeight) {
+        resetContentsStyle();
+        isFixed = false;
+      }
+    }
+    function resetContentsStyle() {
+      $contents.css({
+        position: 'static',
+        top: '',
+        left: '',
+        width: ''
+      });
+    }
+  
+    $window.on('scroll touchmove', checkScroll);
+
+  // スマホスクロール時に .contents で止める
+  $(window).on('scroll', function () {
+    if ($(window).width() < 780) { // スマホサイズのみ
+      let scrollTop = $(window).scrollTop();
+      let contentsTop = $('.contents').offset().top;
+  
+      if (scrollTop >= contentsTop - 10 && scrollTop <= contentsTop + 10) {
+        $('html, body').stop().animate({ scrollTop: contentsTop }, 200, function () {
+          $('.contents').addClass('fullscreen');
+        });
+      } else {
+        $('.contents').removeClass('fullscreen');
+      }
     }
   });
 
@@ -320,30 +361,3 @@ $(function () {
 })
 
 
-// 三和の役割（SP）
-
-
-// Intersection Observer
-const sections = document.querySelectorAll(".scroll-box");
-const observerRoot = document.querySelector(".fullPageScroll");
-const options = {
-  root: observerRoot,
-  rootMargin: "-50% 0px",
-  threshold: 0
-};
-const observer = new IntersectionObserver(doWhenIntersect, options);
-sections.forEach(section => {
-  observer.observe(section);
-});
-
-/**
- * 交差したときに呼び出す関数
- * @param entries - IntersectionObserverEntry IntersectionObserverが交差したときに渡されるオブジェクトです。
- */
-function doWhenIntersect(entries) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      activatePagination(entry.target);
-    }
-  });
-}
