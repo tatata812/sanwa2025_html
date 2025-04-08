@@ -234,73 +234,73 @@ $(function () {
   });
 
     // トップページのパララックス　三和の役割（SP）
-    $(function() {
-      let isFixed = false;
-      const $window = $(window);
-      const $scrollBoxWrap = $('.scroll-box-wrap');
-      let scrollBoxWrapTop;
-      let scrollBoxWrapHeight;
+    // $(function() {
+    //   let isFixed = false;
+    //   const $window = $(window);
+    //   const $scrollBoxWrap = $('.scroll-box-wrap');
+    //   let scrollBoxWrapTop;
+    //   let scrollBoxWrapHeight;
     
-      // 初期位置と高さを記憶
-      $(window).on('load resize', function() {
-        scrollBoxWrapTop = $scrollBoxWrap.offset().top;
-        scrollBoxWrapHeight = $scrollBoxWrap.outerHeight();
-      });
+    //   // 初期位置と高さを記憶
+    //   $(window).on('load resize', function() {
+    //     scrollBoxWrapTop = $scrollBoxWrap.offset().top;
+    //     scrollBoxWrapHeight = $scrollBoxWrap.outerHeight();
+    //   });
     
-      $window.on('scroll touchmove', function() {
-        const scrollTop = $window.scrollTop();
-        const windowHeight = $window.height();
+    //   $window.on('scroll touchmove', function() {
+    //     const scrollTop = $window.scrollTop();
+    //     const windowHeight = $window.height();
     
-        // .scroll-box-wrap が画面上部に達したら固定
-        if (scrollTop >= scrollBoxWrapTop && !isFixed) {
-          $scrollBoxWrap.css({
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            overflow: 'auto' // 内部要素がスクロールできるように
-          });
-          isFixed = true;
-        } else if (scrollTop < scrollBoxWrapTop && isFixed) {
-          // .scroll-box-wrap が画面上部から離れたら固定解除
-          resetScrollBoxWrapStyle();
-          isFixed = false;
-        }
+    //     // .scroll-box-wrap が画面上部に達したら固定
+    //     if (scrollTop >= scrollBoxWrapTop && !isFixed) {
+    //       $scrollBoxWrap.css({
+    //         position: 'fixed',
+    //         top: 0,
+    //         left: 0,
+    //         width: '100%',
+    //         height: '100%',
+    //         overflow: 'auto' // 内部要素がスクロールできるように
+    //       });
+    //       isFixed = true;
+    //     } else if (scrollTop < scrollBoxWrapTop && isFixed) {
+    //       // .scroll-box-wrap が画面上部から離れたら固定解除
+    //       resetScrollBoxWrapStyle();
+    //       isFixed = false;
+    //     }
     
-        // 固定中の処理：
-        if (isFixed) {
-          const wrapScrollTop = $window.scrollTop() - scrollBoxWrapTop;
-          const wrapScrollHeight = $scrollBoxWrap[0].scrollHeight;
-          const wrapClientHeight = $scrollBoxWrap[0].clientHeight;
+    //     // 固定中の処理：
+    //     if (isFixed) {
+    //       const wrapScrollTop = $window.scrollTop() - scrollBoxWrapTop;
+    //       const wrapScrollHeight = $scrollBoxWrap[0].scrollHeight;
+    //       const wrapClientHeight = $scrollBoxWrap[0].clientHeight;
     
-          // 内部要素がスクロールし終わったら固定解除
-          if (wrapScrollTop + wrapClientHeight >= wrapScrollHeight) {
-            resetScrollBoxWrapStyle();
-            isFixed = false;
-          }
+    //       // 内部要素がスクロールし終わったら固定解除
+    //       if (wrapScrollTop + wrapClientHeight >= wrapScrollHeight) {
+    //         resetScrollBoxWrapStyle();
+    //         isFixed = false;
+    //       }
     
-          // .scroll-box-wrap の領域を過ぎたら固定解除
-          if (scrollTop > scrollBoxWrapTop + scrollBoxWrapHeight) {
-            resetScrollBoxWrapStyle();
-            isFixed = false;
-          }
-        }
-      });
+    //       // .scroll-box-wrap の領域を過ぎたら固定解除
+    //       if (scrollTop > scrollBoxWrapTop + scrollBoxWrapHeight) {
+    //         resetScrollBoxWrapStyle();
+    //         isFixed = false;
+    //       }
+    //     }
+    //   });
     
-      function resetScrollBoxWrapStyle() {
-        $scrollBoxWrap.css({
-          position: 'static',
-          top: '',
-          left: '',
-          width: '',
-          height: '',
-          overflow: ''
-        });
-        // 固定解除後のスクロール位置を調整（必要に応じて）
-        $window.scrollTop(scrollBoxWrapTop + scrollBoxWrapHeight - $window.height());
-      }
-    });
+    //   function resetScrollBoxWrapStyle() {
+    //     $scrollBoxWrap.css({
+    //       position: 'static',
+    //       top: '',
+    //       left: '',
+    //       width: '',
+    //       height: '',
+    //       overflow: ''
+    //     });
+    //     // 固定解除後のスクロール位置を調整（必要に応じて）
+    //     $window.scrollTop(scrollBoxWrapTop + scrollBoxWrapHeight - $window.height());
+    //   }
+    // });
 
 
 
