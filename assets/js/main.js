@@ -325,6 +325,24 @@ $(function () {
   }, 3000);
 
 
+// 沿革ボタン
+$('.history-btn-js').on('click', function(e) {
+  e.preventDefault();
+
+  // ヘッダーの高さ + 20px
+  var headerHeight = $('.header').outerHeight() + 24;
+
+  // 移動先の位置を取得
+  var targetId = $(this).attr('href');
+  var targetPosition = $(targetId).offset().top - headerHeight;
+
+  // スムーズにスクロール
+  $('html, body').animate({
+    scrollTop: targetPosition
+  }, 600); // アニメーション速度は 600ms
+});
+
+
   // メインビジュアル　スキップボタン
   $('.gsap-main__skip-btn').on('click', function(e) {
     e.preventDefault(); // デフォルトのアンカーリンクの動作をキャンセル

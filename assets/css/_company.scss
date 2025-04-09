@@ -16,6 +16,98 @@
   }
 }
 
+
+.company-link {
+  background-color: rgb(214 240 241 / 50%);
+  padding: 60px 12px;
+
+
+
+  &__box {
+    display: flex;
+    max-width: 1080px;
+    margin: 0 auto;
+    gap:  16px;
+    flex-wrap: wrap;
+    padding: 0 16px;
+
+    @include pc {
+      gap: 16px;
+    }
+
+    @include tab{
+      padding: 0;
+
+    }
+  }
+
+  &__item {
+    width: calc((100% - 80px) / 6);
+
+    @include tab {
+      width: calc((100% - 32px) / 3);
+    }
+  }
+
+  &__img {
+    margin: 0 0 24px;
+
+    @include tab {
+      margin: 0 0 12px;
+    }
+  }
+
+  &__ttl {
+    margin: 0 0 0 4px;
+    color: #3071b9;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      /* 擬似要素で矢印アイコンをつくる */
+      content: '';
+      border: 0;
+      border-top: solid 2px #3071b9;
+      border-right: solid 2px #3071b9;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      /* 矢印アイコンの位置を設定 */
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%) rotate(45deg);
+      /* rotate(45deg)で矢印を回転（向きを変更）させる */
+      transition: all 0.5s;
+
+      &:hover {
+        transform: translateY(-50%) rotate(45deg) translateX(5px);
+      }
+    }
+
+    &--bee {
+      &:after {
+        display: none;
+      }
+
+      &::before {
+        content: url(../img/company/external-link.png);
+        position: absolute;
+        top: 0;
+        right: -26px;
+        transform: scale(1);
+  
+        @include tab{
+          top: 2px;
+          right: -24px;
+  
+        }
+      }
+    }
+  }
+}
+
 /* =================================
 会社案内（company）
  ================================= */
@@ -181,6 +273,12 @@
 
 .page-services {
 
+  padding: 0 0 120px;
+
+  @include tab{
+  padding: 0;
+  }
+
   &__bg-right {
     bottom: 50px;
     right: 0;
@@ -277,6 +375,11 @@
 
   &__section01 {
     padding: 0 0 120px;
+
+    @include tab{
+      padding: 0 0 60px;
+
+    }
   }
 
   &__section01-box {
@@ -369,10 +472,182 @@
 
 
 /* =================================
-
+会社概要（page-outline）
  ================================= */
 
-.aaa {
+.page-outline {
+  padding: 0 0 120px;
+
+  @include tab{
+  padding: 0;
+  }
+
+
+  &__section {
+    padding: 80px 12px 120px;
+
+    @include tab{
+      padding: 40px 12px 80px;
+
+    }
+  }
+
+  &__section-ttl {
+    max-width: 1040px;
+    margin: 0 auto 24px;
+    padding: 0 0 0 12px;
+    font-size: 24px;
+
+    @include tab{
+      font-size: 18px;
+
+    }
+  }
+
+  &__flex {
+    display: flex;
+    max-width: 1040px;
+    margin: 0 auto;
+
+    @include tab{
+    flex-direction: column;
+    }
+  }
+
+  &__left {
+    width: 50%;
+    padding: 0 40px 0 0;
+    border-right: 1px solid #cccccc;
+
+    @include pc{
+      padding: 0 20px 0 0;
+    }
+
+    @include tab{
+      width: 100%;
+      padding: 0;
+      border-right: none;
+       
+    }
+  }
+
+  &__right {
+    width: 50%;
+    padding: 0 0 0 40px;
+
+    @include pc{
+      padding: 0 0 0 20px;
+
+    }
+
+    @include tab{
+      width: 100%;
+      padding: 0;
+      border-right: none;
+       
+    }
+
+  }
+
+  &__table {
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+
+    @include sp {
+      font-size: 13px;
+    }
+  }
+
+  &__tr {
+    border-bottom: 1px solid #cccccc;
+
+    &:first-child{
+      border-top: 1px solid #cccccc;
+    }
+
+    @include tab{
+      &--none {
+        border-top: none!important;
+    }
+
+    }
+
+
+
+  }
+
+  &__th {
+    border-collapse: collapse;
+    padding: 12px 28px;
+    width: 170px;
+    vertical-align: top;
+
+    @include pc{
+      width: 120px;
+      padding: 12px 12px;
+
+
+    }
+
+    @include sp {
+      padding: 8px 4px 8px 12px;
+      width: 100px;
+    }
+
+
+  }
+
+  &__td {
+    border-bottom: 1px solid #cccccc;
+    border-collapse: collapse;
+    padding: 12px 28px;
+
+    @include sp {
+      padding: 8px 4px 8px 12px;
+    }
+
+  }
+
+  &__section02-box {
+    display: flex;
+    max-width: 1120px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 16px;
+
+    @include pc {
+      gap: 16px;
+    }
+  }
+
+  &__section02-item {
+    width: calc((100% - 80px) / 3);
+    margin: 0 0 40px;
+
+    @include pc {
+      width: calc((100% - 32px) / 3);
+    }
+
+    @include tab {
+      width: calc((100% - 20px) / 2);
+      margin: 0 0 12px;
+    }
+  }
+
+  &__section02-img {
+    margin: 0 0 24px;
+
+    @include tab {
+      margin: 0 0 12px;
+    }
+  }
+
+  &__section02-ttl {
+    margin: 0 0 0 4px;
+  }
 
   &__ {}
 
@@ -386,28 +661,190 @@
 
   &__ {}
 
-  &__ {}
+
+}
+
+
+/* =================================
+会社概要（page-history）
+ ================================= */
+
+ .page-history {
+  padding: 0 0 120px;
+
+  @include tab{
+  padding: 0;
+  }
+
+  &__section {
+    padding: 80px 12px 120px;
+
+    @include tab{
+      padding: 40px 12px 80px;
+
+    }
+  }
+
+  &__section-ttl {
+
+    padding: 0 0 0 12px;
+    font-size: 24px;
+
+    @include tab{
+      font-size: 18px;
+      margin: 0 0 12px;
+
+    }
+  }
+
+  &__content {
+    max-width: 1040px;
+    margin: 0 auto 60px;
+    padding: 0 24px;
+
+    @include sp {
+      margin: 0 auto 32px;
+      padding: 0 ;
+
+    }
+  }
+
+  &__content-ttl {
+    margin: 0 0 16px;
+
+    @include sp {
+      margin: 0 0 16px;
+
+    }
+  }
+
+  &__table {
+    border-top: 1px solid #cccccc;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+
+    @include sp {
+      font-size: 13px;
+    }
+  }
+
+  &__tr {}
+
+  &__tr {
+    border-bottom: 1px solid #cccccc;
+
+    &:first-child{
+      border-top: 1px solid #cccccc;
+    }
+
+    @include tab{
+      &--none {
+        border-top: none!important;
+    }
+
+    }
+
+
+
+  }
+
+  &__th {
+    border-collapse: collapse;
+    padding: 12px 28px;
+    width: 220px;
+    vertical-align: top;
+
+    @include pc{
+      width: 120px;
+      padding: 12px 12px;
+
+
+    }
+
+    @include sp {
+      padding: 8px 4px 8px 12px;
+      width: 100px;
+    }
+
+
+  }
+
+  &__td {
+    border-bottom: 1px solid #cccccc;
+    border-collapse: collapse;
+    padding: 12px 28px;
+
+    @include sp {
+      padding: 8px 4px 8px 12px;
+    }
+
+  }
+
+  &__br {
+    display: none;
+
+    @include sp {
+      display: block;
+    }
+  }
+
+  &__top-wrap {
+    display: flex;
+    max-width: 1040px;
+    margin: 0 auto 54px;
+    justify-content: space-between;
+    align-items: center;
+    align-items: start;
+
+    @include tab{
+      flex-direction: column;
+      margin: 0 auto 24px;
+
+      }
+
+  }
+
+  &__btn-wrap {
+    display: flex;
+    gap: 8px;
+
+    @include sp{
+      gap: 4px;
+      justify-content: center;
+      width: 100%;
+
+    }
+
+  }
+
+  &__btn {
+    width: 110px;
+    font-size: 12px;
+    border: #808080 1px solid;
+    border-radius: 8px;
+    line-height: 1.5;
+    padding: 4px 8px;
+    transition: all 0.6;
+
+    &:hover {
+      background-color: #3071b9;
+      color: #fff;
+
+    }
+
+    @include sp{
+      padding: 4px 4px;
+
+    }
+  }
 
   &__ {}
 
   &__ {}
 
   &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
 
 }
 
