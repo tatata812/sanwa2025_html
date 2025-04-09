@@ -910,7 +910,13 @@ TOP
 
   &__ {}
 
-  &__ {}
+  &__text-wrap {
+    white-space: nowrap;
+
+    span {
+      color: #fff;
+    }
+  }
 
   .l-hero {
     overflow: hidden;
@@ -951,7 +957,7 @@ TOP
         top: 0;
         left: 0;
         z-index: 2;
-        background-color: rgba(#000, .25);
+        background-color: rgba(#000, .0);
       }
     }
     .l-hero-panel__contents {

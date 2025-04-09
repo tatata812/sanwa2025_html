@@ -3299,6 +3299,12 @@ TOP
   color: #000;
   z-index: 5;
 }
+.gsap-main__text-wrap {
+  white-space: nowrap;
+}
+.gsap-main__text-wrap span {
+  color: #fff;
+}
 .gsap-main .l-hero {
   overflow: hidden;
   position: relative;
@@ -3338,7 +3344,7 @@ TOP
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0);
 }
 .gsap-main .l-hero .l-hero-panel__contents {
   flex: 0 0 100%;
