@@ -27,7 +27,7 @@
     display: flex;
     max-width: 1080px;
     margin: 0 auto;
-    gap:  16px;
+    gap: 16px;
     flex-wrap: wrap;
     padding: 0 16px;
 
@@ -35,7 +35,7 @@
       gap: 16px;
     }
 
-    @include tab{
+    @include tab {
       padding: 0;
 
     }
@@ -97,11 +97,11 @@
         top: 0;
         right: -26px;
         transform: scale(1);
-  
-        @include tab{
+
+        @include tab {
           top: 2px;
           right: -24px;
-  
+
         }
       }
     }
@@ -275,8 +275,8 @@
 
   padding: 0 0 120px;
 
-  @include tab{
-  padding: 0;
+  @include tab {
+    padding: 0;
   }
 
   &__bg-right {
@@ -376,7 +376,7 @@
   &__section01 {
     padding: 0 0 120px;
 
-    @include tab{
+    @include tab {
       padding: 0 0 60px;
 
     }
@@ -387,22 +387,22 @@
     gap: 60px;
     margin: 0 0 100px;
 
-    @include tab{
-    flex-direction: column-reverse;
-    gap: 24px;
-    margin: 0 0 60px;
+    @include tab {
+      flex-direction: column-reverse;
+      gap: 24px;
+      margin: 0 0 60px;
     }
 
     &--odd {
       flex-direction: row-reverse;
 
-      @include tab{
+      @include tab {
         flex-direction: column-reverse;
       }
 
       .page-services__section01-left {
         padding: 0 0 0 20px;
-        }
+      }
     }
 
     &--last {
@@ -415,9 +415,9 @@
   &__section01-left {
     width: 50%;
 
-    @include tab{
-    width: 100%;
-    padding: 0 20px 0 0;
+    @include tab {
+      width: 100%;
+      padding: 0 20px 0 0;
     }
 
   }
@@ -444,16 +444,16 @@
   &__section01-text {
     margin: 0 0 60px;
 
-    @include tab{
+    @include tab {
       margin: 0 0 32px;
     }
 
   }
 
   &__section01-btn {
-    @include tab{
-    display: block;
-    margin: 0 auto;
+    @include tab {
+      display: block;
+      margin: 0 auto;
     }
   }
 
@@ -478,15 +478,15 @@
 .page-outline {
   padding: 0 0 120px;
 
-  @include tab{
-  padding: 0;
+  @include tab {
+    padding: 0;
   }
 
 
   &__section {
     padding: 80px 12px 120px;
 
-    @include tab{
+    @include tab {
       padding: 40px 12px 80px;
 
     }
@@ -498,7 +498,7 @@
     padding: 0 0 0 12px;
     font-size: 24px;
 
-    @include tab{
+    @include tab {
       font-size: 18px;
 
     }
@@ -509,8 +509,8 @@
     max-width: 1040px;
     margin: 0 auto;
 
-    @include tab{
-    flex-direction: column;
+    @include tab {
+      flex-direction: column;
     }
   }
 
@@ -519,15 +519,15 @@
     padding: 0 40px 0 0;
     border-right: 1px solid #cccccc;
 
-    @include pc{
+    @include pc {
       padding: 0 20px 0 0;
     }
 
-    @include tab{
+    @include tab {
       width: 100%;
       padding: 0;
       border-right: none;
-       
+
     }
   }
 
@@ -535,16 +535,16 @@
     width: 50%;
     padding: 0 0 0 40px;
 
-    @include pc{
+    @include pc {
       padding: 0 0 0 20px;
 
     }
 
-    @include tab{
+    @include tab {
       width: 100%;
       padding: 0;
       border-right: none;
-       
+
     }
 
   }
@@ -563,14 +563,14 @@
   &__tr {
     border-bottom: 1px solid #cccccc;
 
-    &:first-child{
+    &:first-child {
       border-top: 1px solid #cccccc;
     }
 
-    @include tab{
+    @include tab {
       &--none {
-        border-top: none!important;
-    }
+        border-top: none !important;
+      }
 
     }
 
@@ -584,7 +584,7 @@
     width: 170px;
     vertical-align: top;
 
-    @include pc{
+    @include pc {
       width: 120px;
       padding: 12px 12px;
 
@@ -669,17 +669,17 @@
 会社概要（page-history）
  ================================= */
 
- .page-history {
+.page-history {
   padding: 0 0 120px;
 
-  @include tab{
-  padding: 0;
+  @include tab {
+    padding: 0;
   }
 
   &__section {
     padding: 80px 12px 120px;
 
-    @include tab{
+    @include tab {
       padding: 40px 12px 80px;
 
     }
@@ -690,7 +690,7 @@
     padding: 0 0 0 12px;
     font-size: 24px;
 
-    @include tab{
+    @include tab {
       font-size: 18px;
       margin: 0 0 12px;
 
@@ -704,7 +704,7 @@
 
     @include sp {
       margin: 0 auto 32px;
-      padding: 0 ;
+      padding: 0;
 
     }
   }
@@ -735,14 +735,14 @@
   &__tr {
     border-bottom: 1px solid #cccccc;
 
-    &:first-child{
+    &:first-child {
       border-top: 1px solid #cccccc;
     }
 
-    @include tab{
+    @include tab {
       &--none {
-        border-top: none!important;
-    }
+        border-top: none !important;
+      }
 
     }
 
@@ -756,7 +756,7 @@
     width: 220px;
     vertical-align: top;
 
-    @include pc{
+    @include pc {
       width: 120px;
       padding: 12px 12px;
 
@@ -798,11 +798,11 @@
     align-items: center;
     align-items: start;
 
-    @include tab{
+    @include tab {
       flex-direction: column;
       margin: 0 auto 24px;
 
-      }
+    }
 
   }
 
@@ -810,7 +810,7 @@
     display: flex;
     gap: 8px;
 
-    @include sp{
+    @include sp {
       gap: 4px;
       justify-content: center;
       width: 100%;
@@ -834,7 +834,7 @@
 
     }
 
-    @include sp{
+    @include sp {
       padding: 4px 4px;
 
     }
@@ -846,6 +846,400 @@
 
   &__ {}
 
+}
+
+
+/* =================================
+企業理念（page-vision）
+ ================================= */
+
+.page-vision {
+
+  padding: 0 0 120px;
+
+  @include tab {
+    padding: 0;
+  }
+
+  &__bg-right {
+    bottom: 50px;
+    right: 0;
+
+    @include pc {
+      bottom: -10px;
+    }
+  }
+
+  &__bg-left {
+    bottom: 0;
+    width: 18%;
+  }
+
+  &__lead-wrap {
+    position: relative;
+    padding: 120px 0 40px;
+
+    @include tab {
+      padding: 60px 0 40px;
+    }
+  }
+
+  &__inner {
+    max-width: 920px;
+    margin: 0 auto 0;
+    padding: 0 12px;
+
+
+    @include tab {
+      padding: 0 12px;
+      margin: 0 auto;
+    }
+  }
+
+  &__ttl {
+    margin: 0 0 80px;
+
+    @include tab {
+      margin: 0 0 40px 40px;
+
+    }
+  }
+
+  &__top-lead {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 80px;
+    color: #808080;
+
+    @include pc {
+      font-size: 36px;
+      margin: 0 0 60px;
+    }
+
+    @include tab {
+      font-size: 16px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__lead {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 0 80px;
+    color: #808080;
+    line-height: 1.5;
+
+    @include pc {
+      font-size: 36px;
+      margin: 0 0 60px;
+    }
+
+    @include tab {
+      font-size: 21px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__text {
+    color: #3071b9;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 0 80px;
+
+    @include pc {
+      font-size: 16px;
+      margin: 0 0 60px;
+    }
+
+    @include tab {
+      font-size: 16px;
+      margin: 0 0 0;
+    }
+  }
+
+  &__lead-item-wrap {
+    max-width: 920px;
+    margin: 0 auto 120px;
+    padding: 0 12px;
+    display: flex;
+    gap: 40px;
+
+    @include pc {
+      gap: 24px;
+    }
+
+    @include tab {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;    
+      margin: 0 auto 60px;
+
+
+    }
+  }
+
+  &__lead-item {
+
+    @include tab {
+      width: calc((100% - 12px) / 2);
+    }
+  }
+
+  &__bg-left {
+    top: -150px;
+    max-width: 300px;
+
+    @include tab{
+    width: 50%;
+    top: -80px;
+
+    }
+  }
+
+
+  &__section {
+    position: relative;
+  }
+
+  &__content-wrap {
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+
+  &__img {
+    max-width: 600px;
+    margin: -160px 0 0 0;
+
+    @include pc{
+    width: 50%;
+    margin: -160px 0 0 40px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 0 140px;
+
+    @include tab{
+      margin: 0 0 60px;
+
+    }
+  }
+
+  &__item-dec {
+    bottom: -97px;
+
+    @include tab{
+      bottom: -47px;
+
+    }
+  }
+
+  &__item-dec-odd {
+    bottom: -97px;
+    right: 0;
+    max-width: 50%;
+
+    @include tab{
+      bottom: -47px;
+
+    }
+  }
+
+  &__item-inner {
+    background-color: rgb(214 240 241 / 50%);
+    margin: 0 0 0 5%;
+    border-radius: 60px 0 0 60px;
+    padding: 100px 12px;
+
+    @include pc{
+    border-radius: 24px 0 0 24px;
+    }
+
+    @include tab{
+      padding: 24px 0;
+      margin: 0 0 0 12px;
+    }
+
+    &--odd {
+      margin: 0 5% 0 0;
+      border-radius: 60px 60px 0 0;
+      padding: 100px 12px;
+  
+      @include pc{
+      border-radius: 24px 24px 0 0;
+      }
+  
+      @include tab{
+        padding: 24px 0;
+        margin: 0 12px 0 0;
+      }
+  
+    }
+  }
+
+  &__content {
+    background-color: #fff;
+    padding: 60px;
+    max-width: 720px;
+    border-radius: 60px;
+    margin: -80px 0 0 auto;
+    position: relative;
+    z-index: 1;
+
+    @include pc{
+      margin: -80px 0 0 100px;
+      border-radius: 24px;
+    }
+
+    @include tab{
+      margin: 0 0 0 12px;
+      border-radius: 24px 0 0 24px;
+      padding: 40px 12px 24px;
+    }
+
+
+    &--odd {
+  
+      @include pc{
+        margin: -80px 100px 0 0;
+      }
+  
+      @include tab{
+        margin: 0 12px 0 0;
+        border-radius: 24px 24px 0 20;
+      }
+    }
+  }
+
+  &__content-ttl {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0 0 24px;
+
+    @include tab{
+      font-size: 24px;
+
+    }
+  }
+
+  &__content-lead {
+    color: #3071b9;
+    font-weight: bold;
+    margin: 0 0 24px;
+  }
+
+  &__content-text {
+    @include tab{
+    margin: 0 0 24px;
+    }
+  }
+
+  &__img-sp {
+    padding: 0 6px;
+  }
+
+  &__recruit {
+    background-image: url(../img/company/vision-recruit-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px;
+    position: relative;
+    margin: 0 0 80px;
+
+    @include tab{
+    padding: 40px;
+    margin: 0 0 40px;
+
+    }
+
+    @include sp{
+    padding: 20px;
+    }
+  }
+
+  &__recruit-bg {
+    right: 0;
+    top: 30%;
+    z-index: 01;
+
+  }
+
+  &__recruit__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
+  &__recruit-img {
+margin: 0 0 40px;
+  }
+
+  &__recruit-btn {
+    margin: 0 0 0 auto;
+    background-color: #fff;
+    border-radius: 50px;
+    color: #3071b9;
+    display: block;
+    padding: 12px;
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    width: 180px;
+  
+    &:after {
+      /* 擬似要素で矢印アイコンをつくる */
+      content: '';
+      border: 0;
+      border-top: solid 2px #b3b3b3;
+      border-right: solid 2px #b3b3b3;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      /* 矢印アイコンの位置を設定 */
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%) rotate(45deg);
+      /* rotate(45deg)で矢印を回転（向きを変更）させる */
+      transition: all 0.5s;
+    }
+  
+  
+    &:hover {
+      &:after {
+        right: 15px;
+      }
+    }
+  
+  }
+
+  &__recruit-text-wrap {
+    max-width: 460px;
+    margin: 0 auto 160px;
+    padding: 0 12px;
+
+    @include tab{
+      margin: 0 auto 60px;
+
+    }
+
+  }
+
+  &__recruit-text {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.7;
+    margin: 0 0 60px;
+
+    @include tab{
+    font-size: 18px;
+    margin: 0 0 24px;
+
+    }
+  }
 }
 
 
