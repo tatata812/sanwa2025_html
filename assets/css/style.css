@@ -2594,11 +2594,11 @@ input[type=text] {
 .page-form__td {
   border-bottom: 1px solid #cccccc;
   border-collapse: collapse;
-  padding: 12px 28px;
+  padding: 12px 12px;
 }
 @media (max-width: 780px) {
   .page-form__td {
-    padding: 8px 4px 24px 12px;
+    padding: 8px 4px 24px 4px;
     width: 100%;
     display: block;
     border-bottom: none;
