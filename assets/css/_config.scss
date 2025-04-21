@@ -295,9 +295,6 @@ input[type="text"] {
     &-- {
       background-image: url(../img/company/main-visual-.jpg);
     }
-
-
-
   }
 
   &__main-visual-top {
@@ -309,6 +306,14 @@ input[type="text"] {
     position: absolute;
     bottom: -1px;
     right: 0;
+  }
+
+  &__padding {
+    padding: 120px 0;
+
+    @include tab{
+    padding: 60px 0 ;
+    }
   }
 
 }

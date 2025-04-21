@@ -264,6 +264,14 @@ input[type=text] {
   bottom: -1px;
   right: 0;
 }
+.sub-page__padding {
+  padding: 120px 0;
+}
+@media (max-width: 780px) {
+  .sub-page__padding {
+    padding: 60px 0;
+  }
+}
 
 .sub-page-ttl {
   color: #3071b9;
@@ -2660,11 +2668,19 @@ input[type=text] {
 /* =================================
  リンク 
  ================================= */
+.page-link {
+  padding: 120px 16px;
+}
+@media (max-width: 780px) {
+  .page-link {
+    padding: 60px 16px 0;
+  }
+}
 .page-link__ttl {
   max-width: 1108px;
   margin: 0 auto 60px;
   font-size: 28px;
-  padding: 28px 24px;
+  padding: 28px 0;
   font-weight: bold;
 }
 @media (max-width: 1120px) {
@@ -2676,13 +2692,13 @@ input[type=text] {
 @media (max-width: 780px) {
   .page-link__ttl {
     font-size: 20px;
-    padding: 14px 24px;
+    padding: 14px 0;
   }
 }
 .page-link__sub-ttl {
   font-size: 20px;
-  border-bottom: #cccccc 1px solid;
-  padding: 0 0 12px;
+  color: #3071b9;
+  font-weight: bold;
   margin: 0 0 24px;
 }
 @media (max-width: 520px) {
@@ -2694,7 +2710,6 @@ input[type=text] {
 .page-link__content {
   max-width: 1100px;
   margin: 0 auto 80px;
-  padding: 0 24px;
 }
 .page-link__table {
   border-top: 1px solid #cccccc;
@@ -2703,6 +2718,11 @@ input[type=text] {
   text-align: left;
   width: 100%;
 }
+@media (max-width: 780px) {
+  .page-link__table {
+    border-top: none;
+  }
+}
 @media (max-width: 520px) {
   .page-link__table {
     font-size: 13px;
@@ -2710,8 +2730,6 @@ input[type=text] {
 }
 .page-link__th {
   border-bottom: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  background-color: #eee;
   border-collapse: collapse;
   padding: 12px 28px;
   width: 460px;
@@ -2723,12 +2741,15 @@ input[type=text] {
     padding: 8px 4px 8px 12px;
     width: 100%;
     display: block;
+    background-color: #eaf7fc;
+    border-bottom: none;
   }
 }
 .page-link__td {
   border-bottom: 1px solid #cccccc;
   border-collapse: collapse;
   padding: 12px 28px;
+  vertical-align: middle;
 }
 @media (max-width: 780px) {
   .page-link__td {
@@ -3250,7 +3271,7 @@ input[type=text] {
   max-width: 1108px;
   margin: 0 auto 60px;
   font-size: 28px;
-  padding: 28px 24px;
+  padding: 28px 0;
   font-weight: bold;
 }
 @media (max-width: 1120px) {
@@ -3262,7 +3283,15 @@ input[type=text] {
 @media (max-width: 780px) {
   .page-style__ttl {
     font-size: 20px;
-    padding: 14px 24px;
+    padding: 14px 0;
+  }
+}
+.page-style__section--top {
+  padding: 120px 16px;
+}
+@media (max-width: 780px) {
+  .page-style__section--top {
+    padding: 60px 16px;
   }
 }
 .page-style__section--404 {
@@ -3271,7 +3300,6 @@ input[type=text] {
 .page-style__content {
   max-width: 1100px;
   margin: 0 auto 80px;
-  padding: 0 24px;
 }
 .page-style__table {
   border-top: 1px solid #cccccc;

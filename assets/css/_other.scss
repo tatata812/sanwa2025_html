@@ -1177,12 +1177,17 @@
  ================================= */
 
 .page-link {
+  padding: 120px 16px;
+
+  @include tab{
+  padding: 60px 16px 0;
+  }
 
   &__ttl {
     max-width: 1108px;
     margin: 0 auto 60px;
     font-size: 28px;
-    padding: 28px 24px;
+    padding: 28px 0;
     font-weight: bold;
 
 
@@ -1194,14 +1199,14 @@
 
     @include tab {
       font-size: 20px;
-      padding: 14px 24px;
+      padding: 14px 0;
     }
   }
 
   &__sub-ttl {
     font-size: 20px;
-    border-bottom: #cccccc 1px solid;
-    padding: 0 0 12px;
+    color: #3071b9;
+    font-weight: bold;
     margin: 0 0 24px;
 
     @include sp {
@@ -1216,7 +1221,6 @@
   &__content {
     max-width: 1100px;
     margin: 0 auto 80px;
-    padding: 0 24px;
   }
 
   &__table {
@@ -1225,6 +1229,11 @@
     font-size: 14px;
     text-align: left;
     width: 100%;
+
+    @include tab{
+      border-top: none;
+
+    }
 
     @include sp {
       font-size: 13px;
@@ -1236,8 +1245,6 @@
 
   &__th {
     border-bottom: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
-    background-color: #eee;
     border-collapse: collapse;
     padding: 12px 28px;
     width: 460px;
@@ -1248,6 +1255,9 @@
       padding: 8px 4px 8px 12px;
       width: 100%;
       display: block;
+      background-color: #eaf7fc;
+      border-bottom: none;
+
     }
   }
 
@@ -1255,6 +1265,7 @@
     border-bottom: 1px solid #cccccc;
     border-collapse: collapse;
     padding: 12px 28px;
+    vertical-align: middle;
 
     @include tab {
       padding: 8px 4px 24px 12px;
@@ -1829,8 +1840,9 @@
 
   &__ {}
 
-
 }
+
+
 
 /* =================================
 その他ページ
@@ -1841,7 +1853,7 @@
     max-width: 1108px;
     margin: 0 auto 60px;
     font-size: 28px;
-    padding: 28px 24px;
+    padding: 28px 0;
     font-weight: bold;
 
 
@@ -1853,15 +1865,22 @@
 
     @include tab {
       font-size: 20px;
-      padding: 14px 24px;
+      padding: 14px 0;
     }
 
   }
 
 
 
-
   &__section {
+
+    &--top {
+      padding: 120px 16px;
+
+      @include tab{
+        padding: 60px 16px;
+      }
+    }
 
     &--404 {
       min-height: 600px;
@@ -1871,7 +1890,6 @@
   &__content {
     max-width: 1100px;
     margin: 0 auto 80px;
-    padding: 0 24px;
   }
 
 
