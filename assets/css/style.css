@@ -2455,6 +2455,14 @@ input[type=text] {
 /* =================================
 お問い合わせ　　フォーム
 ================================= */
+.page-form {
+  padding: 120px 16px;
+}
+@media (max-width: 780px) {
+  .page-form {
+    padding: 80px 16px 40px;
+  }
+}
 .page-form__section {
   margin: 0 0 80px;
 }
@@ -2464,11 +2472,12 @@ input[type=text] {
   }
 }
 .page-form__ttl {
-  max-width: 1108px;
+  max-width: 1100px;
   margin: 0 auto 12px;
   font-size: 28px;
-  padding: 28px 0 0 24px;
+  padding: 28px 0 10px 0;
   font-weight: bold;
+  border-bottom: #3071b9 4px solid;
 }
 @media (max-width: 1120px) {
   .page-form__ttl {
@@ -2478,22 +2487,26 @@ input[type=text] {
 @media (max-width: 780px) {
   .page-form__ttl {
     font-size: 20px;
-    padding: 14px 24px;
+    padding: 28px 0 8px 0;
+    margin: 0 auto 8px;
   }
 }
 .page-form__lead-wrap {
-  background-color: #eeeeee;
-  margin: 0 0 40px;
+  margin: 0 0 60px;
+}
+@media (max-width: 780px) {
+  .page-form__lead-wrap {
+    margin: 0 0 24px;
+  }
 }
 .page-form__lead {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (max-width: 520px) {
   .page-form__lead {
-    font-size: 9px;
+    font-size: 11px;
   }
 }
 .page-form__confirm-img {
@@ -2511,13 +2524,12 @@ input[type=text] {
   }
 }
 .page-form__content {
-  max-width: 1100px;
-  margin: 0 auto 80px;
-  padding: 0 24px;
+  max-width: 1020px;
+  margin: 0 auto 60px;
 }
 @media (max-width: 780px) {
   .page-form__content {
-    margin: 0 auto;
+    margin: 0 auto 24px;
   }
 }
 .page-form__content-ttl {
@@ -2539,6 +2551,11 @@ input[type=text] {
   text-align: left;
   width: 100%;
 }
+@media (max-width: 780px) {
+  .page-form__table {
+    border-top: none;
+  }
+}
 @media (max-width: 520px) {
   .page-form__table {
     font-size: 13px;
@@ -2546,8 +2563,6 @@ input[type=text] {
 }
 .page-form__th {
   border-bottom: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  background-color: #eee;
   border-collapse: collapse;
   padding: 12px 28px;
   width: 280px;
@@ -2556,19 +2571,22 @@ input[type=text] {
 }
 @media (max-width: 780px) {
   .page-form__th {
+    background-color: #eaf7fc;
     padding: 8px 4px 8px 12px;
     width: 100%;
     display: block;
+    border-bottom: none;
+    border-right: none;
   }
 }
 .page-form__span {
   position: absolute;
   right: 24px;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 17px;
-  padding: 0 2px;
-  color: #d60000;
-  border: #d60000 1px solid;
+  padding: 0 2px 1px;
+  color: #fff;
+  background-color: #3071b9;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -2586,13 +2604,13 @@ input[type=text] {
     border-bottom: none;
   }
 }
-.page-form__input-text {
+.page-form input[type=text] {
   padding: 8px;
-  width: 380px;
+  width: 100%;
   border: 1px solid #cccccc;
 }
 @media (max-width: 520px) {
-  .page-form__input-text {
+  .page-form input[type=text] {
     width: 100%;
     padding: 6px;
   }
@@ -2621,10 +2639,8 @@ input[type=text] {
   margin: 0 10px 0 0;
 }
 .page-form__confirm-wrap {
-  background-color: #eee;
   max-width: 660px;
   margin: 0 auto 60px;
-  padding: 24px;
   text-align: center;
 }
 @media (max-width: 780px) {
@@ -2645,19 +2661,33 @@ input[type=text] {
 .page-form__confirm-link {
   text-decoration: underline;
 }
+.page-form__btn-wrap {
+  text-align: center;
+}
 .page-form__input-btn {
-  background: url(../img/other/contact-btn.png) no-repeat;
-  background-size: contain;
-  width: 420px;
-  height: 80px;
+  margin: 0 auto;
+  background-color: #3071b9;
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  padding: 16px 8px 13px 0;
+  position: relative;
+  /* position: relative;で矢印の位置を基点とさせます */
+  text-align: center;
+  text-decoration: none;
+  width: 280px;
   border: none;
   cursor: pointer;
-  margin: 0 auto;
-  display: block;
+  border: #3071b9 2px solid;
+  transition: all 0.5s;
+}
+.page-form__input-btn:hover {
+  background-color: #fff;
+  color: #3071b9;
 }
 @media (max-width: 780px) {
   .page-form__input-btn {
-    width: 280px;
+    width: 240px;
   }
 }
 .page-form__content-img {

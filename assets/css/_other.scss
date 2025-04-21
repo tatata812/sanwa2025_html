@@ -352,8 +352,8 @@
   &__ttl-wrap {
     max-width: 1120px;
     margin: 0 auto 60px;
-    
-    @include tab{
+
+    @include tab {
       margin: 0 auto 40px;
 
     }
@@ -384,7 +384,7 @@
     max-width: 1040px;
     margin: 0 auto 60px;
 
-    @include tab{
+    @include tab {
       margin: 0 auto 40px;
 
     }
@@ -935,6 +935,11 @@
 ================================= */
 
 .page-form {
+  padding: 120px 16px;
+
+  @include tab {
+    padding: 80px 16px 40px;
+  }
 
   &__section {
     margin: 0 0 80px;
@@ -945,11 +950,13 @@
   }
 
   &__ttl {
-    max-width: 1108px;
+    max-width: 1100px;
     margin: 0 auto 12px;
     font-size: 28px;
-    padding: 28px 0 0 24px;
+    padding: 28px 0 10px 0;
     font-weight: bold;
+    border-bottom: #3071b9 4px solid;
+
 
 
     @include pc {
@@ -958,24 +965,28 @@
 
     @include tab {
       font-size: 20px;
-      padding: 14px 24px;
+      padding: 28px 0 8px 0;
+      margin: 0 auto 8px;
+
     }
 
   }
 
   &__lead-wrap {
-    background-color: #eeeeee;
-    margin: 0 0 40px;
+    margin: 0 0 60px;
+
+    @include tab {
+      margin: 0 0 24px;
+    }
   }
 
   &__lead {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 24px;
-    font-size: 12px;
+    font-size: 14px;
 
     @include sp {
-      font-size: 9px;
+      font-size: 11px;
     }
   }
 
@@ -998,12 +1009,11 @@
 
 
   &__content {
-    max-width: 1100px;
-    margin: 0 auto 80px;
-    padding: 0 24px;
+    max-width: 1020px;
+    margin: 0 auto 60px;
 
     @include tab {
-      margin: 0 auto;
+      margin: 0 auto 24px;
     }
   }
 
@@ -1027,6 +1037,11 @@
     text-align: left;
     width: 100%;
 
+    @include tab {
+      border-top: none;
+
+    }
+
     @include sp {
       font-size: 13px;
     }
@@ -1036,8 +1051,6 @@
 
   &__th {
     border-bottom: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
-    background-color: #eee;
     border-collapse: collapse;
     padding: 12px 28px;
     width: 280px;
@@ -1045,20 +1058,24 @@
     position: relative;
 
     @include tab {
+      background-color: #eaf7fc;
       padding: 8px 4px 8px 12px;
       width: 100%;
       display: block;
+      border-bottom: none;
+      border-right: none;
+
     }
   }
 
   &__span {
     position: absolute;
     right: 24px;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 17px;
-    padding: 0 2px;
-    color: #d60000;
-    border: #d60000 1px solid;
+    padding: 0 2px 1px;
+    color: #fff;
+    background-color: #3071b9;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -1077,11 +1094,10 @@
     }
   }
 
-  &__input-text {
+  input[type=text] {
     padding: 8px;
-    width: 380px;
+    width: 100%;
     border: 1px solid #cccccc;
-
 
     @include sp {
       width: 100%;
@@ -1120,10 +1136,8 @@
 
 
   &__confirm-wrap {
-    background-color: #eee;
     max-width: 660px;
     margin: 0 auto 60px;
-    padding: 24px;
     text-align: center;
 
     @include tab {
@@ -1147,21 +1161,38 @@
   }
 
 
-  &__btn-wrap {}
+  &__btn-wrap {
+    text-align: center;
+  }
 
   &__input-btn {
-    background: url(../img/other/contact-btn.png) no-repeat;
-    background-size: contain;
-    width: 420px;
-    height: 80px;
+    margin: 0 auto;
+    background-color: #3071b9;
+    border-radius: 50px;
+    color: #fff;
+    display: inline-block;
+    padding: 16px 8px 13px 0;
+    position: relative;
+    /* position: relative;で矢印の位置を基点とさせます */
+    text-align: center;
+    text-decoration: none;
+    width: 280px;
     border: none;
     cursor: pointer;
-    margin: 0 auto;
-    display: block;
+    border: #3071b9 2px solid;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: #fff;
+      color: #3071b9;
+    }
+    
 
     @include tab {
-      width: 280px;
+      width: 240px;
+
     }
+
   }
 
 
@@ -1179,8 +1210,8 @@
 .page-link {
   padding: 120px 16px;
 
-  @include tab{
-  padding: 60px 16px 0;
+  @include tab {
+    padding: 60px 16px 0;
   }
 
   &__ttl {
@@ -1230,7 +1261,7 @@
     text-align: left;
     width: 100%;
 
-    @include tab{
+    @include tab {
       border-top: none;
 
     }
@@ -1877,7 +1908,7 @@
     &--top {
       padding: 120px 16px;
 
-      @include tab{
+      @include tab {
         padding: 60px 16px;
       }
     }
@@ -1887,10 +1918,10 @@
       padding: 200px 16px;
       text-align: center;
 
-      @include tab{
+      @include tab {
         padding: 160px 16px;
       }
-      
+
     }
   }
 
