@@ -1884,6 +1884,13 @@
 
     &--404 {
       min-height: 600px;
+      padding: 200px 16px;
+      text-align: center;
+
+      @include tab{
+        padding: 160px 16px;
+      }
+      
     }
   }
 

@@ -3296,6 +3296,13 @@ input[type=text] {
 }
 .page-style__section--404 {
   min-height: 600px;
+  padding: 200px 16px;
+  text-align: center;
+}
+@media (max-width: 780px) {
+  .page-style__section--404 {
+    padding: 160px 16px;
+  }
 }
 .page-style__content {
   max-width: 1100px;
