@@ -110,28 +110,28 @@ $(function () {
 
   // メインビジュアル　スライダー
   $(".top-slider-js").slick({
-    autoplay: true,
-    autoplaySpeed: 27000,
-    fade: true, // スライドをフェードイン・フェードアウト
-    cssEase: 'linear', // アニメーション
-    speed: 1000, // フェードアニメーションの速度設定
-    dots: false,
-    arrows: true,
-    slidesToShow: 1,
-    dotsClass: "main-visual__slider-dots",
-  })
-  .on("afterChange", function(event, slick, currentSlide, nextSlide) {
-    switch (currentSlide){
-      case 0:
-        // 1枚目のスライド
-        $(this).slick("slickSetOption", "autoplaySpeed", 27000);
-        break;
-      default:
-        // その他のスライド
-        $(this).slick("slickSetOption", "autoplaySpeed", 3000);
-        break;
-    }
-  });
+      autoplay: true,
+      autoplaySpeed: 27000,
+      fade: true, // スライドをフェードイン・フェードアウト
+      cssEase: 'linear', // アニメーション
+      speed: 1000, // フェードアニメーションの速度設定
+      dots: false,
+      arrows: true,
+      slidesToShow: 1,
+      dotsClass: "main-visual__slider-dots",
+    })
+    .on("afterChange", function (event, slick, currentSlide, nextSlide) {
+      switch (currentSlide) {
+        case 0:
+          // 1枚目のスライド
+          $(this).slick("slickSetOption", "autoplaySpeed", 27000);
+          break;
+        default:
+          // その他のスライド
+          $(this).slick("slickSetOption", "autoplaySpeed", 3000);
+          break;
+      }
+    });
 
   const $images = $('.main-visual-top-js img');
   let current = 0;
@@ -158,7 +158,7 @@ $(function () {
     $images2.eq(current2).addClass('active');
   }, 4000);
 
-  
+
 
   // バナー　スライダー
   $(".external-bnr-js").slick({
@@ -219,12 +219,12 @@ $(function () {
     if ($(window).width() >= 780) {
       const scrollTop = $(window).scrollTop();
       const windowHeight = $(window).height();
-  
+
       $('.contents div').each(function () {
         const $this = $(this);
         const boxNum = $this.attr("class");
         const areaTop = $this.offset().top;
-  
+
         if (scrollTop + windowHeight / 2 > areaTop) {
           $('.images .' + boxNum).addClass('active');
         } else {
@@ -237,7 +237,7 @@ $(function () {
     }
   });
 
- 
+
 
   // スライドメニューにアコーディオン
   $('.slide-menu__top-link-content').hide(); // 初めに非表示
@@ -304,20 +304,20 @@ $(function () {
   // 最初と最後をつなぐためにクローンを追加
   $slides.append($slide.first().clone());
 
-  setInterval(function() {
+  setInterval(function () {
     currentIndex++;
     $slides.css('transform', 'translateX(' + (-slideWidth * currentIndex) + 'px)');
 
     // 最後のクローンに到達したら
     if (currentIndex === slideCount) {
-      setTimeout(function() {
+      setTimeout(function () {
         // アニメーションなしでリセット
         $slides.css('transition', 'none');
         $slides.css('transform', 'translateX(0)');
         currentIndex = 0;
 
         // 再び transition を有効に
-        setTimeout(function() {
+        setTimeout(function () {
           $slides.css('transition', 'transform 0.5s ease');
         }, 50);
       }, 500); // スライドの transition 時間
@@ -325,26 +325,26 @@ $(function () {
   }, 3000);
 
 
-// 沿革ボタン
-$('.history-btn-js').on('click', function(e) {
-  e.preventDefault();
+  // 沿革ボタン
+  $('.history-btn-js').on('click', function (e) {
+    e.preventDefault();
 
-  // ヘッダーの高さ + 20px
-  var headerHeight = $('.header').outerHeight() + 24;
+    // ヘッダーの高さ + 20px
+    var headerHeight = $('.header').outerHeight() + 24;
 
-  // 移動先の位置を取得
-  var targetId = $(this).attr('href');
-  var targetPosition = $(targetId).offset().top - headerHeight;
+    // 移動先の位置を取得
+    var targetId = $(this).attr('href');
+    var targetPosition = $(targetId).offset().top - headerHeight;
 
-  // スムーズにスクロール
-  $('html, body').animate({
-    scrollTop: targetPosition
-  }, 600); // アニメーション速度は 600ms
-});
+    // スムーズにスクロール
+    $('html, body').animate({
+      scrollTop: targetPosition
+    }, 600); // アニメーション速度は 600ms
+  });
 
 
   // メインビジュアル　スキップボタン
-  $('.gsap-main__skip-btn').on('click', function(e) {
+  $('.gsap-main__skip-btn').on('click', function (e) {
     e.preventDefault(); // デフォルトのアンカーリンクの動作をキャンセル
 
     const target = $('#main-visual');
@@ -355,33 +355,63 @@ $('.history-btn-js').on('click', function(e) {
     }
   });
 
+
+
+  // スクロースするときえていく　メインビジュアルGSAPの背景
+  $(window).on("scroll", function () {
+    const $target = $(".fade-on-scroll");
+    const scrollY = $(window).scrollTop();
+
+    // スマホかどうかを判定（768px以下をスマホとする例）
+    const isMobile = window.innerWidth <= 768;
+
+    // フェードの設定
+    const fadeStart = 0;
+    const fadeUntil = isMobile ? 1000 : 2000;  // スマホは150、PCは300で透明になる
+
+    let opacity = 1;
+
+    if (scrollY <= fadeStart) {
+      opacity = 1;
+    } else if (scrollY >= fadeUntil) {
+      opacity = 0;
+    } else {
+      opacity = 1 - (scrollY - fadeStart) / (fadeUntil - fadeStart);
+    }
+
+    $target.css("opacity", opacity);
+  });
+
 })
 
 
 // GSAPメインビジュアル
 const wrapper = document.querySelector('#wrapper');
-if(wrapper) {
-    // gsap.registerPlugin(ScrollTrigger); // npm/yarnの際に必要
-    const panels = gsap.utils.toArray('.panel');
-    const wrapperWidth = wrapper.offsetWidth;
-    /**
-    * 横スクロール開始
-    */
-    gsap.to( panels, {
-        xPercent: -100 * (panels.length - 1), // transformX
-        ease: "none", // easingの設定
-        scrollTrigger: { // scrollTrigger
-            trigger: wrapper, // アニメーションの対象となる要素
-            pin: true, // 要素を固定する
-            scrub: 1, // スクロールとアニメーションを同期させる。数値で秒数の設定に
-            snap: { // スナップスクロールにする
-                snapTo: 1 / ( panels.length - 1 ), // スナップで移動させる位置
-                duration: {min: .4, max: .6}, // スナップで移動する際の遅延時間
-                ease: "none" // easing
-            },
-            end: () => "+=" + wrapperWidth // アニメーションの終了タイミング
-        }
-    })
+if (wrapper) {
+  // gsap.registerPlugin(ScrollTrigger); // npm/yarnの際に必要
+  const panels = gsap.utils.toArray('.panel');
+  const wrapperWidth = wrapper.offsetWidth;
+  /**
+   * 横スクロール開始
+   */
+  gsap.to(panels, {
+    xPercent: -100 * (panels.length - 1), // transformX
+    ease: "none", // easingの設定
+    scrollTrigger: { // scrollTrigger
+      trigger: wrapper, // アニメーションの対象となる要素
+      pin: true, // 要素を固定する
+      scrub: 1, // スクロールとアニメーションを同期させる。数値で秒数の設定に
+      snap: { // スナップスクロールにする
+        snapTo: 1 / (panels.length - 1), // スナップで移動させる位置
+        duration: {
+          min: .4,
+          max: .6
+        }, // スナップで移動する際の遅延時間
+        ease: "none" // easing
+      },
+      end: () => "+=" + wrapperWidth // アニメーションの終了タイミング
+    }
+  })
 }
 
 
@@ -399,11 +429,3 @@ ScrollTrigger.create({
     document.querySelector('.page-top-fixed').style.display = 'block';
   }
 });
-
-
-
-
-
-
-
-

@@ -4232,6 +4232,10 @@ TOP
   }
 }
 
+.fade-on-scroll {
+  transition: opacity 0.2s ease;
+}
+
 .text-animation {
   color: #3071b9;
 }
