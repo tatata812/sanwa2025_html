@@ -65,7 +65,7 @@ header（PC）
       opacity: 1;
     }
 
-    @include tab{
+    @include tab {
       top: 62px;
 
     }
@@ -896,31 +896,55 @@ TOP
 
   &__skip-btn {
     position: fixed;
-    bottom: 200px;
+    bottom: 50px;
     right: 20px;
-    font-size: 22px;
+    font-size: 14px;
     background-color: #fff;
     color: #000;
     z-index: 5;
+    width: 100px;
+    border-radius: 50px;
+    line-height: 100px;
+    text-align: center;
+
+    @include tab{
+    width: 70px;
+    line-height: 70px;
+    }
+  }
+
+  &__bg-left {
+    position: fixed;
+    top: 100px;
+  }
+
+  &__bg-right {
+    position: fixed;
+    bottom: 100px;
+    right: 0;
   }
 
   &__ {}
 
-  &__ {}
 
-  &__ {}
-
+  // 1ページ目設定
   &__text-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     white-space: nowrap;
 
     span {
-      color: #fff;
+      color: #6e6e6e;
     }
+
   }
 
   .l-hero {
     overflow: hidden;
     position: relative;
+
     .l-hero-wrapper {
       width: 300%;
       height: 100vh;
@@ -928,25 +952,34 @@ TOP
       flex-wrap: nowrap;
       will-change: auto;
     }
+
     .l-hero-panel {
       width: 100%;
       height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
+
 
       &-01 {
-        background-image: url('../img/top/top-slider01.jpg');
+        // background-image: url('../img/top/top-slider01.jpg');
+        background-color: #eaf7fc;
+        position: relative;
       }
+
       &-02 {
-        background-image: url('../img/top/top-slider02.jpg');
+        // background-image: url('../img/top/top-slider02.jpg');
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // justify-content: center;
+        // background-size: cover;
+        // background-position: center center;
+        // background-repeat: no-repeat;
+        background-color: #bde7f8;
+        position: relative;
       }
+
       &-03 {
-        background-image: url('../img/top/top-slider03.jpg');
+        background-color: #8bd6f4;
+        position: relative;
       }
 
       &::after {
@@ -960,6 +993,8 @@ TOP
         background-color: rgba(#000, .0);
       }
     }
+
+
     .l-hero-panel__contents {
       flex: 0 0 100%;
       text-align: center;
@@ -970,6 +1005,7 @@ TOP
       text-transform: uppercase;
       z-index: 3;
     }
+
     @media all and (min-width: 1280px) {
       .l-hero-panel__contents {
         font-size: 36px;
@@ -1617,11 +1653,11 @@ TOP
     }
 
     .scroll-box {
-  scroll-snap-align: start;
-  height: 100vh;
-  width: 100%;
-  padding: 100px 12px 0;
-  border: 1px solid #3071b9;
+      scroll-snap-align: start;
+      height: 100vh;
+      width: 100%;
+      padding: 100px 12px 0;
+      border: 1px solid #3071b9;
 
     }
   }
