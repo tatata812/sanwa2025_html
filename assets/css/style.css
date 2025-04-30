@@ -246,8 +246,8 @@ input[type=text] {
 .sub-page__main-visual--vision {
   background-image: url(../img/company/main-visual-vision.jpg);
 }
-.sub-page__main-visual-- {
-  background-image: url(../img/company/main-visual-.jpg);
+.sub-page__main-visual--inquiry {
+  background-image: url(../img/other/main-visual-inquiry.jpg);
 }
 .sub-page__main-visual-- {
   background-image: url(../img/company/main-visual-.jpg);
@@ -3387,6 +3387,109 @@ input[type=text] {
   }
 }
 
+/* =================================
+お問い合わせ
+ ================================= */
+.page-inquiry__section {
+  padding: 80px 0;
+}
+@media (max-width: 780px) {
+  .page-inquiry__section {
+    padding: 40px 0;
+  }
+}
+.page-inquiry__section-inner {
+  padding: 0 16px;
+}
+.page-inquiry__subttl {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 26px;
+  font-weight: bold;
+}
+@media (max-width: 780px) {
+  .page-inquiry__subttl {
+    font-size: 20px;
+  }
+}
+.page-inquiry__subttl--margin {
+  margin: 0 auto 40px;
+}
+@media (max-width: 780px) {
+  .page-inquiry__subttl--margin {
+    margin: 0 auto 24px;
+  }
+}
+.page-inquiry__lead {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 0 0 0 16px;
+}
+@media (max-width: 780px) {
+  .page-inquiry__lead {
+    padding: 0;
+  }
+}
+.page-inquiry__box {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  display: flex;
+  gap: 40px;
+}
+@media (max-width: 780px) {
+  .page-inquiry__box {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto 40px;
+  }
+}
+.page-inquiry__item {
+  width: calc((100% - 80px) / 3);
+}
+@media (max-width: 780px) {
+  .page-inquiry__item {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+.page-inquiry__item-img {
+  margin: 0 0 16px;
+}
+.page-inquiry__item-ttl {
+  margin: 0 0 16px 4px;
+  color: #3071b9;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+}
+.page-inquiry__item-ttl:after {
+  /* 擬似要素で矢印アイコンをつくる */
+  content: "";
+  border: 0;
+  border-top: solid 2px #3071b9;
+  border-right: solid 2px #3071b9;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  /* 矢印アイコンの位置を設定 */
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%) rotate(45deg);
+  /* rotate(45deg)で矢印を回転（向きを変更）させる */
+  transition: all 0.5s;
+}
+.page-inquiry__item-ttl:after:hover {
+  transform: translateY(-50%) rotate(45deg) translateX(5px);
+}
+.page-inquiry__tel {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 0 0 16px;
+  font-size: 20px;
+}
 .main {
   position: relative;
 }
