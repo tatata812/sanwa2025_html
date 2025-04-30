@@ -364,7 +364,6 @@ header（PC）
 
       }
     }
-
   }
 }
 
@@ -1642,14 +1641,11 @@ TOP
 
   @include tab {
     .contents {
-      overflow: auto;
-      scroll-snap-type: y mandatory;
-      height: 100vh;
       width: 100%;
     }
 
     .contents div {
-      padding-top: 100px;
+      padding-top: 16px;
     }
 
     .contents div:last-child {
@@ -1658,12 +1654,16 @@ TOP
 
     .scroll-box {
       scroll-snap-align: start;
-      height: 100vh;
+      height: auto;
       width: 100%;
-      padding: 100px 12px 0;
-      border: 1px solid #3071b9;
+      padding: 16px 12px 0;
 
     }
+
+    .scroll-box-img-sp {
+      margin: -24px 0 40px;
+    }
+
   }
 
   .images {
@@ -1726,7 +1726,8 @@ TOP
 
     @include tab {
       font-size: 24px;
-      margin: 0 0 16px;
+      margin: 0 0 24px;
+      text-align: center;
     }
   }
 
@@ -1736,7 +1737,7 @@ TOP
 
     @include tab {
       max-width: 120px;
-      margin: -8px 0 16px 4px;
+      margin: -16px auto 24px;
     }
   }
 
@@ -1746,6 +1747,11 @@ TOP
 
     &:last-child {
       margin: 0;
+    }
+
+
+    @include tab{
+    padding: 0 20px;
     }
   }
 }

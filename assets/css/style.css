@@ -3391,6 +3391,7 @@ input[type=text] {
 お問い合わせ
  ================================= */
 .page-inquiry__section {
+  position: relative;
   padding: 80px 0;
 }
 @media (max-width: 780px) {
@@ -3489,6 +3490,15 @@ input[type=text] {
   margin: 0 auto;
   padding: 0 0 0 16px;
   font-size: 20px;
+}
+.page-inquiry__bg-right {
+  top: 250px;
+  right: 0;
+}
+.page-inquiry__bg-left {
+  left: 0;
+  bottom: -49px;
+  width: 25%;
 }
 .main {
   position: relative;
@@ -4903,23 +4913,22 @@ TOP
 }
 @media (max-width: 780px) {
   .top-role .contents {
-    overflow: auto;
-    scroll-snap-type: y mandatory;
-    height: 100vh;
     width: 100%;
   }
   .top-role .contents div {
-    padding-top: 100px;
+    padding-top: 16px;
   }
   .top-role .contents div:last-child {
     padding-bottom: 0;
   }
   .top-role .scroll-box {
     scroll-snap-align: start;
-    height: 100vh;
+    height: auto;
     width: 100%;
-    padding: 100px 12px 0;
-    border: 1px solid #3071b9;
+    padding: 16px 12px 0;
+  }
+  .top-role .scroll-box-img-sp {
+    margin: -24px 0 40px;
   }
 }
 .top-role .images {
@@ -4976,7 +4985,8 @@ TOP
 @media (max-width: 780px) {
   .top-role .scroll-box-ttl {
     font-size: 24px;
-    margin: 0 0 16px;
+    margin: 0 0 24px;
+    text-align: center;
   }
 }
 .top-role .scroll-box-ttl-en {
@@ -4986,7 +4996,7 @@ TOP
 @media (max-width: 780px) {
   .top-role .scroll-box-ttl-en {
     max-width: 120px;
-    margin: -8px 0 16px 4px;
+    margin: -16px auto 24px;
   }
 }
 .top-role .scroll-box-text {
@@ -4995,6 +5005,11 @@ TOP
 }
 .top-role .scroll-box-text:last-child {
   margin: 0;
+}
+@media (max-width: 780px) {
+  .top-role .scroll-box-text {
+    padding: 0 20px;
+  }
 }
 
 /* =================================

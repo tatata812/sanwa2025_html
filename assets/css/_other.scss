@@ -1991,8 +1991,9 @@
  ================================= */
 
 .page-inquiry {
-
+  
   &__section {
+    position: relative;
     padding: 80px 0;
 
     @include tab {
@@ -2103,9 +2104,18 @@
     font-size: 20px;
   }
 
-  &__ {}
+  &__bg-right {
+    top: 250px;
+    right: 0;
+  }
 
-  &__ {}
+
+
+  &__bg-left {
+    left: 0;
+    bottom: -49px;
+    width: 25%;
+  }
 
   &__ {}
 
