@@ -1510,10 +1510,20 @@
     padding: 20px 0;
     border-radius: 12px;
     width: calc((100% - 60px) / 4);
+    transition: all 0.3s;
 
     @include tab {
       width: calc((100% - 20px) / 2);
+    }
 
+    &.active {
+      border: #bababa 1px solid;
+      color: #bababa;
+    }
+
+    &:hover {
+      border: #bababa 1px solid;
+      color: #bababa;
     }
   }
 
