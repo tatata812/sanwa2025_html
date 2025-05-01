@@ -971,7 +971,7 @@
     @include tab {
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;    
+      gap: 12px;
       margin: 0 auto 60px;
 
 
@@ -989,9 +989,9 @@
     top: -150px;
     max-width: 300px;
 
-    @include tab{
-    width: 50%;
-    top: -80px;
+    @include tab {
+      width: 50%;
+      top: -80px;
 
     }
   }
@@ -1010,9 +1010,9 @@
     max-width: 600px;
     margin: -160px 0 0 0;
 
-    @include pc{
-    width: 50%;
-    margin: -160px 0 0 40px;
+    @include pc {
+      width: 50%;
+      margin: -160px 0 0 40px;
     }
   }
 
@@ -1020,7 +1020,7 @@
     position: relative;
     margin: 0 0 140px;
 
-    @include tab{
+    @include tab {
       margin: 0 0 60px;
 
     }
@@ -1029,7 +1029,7 @@
   &__item-dec {
     bottom: -97px;
 
-    @include tab{
+    @include tab {
       bottom: -47px;
 
     }
@@ -1040,7 +1040,7 @@
     right: 0;
     max-width: 50%;
 
-    @include tab{
+    @include tab {
       bottom: -47px;
 
     }
@@ -1052,11 +1052,11 @@
     border-radius: 60px 0 0 60px;
     padding: 100px 12px;
 
-    @include pc{
-    border-radius: 24px 0 0 24px;
+    @include pc {
+      border-radius: 24px 0 0 24px;
     }
 
-    @include tab{
+    @include tab {
       padding: 24px 0;
       margin: 0 0 0 12px;
     }
@@ -1065,16 +1065,16 @@
       margin: 0 5% 0 0;
       border-radius: 60px 60px 0 0;
       padding: 100px 12px;
-  
-      @include pc{
-      border-radius: 24px 24px 0 0;
+
+      @include pc {
+        border-radius: 24px 24px 0 0;
       }
-  
-      @include tab{
+
+      @include tab {
         padding: 24px 0;
         margin: 0 12px 0 0;
       }
-  
+
     }
   }
 
@@ -1087,12 +1087,12 @@
     position: relative;
     z-index: 1;
 
-    @include pc{
+    @include pc {
       margin: -80px 0 0 100px;
       border-radius: 24px;
     }
 
-    @include tab{
+    @include tab {
       margin: 0 0 0 12px;
       border-radius: 24px 0 0 24px;
       padding: 40px 12px 24px;
@@ -1100,12 +1100,12 @@
 
 
     &--odd {
-  
-      @include pc{
+
+      @include pc {
         margin: -80px 100px 0 0;
       }
-  
-      @include tab{
+
+      @include tab {
         margin: 0 12px 0 0;
         border-radius: 24px 24px 0 20;
       }
@@ -1117,7 +1117,7 @@
     font-weight: bold;
     margin: 0 0 24px;
 
-    @include tab{
+    @include tab {
       font-size: 24px;
 
     }
@@ -1130,8 +1130,8 @@
   }
 
   &__content-text {
-    @include tab{
-    margin: 0 0 24px;
+    @include tab {
+      margin: 0 0 24px;
     }
   }
 
@@ -1148,14 +1148,14 @@
     position: relative;
     margin: 0 0 80px;
 
-    @include tab{
-    padding: 40px;
-    margin: 0 0 40px;
+    @include tab {
+      padding: 40px;
+      margin: 0 0 40px;
 
     }
 
-    @include sp{
-    padding: 20px;
+    @include sp {
+      padding: 20px;
     }
   }
 
@@ -1173,7 +1173,7 @@
   }
 
   &__recruit-img {
-margin: 0 0 40px;
+    margin: 0 0 40px;
   }
 
   &__recruit-btn {
@@ -1188,7 +1188,7 @@ margin: 0 0 40px;
     text-align: center;
     text-decoration: none;
     width: 180px;
-  
+
     &:after {
       /* 擬似要素で矢印アイコンをつくる */
       content: '';
@@ -1206,14 +1206,14 @@ margin: 0 0 40px;
       /* rotate(45deg)で矢印を回転（向きを変更）させる */
       transition: all 0.5s;
     }
-  
-  
+
+
     &:hover {
       &:after {
         right: 15px;
       }
     }
-  
+
   }
 
   &__recruit-text-wrap {
@@ -1221,7 +1221,7 @@ margin: 0 0 40px;
     margin: 0 auto 160px;
     padding: 0 12px;
 
-    @include tab{
+    @include tab {
       margin: 0 auto 60px;
 
     }
@@ -1234,9 +1234,9 @@ margin: 0 0 40px;
     line-height: 1.7;
     margin: 0 0 60px;
 
-    @include tab{
-    font-size: 18px;
-    margin: 0 0 24px;
+    @include tab {
+      font-size: 18px;
+      margin: 0 0 24px;
 
     }
   }
@@ -1244,10 +1244,215 @@ margin: 0 0 40px;
 
 
 /* =================================
-
+事業所（個別）
  ================================= */
 
-.aaa {
+.page-head {
+
+  &__main-visual {
+    position: relative;
+  }
+
+
+  &__bg-right {
+    top: 250px;
+    right: 0;
+  }
+
+
+
+  &__bg-left {
+    z-index: 1;
+    left: 0;
+    bottom: -50px;
+    width: 30%;
+  }
+
+  &__mv-img {
+    max-width: 800px;
+    margin: -280px auto 0;
+
+    @include pc {
+      max-width: 500px;
+      margin: -130px auto 0;
+    }
+
+    @include tab {
+      max-width: 500px;
+      width: 80%;
+      margin: -95px auto 0;
+    }
+
+    @include sp {
+      max-width: 440px;
+      width: 85%;
+      margin: -15px auto 0;
+    }
+
+  }
+
+
+  &__lead-wrap {
+    position: relative;
+    padding: 120px 16px 0;
+    max-width: 920px;
+    margin: 0 auto 120px;
+
+
+    @include tab {
+      margin: 0 auto 60px;
+      padding: 40px 16px 0;
+
+    }
+
+
+  }
+
+
+
+  &__ttl {
+    margin: 0 0 80px;
+
+    @include tab {
+      margin: 0 0 40px 40px;
+
+    }
+  }
+
+  &__top-lead {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 40px;
+    color: #808080;
+
+    @include pc {
+      font-size: 28px;
+    }
+
+    @include tab {
+      font-size: 16px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__lead {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 40px;
+    color: #808080;
+    line-height: 1.5;
+    color: #3071b9;
+
+
+    @include pc {
+      font-size: 28px;
+    }
+
+    @include tab {
+      font-size: 17px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 32px;
+
+
+    @include tab {
+      margin: 0 0 24px;
+    }
+  }
+
+
+
+
+
+
+  &__map-section {
+    max-width: 920px;
+    margin: 0 auto 80px;
+    display: flex;
+    gap: 80px;
+    padding: 0 16px;
+    position: relative;
+
+    @include pc {
+      gap: 40px;
+    }
+
+    @include tab {
+      gap: 16px;
+      flex-direction: column;
+      margin: 0 auto 40px;
+
+    }
+
+    &--other {
+      margin: 120px auto 80px;
+
+      @include tab {
+        margin: 40px auto 40px;
+      }
+    }
+  }
+
+  &__map-left {}
+
+  &__map-ttl {
+
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 24px;
+    color: #3071b9;
+
+
+    @include tab {
+      font-size: 22px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__map-text {
+    white-space: nowrap;
+    margin: 0 0 24px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__map-wrap {
+    width: 100%;
+
+  }
+
+  &__map {
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 40px;
+
+      @include tab {
+        border-radius: 12px;
+      }
+    }
+  }
+
+  &__bg-map-right {
+    top: 100%;
+    right: -20%;
+    transform: translate(-50%, -50%);
+
+  }
 
   &__ {}
 
@@ -1265,23 +1470,54 @@ margin: 0 0 40px;
 
   &__ {}
 
-  &__ {}
+
+}
+
+.office-link {
+
+  &__ttl {
+    max-width: 920px;
+    margin: 0 auto 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #3071b9;
+    padding: 0 16px;
+
+
+    @include tab {
+      font-size: 22px;
+      margin: 0 auto 24px;
+    }
+  }
+
+  &__inner {
+    max-width: 920px;
+    margin: 0 auto 120px;
+    display: flex;
+    gap: 20px;
+    padding: 0 16px;
+    flex-wrap: wrap;
+
+    @include tab {
+      margin: 0 auto 60px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    border: #3071b9 1px solid;
+    padding: 20px 0;
+    border-radius: 12px;
+    width: calc((100% - 60px) / 4);
+
+    @include tab {
+      width: calc((100% - 20px) / 2);
+
+    }
+  }
 
   &__ {}
 
   &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
 
 }
