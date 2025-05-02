@@ -2349,22 +2349,17 @@ input[type=text] {
   }
 }
 .page-interior__lead {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
-  margin: 0 0 40px;
+  margin: 0 0 24px;
   color: #808080;
   line-height: 1.5;
   color: #3071b9;
 }
-@media (max-width: 1120px) {
-  .page-interior__lead {
-    font-size: 28px;
-  }
-}
 @media (max-width: 780px) {
   .page-interior__lead {
     font-size: 17px;
-    margin: 0 0 24px;
+    margin: 0 0 18px;
   }
 }
 .page-interior__lead-text {
@@ -2430,6 +2425,9 @@ input[type=text] {
 .page-interior__section02-bg-left {
   bottom: 500px;
   left: -500px;
+}
+.page-interior__bg {
+  background-color: rgba(214, 240, 241, 0.5);
 }
 /* =================================
 お知らせ一覧

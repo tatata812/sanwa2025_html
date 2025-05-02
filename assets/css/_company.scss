@@ -2096,21 +2096,17 @@
   }
 
   &__lead {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
-    margin: 0 0 40px;
+    margin: 0 0 24px;
     color: #808080;
     line-height: 1.5;
     color: #3071b9;
 
 
-    @include pc {
-      font-size: 28px;
-    }
-
     @include tab {
       font-size: 17px;
-      margin: 0 0 24px;
+      margin: 0 0 18px;
     }
   }
 
@@ -2189,7 +2185,10 @@
     left :-500px;
   }
 
-  &__ {}
+  &__bg {
+    background-color: rgb(214 240 241 / 50%);
+
+  }
 
   &__ {}
 
