@@ -249,10 +249,10 @@ input[type="text"] {
 
     @media screen and (max-width: 1520px) {
       height: 500px;
-      background-size: contain;
     }
-
+    
     @include pc {
+      background-size: contain;
       height: 400px;
     }
 
@@ -288,8 +288,8 @@ input[type="text"] {
       background-image: url(../img/other/main-visual-inquiry.jpg);
     }
 
-    &-- {
-      background-image: url(../img/company/main-visual-.jpg);
+    &--office {
+      background-image: url(../img/company/main-visual-office.jpg);
     }
 
     &-- {
