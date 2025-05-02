@@ -2193,9 +2193,17 @@
   &__section03 {
     background-color: #ffffff80;
     max-width: 880px;
-    margin: 0 auto;
+    margin: 80px auto;
     border-radius: 24px;
     padding: 60px 40px;
+
+    @include tab{
+    margin: 40px 16px;
+    padding: 24px 16px;
+    border-radius: 12px;
+
+
+    }
   }
 
   &__section03-item {
@@ -2204,8 +2212,17 @@
     align-items: center;
     margin: 0 0 100px;
 
+    @include tab{
+    flex-direction: column;
+    margin: 0 0 60px;
+
+    }
+
     &--even {
       flex-direction: row-reverse;
+      @include tab{
+        flex-direction: column;
+        }
     }
 
     &:last-of-type {
@@ -2215,6 +2232,10 @@
 
   &__section03-left {
     width: 340px;
+
+    @include tab{
+    width: 100%;
+    }
   }
 
   &__section03-ttl {
@@ -2223,12 +2244,22 @@
     border-bottom: #3071b9 1px solid;
     padding: 0 0 24px;
     margin: 0 0 20px;
+
+    @include tab{
+      font-size: 20px;
+      padding: 0 0 12px;
+
+    }
   }
 
   &__section03-text {}
 
   &__section03-right {
     flex: 1;
+
+    @include tab{
+    max-width: 400px;
+    }
 
     img {
       transform: scale(1.2) translateX(50px);
