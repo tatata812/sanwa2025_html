@@ -1677,7 +1677,7 @@
     margin: 0 auto 120px;
     padding: 0 16px;
 
-    @include tab{
+    @include tab {
       margin: 0 auto 60px;
     }
   }
@@ -1686,7 +1686,7 @@
     padding: 0 0 220px;
     position: relative;
 
-    @include tab{
+    @include tab {
       padding: 0 0 60px;
     }
   }
@@ -1726,15 +1726,15 @@
     width: calc((100% - 40px) / 2);
     margin: 0 0 12px;
 
-    @include tab{
-    width: 100%;
-    max-width: 500px;
+    @include tab {
+      width: 100%;
+      max-width: 500px;
     }
 
-    &:nth-of-type(even){
+    &:nth-of-type(even) {
       transform: translateY(170px);
 
-      @include tab{
+      @include tab {
         transform: translateY(0);
       }
     }
@@ -1781,4 +1781,269 @@
   &__ {}
 
 
+}
+
+
+/* =================================
+建材販売
+ ================================= */
+
+.page-materials {
+
+  &__main-visual {
+    height: 600px;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/company/materials-bg.jpg);
+
+
+    @media screen and (max-width: 1520px) {
+      height: 500px;
+    }
+
+    @include pc {
+      background-size: contain;
+      height: 400px;
+    }
+
+    @include tab {
+      height: 300px;
+    }
+
+    @include sp {
+      height: 200px;
+    }
+
+  }
+
+  &__mv-img {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+
+    @include pc{
+      max-width: 500px;
+      top: 60%;
+
+    }
+
+    @include tab{
+      max-width: 400px;
+      top: 65%;
+    }
+
+    @include sp{
+      max-width: 280px;
+      top: 77%;
+    }
+  }
+
+  &__lead-wrap {
+    position: relative;
+    padding: 120px 16px 0;
+    max-width: 920px;
+    margin: 0 auto 120px;
+
+
+    @include tab {
+      margin: 0 auto 40px;
+      padding: 40px 16px 0;
+
+    }
+
+
+  }
+
+
+
+  &__ttl {
+    margin: 0 0 80px;
+
+    @include tab {
+      margin: 0 0 40px 40px;
+
+    }
+  }
+
+  &__top-lead {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 40px;
+    color: #808080;
+    line-height: 1.3;
+
+    @include pc {
+      font-size: 28px;
+    }
+
+    @include tab {
+      font-size: 16px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__lead {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 40px;
+    color: #808080;
+    line-height: 1.5;
+    color: #3071b9;
+
+
+    @include pc {
+      font-size: 28px;
+    }
+
+    @include tab {
+      font-size: 17px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 32px;
+
+
+    @include tab {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__bg-right {
+    top: 100px;
+    right: 0;
+  }
+
+  &__section {
+    padding: 0 16px;
+    position: relative;
+  }
+
+  &__main-img {
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+
+  &__main-text {    
+    max-width: 600px;
+    margin: 0 auto 40px;}
+
+  &__bottom-img-wrap {
+    max-width: 940px;
+    margin: 0 auto 40px;
+    text-align: right;
+  }
+
+  &__bottom-img {
+    max-width: 600px;
+  }
+
+  &__section-bg-right {
+    bottom: -100px;
+    right: 0;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+事業案内リンク
+ ================================= */
+
+ .services-link {
+  background-color: rgb(214 240 241 / 50%);
+  padding: 60px 12px;
+
+
+
+  &__box {
+    display: flex;
+    max-width: 700px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 16px;
+    justify-content: center;
+
+    @include pc {
+      gap: 16px;
+    }
+
+    @include tab {
+      padding: 0;
+      max-width: 500px;
+
+    }
+  }
+
+  &__item {
+    width: calc((100% - 60px) / 4);
+
+    @include tab {
+      width: calc((100% - 32px) / 2);
+      max-width: 180px;
+    }
+  }
+
+  &__img {
+    margin: 0 0 24px;
+
+    @include tab {
+      margin: 0 0 12px;
+    }
+  }
+
+  &__ttl {
+    margin: 0 0 0 16px;
+    color: #3071b9;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      /* 擬似要素で矢印アイコンをつくる */
+      content: '';
+      border: 0;
+      border-top: solid 2px #3071b9;
+      border-right: solid 2px #3071b9;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      /* 矢印アイコンの位置を設定 */
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%) rotate(45deg);
+      /* rotate(45deg)で矢印を回転（向きを変更）させる */
+      transition: all 0.5s;
+
+      &:hover {
+        transform: translateY(-50%) rotate(45deg) translateX(5px);
+      }
+    }
+  }
 }
