@@ -2050,12 +2050,15 @@
  ================================= */
 
  .page-interior {
+  overflow: hidden;
+
 
   &__lead-wrap {
     position: relative;
     padding: 120px 16px 0;
     max-width: 920px;
-    margin: 0 auto 120px;
+    margin: 0 auto 60px;
+    
 
 
     @include tab {
@@ -2122,7 +2125,7 @@
 
   &__bg-right {
     top: 100px;
-    right: 0;
+    right: -300px;
   }
 
   &__section01 {
@@ -2154,9 +2157,37 @@
     left :0;
   }
 
-  &__section02 {}
+  &__section02 {
+    margin: 0 0 120px;
+  }
 
-  &__ {}
+  &__section02-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__section02-item {
+    width: 20%;
+    margin: 16px 0;
+    text-align: center;
+
+    img {
+      width: 70px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @include tab {
+      width: 33.3%;
+    }
+  }
+
+  &__section02-bg-left {
+    bottom: 500px;
+    left :-500px;
+  }
 
   &__ {}
 

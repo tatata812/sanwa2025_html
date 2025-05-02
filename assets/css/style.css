@@ -2307,11 +2307,14 @@ input[type=text] {
 /* =================================
 家具・インテリア
  ================================= */
+.page-interior {
+  overflow: hidden;
+}
 .page-interior__lead-wrap {
   position: relative;
   padding: 120px 16px 0;
   max-width: 920px;
-  margin: 0 auto 120px;
+  margin: 0 auto 60px;
 }
 @media (max-width: 780px) {
   .page-interior__lead-wrap {
@@ -2374,7 +2377,7 @@ input[type=text] {
 }
 .page-interior__bg-right {
   top: 100px;
-  right: 0;
+  right: -300px;
 }
 .page-interior__section01 {
   padding: 0 16px;
@@ -2399,6 +2402,34 @@ input[type=text] {
 .page-interior__section01-bg-left {
   bottom: 100px;
   left: 0;
+}
+.page-interior__section02 {
+  margin: 0 0 120px;
+}
+.page-interior__section02-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.page-interior__section02-item {
+  width: 20%;
+  margin: 16px 0;
+  text-align: center;
+}
+.page-interior__section02-item img {
+  width: 70px;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 780px) {
+  .page-interior__section02-item {
+    width: 33.3%;
+  }
+}
+.page-interior__section02-bg-left {
+  bottom: 500px;
+  left: -500px;
 }
 /* =================================
 お知らせ一覧
