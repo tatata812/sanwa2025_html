@@ -1483,14 +1483,16 @@
     font-weight: bold;
     color: #3071b9;
     padding: 0 16px;
-
-
+    
+    
     @include tab {
       font-size: 22px;
       margin: 0 auto 24px;
     }
+    
+    
   }
-
+  
   &__inner {
     max-width: 920px;
     margin: 0 auto 120px;
@@ -1498,12 +1500,12 @@
     gap: 20px;
     padding: 0 16px;
     flex-wrap: wrap;
-
+    
     @include tab {
-      margin: 0 auto 60px;
+      margin: 0 auto 80px;
     }
   }
-
+  
   &__item {
     text-align: center;
     border: #3071b9 1px solid;
@@ -1511,19 +1513,51 @@
     border-radius: 12px;
     width: calc((100% - 60px) / 4);
     transition: all 0.3s;
+    position: relative;
 
     @include tab {
       width: calc((100% - 20px) / 2);
     }
 
+
+    &:after {
+      content: "";
+      border: 0;
+      border-top: solid 2px #3071b9;
+      border-right: solid 2px #3071b9;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%) rotate(45deg);
+      transition: all 0.3s;
+    }
+
     &.active {
       border: #bababa 1px solid;
       color: #bababa;
+
+      &:after {
+        border-top: solid 2px #bababa;
+        border-right: solid 2px #bababa;
+
+      }
     }
 
     &:hover {
       border: #bababa 1px solid;
       color: #bababa;
+
+
+      &:after {
+        border-top: solid 2px #bababa;
+        border-right: solid 2px #bababa;
+        right: 7px;
+
+
+      }
     }
   }
 
