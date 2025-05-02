@@ -2429,6 +2429,54 @@ input[type=text] {
 .page-interior__bg {
   background-color: rgba(214, 240, 241, 0.5);
 }
+.page-interior__section03 {
+  background-color: rgba(255, 255, 255, 0.5019607843);
+  max-width: 880px;
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: 60px 40px;
+}
+.page-interior__section03-item {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin: 0 0 100px;
+}
+.page-interior__section03-item--even {
+  flex-direction: row-reverse;
+}
+.page-interior__section03-item:last-of-type {
+  margin: 0;
+}
+.page-interior__section03-left {
+  width: 340px;
+}
+.page-interior__section03-ttl {
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: #3071b9 1px solid;
+  padding: 0 0 24px;
+  margin: 0 0 20px;
+}
+.page-interior__section03-right {
+  flex: 1;
+}
+.page-interior__section03-right img {
+  transform: scale(1.2) translateX(50px);
+}
+@media (max-width: 1120px) {
+  .page-interior__section03-right img {
+    transform: scale(1) translateX(0);
+  }
+}
+.page-interior__section03-right--even img {
+  transform: scale(1.2) translateX(-50px);
+}
+@media (max-width: 1120px) {
+  .page-interior__section03-right--even img {
+    transform: scale(1) translateX(0);
+  }
+}
 /* =================================
 お知らせ一覧
  ================================= */
