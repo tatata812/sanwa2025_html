@@ -1826,18 +1826,18 @@
     width: 80%;
     max-width: 800px;
 
-    @include pc{
+    @include pc {
       max-width: 500px;
       top: 60%;
 
     }
 
-    @include tab{
+    @include tab {
       max-width: 400px;
       top: 65%;
     }
 
-    @include sp{
+    @include sp {
       max-width: 280px;
       top: 77%;
     }
@@ -1927,9 +1927,10 @@
     margin: 0 auto 40px;
   }
 
-  &__main-text {    
+  &__main-text {
     max-width: 600px;
-    margin: 0 auto 40px;}
+    margin: 0 auto 40px;
+  }
 
   &__bottom-img-wrap {
     max-width: 940px;
@@ -1971,7 +1972,7 @@
 事業案内リンク
  ================================= */
 
- .services-link {
+.services-link {
   background-color: rgb(214 240 241 / 50%);
   padding: 60px 12px;
 
@@ -1993,6 +1994,7 @@
     @include tab {
       padding: 0;
       max-width: 500px;
+      gap: 16px;
 
     }
   }
@@ -2001,8 +2003,8 @@
     width: calc((100% - 60px) / 4);
 
     @include tab {
-      width: calc((100% - 32px) / 2);
-      max-width: 180px;
+      width: calc((100% - 16px) / 2);
+      max-width: 143px;
     }
   }
 
@@ -2049,7 +2051,7 @@
 家具・インテリア
  ================================= */
 
- .page-interior {
+.page-interior {
   overflow: hidden;
 
 
@@ -2058,7 +2060,7 @@
     padding: 120px 16px 0;
     max-width: 920px;
     margin: 0 auto 60px;
-    
+
 
 
     @include tab {
@@ -2099,7 +2101,6 @@
     font-size: 24px;
     font-weight: bold;
     margin: 0 0 24px;
-    color: #808080;
     line-height: 1.5;
     color: #3071b9;
 
@@ -2134,9 +2135,10 @@
     margin: 0 auto 40px;
   }
 
-  &__section01-main-text {    
+  &__section01-main-text {
     max-width: 600px;
-    margin: 0 auto 40px;}
+    margin: 0 auto 40px;
+  }
 
   &__section01-bottom-img-wrap {
     max-width: 940px;
@@ -2150,7 +2152,7 @@
 
   &__section01-bg-left {
     bottom: 100px;
-    left :0;
+    left: 0;
   }
 
   &__section02 {
@@ -2182,12 +2184,50 @@
 
   &__section02-bg-left {
     bottom: 500px;
-    left :-500px;
+    left: -500px;
   }
 
   &__bg {
     background-color: rgb(214 240 241 / 50%);
+    padding: 0 0 120px;
+    margin: 0 0 80px;
+    position: relative;
 
+    @include tab{
+      padding: 0 0 40px;
+      margin: 0 0 32px;
+    }
+
+  }
+
+  &__section-bg01 {
+    top: 20%;
+    right: 0;
+  }
+
+  &__section-bg02 {
+    top: 35%;
+    left: -5%;
+  }
+
+  &__section-bg03 {
+    top: 50%;
+    right: 0;
+  }
+
+  &__section-bg04 {
+    top: 65%;
+    left: -5%;
+  }
+
+  &__section-bg05 {
+    top: 80%;
+    right: 0;
+  }
+
+  &__section-bg06 {
+    top: 95%;
+    left: -5%;
   }
 
   &__section03 {
@@ -2197,12 +2237,10 @@
     border-radius: 24px;
     padding: 60px 40px;
 
-    @include tab{
-    margin: 40px 16px;
-    padding: 24px 16px;
-    border-radius: 12px;
-
-
+    @include tab {
+      margin: 40px 16px;
+      padding: 24px 16px;
+      border-radius: 12px;
     }
   }
 
@@ -2212,17 +2250,18 @@
     align-items: center;
     margin: 0 0 100px;
 
-    @include tab{
-    flex-direction: column;
-    margin: 0 0 60px;
+    @include tab {
+      flex-direction: column;
+      margin: 0 0 60px;
 
     }
 
     &--even {
       flex-direction: row-reverse;
-      @include tab{
+
+      @include tab {
         flex-direction: column;
-        }
+      }
     }
 
     &:last-of-type {
@@ -2231,10 +2270,10 @@
   }
 
   &__section03-left {
-    width: 340px;
+    width: 348px;
 
-    @include tab{
-    width: 100%;
+    @include tab {
+      width: 100%;
     }
   }
 
@@ -2245,11 +2284,16 @@
     padding: 0 0 24px;
     margin: 0 0 20px;
 
-    @include tab{
+    @include tab {
       font-size: 20px;
       padding: 0 0 12px;
 
     }
+
+    &--none {
+      border-bottom: none;
+      padding: 0 ;
+      }
   }
 
   &__section03-text {}
@@ -2257,14 +2301,14 @@
   &__section03-right {
     flex: 1;
 
-    @include tab{
-    max-width: 400px;
+    @include tab {
+      max-width: 400px;
     }
 
     img {
       transform: scale(1.2) translateX(50px);
 
-      @include pc{
+      @include pc {
         transform: scale(1) translateX(0);
       }
     }
@@ -2274,7 +2318,8 @@
 
       img {
         transform: scale(1.2) translateX(-50px);
-        @include pc{
+
+        @include pc {
           transform: scale(1) translateX(0);
         }
       }
@@ -2282,9 +2327,139 @@
     }
   }
 
-  &__ {}
+  &__section04 {
 
-  &__ {}
+    background-color: #ffffff80;
+    max-width: 880px;
+    margin: 80px auto;
+    border-radius: 24px;
+    padding: 60px 40px;
+
+    @include tab {
+      margin: 40px 16px;
+      padding: 24px 16px;
+      border-radius: 12px;
+    }
+  }
+
+  &__section04-ttl {
+
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 24px;
+    line-height: 1.5;
+
+
+    @include tab {
+      font-size: 17px;
+      margin: 0 0 18px;
+    }
+  }
+
+  &__section04-lead {
+    margin: 0 0 24px;
+
+    &:last-of-type {
+      margin: 0 0 60px;
+
+      @include tab{
+        margin: 0 0 40px;
+      }
+    }
+  }
+
+  &__section04-item {
+    display: flex;
+    max-width: 680px;
+    gap: 40px;
+    margin: 0 0 40px;
+
+    @include tab{
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+
+    }
+
+    &:nth-of-type(1) {
+      transform: translateX(250px);
+
+      @include pc{
+        transform: translateX(0);
+      }
+    }
+
+    &:nth-of-type(2) {
+      transform: translateX(150px);
+
+      @include pc{
+        transform: translateX(0);
+      }
+    }
+
+    &:nth-of-type(3) {
+      transform: translateX(50px);
+      margin: 0;
+
+      @include pc{
+        transform: translateX(0);
+      }
+
+    }
+
+    &--even {
+      flex-direction: row-reverse;
+
+      @include tab{
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    
+        }
+
+      &:nth-of-type(1) {
+        transform: translateX(-130px);
+  
+        @include pc{
+          transform: translateX(0);
+        }
+      }
+  
+      &:nth-of-type(2) {
+        transform: translateX(-30px);
+        margin: 0;
+  
+        @include pc{
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  &__section04-left {
+    width: 320px;
+
+    @include tab{
+    width: 100%;
+    }
+  }
+
+  &__section04-right {
+    flex: 1;
+
+    @include tab{
+    max-width: 420px;
+    }
+  }
+
+  &__link-wrap {
+    text-align: center;
+    margin: 60px 0 0;
+
+    @include tab{
+      margin: 40px 0 0;
+    }
+  }
 
   &__ {}
 

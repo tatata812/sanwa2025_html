@@ -185,6 +185,22 @@ h3 {
       right: 15px;
     }
   }
+
+  &--external {
+
+    &:after {
+      display: none;
+    }
+
+    &:before {
+      content: url(../img/company/external-link.png);
+      position: absolute;
+      top: 17px;
+      right: 19px;
+      transform: scale(1);
+    }
+
+  }
 }
 
 //  装飾
@@ -251,7 +267,7 @@ input[type="text"] {
     @media screen and (max-width: 1520px) {
       height: 500px;
     }
-    
+
     @include pc {
       background-size: contain;
       height: 400px;
@@ -312,8 +328,8 @@ input[type="text"] {
   &__padding {
     padding: 120px 0;
 
-    @include tab{
-    padding: 60px 0 ;
+    @include tab {
+      padding: 60px 0;
     }
   }
 
@@ -339,7 +355,7 @@ input[type="text"] {
     font-size: 20px;
     display: inline-block;
 
-  
+
     &::before {
       content: url(../img/top/ttl-dec.png);
       position: absolute;
@@ -373,7 +389,7 @@ input[type="text"] {
     display: inline-block;
 
 
-    @include tab{
+    @include tab {
       font-size: 16px;
       padding: 0 0 0 32px;
     }
@@ -382,7 +398,7 @@ input[type="text"] {
       content: url(../img/top/ttl-dec.png);
       position: absolute;
 
-      @include tab{
+      @include tab {
         top: -57px;
         left: -56px;
         transform: scale(0.15);
@@ -412,17 +428,17 @@ input[type="text"] {
     font-size: 20px;
     display: inline-block;
 
-    @include tab{
+    @include tab {
       font-size: 16px;
       padding: 0 0 0 32px;
     }
 
-  
+
     &::before {
       content: url(../img/top/ttl-dec.png);
       position: absolute;
 
-      @include tab{
+      @include tab {
         top: -45px;
         left: -56px;
         transform: scale(0.15);
@@ -436,7 +452,7 @@ input[type="text"] {
       right: -26px;
       transform: scale(1);
 
-      @include tab{
+      @include tab {
         top: 2px;
         right: -24px;
 
