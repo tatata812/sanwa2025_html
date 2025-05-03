@@ -2157,6 +2157,10 @@
 
   &__section02 {
     margin: 0 0 120px;
+
+    @include tab{
+      margin: 0 0 40px;
+    }
   }
 
   &__section02-content {
