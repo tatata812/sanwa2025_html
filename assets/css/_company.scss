@@ -2501,7 +2501,6 @@
 
     @include tab {
       margin: 0 0 40px 40px;
-
     }
   }
 
@@ -2631,7 +2630,7 @@
     width: calc((100% - 54px) / 2);
     margin: 0 0 40px;
 
-    @include tab{
+    @include tab {
       width: calc((100% - 18px) / 2);
     }
   }
@@ -2655,22 +2654,214 @@
 
 
 /* =================================
-
+施工
  ================================= */
 
-.aaa {
+.page-construction {
 
-  &__ {}
+  overflow: hidden;
 
-  &__ {}
+  &__lead-wrap {
+    position: relative;
+    padding: 120px 16px 0;
+    max-width: 920px;
+    margin: 0 auto 60px;
 
-  &__ {}
 
-  &__ {}
 
-  &__ {}
+    @include tab {
+      margin: 0 auto 40px;
+      padding: 40px 16px 0;
+    }
+  }
 
-  &__ {}
+
+
+  &__ttl {
+    margin: 0 0 80px;
+
+    @include tab {
+      margin: 0 0 40px 40px;
+    }
+  }
+
+  &__top-lead {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 40px;
+    color: #808080;
+    line-height: 1.3;
+
+    @include pc {
+      font-size: 28px;
+    }
+
+    @include tab {
+      font-size: 16px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__lead {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 24px;
+    line-height: 1.5;
+    color: #3071b9;
+
+
+    @include tab {
+      font-size: 17px;
+      margin: 0 0 18px;
+    }
+  }
+
+  &__lead-text {
+    margin: 0 0 32px;
+
+
+    @include tab {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__bg-right {
+    top: 100px;
+    right: -300px;
+  }
+
+  &__section01 {
+    padding: 0 16px;
+    position: relative;
+    margin: 0 0 120px;
+
+    @include tab {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__main-img {
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+
+
+  &__section01-bg-left {
+    bottom: -100px;
+    left: 0;
+  }
+
+  &__section02 {
+    max-width: 900px;
+    border-radius: 40px;
+    margin: 0 auto 120px;
+    background-color: rgb(214 240 241 / 50%);
+    padding: 60px 40px;
+
+    @include tab {
+      border-radius: 12px;
+      margin: 0 16px 40px;
+      padding: 40px 12px 24px;
+    }
+  }
+
+  &__section02-ttl {
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: #3071b9 1px solid;
+    padding: 0 0 12px;
+    margin: 0 0 24px;
+
+    @include tab {
+      margin: 0 0 12px;
+      font-size: 20px;
+
+
+    }
+  }
+
+  &__section02-text {
+    margin: 0 0 40px;
+
+    @include tab {
+      margin: 0 0 16px;
+    }
+
+    &--blue {
+      color: #3071b9;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 12px;
+
+    }
+
+  }
+
+  &__section02-img {
+    margin: 0 0 80px;
+    padding: 0 12px;
+
+    @include tab {
+      margin: 0 0 40px;
+      padding: 0;
+    }
+
+    &--last {
+      margin: 0 auto;
+      max-width: 600px;
+
+      @include tab {
+        margin: 0;
+        padding: 0;
+      }
+
+    }
+
+  }
+
+  &__section02-wrap {
+    position: relative;
+  }
+
+  &__section-bg01 {
+    top: 0%;
+    right: 0;
+  }
+
+  &__section-bg02 {
+    top: 13%;
+    left: -5%;
+  }
+
+  &__section-bg03 {
+    top: 27%;
+    right: 0;
+  }
+
+  &__section-bg04 {
+    top: 45%;
+    left: -5%;
+  }
+
+  &__section-bg05 {
+    top: 60%;
+    right: 0;
+  }
+
+  &__section-bg06 {
+    top: 72%;
+    left: -5%;
+  }
+
+  &__section-bg07 {
+    top: 87%;
+    right: 0;
+  }
+
+  &__section-bg08 {
+    top: 97%;
+    left: -5%;
+  }
 
   &__ {}
 
