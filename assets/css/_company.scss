@@ -2158,7 +2158,7 @@
   &__section02 {
     margin: 0 0 120px;
 
-    @include tab{
+    @include tab {
       margin: 0 0 40px;
     }
   }
@@ -2197,7 +2197,7 @@
     margin: 0 0 80px;
     position: relative;
 
-    @include tab{
+    @include tab {
       padding: 0 0 40px;
       margin: 0 0 32px;
     }
@@ -2296,8 +2296,8 @@
 
     &--none {
       border-bottom: none;
-      padding: 0 ;
-      }
+      padding: 0;
+    }
   }
 
   &__section03-text {}
@@ -2366,7 +2366,7 @@
     &:last-of-type {
       margin: 0 0 60px;
 
-      @include tab{
+      @include tab {
         margin: 0 0 40px;
       }
     }
@@ -2378,17 +2378,17 @@
     gap: 40px;
     margin: 0 0 40px;
 
-    @include tab{
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+    @include tab {
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
 
     }
 
     &:nth-of-type(1) {
       transform: translateX(250px);
 
-      @include pc{
+      @include pc {
         transform: translateX(0);
       }
     }
@@ -2396,7 +2396,7 @@
     &:nth-of-type(2) {
       transform: translateX(150px);
 
-      @include pc{
+      @include pc {
         transform: translateX(0);
       }
     }
@@ -2405,7 +2405,7 @@
       transform: translateX(50px);
       margin: 0;
 
-      @include pc{
+      @include pc {
         transform: translateX(0);
       }
 
@@ -2414,26 +2414,26 @@
     &--even {
       flex-direction: row-reverse;
 
-      @include tab{
+      @include tab {
         flex-direction: column;
         gap: 12px;
         align-items: center;
-    
-        }
+
+      }
 
       &:nth-of-type(1) {
         transform: translateX(-130px);
-  
-        @include pc{
+
+        @include pc {
           transform: translateX(0);
         }
       }
-  
+
       &:nth-of-type(2) {
         transform: translateX(-30px);
         margin: 0;
-  
-        @include pc{
+
+        @include pc {
           transform: translateX(0);
         }
       }
@@ -2443,16 +2443,16 @@
   &__section04-left {
     width: 320px;
 
-    @include tab{
-    width: 100%;
+    @include tab {
+      width: 100%;
     }
   }
 
   &__section04-right {
     flex: 1;
 
-    @include tab{
-    max-width: 420px;
+    @include tab {
+      max-width: 420px;
     }
   }
 
@@ -2460,10 +2460,235 @@
     text-align: center;
     margin: 60px 0 0;
 
-    @include tab{
+    @include tab {
       margin: 40px 0 0;
     }
   }
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+
+/* =================================
+物流
+ ================================= */
+
+.page-logistics {
+  overflow: hidden;
+
+  &__lead-wrap {
+    position: relative;
+    padding: 120px 16px 0;
+    max-width: 920px;
+    margin: 0 auto 60px;
+
+
+
+    @include tab {
+      margin: 0 auto 40px;
+      padding: 40px 16px 0;
+    }
+  }
+
+
+
+  &__ttl {
+    margin: 0 0 80px;
+
+    @include tab {
+      margin: 0 0 40px 40px;
+
+    }
+  }
+
+  &__top-lead {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 40px;
+    color: #808080;
+    line-height: 1.3;
+
+    @include pc {
+      font-size: 28px;
+    }
+
+    @include tab {
+      font-size: 16px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__lead {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 24px;
+    line-height: 1.5;
+    color: #3071b9;
+
+
+    @include tab {
+      font-size: 17px;
+      margin: 0 0 18px;
+    }
+  }
+
+  &__lead-text {
+    margin: 0 0 32px;
+
+
+    @include tab {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__bg-right {
+    top: 100px;
+    right: -300px;
+  }
+
+  &__section01 {
+    padding: 0 16px;
+    position: relative;
+    margin: 0 0 120px;
+
+    @include tab {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__main-img {
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+
+
+
+  &__section01-bg-left {
+    bottom: -100px;
+    left: 0;
+  }
+
+  &__section02 {
+    padding: 0 16px;
+    position: relative;
+    margin: 0 0 120px;
+
+    @include tab {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__section02-bg-left {
+    bottom: -100px;
+    left: 0;
+  }
+
+  &__section02-bg-right {
+    top: 100px;
+    right: -300px;
+  }
+
+
+  &__section02-box {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  &__section02-num-wrap {
+    border-bottom: #97dbdd 1px solid;
+    padding: 0 0 6px;
+    margin: 0 0 12px;
+  }
+
+  &__section02-num {
+    background-color: #97dbdd;
+    color: #fff;
+    border-radius: 26px;
+    width: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 12px;
+    display: block;
+    font-weight: bold;
+
+
+  }
+
+  &__section02-flex {
+    display: flex;
+    gap: 54px;
+
+    @include tab {
+      gap: 18px;
+    }
+  }
+
+  &__section02-item {
+    width: calc((100% - 54px) / 2);
+    margin: 0 0 40px;
+
+    @include tab{
+      width: calc((100% - 18px) / 2);
+    }
+  }
+
+  &__section02-ttl {
+    font-weight: bold;
+    margin: 0 0 12px;
+    font-size: 17px;
+  }
+
+  &__section02-text {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
   &__ {}
 
