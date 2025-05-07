@@ -367,7 +367,7 @@ $(function () {
 
     // フェードの設定
     const fadeStart = 0;
-    const fadeUntil = isMobile ? 1000 : 2000;  // スマホは150、PCは300で透明になる
+    const fadeUntil = isMobile ? 2000 : 5000;  // スマホは150、PCは300で透明になる
 
     let opacity = 1;
 
