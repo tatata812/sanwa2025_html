@@ -269,9 +269,6 @@ input[type=text] {
 .sub-page__main-visual--office {
   background-image: url(../img/company/main-visual-office.jpg);
 }
-.sub-page__main-visual-- {
-  background-image: url(../img/company/main-visual-.jpg);
-}
 .sub-page__main-visual-top {
   position: absolute;
   top: 0;
@@ -519,8 +516,10 @@ input[type=text] {
   margin: 0 auto;
 }
 .content-style .alignright {
-  display: block;
-  margin-left: auto;
+  float: right;
+}
+.content-style .alignleft {
+  float: left;
 }
 .content-style img {
   width: auto;
@@ -992,6 +991,7 @@ input[type=text] {
     margin: 0 auto;
   }
 }
+
 /* =================================
 会社概要（page-outline）
  ================================= */
@@ -1154,6 +1154,7 @@ input[type=text] {
 .page-outline__section02-ttl {
   margin: 0 0 0 4px;
 }
+
 /* =================================
 会社概要（page-history）
  ================================= */
@@ -1304,6 +1305,7 @@ input[type=text] {
     padding: 4px 4px;
   }
 }
+
 /* =================================
 企業理念（page-vision）
  ================================= */
@@ -1848,6 +1850,7 @@ input[type=text] {
   right: -20%;
   transform: translate(-50%, -50%);
 }
+
 .office-link__ttl {
   max-width: 920px;
   margin: 0 auto 40px;
@@ -1920,6 +1923,7 @@ input[type=text] {
   border-right: solid 2px #bababa;
   right: 7px;
 }
+
 /* =================================
 営業所
  ================================= */
@@ -2097,6 +2101,7 @@ input[type=text] {
   transform: translateY(-50%) rotate(45deg);
   transition: all 0.3s;
 }
+
 /* =================================
 建材販売
  ================================= */
@@ -2248,6 +2253,7 @@ input[type=text] {
   bottom: -100px;
   right: 0;
 }
+
 /* =================================
 事業案内リンク
  ================================= */
@@ -2696,6 +2702,7 @@ input[type=text] {
     margin: 40px 0 0;
   }
 }
+
 /* =================================
 物流
  ================================= */
@@ -2844,6 +2851,7 @@ input[type=text] {
   margin: 0 0 12px;
   font-size: 17px;
 }
+
 /* =================================
 施工
  ================================= */
@@ -3027,6 +3035,7 @@ input[type=text] {
   top: 97%;
   left: -5%;
 }
+
 /* =================================
 お知らせ一覧
  ================================= */
@@ -3355,6 +3364,7 @@ input[type=text] {
     margin: 0 auto 40px;
   }
 }
+
 /* =================================
 リクルート
  ================================= */
@@ -3412,6 +3422,7 @@ input[type=text] {
   margin: 0 auto 80px;
   padding: 0 24px;
 }
+
 @media (max-width: 780px) {
   .section01-box {
     background: linear-gradient(90deg, #fff 0%, #fff 80%, #eaf7fc 80%, #eaf7fc 100%);
@@ -3590,6 +3601,7 @@ input[type=text] {
     width: 100%;
   }
 }
+
 .recruit-vision {
   margin: 0 0 60px;
 }
@@ -4069,7 +4081,7 @@ input[type=text] {
 }
 
 /* =================================
- リンク 
+リンク 
  ================================= */
 .page-link {
   padding: 120px 16px;
@@ -4759,6 +4771,7 @@ input[type=text] {
   bottom: -49px;
   width: 25%;
 }
+
 /* =================================
 レノファ山口FC
  ================================= */
@@ -4832,6 +4845,7 @@ input[type=text] {
   max-width: 800px;
   margin: 0 auto;
 }
+
 .main {
   position: relative;
 }
@@ -5586,6 +5600,7 @@ TOP
     display: none;
   }
 }
+
 .gsap-main__skip-btn {
   position: fixed;
   bottom: 50px;

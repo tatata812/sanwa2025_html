@@ -63,7 +63,6 @@ a {
     opacity: 0.7;
   }
 
-
   //hover-card
   &.hover-cad {
 
@@ -110,7 +109,6 @@ h3 {
     display: block;
   }
 }
-
 
 // トップページのセクションタイトル
 .section-ttl {
@@ -159,7 +157,6 @@ h3 {
 
   @include tab {
     width: 240px;
-
   }
 
   &:after {
@@ -205,7 +202,6 @@ h3 {
 
       }
     }
-
   }
 }
 
@@ -258,7 +254,6 @@ input[type="text"] {
       font-size: 24px;
       left: 30px;
       top: 62px;
-
     }
   }
 
@@ -314,10 +309,6 @@ input[type="text"] {
     &--office {
       background-image: url(../img/company/main-visual-office.jpg);
     }
-
-    &-- {
-      background-image: url(../img/company/main-visual-.jpg);
-    }
   }
 
   &__main-visual-top {
@@ -338,7 +329,6 @@ input[type="text"] {
       padding: 60px 0;
     }
   }
-
 }
 
 // 下層タイトル
@@ -593,10 +583,13 @@ input[type="text"] {
     display: block;
     margin: 0 auto;
   }
-
+  
   .alignright {
-    display: block;
-    margin-left: auto;
+    float: right;
+  }
+  
+  .alignleft {
+    float: left;
   }
 
   img {

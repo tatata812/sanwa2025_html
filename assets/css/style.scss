@@ -67,7 +67,6 @@ header（PC）
 
     @include tab {
       top: 62px;
-
     }
   }
 
@@ -127,7 +126,6 @@ header（PC）
       }
     }
 
-
     &--ttl {
       width: 30%;
 
@@ -137,7 +135,6 @@ header（PC）
 
       @include tab {
         width: 70%;
-
       }
     }
 
@@ -200,8 +197,6 @@ header（PC）
       opacity: 1;
     }
   }
-
-  &__global-child-inner {}
 
   &__global-child-link {
     display: block;
@@ -361,7 +356,6 @@ header（PC）
 
       @include sp {
         width: 280px;
-
       }
     }
   }
@@ -486,14 +480,9 @@ header（PC）
   &__scroll-btn {}
 }
 
-
 .disabled {
   pointer-events: none;
 }
-
-
-
-
 
 
 
@@ -638,13 +627,11 @@ TOP
       }
     }
 
-
     &:hover {
       &:after {
         right: 15px;
       }
     }
-
   }
 
   &__info-left {
@@ -667,7 +654,6 @@ TOP
     margin: 0 0 0 24px;
     overflow: hidden;
 
-
     @include tab {
       width: 300px;
       margin: 8px 0 0 0;
@@ -686,7 +672,6 @@ TOP
     @include tab {
       width: 300px;
     }
-
   }
 
   &__info-right-top {
@@ -704,7 +689,6 @@ TOP
   &__info-cat {
     padding: 0 0 0 12px;
   }
-
 
   &__info-ttl {
     @include tab {
@@ -778,7 +762,6 @@ TOP
       }
     }
 
-
     .slick-next:before {
       left: -60px;
 
@@ -808,8 +791,6 @@ TOP
     gap: 32px;
     max-width: 980px;
     margin: 0 auto;
-
-
 
     @include tab {
       justify-content: center;
@@ -881,12 +862,6 @@ TOP
       }
     }
   }
-
-
-
-  &__ {}
-
-  &__ {}
 }
 
 
@@ -906,9 +881,9 @@ TOP
     line-height: 100px;
     text-align: center;
 
-    @include tab{
-    width: 70px;
-    line-height: 70px;
+    @include tab {
+      width: 70px;
+      line-height: 70px;
     }
   }
 
@@ -1187,7 +1162,6 @@ TOP
     transition: color 0.3s;
     position: relative;
 
-
     &:last-child {
       margin: 0;
     }
@@ -1218,8 +1192,6 @@ TOP
       }
     }
   }
-
-  &__box {}
 
   &__box-item {
     display: none;
@@ -1271,10 +1243,7 @@ TOP
   &__article-date {
     width: 160px;
     white-space: nowrap;
-
   }
-
-
 
   &__article-span {
     display: block;
@@ -1301,8 +1270,6 @@ TOP
     }
   }
 
-  &__article-cat {}
-
   &__link {
     display: block;
   }
@@ -1317,7 +1284,6 @@ TOP
     border-radius: 8px;
     position: relative;
     max-width: 880px;
-
 
     &:after {
       /* 擬似要素で矢印アイコンをつくる */
@@ -1340,7 +1306,6 @@ TOP
         display: none;
       }
     }
-
 
     &:hover {
       &:after {
@@ -1522,7 +1487,6 @@ TOP
  ================================= */
 
 .top-role {
-
   padding: 0 0 120px;
 
   @include tab {
@@ -1657,7 +1621,6 @@ TOP
       height: auto;
       width: 100%;
       padding: 16px 12px 0;
-
     }
 
     .scroll-box-img-sp {
@@ -1749,9 +1712,8 @@ TOP
       margin: 0;
     }
 
-
-    @include tab{
-    padding: 0 20px;
+    @include tab {
+      padding: 0 20px;
     }
   }
 }
@@ -1788,7 +1750,6 @@ TOP
       margin: 0 0 40px 40px;
     }
   }
-
 
   &__text {
     color: #3071b9;
@@ -1885,8 +1846,6 @@ TOP
   &__img {
     border-radius: 12px 12px 0 0;
   }
-
-  &__ {}
 
   &__bg-left {
     top: -100px;

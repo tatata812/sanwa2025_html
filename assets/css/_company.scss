@@ -21,8 +21,6 @@
   background-color: rgb(214 240 241 / 50%);
   padding: 60px 12px;
 
-
-
   &__box {
     display: flex;
     max-width: 1080px;
@@ -37,7 +35,6 @@
 
     @include tab {
       padding: 0;
-
     }
   }
 
@@ -117,10 +114,8 @@
     padding: 120px 16px 240px;
     position: relative;
 
-
     @include tab {
       padding: 40px 16px 60px;
-
     }
   }
 
@@ -265,14 +260,11 @@
   }
 }
 
-
-
 /* =================================
 事業案内（page-services）
  ================================= */
 
 .page-services {
-
   padding: 0 0 120px;
 
   @include tab {
@@ -317,7 +309,6 @@
 
     @include tab {
       margin: 0 0 40px 40px;
-
     }
   }
 
@@ -378,7 +369,6 @@
 
     @include tab {
       padding: 0 0 60px;
-
     }
   }
 
@@ -408,8 +398,6 @@
     &--last {
       margin: 0;
     }
-
-
   }
 
   &__section01-left {
@@ -419,7 +407,6 @@
       width: 100%;
       padding: 0 20px 0 0;
     }
-
   }
 
   &__section01-right {
@@ -438,7 +425,6 @@
     font-size: 24px;
     font-weight: bold;
     color: #3071b9;
-
   }
 
   &__section01-text {
@@ -447,7 +433,6 @@
     @include tab {
       margin: 0 0 32px;
     }
-
   }
 
   &__section01-btn {
@@ -456,18 +441,6 @@
       margin: 0 auto;
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
@@ -482,13 +455,11 @@
     padding: 0;
   }
 
-
   &__section {
     padding: 80px 12px 120px;
 
     @include tab {
       padding: 40px 12px 80px;
-
     }
   }
 
@@ -500,7 +471,6 @@
 
     @include tab {
       font-size: 18px;
-
     }
   }
 
@@ -527,7 +497,6 @@
       width: 100%;
       padding: 0;
       border-right: none;
-
     }
   }
 
@@ -544,9 +513,7 @@
       width: 100%;
       padding: 0;
       border-right: none;
-
     }
-
   }
 
   &__table {
@@ -571,11 +538,7 @@
       &--none {
         border-top: none !important;
       }
-
     }
-
-
-
   }
 
   &__th {
@@ -587,16 +550,12 @@
     @include pc {
       width: 120px;
       padding: 12px 12px;
-
-
     }
 
     @include sp {
       padding: 8px 4px 8px 12px;
       width: 100px;
     }
-
-
   }
 
   &__td {
@@ -607,7 +566,6 @@
     @include sp {
       padding: 8px 4px 8px 12px;
     }
-
   }
 
   &__section02-box {
@@ -648,20 +606,6 @@
   &__section02-ttl {
     margin: 0 0 0 4px;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
@@ -681,7 +625,6 @@
 
     @include tab {
       padding: 40px 12px 80px;
-
     }
   }
 
@@ -693,7 +636,6 @@
     @include tab {
       font-size: 18px;
       margin: 0 0 12px;
-
     }
   }
 
@@ -705,7 +647,6 @@
     @include sp {
       margin: 0 auto 32px;
       padding: 0;
-
     }
   }
 
@@ -714,7 +655,6 @@
 
     @include sp {
       margin: 0 0 16px;
-
     }
   }
 
@@ -730,8 +670,6 @@
     }
   }
 
-  &__tr {}
-
   &__tr {
     border-bottom: 1px solid #cccccc;
 
@@ -743,11 +681,7 @@
       &--none {
         border-top: none !important;
       }
-
     }
-
-
-
   }
 
   &__th {
@@ -759,16 +693,12 @@
     @include pc {
       width: 120px;
       padding: 12px 12px;
-
-
     }
 
     @include sp {
       padding: 8px 4px 8px 12px;
       width: 100px;
     }
-
-
   }
 
   &__td {
@@ -779,7 +709,6 @@
     @include sp {
       padding: 8px 4px 8px 12px;
     }
-
   }
 
   &__br {
@@ -801,9 +730,7 @@
     @include tab {
       flex-direction: column;
       margin: 0 auto 24px;
-
     }
-
   }
 
   &__btn-wrap {
@@ -814,9 +741,7 @@
       gap: 4px;
       justify-content: center;
       width: 100%;
-
     }
-
   }
 
   &__btn {
@@ -831,21 +756,12 @@
     &:hover {
       background-color: #3071b9;
       color: #fff;
-
     }
 
     @include sp {
       padding: 4px 4px;
-
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
 }
 
 
@@ -901,7 +817,6 @@
 
     @include tab {
       margin: 0 0 40px 40px;
-
     }
   }
 
@@ -973,8 +888,6 @@
       justify-content: center;
       gap: 12px;
       margin: 0 auto 60px;
-
-
     }
   }
 
@@ -992,7 +905,6 @@
     @include tab {
       width: 50%;
       top: -80px;
-
     }
   }
 
@@ -1031,7 +943,6 @@
 
     @include tab {
       bottom: -47px;
-
     }
   }
 
@@ -1074,7 +985,6 @@
         padding: 24px 0;
         margin: 0 12px 0 0;
       }
-
     }
   }
 
@@ -1098,7 +1008,6 @@
       padding: 40px 12px 24px;
     }
 
-
     &--odd {
 
       @include pc {
@@ -1119,7 +1028,6 @@
 
     @include tab {
       font-size: 24px;
-
     }
   }
 
@@ -1151,7 +1059,6 @@
     @include tab {
       padding: 40px;
       margin: 0 0 40px;
-
     }
 
     @include sp {
@@ -1213,7 +1120,6 @@
         right: 15px;
       }
     }
-
   }
 
   &__recruit-text-wrap {
@@ -1223,9 +1129,7 @@
 
     @include tab {
       margin: 0 auto 60px;
-
     }
-
   }
 
   &__recruit-text {
@@ -1253,12 +1157,10 @@
     position: relative;
   }
 
-
   &__bg-right {
     top: 250px;
     right: 0;
   }
-
 
   &__bg-left {
     z-index: 1;
@@ -1287,7 +1189,6 @@
       width: 85%;
       margin: -15px auto 0;
     }
-
   }
 
 
@@ -1301,20 +1202,14 @@
     @include tab {
       margin: 0 auto 60px;
       padding: 40px 16px 0;
-
     }
-
-
   }
-
-
 
   &__ttl {
     margin: 0 0 80px;
 
     @include tab {
       margin: 0 0 40px 40px;
-
     }
   }
 
@@ -1357,16 +1252,10 @@
   &__text {
     margin: 0 0 32px;
 
-
     @include tab {
       margin: 0 0 24px;
     }
   }
-
-
-
-
-
 
   &__map-section {
     max-width: 920px;
@@ -1384,7 +1273,6 @@
       gap: 16px;
       flex-direction: column;
       margin: 0 auto 40px;
-
     }
 
     &--other {
@@ -1396,15 +1284,12 @@
     }
   }
 
-  &__map-left {}
-
   &__map-ttl {
 
     font-size: 24px;
     font-weight: bold;
     margin: 0 0 24px;
     color: #3071b9;
-
 
     @include tab {
       font-size: 22px;
@@ -1423,7 +1308,6 @@
 
   &__map-wrap {
     width: 100%;
-
   }
 
   &__map {
@@ -1453,24 +1337,6 @@
     transform: translate(-50%, -50%);
 
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 .office-link {
@@ -1483,13 +1349,10 @@
     color: #3071b9;
     padding: 0 16px;
 
-
     @include tab {
       font-size: 22px;
       margin: 0 auto 24px;
     }
-
-
   }
 
   &__inner {
@@ -1554,16 +1417,9 @@
         border-top: solid 2px #bababa;
         border-right: solid 2px #bababa;
         right: 7px;
-
-
       }
     }
   }
-
-  &__ {}
-
-  &__ {}
-
 }
 
 /* =================================
@@ -1576,7 +1432,6 @@
     top: 250px;
     right: 0;
   }
-
 
   &__bg-left {
     z-index: 1;
@@ -1596,31 +1451,23 @@
     width: 50%;
   }
 
-
   &__lead-wrap {
     position: relative;
     padding: 120px 16px 0;
     max-width: 920px;
     margin: 0 auto 120px;
 
-
     @include tab {
       margin: 0 auto 60px;
       padding: 40px 16px 0;
-
     }
-
-
   }
-
-
 
   &__ttl {
     margin: 0 0 80px;
 
     @include tab {
       margin: 0 0 40px 40px;
-
     }
   }
 
@@ -1670,8 +1517,6 @@
     }
   }
 
-  &__map-wrap {}
-
   &__map {
     max-width: 900px;
     margin: 0 auto 120px;
@@ -1711,7 +1556,6 @@
     left: 0;
   }
 
-
   &__section-inner {
     max-width: 900px;
     padding: 0 16px;
@@ -1742,7 +1586,6 @@
 
   &__item-img {
     margin: 0 0 12px;
-
   }
 
   &__bottom {
@@ -1771,16 +1614,6 @@
       transition: all 0.3s;
     }
   }
-
-  &__item-text {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
@@ -1856,14 +1689,11 @@
     }
   }
 
-
-
   &__ttl {
     margin: 0 0 80px;
 
     @include tab {
       margin: 0 0 40px 40px;
-
     }
   }
 
@@ -1946,26 +1776,6 @@
     bottom: -100px;
     right: 0;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 /* =================================
@@ -1975,8 +1785,6 @@
 .services-link {
   background-color: rgb(214 240 241 / 50%);
   padding: 60px 12px;
-
-
 
   &__box {
     display: flex;
@@ -1995,7 +1803,6 @@
       padding: 0;
       max-width: 500px;
       gap: 16px;
-
     }
   }
 
@@ -2061,22 +1868,17 @@
     max-width: 920px;
     margin: 0 auto 60px;
 
-
-
     @include tab {
       margin: 0 auto 40px;
       padding: 40px 16px 0;
     }
   }
 
-
-
   &__ttl {
     margin: 0 0 80px;
 
     @include tab {
       margin: 0 0 40px 40px;
-
     }
   }
 
@@ -2104,7 +1906,6 @@
     line-height: 1.5;
     color: #3071b9;
 
-
     @include tab {
       font-size: 17px;
       margin: 0 0 18px;
@@ -2113,7 +1914,6 @@
 
   &__lead-text {
     margin: 0 0 32px;
-
 
     @include tab {
       margin: 0 0 24px;
@@ -2317,7 +2117,6 @@
       }
     }
 
-
     &--even {
 
       img {
@@ -2327,12 +2126,10 @@
           transform: scale(1) translateX(0);
         }
       }
-
     }
   }
 
   &__section04 {
-
     background-color: #ffffff80;
     max-width: 880px;
     margin: 80px auto;
@@ -2347,7 +2144,6 @@
   }
 
   &__section04-ttl {
-
     font-size: 24px;
     font-weight: bold;
     margin: 0 0 24px;
@@ -2382,7 +2178,6 @@
       flex-direction: column;
       gap: 12px;
       align-items: center;
-
     }
 
     &:nth-of-type(1) {
@@ -2408,7 +2203,6 @@
       @include pc {
         transform: translateX(0);
       }
-
     }
 
     &--even {
@@ -2464,12 +2258,6 @@
       margin: 40px 0 0;
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
@@ -2486,15 +2274,11 @@
     max-width: 920px;
     margin: 0 auto 60px;
 
-
-
     @include tab {
       margin: 0 auto 40px;
       padding: 40px 16px 0;
     }
   }
-
-
 
   &__ttl {
     margin: 0 0 80px;
@@ -2538,7 +2322,6 @@
   &__lead-text {
     margin: 0 0 32px;
 
-
     @include tab {
       margin: 0 0 24px;
     }
@@ -2563,7 +2346,6 @@
     max-width: 800px;
     margin: 0 auto 40px;
   }
-
 
 
   &__section01-bg-left {
@@ -2613,8 +2395,6 @@
     font-size: 12px;
     display: block;
     font-weight: bold;
-
-
   }
 
   &__section02-flex {
@@ -2640,16 +2420,6 @@
     margin: 0 0 12px;
     font-size: 17px;
   }
-
-  &__section02-text {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
@@ -2667,15 +2437,11 @@
     max-width: 920px;
     margin: 0 auto 60px;
 
-
-
     @include tab {
       margin: 0 auto 40px;
       padding: 40px 16px 0;
     }
   }
-
-
 
   &__ttl {
     margin: 0 0 80px;
@@ -2709,7 +2475,6 @@
     line-height: 1.5;
     color: #3071b9;
 
-
     @include tab {
       font-size: 17px;
       margin: 0 0 18px;
@@ -2718,7 +2483,6 @@
 
   &__lead-text {
     margin: 0 0 32px;
-
 
     @include tab {
       margin: 0 0 24px;
@@ -2775,8 +2539,6 @@
     @include tab {
       margin: 0 0 12px;
       font-size: 20px;
-
-
     }
   }
 
@@ -2792,9 +2554,7 @@
       font-size: 18px;
       font-weight: bold;
       margin: 0 0 12px;
-
     }
-
   }
 
   &__section02-img {
@@ -2814,9 +2574,7 @@
         margin: 0;
         padding: 0;
       }
-
     }
-
   }
 
   &__section02-wrap {
@@ -2862,28 +2620,4 @@
     top: 97%;
     left: -5%;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }

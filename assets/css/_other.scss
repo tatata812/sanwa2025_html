@@ -20,7 +20,7 @@
 お知らせ一覧
  ================================= */
 
-.page-newsrelease{
+.page-newsrelease {
   padding: 160px 12px;
 
   @include tab {
@@ -54,9 +54,7 @@
     @include tab {
       padding: 24px 16px;
       border-radius: 12px;
-
     }
-
   }
 
   &__top-wrap {
@@ -85,7 +83,6 @@
     cursor: pointer;
     transition: color 0.3s;
     position: relative;
-
 
     &:last-child {
       margin: 0;
@@ -132,19 +129,13 @@
     }
   }
 
-  &__select {}
-
-  &__pager {}
-
   &__box {
     margin: 0 0 40px;
 
     @include tab {
       margin: 0 0 16px;
-
     }
   }
-
 
   &__article {
     display: flex;
@@ -191,8 +182,6 @@
 
   }
 
-
-
   &__article-span {
     display: block;
     margin: 0 24px 0 0;
@@ -217,8 +206,6 @@
       margin: 12px 0 0 0;
     }
   }
-
-  &__article-cat {}
 
   &__link {
     display: block;
@@ -257,7 +244,6 @@
       }
     }
 
-
     &:hover {
       &:after {
         right: 15px;
@@ -292,7 +278,6 @@
     padding: 0 0 0 12px;
   }
 
-
   &__info-ttl {
     @include tab {
       text-align: center;
@@ -305,7 +290,6 @@
 
     @include tab {
       margin: 24px 0 0;
-
     }
   }
 
@@ -332,9 +316,7 @@
       bottom: -10px;
     }
   }
-
 }
-
 
 
 /* =================================
@@ -346,7 +328,6 @@
 
   @include tab {
     padding: 80px 12px 72px;
-
   }
 
   &__ttl-wrap {
@@ -355,14 +336,11 @@
 
     @include tab {
       margin: 0 auto 40px;
-
     }
   }
 
-
   &__info-right-top {
     font-size: 12px;
-
   }
 
   &__info-date {
@@ -389,27 +367,6 @@
 
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
 }
 
 
@@ -431,8 +388,6 @@
     }
   }
 
-  &__section01 {}
-
   &__section-ttl {
 
     max-width: 1100px;
@@ -451,9 +406,7 @@
     @include sp {
       font-size: 17px;
       margin: 0 auto 40px;
-
     }
-
   }
 
   &__section01-box {
@@ -478,11 +431,9 @@
     padding: 0 24px;
   }
 
-  &__ {}
 }
 
 .section01-box {
-
 
   @include tab {
     background: linear-gradient(90deg, #fff 0%, #fff 80%, #eaf7fc 80%, #eaf7fc 100%);
@@ -496,7 +447,6 @@
       border-left: 24px solid #fff;
       border-right: 24px solid #fff;
     }
-
   }
 
   &__top-wrap {
@@ -540,8 +490,6 @@
   &__img {
     width: 65%;
     margin: 0 -180px 0 0;
-
-
 
     @media screen and (max-width: 1450px) {
       width: 60%;
@@ -602,21 +550,17 @@
 
       @media screen and (max-width: 1250px) {
         padding: 80px 16px 40px;
-
       }
     }
 
     @media screen and (max-width: 1250px) {
       margin: -60px 0 0 0;
-
     }
 
     @include tab {
       margin: 0;
       background: none;
       padding: 24px 0 24px 8px;
-
-
     }
   }
 
@@ -634,7 +578,6 @@
       @include tab {
         text-align: left;
       }
-
     }
 
     @include sp {
@@ -657,16 +600,12 @@
       @include pc {
         width: 580px;
       }
-
     }
 
     @include tab {
       width: 100%;
-
     }
   }
-
-  &__ {}
 }
 
 .recruit-vision {
@@ -675,7 +614,6 @@
   @include tab {
     margin: 0;
   }
-
 
   &__inner {
     background: linear-gradient(180deg, #eaf7fc 0%, #eaf7fc 60%, #fff 60%, #fff 100%);
@@ -696,7 +634,6 @@
     @include tab {
       width: 180px;
       margin: 0 0 20px;
-
     }
   }
 
@@ -716,7 +653,6 @@
     @include tab {
       font-size: 22px;
       margin: 24px 0;
-
     }
 
     @include sp {
@@ -724,8 +660,6 @@
       letter-spacing: 0;
     }
   }
-
-
 
   &__content {
     display: flex;
@@ -738,8 +672,6 @@
       flex-direction: column;
       align-items: center;
       padding: 0 25px 0;
-
-
     }
   }
 
@@ -751,7 +683,6 @@
       width: 100%;
       max-width: 600px;
       box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
-
     }
   }
 
@@ -772,9 +703,7 @@
       margin: 0;
       font-size: 13px;
       margin: 0 12px;
-
     }
-
 
     &::after {
       content: "";
@@ -811,9 +740,7 @@
     @include tab {
       margin: 12px auto 0;
     }
-
   }
-
 }
 
 /* =================================
@@ -863,7 +790,6 @@
     @include sp {
       font-size: 18px;
     }
-
   }
 
   &__content {
@@ -888,10 +814,7 @@
       position: relative;
       margin: 0 0 16px;
       overflow: hidden;
-
     }
-
-
   }
 
   &__ttl {
@@ -922,7 +845,6 @@
   &__img {
     margin: 0 0 16px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
   }
 
   &__text {
@@ -957,8 +879,6 @@
     font-weight: bold;
     border-bottom: #3071b9 4px solid;
 
-
-
     @include pc {
       font-size: 22px;
     }
@@ -967,9 +887,7 @@
       font-size: 20px;
       padding: 28px 0 8px 0;
       margin: 0 auto 8px;
-
     }
-
   }
 
   &__lead-wrap {
@@ -1002,9 +920,7 @@
     @include sp {
       font-size: 9px;
       margin: 0 0 40px;
-
     }
-
   }
 
 
@@ -1026,7 +942,6 @@
     @include sp {
       font-size: 18px;
       margin: 0 0 16px;
-
     }
   }
 
@@ -1039,15 +954,12 @@
 
     @include tab {
       border-top: none;
-
     }
 
     @include sp {
       font-size: 13px;
     }
   }
-
-  &__tr {}
 
   &__th {
     border-bottom: 1px solid #cccccc;
@@ -1064,7 +976,6 @@
       display: block;
       border-bottom: none;
       border-right: none;
-
     }
   }
 
@@ -1103,7 +1014,6 @@
       width: 100%;
       padding: 6px;
     }
-
   }
 
   &__input-radio {
@@ -1123,7 +1033,6 @@
     @include sp {
       padding: 6px;
     }
-
   }
 
   &__input-checkbox {
@@ -1160,7 +1069,6 @@
     text-decoration: underline;
   }
 
-
   &__btn-wrap {
     text-align: center;
   }
@@ -1187,12 +1095,9 @@
       color: #3071b9;
     }
 
-
     @include tab {
       width: 240px;
-
     }
-
   }
 
 
@@ -1204,7 +1109,7 @@
 }
 
 /* =================================
- リンク 
+リンク 
  ================================= */
 
 .page-link {
@@ -1221,11 +1126,9 @@
     padding: 28px 0;
     font-weight: bold;
 
-
     @include pc {
       font-size: 22px;
       margin: 0 auto 20px;
-
     }
 
     @include tab {
@@ -1243,11 +1146,8 @@
     @include sp {
       font-size: 18px;
       margin: 0 0 16px;
-
     }
   }
-
-  &__section {}
 
   &__content {
     max-width: 1100px;
@@ -1268,11 +1168,8 @@
 
     @include sp {
       font-size: 13px;
-
     }
   }
-
-  &__tr {}
 
   &__th {
     border-bottom: 1px solid #cccccc;
@@ -1288,7 +1185,6 @@
       display: block;
       background-color: #eaf7fc;
       border-bottom: none;
-
     }
   }
 
@@ -1319,24 +1215,16 @@
     padding: 28px 24px;
     font-weight: bold;
 
-
     @include pc {
       font-size: 22px;
       margin: 0 auto 20px;
-
     }
 
     @include tab {
       font-size: 20px;
       padding: 14px 24px;
     }
-
   }
-
-
-
-
-  &__section {}
 
   &__content {
     max-width: 1100px;
@@ -1353,14 +1241,11 @@
     justify-content: space-between;
     margin: 0 0 60px;
 
-
-
     @include tab {
       padding: 0 12px 0;
       border-bottom: none;
       border-bottom: #3071b9 solid 1px;
       margin: 0;
-
     }
 
     @include sp {
@@ -1394,7 +1279,6 @@
       font-size: 11px;
       width: 24%;
     }
-
 
     &:hover {
       color: #fff;
@@ -1442,7 +1326,6 @@
           display: none;
         }
       }
-
     }
   }
 
@@ -1453,7 +1336,6 @@
     @include sp {
       margin: 0 0 40px;
     }
-
   }
 
   &__article {
@@ -1485,7 +1367,6 @@
         background-color: #fff;
         bottom: -1px;
         right: 0;
-
       }
 
       &::after {
@@ -1497,17 +1378,13 @@
         bottom: -1px;
         left: 0;
       }
-
     }
   }
 
   &__article-date {
     width: 160px;
     white-space: nowrap;
-
   }
-
-
 
   &__article-span {
     display: block;
@@ -1539,9 +1416,7 @@
 
   &__pager {
     text-align: center;
-
   }
-
 }
 
 
@@ -1557,7 +1432,6 @@
     padding: 28px 24px;
     font-weight: bold;
 
-
     @include pc {
       font-size: 22px;
       margin: 0 auto 20px;
@@ -1570,8 +1444,6 @@
     }
 
   }
-
-  &__section {}
 
   &__inner {
     max-width: 1100px;
@@ -1588,14 +1460,11 @@
     justify-content: space-between;
     margin: 0 0 60px;
 
-
-
     @include tab {
       padding: 0 12px 0;
       border-bottom: none;
       border-bottom: #3071b9 solid 1px;
       margin: 0;
-
     }
 
     @include sp {
@@ -1629,7 +1498,6 @@
       font-size: 11px;
       width: 24%;
     }
-
 
     &:hover {
       color: #fff;
@@ -1677,7 +1545,6 @@
           display: none;
         }
       }
-
     }
   }
 
@@ -1701,7 +1568,6 @@
     @include sp {
       font-size: 18px;
       line-height: 30px;
-
     }
   }
 
@@ -1718,7 +1584,6 @@
     @include tab {
       margin: 0 0 40px;
     }
-
   }
 
   &__link {
@@ -1754,21 +1619,16 @@
     padding: 28px 0;
     font-weight: bold;
 
-
     @include pc {
       font-size: 22px;
       margin: 0 auto 20px;
-
     }
 
     @include tab {
       font-size: 20px;
       padding: 14px 0;
     }
-
   }
-
-
 
   &__section {
 
@@ -1788,7 +1648,6 @@
       @include tab {
         padding: 160px 16px;
       }
-
     }
   }
 
@@ -1796,7 +1655,6 @@
     max-width: 1100px;
     margin: 0 auto 80px;
   }
-
 
   &__table {
     border-top: 1px solid #cccccc;
@@ -1809,8 +1667,6 @@
       font-size: 13px;
     }
   }
-
-  &__tr {}
 
   &__th {
     border-bottom: 1px solid #cccccc;
@@ -1848,9 +1704,7 @@
     @include sp {
       padding: 8px 4px 8px 12px;
     }
-
   }
-
 }
 
 /* =================================
@@ -1858,7 +1712,7 @@
  ================================= */
 
 .page-inquiry {
-  
+
   &__section {
     position: relative;
     padding: 80px 0;
@@ -1888,7 +1742,6 @@
       @include tab {
         margin: 0 auto 24px;
       }
-
     }
   }
 
@@ -1913,8 +1766,6 @@
       align-items: center;
       gap: 16px;
       margin: 0 auto 40px;
-
-
     }
   }
 
@@ -1976,44 +1827,23 @@
     right: 0;
   }
 
-
-
   &__bg-left {
     left: 0;
     bottom: -49px;
     width: 25%;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 /* =================================
 レノファ山口FC
  ================================= */
 
- .page-renofa {
+.page-renofa {
   padding: 0 0 120px;
-  @include tab{
-  padding: 0 0 60px;
+
+  @include tab {
+    padding: 0 0 60px;
   }
-
-  &__mv {}
-
-  &__mv-img {
-  }
-
 
   &__ttl {
     max-width: 1108px;
@@ -2025,20 +1855,17 @@
     @include pc {
       font-size: 22px;
       margin: 0 auto 80px;
-
     }
 
     @include tab {
       font-size: 20px;
       margin: 0 auto 40px;
-
     }
   }
 
   &__section-inner {
     padding: 0 16px;
   }
-
 
   &__lead {
     max-width: 800px;
@@ -2051,9 +1878,7 @@
       font-size: 18px;
       line-height: 1.5;
       margin: 0 auto 24px;
-
     }
-
   }
 
   &__text {
@@ -2073,7 +1898,6 @@
       list-style: disc;
       margin: 0 0 0 20px;
     }
-
   }
 
   &__link {
@@ -2085,28 +1909,5 @@
   &__img {
     max-width: 800px;
     margin: 0 auto;
-
-
-
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
