@@ -20,7 +20,7 @@
 お知らせ一覧
  ================================= */
 
-.page-newsrelease {
+.page-newsrelease{
   padding: 160px 12px;
 
   @include tab {
@@ -1738,140 +1738,7 @@
   }
 }
 
-/* =================================
-レノファ
-================================= */
 
-.page-renofa {
-
-  &__ttl {
-    max-width: 1108px;
-    margin: 0 auto 20px;
-    font-size: 28px;
-    padding: 28px 24px;
-    font-weight: bold;
-
-
-    @include pc {
-      font-size: 22px;
-    }
-
-    @include tab {
-      font-size: 20px;
-      padding: 14px 24px;
-    }
-  }
-
-  &__top-img {
-    margin: 0 0 40px;
-  }
-
-  &__section-ttl {
-    display: flex;
-    color: #3071b9;
-    max-width: 1100px;
-    margin: 0 auto 60px;
-    padding: 0 24px;
-    align-items: center;
-    font-size: 20px;
-    white-space: nowrap;
-
-    @include sp {
-      font-size: 16px;
-      white-space: normal;
-      margin: 0 auto 40px;
-    }
-
-    &::after {
-      background-color: #3071b9;
-      content: "";
-      flex-grow: 1;
-      height: 1px;
-      margin: 0 0 0 12px;
-    }
-  }
-
-  &__section {
-    margin: 0 0 120px;
-
-    @include tab {
-      margin: 0 0 40px;
-    }
-  }
-
-  &__content {
-    max-width: 1100px;
-    margin: 0 auto 80px;
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
-
-    @include tab {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &__text-wrap {
-    width: 48%;
-
-    @include tab {
-      width: 100%;
-      margin: 0 0 40px;
-    }
-
-  }
-
-  &__text {
-    margin: 0 0 40px;
-
-    @include sp {
-      margin: 0 0 24px;
-    }
-  }
-
-
-  &__list {
-    margin: 0 0 40px 40px;
-
-    @include tab {
-      margin: 0 0 24px 16px;
-    }
-  }
-
-
-  &__list-item {
-    list-style: disc;
-  }
-
-
-  &__btn {
-    display: block;
-    max-width: 280px;
-
-    @include tab {
-      margin: 0 auto;
-    }
-  }
-
-
-  &__img {
-    width: 48%;
-
-    @include tab {
-      width: 100%;
-    }
-  }
-
-
-  &__ {}
-
-
-  &__ {}
-
-  &__ {}
-
-}
 
 
 
@@ -2116,6 +1983,118 @@
     bottom: -49px;
     width: 25%;
   }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+レノファ山口FC
+ ================================= */
+
+ .page-renofa {
+  padding: 0 0 120px;
+  @include tab{
+  padding: 0 0 60px;
+  }
+
+  &__mv {}
+
+  &__mv-img {
+  }
+
+
+  &__ttl {
+    max-width: 1108px;
+    margin: 0 auto 120px;
+    font-size: 28px;
+    padding: 16px 16px 0;
+    font-weight: bold;
+
+    @include pc {
+      font-size: 22px;
+      margin: 0 auto 80px;
+
+    }
+
+    @include tab {
+      font-size: 20px;
+      margin: 0 auto 40px;
+
+    }
+  }
+
+  &__section-inner {
+    padding: 0 16px;
+  }
+
+
+  &__lead {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #3071b9;
+
+    @include tab {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 0 auto 24px;
+
+    }
+
+  }
+
+  &__text {
+    max-width: 800px;
+    margin: 0 auto 40px;
+
+    @include tab {
+      margin: 0 auto 24px;
+    }
+  }
+
+  &__list {
+    max-width: 800px;
+    margin: 0 auto 40px;
+
+    li {
+      list-style: disc;
+      margin: 0 0 0 20px;
+    }
+
+  }
+
+  &__link {
+    max-width: 320px;
+    margin: 0 auto 60px;
+    display: block;
+  }
+
+  &__img {
+    max-width: 800px;
+    margin: 0 auto;
+
+
+
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
   &__ {}
 
