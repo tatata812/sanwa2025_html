@@ -466,7 +466,7 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.create({
   trigger: '.main-visual',
   end: "top",
-  markers: true,
+  markers: false,
   onEnter: () => {
     document.querySelector('.page-top-fixed').style.display = 'none';
   },
