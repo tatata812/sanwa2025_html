@@ -867,6 +867,7 @@ TOP
 
 // GSAPメインビジュアル
 .gsap-main {
+  overflow: hidden;
 
   &__skip-btn {
     position: fixed;
@@ -990,6 +991,36 @@ TOP
 
 .fade-on-scroll {
   transition: opacity 0.2s ease;
+}
+
+.l-hero-panel-02 {
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &__text {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  white-space: nowrap;
+
+  @include tab{
+  font-size: 20px;
+  }
+
+  @include sp{
+  font-size: 16px;
+  left: 40%;
+
+  }
+  }
 }
 
 
