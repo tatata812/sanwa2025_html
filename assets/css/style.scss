@@ -1013,14 +1013,29 @@ TOP
 
   @include tab{
   font-size: 20px;
+  top: 30%;
+
   }
 
   @include sp{
   font-size: 16px;
-  left: 40%;
+  left: 50%;
+  top: 35%;
+
 
   }
   }
+}
+
+.l-hero-panel-03 {
+
+&__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
 }
 
 

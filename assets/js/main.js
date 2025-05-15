@@ -358,60 +358,105 @@ $(function () {
 
 
   // スクロースするときえていく　メインビジュアルGSAPの背景
-  $(window).on("scroll", function () {
-    const $target = $(".fade-on-scroll");
+  // $(window).on("scroll", function () {
+  //   const $target = $(".fade-on-scroll");
+  //   const scrollY = $(window).scrollTop();
+
+  //   // スマホかどうかを判定（768px以下をスマホとする例）
+  //   const isMobile = window.innerWidth <= 768;
+
+  //   // フェードの設定
+  //   const fadeStart = 0;
+  //   const fadeUntil = isMobile ? 2000 : 4000;  // スマホは150、PCは300で透明になる
+
+  //   let opacity = 1;
+
+  //   if (scrollY <= fadeStart) {
+  //     opacity = 1;
+  //   } else if (scrollY >= fadeUntil) {
+  //     opacity = 0;
+  //   } else {
+  //     opacity = 1 - (scrollY - fadeStart) / (fadeUntil - fadeStart);
+  //   }
+
+  //   $target.css("opacity", opacity);
+  // });
+
+  const $target = $(".fade-on-scroll");
+
+  function updateFade() {
     const scrollY = $(window).scrollTop();
+    const frequency = 0.0035; // 波の周期（値を上げると早く変化）
+    const amplitude = 0.5;   // 透明度の振幅（0.5 だと 0〜1 の間を往復）
 
-    // スマホかどうかを判定（768px以下をスマホとする例）
-    const isMobile = window.innerWidth <= 768;
-
-    // フェードの設定
-    const fadeStart = 0;
-    const fadeUntil = isMobile ? 2000 : 5000;  // スマホは150、PCは300で透明になる
-
-    let opacity = 1;
-
-    if (scrollY <= fadeStart) {
-      opacity = 1;
-    } else if (scrollY >= fadeUntil) {
-      opacity = 0;
-    } else {
-      opacity = 1 - (scrollY - fadeStart) / (fadeUntil - fadeStart);
-    }
+    // sin波を使って opacity を計算（0〜1 の範囲）
+    const opacity = 0.5 + Math.sin(scrollY * frequency) * amplitude;
 
     $target.css("opacity", opacity);
-  });
+  }
+
+  $(window).on("scroll", updateFade);
+  updateFade(); // 初回表示
 
 })
 
 
 // GSAPメインビジュアル
 const wrapper = document.querySelector('#wrapper');
+
 if (wrapper) {
-  // gsap.registerPlugin(ScrollTrigger); // npm/yarnの際に必要
   const panels = gsap.utils.toArray('.panel');
   const wrapperWidth = wrapper.offsetWidth;
-  /**
-   * 横スクロール開始
-   */
-  gsap.to(panels, {
-    xPercent: -100 * (panels.length - 1), // transformX
-    ease: "none", // easingの設定
-    scrollTrigger: { // scrollTrigger
-      trigger: wrapper, // アニメーションの対象となる要素
-      pin: true, // 要素を固定する
-      scrub: 1, // スクロールとアニメーションを同期させる。数値で秒数の設定に
-      snap: { // スナップスクロールにする
-        snapTo: 1 / (panels.length - 1), // スナップで移動させる位置
-        duration: {
-          min: .4,
-          max: .6
-        }, // スナップで移動する際の遅延時間
-        ease: "none" // easing
+
+  // 横スクロール本体
+  const horizontalScroll = gsap.to(panels, {
+    xPercent: -100 * (panels.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: wrapper,
+      pin: true,
+      scrub: 1,
+      snap: {
+        snapTo: 1 / (panels.length - 1),
+        duration: { min: 0.4, max: 0.6 },
+        ease: "none"
       },
-      end: () => "+=" + wrapperWidth // アニメーションの終了タイミング
+      end: () => "+=" + wrapperWidth
     }
-  })
+  });
+
+  // .l-hero-panel-02__text のアニメーション
+  gsap.utils.toArray('.l-hero-panel-02__text').forEach(elem => {
+    gsap.from(elem, {
+      opacity: 0,
+      x: 50,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: elem,
+        containerAnimation: horizontalScroll,
+        start: "left center",
+        toggleActions: "play none none none"
+      }
+    });
+  });
+
+  // .l-hero-panel-03__logo の「いい感じ」なアニメーション
+  gsap.utils.toArray('.l-hero-panel-03__logo').forEach(elem => {
+    gsap.from(elem, {
+      opacity: 0,
+      y: 30,
+      scale: 0.95,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: elem,
+        containerAnimation: horizontalScroll, // 横スクロール対応
+        start: "left center",
+        toggleActions: "play none none none"
+      }
+    });
+  });
 }
 
 
@@ -429,3 +474,6 @@ ScrollTrigger.create({
     document.querySelector('.page-top-fixed').style.display = 'block';
   }
 });
+
+
+
