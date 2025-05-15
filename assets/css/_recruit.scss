@@ -114,7 +114,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
 
-    @include tab{
+    @include tab {
       padding: 0 16px 80px;
     }
   }
@@ -124,7 +124,7 @@
     max-width: 780px;
     margin: 0 auto 60px;
 
-    @include tab{
+    @include tab {
       margin: 0 auto 32px;
     }
 
@@ -139,7 +139,7 @@
     max-width: 640px;
     margin: 0 auto;
 
-    @include tab{
+    @include tab {
       gap: 16px;
     }
   }
@@ -157,7 +157,7 @@
     font-weight: bold;
     margin: 0 0 32px 12px;
 
-    @include tab{
+    @include tab {
       font-size: 20px;
       margin: 0 0 24px 12px;
 
@@ -184,13 +184,113 @@
   &__news-link {
 
 
-    @include tab{
-    max-width: 380px;
+    @include tab {
+      max-width: 380px;
     }
 
     img {
       filter: drop-shadow(5px 5px 5px #aaa);
     }
+  }
+}
+
+.recruit-section01 {
+
+  &__box {
+    padding: 180px 0 140px;
+    background-image: url(../img/recruit/recruit-section01-bg01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 780px;
+
+    &--second {
+      margin: -180px 0 0;
+
+      @include tab {
+        margin: 0;
+      }
+    }
+
+    &--third {
+      background-image: url(../img/recruit/recruit-bnr-bg.png);
+      margin: -180px 0 0;
+
+      @include tab {
+        margin: 0;
+      }
+    }
+
+
+    @include pc {
+      height: auto;
+
+    }
+
+    @include tab {
+      padding: 40px 0 60px;
+    }
+  }
+
+  &__box-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 16px;
+    justify-content: center;
+
+    @include pc {
+      gap: 24px;
+      align-items: center;
+    }
+
+    @include tab {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    width: 500px;
+
+    @include pc {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  &__lead {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 0 24px;
+
+    @include pc {
+      font-size: 22px;
+    }
+
+    @include tab{
+    font-size: 18px;
+    }
+  }
+
+  &__bottom-lead {
+    color: #3071b9;
+    margin: 0 0 24px;
+    font-weight: bold;
+  }
+
+  &__text {}
+
+  &__right {
+    flex: 1;
+    margin: -80px 0 0 0;
+
+    @include pc {
+      margin: 0;
+      max-width: 500px;
+    }
+
   }
 
   &__ {}
@@ -200,6 +300,80 @@
   &__ {}
 
   &__ {}
+}
+
+.recruit-section02 {
+  padding: 0 0 180px;
+  background-image: url(../img/recruit/recruit-section02-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @include tab{
+    padding: 40px 0 120px;
+  }
+
+  @include sp{
+    padding: 40px 0 80px;
+  }
+  
+
+  &__box {
+    display: flex;
+    max-width: 970px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 16px;
+    justify-content: center;
+
+  }
+  
+  &__item {
+    width: calc((100% - 40px) / 3);
+    padding: 6px;
+    border-radius: 48px;
+    border: #3071b9 1px solid;
+    margin: 0 0 24px;
+    background-color: #fff;
+
+    @include tab{
+      width: calc((100% - 20px) / 2);
+    }
+
+    @include sp{
+    width: 100%;
+    max-width: 340px;
+    margin: 0;
+
+    }
+    
+    &--gray {
+      border: #bcbcbc 1px solid;
+    }
+  }
+
+  &__img {
+    margin: 0 0 24px;
+  }
+
+  &__ttl {
+    padding: 0 14px;
+    font-weight: bold;
+    margin: 0 0 12px;
+  }
+
+  &__text {
+    padding: 0 14px;
+    margin: 0 0 12px;
+
+  }
+
+  &__btn {
+    text-align: center;
+    margin: 0 0 12px;
+
+  }
 
   &__ {}
 
@@ -208,14 +382,6 @@
   &__ {}
 
   &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
