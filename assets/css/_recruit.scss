@@ -1,0 +1,306 @@
+@mixin sp {
+  @media (max-width:(520px)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width:(780px)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width:(1120px)) {
+    @content;
+  }
+}
+
+/* =================================
+採用案内
+ ================================= */
+
+.page-recruit {
+
+  &__lead-wrap {
+    position: relative;
+    padding: 120px 0 40px;
+
+    @include tab {
+      padding: 60px 0 40px;
+    }
+  }
+
+  &__inner {
+    max-width: 920px;
+    margin: 0 auto 0;
+    padding: 0 12px;
+
+
+    @include tab {
+      padding: 0 12px;
+      margin: 0 auto;
+    }
+  }
+
+  &__ttl {
+    margin: 0 0 80px;
+
+    @include tab {
+      margin: 0 0 40px 40px;
+    }
+  }
+
+  &__top-lead {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 40px;
+    color: #808080;
+    line-height: 1.2;
+
+    @include pc {
+      font-size: 22px;
+    }
+
+    @include tab {
+      font-size: 16px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__lead {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 0 40px;
+    color: #3071b9;
+
+    line-height: 1.5;
+
+    @include pc {
+      font-size: 36px;
+    }
+
+    @include tab {
+      font-size: 21px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__text {
+    color: #808080;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 80px;
+
+    @include pc {
+      font-size: 16px;
+      margin: 0 0 60px;
+    }
+
+    @include tab {
+      font-size: 16px;
+      margin: 0 0 0;
+    }
+  }
+
+  &__lead-bg {
+    bottom: 20%;
+  }
+
+  &__bnr-wrap {
+    padding: 0 16px 180px;
+    background-image: url(../img/recruit/recruit-bnr-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    @include tab{
+      padding: 0 16px 80px;
+    }
+  }
+
+  &__bnr-top {
+    display: block;
+    max-width: 780px;
+    margin: 0 auto 60px;
+
+    @include tab{
+      margin: 0 auto 32px;
+    }
+
+    img {
+      filter: drop-shadow(5px 5px 5px #aaa);
+    }
+  }
+
+  &__bnr-flex {
+    display: flex;
+    gap: 40px;
+    max-width: 640px;
+    margin: 0 auto;
+
+    @include tab{
+      gap: 16px;
+    }
+  }
+
+  &__bnr-item {
+
+    img {
+      filter: drop-shadow(5px 5px 5px #aaa);
+    }
+  }
+
+  &__news-ttl {
+    color: #3071b9;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 32px 12px;
+
+    @include tab{
+      font-size: 20px;
+      margin: 0 0 24px 12px;
+
+    }
+  }
+
+  &__news-link-wrap {
+    display: flex;
+    gap: 32px;
+    margin: 60px auto 0;
+    max-width: 780px;
+    padding: 0 16px;
+
+
+    @include tab {
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 40px auto 0;
+
+    }
+  }
+
+  &__news-link {
+
+
+    @include tab{
+    max-width: 380px;
+    }
+
+    img {
+      filter: drop-shadow(5px 5px 5px #aaa);
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}

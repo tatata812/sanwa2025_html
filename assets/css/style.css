@@ -269,6 +269,9 @@ input[type=text] {
 .sub-page__main-visual--office {
   background-image: url(../img/company/main-visual-office.jpg);
 }
+.sub-page__main-visual--recruit {
+  background-image: url(../img/recruit/main-visual-recruit.jpg);
+}
 .sub-page__main-visual-top {
   position: absolute;
   top: 0;
@@ -3037,6 +3040,174 @@ input[type=text] {
 }
 
 /* =================================
+採用案内
+ ================================= */
+.page-recruit__lead-wrap {
+  position: relative;
+  padding: 120px 0 40px;
+}
+@media (max-width: 780px) {
+  .page-recruit__lead-wrap {
+    padding: 60px 0 40px;
+  }
+}
+.page-recruit__inner {
+  max-width: 920px;
+  margin: 0 auto 0;
+  padding: 0 12px;
+}
+@media (max-width: 780px) {
+  .page-recruit__inner {
+    padding: 0 12px;
+    margin: 0 auto;
+  }
+}
+.page-recruit__ttl {
+  margin: 0 0 80px;
+}
+@media (max-width: 780px) {
+  .page-recruit__ttl {
+    margin: 0 0 40px 40px;
+  }
+}
+.page-recruit__top-lead {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 40px;
+  color: #808080;
+  line-height: 1.2;
+}
+@media (max-width: 1120px) {
+  .page-recruit__top-lead {
+    font-size: 22px;
+  }
+}
+@media (max-width: 780px) {
+  .page-recruit__top-lead {
+    font-size: 16px;
+    margin: 0 0 24px;
+  }
+}
+.page-recruit__lead {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0 0 40px;
+  color: #3071b9;
+  line-height: 1.5;
+}
+@media (max-width: 1120px) {
+  .page-recruit__lead {
+    font-size: 36px;
+  }
+}
+@media (max-width: 780px) {
+  .page-recruit__lead {
+    font-size: 21px;
+    margin: 0 0 24px;
+  }
+}
+.page-recruit__text {
+  color: #808080;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 80px;
+}
+@media (max-width: 1120px) {
+  .page-recruit__text {
+    font-size: 16px;
+    margin: 0 0 60px;
+  }
+}
+@media (max-width: 780px) {
+  .page-recruit__text {
+    font-size: 16px;
+    margin: 0 0 0;
+  }
+}
+.page-recruit__lead-bg {
+  bottom: 20%;
+}
+.page-recruit__bnr-wrap {
+  padding: 0 16px 180px;
+  background-image: url(../img/recruit/recruit-bnr-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+@media (max-width: 780px) {
+  .page-recruit__bnr-wrap {
+    padding: 0 16px 80px;
+  }
+}
+.page-recruit__bnr-top {
+  display: block;
+  max-width: 780px;
+  margin: 0 auto 60px;
+}
+@media (max-width: 780px) {
+  .page-recruit__bnr-top {
+    margin: 0 auto 32px;
+  }
+}
+.page-recruit__bnr-top img {
+  filter: drop-shadow(5px 5px 5px #aaa);
+}
+.page-recruit__bnr-flex {
+  display: flex;
+  gap: 40px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+@media (max-width: 780px) {
+  .page-recruit__bnr-flex {
+    gap: 16px;
+  }
+}
+.page-recruit__bnr-item img {
+  filter: drop-shadow(5px 5px 5px #aaa);
+}
+.page-recruit__news-ttl {
+  color: #3071b9;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 32px 12px;
+}
+@media (max-width: 780px) {
+  .page-recruit__news-ttl {
+    font-size: 20px;
+    margin: 0 0 24px 12px;
+  }
+}
+.page-recruit__news-link-wrap {
+  display: flex;
+  gap: 32px;
+  margin: 60px auto 0;
+  max-width: 780px;
+  padding: 0 16px;
+}
+@media (max-width: 780px) {
+  .page-recruit__news-link-wrap {
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 40px auto 0;
+  }
+}
+@media (max-width: 780px) {
+  .page-recruit__news-link {
+    max-width: 380px;
+  }
+}
+.page-recruit__news-link img {
+  filter: drop-shadow(5px 5px 5px #aaa);
+}
+/* =================================
+
+ ================================= */
+/* =================================
+
+ ================================= */
+/* =================================
 お知らせ一覧
  ================================= */
 .page-newsrelease {
@@ -4988,6 +5159,14 @@ header（PC）
   position: absolute;
   left: 50%;
   transform: translateX(-50%) scale(0.4);
+}
+.header__global-link.active.header-arrow-button {
+  background-color: #fff;
+  color: #000;
+  border: #f17624 2px solid;
+}
+.header__global-link.active.header-arrow-button::before {
+  display: none;
 }
 .header__global-child-wrap {
   margin: 0 calc(50% - 50vw);

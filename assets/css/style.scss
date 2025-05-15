@@ -1,5 +1,6 @@
 @use "config";
 @use "company";
+@use "recruit";
 @use "other";
 
 @mixin sp {
@@ -173,6 +174,18 @@ header（PC）
         left: 50%;
         transform: translateX(-50%)scale(0.4);
       }
+    }
+
+    &.active.header-arrow-button {
+      &::before {
+        display: none;
+      }
+
+      background-color: #fff;
+      color: #000;
+      border: #f17624 2px solid;
+
+
     }
   }
 
@@ -559,7 +572,7 @@ TOP
 
   &__inner {
     max-width: 1240px;
-    margin: 0 auto ;
+    margin: 0 auto;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -1005,39 +1018,39 @@ TOP
   }
 
   &__text {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  font-size: 28px;
-  font-weight: bold;
-  white-space: nowrap;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
 
-  @include tab{
-  font-size: 20px;
-  top: 30%;
+    @include tab {
+      font-size: 20px;
+      top: 30%;
 
-  }
+    }
 
-  @include sp{
-  font-size: 16px;
-  left: 50%;
-  top: 35%;
+    @include sp {
+      font-size: 16px;
+      left: 50%;
+      top: 35%;
 
 
-  }
+    }
   }
 }
 
 .l-hero-panel-03 {
 
-&__logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-}
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
 }
 
 
