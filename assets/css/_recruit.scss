@@ -192,6 +192,45 @@
       filter: drop-shadow(5px 5px 5px #aaa);
     }
   }
+
+  &__dec-wrap {
+    position: relative;
+  }
+
+
+  &__section-bg02 {
+    top: 13%;
+    left: -5%;
+    z-index: 1;
+  }
+
+  &__section-bg03 {
+    top: 27%;
+    right: 0;
+    z-index: 1;
+
+  }
+
+  &__section-bg04 {
+    top: 45%;
+    left: -5%;
+    z-index: 1;
+
+  }
+
+  &__section-bg05 {
+    top: 60%;
+    right: 0;
+    z-index: 1;
+
+  }
+
+  &__section-bg06 {
+    top: 72%;
+    left: -5%;
+    z-index: 1;
+
+  }
 }
 
 .recruit-section01 {
@@ -252,6 +291,8 @@
 
   &__left {
     width: 500px;
+    position: relative;
+    z-index: 2;
 
     @include pc {
       width: 100%;
@@ -269,8 +310,8 @@
       font-size: 22px;
     }
 
-    @include tab{
-    font-size: 18px;
+    @include tab {
+      font-size: 18px;
     }
   }
 
@@ -285,6 +326,8 @@
   &__right {
     flex: 1;
     margin: -80px 0 0 0;
+    position: relative;
+    z-index: 2;
 
     @include pc {
       margin: 0;
@@ -309,14 +352,14 @@
   background-repeat: no-repeat;
   background-position: bottom;
 
-  @include tab{
+  @include tab {
     padding: 40px 0 120px;
   }
 
-  @include sp{
+  @include sp {
     padding: 40px 0 80px;
   }
-  
+
 
   &__box {
     display: flex;
@@ -326,9 +369,11 @@
     flex-wrap: wrap;
     padding: 0 16px;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 
   }
-  
+
   &__item {
     width: calc((100% - 40px) / 3);
     padding: 6px;
@@ -337,17 +382,17 @@
     margin: 0 0 24px;
     background-color: #fff;
 
-    @include tab{
+    @include tab {
       width: calc((100% - 20px) / 2);
     }
 
-    @include sp{
-    width: 100%;
-    max-width: 340px;
-    margin: 0;
+    @include sp {
+      width: 100%;
+      max-width: 340px;
+      margin: 0;
 
     }
-    
+
     &--gray {
       border: #bcbcbc 1px solid;
     }
@@ -386,24 +431,139 @@
 
 
 /* =================================
-
+CMつくりました
  ================================= */
 
-.aaa {
+.page-movie {
+  position: relative;
 
-  &__ {}
 
-  &__ {}
 
-  &__ {}
+  &__section-bg02 {
+    top: 3%;
+    left: -5%;
+  }
 
-  &__ {}
+  &__section-bg03 {
+    top: 20%;
+    right: 0;
+  }
 
-  &__ {}
+  &__section-bg04 {
+    top: 40%;
+    left: -5%;
+  }
 
-  &__ {}
+  &__section-bg05 {
+    top: 60%;
+    right: 0;
+  }
 
-  &__ {}
+  &__section-bg06 {
+    top: 80%;
+    left: -5%;
+  }
+
+  &__top-dec {
+
+    @include sp {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__content {
+    background-color: rgb(214 240 241 / 50%);
+    max-width: 1040px;
+    margin: 0 auto 180px;
+    border-radius: 60px;
+    padding: 60px 80px;
+
+    @include pc {
+      border-radius: 12px;
+      padding: 24px 12px;
+    }
+
+    @include tab {
+      margin: 0 16px 60px;
+    }
+
+
+
+  }
+
+  &__conten-ttl {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: #3071b9 1px solid;
+    padding: 0 0 12px;
+    margin: 0 0 60px;
+
+    @include tab {
+      font-size: 20px;
+      margin: 0 0 32px;
+    }
+  }
+
+  &__content-inner {
+    background-color: #fff;
+    margin: 0 24px 120px;
+    border-radius: 24px;
+    padding: 60px 80px;
+
+
+
+    @include tab {
+      background-color: transparent;
+      margin: 0 0 40px;
+      padding: 0 6px;
+      border-radius: 0;
+    }
+
+    &--last {
+      margin: 0 24px 0;
+
+      @include tab {
+        margin: 0;
+      }
+
+    }
+
+
+  }
+
+  &__youtube-content {
+    width: 100%;
+    margin: 0 auto 12px;
+  }
+
+  &__youtube-item {
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__youtube-ttl {
+    text-align: center;
+    margin: 0 0 80px;
+
+    &--last {
+      margin: 0;
+    }
+
+    @include tab {
+      margin: 0 0 40px;
+    }
+  }
 
   &__ {}
 
