@@ -6123,7 +6123,7 @@ TOP
 }
 .gsap-main__text-wrap {
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
@@ -6147,15 +6147,12 @@ TOP
   height: 100%;
 }
 .gsap-main .l-hero .l-hero-panel-01 {
-  background-color: #eaf7fc;
   position: relative;
 }
 .gsap-main .l-hero .l-hero-panel-02 {
-  background-color: #d7eef6;
   position: relative;
 }
 .gsap-main .l-hero .l-hero-panel-03 {
-  background-color: #c4e9f7;
   position: relative;
 }
 .gsap-main .l-hero .l-hero-panel::after {
@@ -6184,6 +6181,33 @@ TOP
   }
 }
 
+.l-hero-wrapper {
+  width: 300vw; /* 画面3つ分 */
+  height: 100vh;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  /* ここがグラデーションのポイント */
+  background: linear-gradient(to right, #effcfe 0%, #75c3f8 33.3333%, #2ba8e2 33.3334%, #005f99 66.6666%, #005f99 66.6667%, #003366 100%);
+  background-size: 300vw 100vh; /* 横に3倍のサイズを指定 */
+  background-repeat: no-repeat;
+}
+
+.panel {
+  flex: 0 0 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  background: transparent; /* 透過にして親のグラデーションを見せる */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .fade-on-scroll {
   transition: opacity 0.2s ease;
 }
@@ -6204,6 +6228,7 @@ TOP
   font-size: 28px;
   font-weight: bold;
   white-space: nowrap;
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 780px) {
   .l-hero-panel-02__text {

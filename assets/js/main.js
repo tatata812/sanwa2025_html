@@ -461,6 +461,11 @@ if (wrapper) {
 
 
 
+
+
+
+
+
 // スキップボタン
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.create({
