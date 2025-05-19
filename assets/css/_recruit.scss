@@ -596,7 +596,8 @@ CMつくりました
 
   &__section01-wrap {
     position: relative;
-    margin-top: 50px; /* 元の位置より100px下に見せる */
+    margin-top: 50px;
+    /* 元の位置より100px下に見せる */
 
     &::before {
       content: "";
@@ -615,8 +616,12 @@ CMつくりました
 
 
   &__section01 {
-margin: 0 0 80px;
+    margin: 0 0 80px;
     padding: 0 16px;
+
+    @include tab {
+      margin: 0 0 40px;
+    }
   }
 
   &__section01-lead {
@@ -643,8 +648,8 @@ margin: 0 0 80px;
     display: flex;
     margin: 0 auto 80px;
 
-    @include tab{
-    margin: 0 auto 32px;
+    @include tab {
+      margin: 0 auto 32px;
     }
 
   }
@@ -661,8 +666,8 @@ margin: 0 0 80px;
     gap: 40px;
     justify-content: center;
 
-    @include tab{
-    gap: 12px;
+    @include tab {
+      gap: 12px;
     }
   }
 
@@ -675,8 +680,8 @@ margin: 0 0 80px;
   &__section01-name-right {
     font-size: 34px;
 
-    @include tab{
-    font-size: 20px;
+    @include tab {
+      font-size: 20px;
     }
   }
 
@@ -686,12 +691,18 @@ margin: 0 0 80px;
     font-size: 18px;
     max-width: 300px;
     margin: 0 auto;
+
+    @include tab {
+      font-size: 16px;
+      max-width: 260px;
+
+    }
   }
 
   &__content {
     background-color: rgb(214 240 241 / 50%);
     max-width: 1040px;
-    margin: 0 auto 180px;
+    margin: 0 auto 120px;
     border-radius: 60px;
     padding: 60px 80px;
 
@@ -701,7 +712,7 @@ margin: 0 0 80px;
     }
 
     @include tab {
-      margin: 0 16px 60px;
+      margin: 0 16px 40px;
     }
 
 
@@ -735,13 +746,74 @@ margin: 0 0 80px;
     font-size: 22px;
     font-weight: bold;
     margin: 0 0 80px;
+
+    @include tab {
+      font-size: 18px;
+      margin: 0 0 40px;
+
+    }
   }
 
-  &__ {}
+  &__section02-item {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin: 0 0 24px;
 
-  &__ {}
+    @include tab {
+      gap: 24px;
+    }
 
-  &__ {}
+    &--m {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__section02-item-img {
+    width: 120px;
+  }
+
+  &__section02-item-text {
+    width: 440px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+
+    @include tab {
+      padding: 12px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: -24px;
+      margin-top: -12px;
+      border: 11px solid transparent;
+      border-right: 17px solid #FFF;
+      z-index: 2;
+    }
+
+    &--m {
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 35px;
+        right: -24px;
+        margin-top: -12px;
+        border: 11px solid transparent;
+        border-left: 17px solid #FFF;
+        z-index: 2;
+      }
+    }
+
+
+  }
 
   &__ {}
 
