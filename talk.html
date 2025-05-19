@@ -1,0 +1,370 @@
+<!-- <?php
+  $des="サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。"
+  ; ?> -->
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>社員同士で対談</title>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <meta name="description" content="<?php echo $des; ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?2023103">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+
+  <div class="header-wrap">
+
+    <header class="header">
+      <div class="header__breadcrumb-wrap">
+        <div class="header__breadcrumb">ホーム　＞　〇〇〇〇</div>
+      </div>
+      <div class="header__inner">
+        <nav class="header__global-wrap">
+          <ul class="header__global-list">
+            <li class="header__global-menu header__global-menu--ttl">
+              <h1 class="header__global-ttl"><a href="index.html"><img src="assets/img/top/header_logo.png"
+                    alt="株式会社　三和"></a>
+              </h1>
+            </li>
+            <li class="header__global-menu header__global-menu--none hover-menu-js">
+              <a href="#" class="header__global-link">TOP</a>
+            </li>
+            <li class="header__global-menu header__global-menu--none hover-menu-js">
+              <a href="company.html" class="header__global-link">会社案内</a>
+            </li>
+            <li class="header__global-menu header__global-menu--none hover-menu-js">
+              <a href="newsrelease.html" class="header__global-link">ニュース</a>
+            </li>
+            <li class="header__global-menu header__global-menu--none hover-menu-js">
+              <a href="inquiry.html" class="header__global-link">お問い合わせ</a>
+            </li>
+            <li class="header__global-menu header__global-menu--none hover-menu-js">
+              <a href="recruit.html" class="header__global-link header-arrow-button active">採用のご案内</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="open-btn">
+        <div class="open-btn__item open-btn-js">
+          <img src="assets/img/top/search-btn.png" alt="" class="open-btn-js-img">
+        </div>
+        <div class="open-btn__item open-btn-js02">
+          <img src="assets/img/top/hamburger-btn.png" alt="" class="open-btn-js02-img">
+        </div>
+      </div>
+
+      <!-- 検索メニュー -->
+      <div class="search-menu">
+        <div class="search-menu__inner">
+          <div class="search-menu__input-wrap">
+            <form id="form" action="自分のサイトURL" method="get">
+              <input id="s-box" name="s" type="text" placeholder="検索ワードを入力" />
+              <button type="submit" id="s-btn-area">
+                <div id="s-btn">検索</div>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <!-- スライドメニュー -->
+      <div class="slide-menu">
+        <div class="slide-menu__inner">
+          <div class="slide-menu__top">
+            <div class="slide-menu__top-item">
+              <a href="company.html" class="slide-menu__top-ttl">会社案内</a>
+              <a href="outline.html" class="slide-menu__top-link">会社概要</a>
+              <a href="vision.html" class="slide-menu__top-link">企業理念</a>
+              <a href="history.html" class="slide-menu__top-link">沿革</a>
+              <p class="slide-menu__top-link slide-menu__top-link--arrow top-link-js">事業案内</p>
+              <div class="slide-menu__top-link-content">
+                <a href="materials.html" class="slide-menu__top-link">建材販売</a>
+                <a href="interior.html" class="slide-menu__top-link">家具・インテリア</a>
+                <a href="logistics.html" class="slide-menu__top-link">物流</a>
+                <a href="construction.html" class="slide-menu__top-link">施工</a>
+              </div>
+              <p class="slide-menu__top-link slide-menu__top-link--arrow top-link-js">営業所</p>
+              <div class="slide-menu__top-link-content">
+                <a href="office.html" class="slide-menu__top-link">一覧</a>
+                <a href="head.html" class="slide-menu__top-link">本社</a>
+                <a href="tokuyama.html" class="slide-menu__top-link">徳山営業所</a>
+                <a href="hofu.html" class="slide-menu__top-link">防府営業所</a>
+                <a href="ogori.html" class="slide-menu__top-link">小郡営業所</a>
+                <a href="ube.html" class="slide-menu__top-link">宇部営業所</a>
+                <a href="gallery_ube.html" class="slide-menu__top-link">Gallery 宇部</a>
+                <a href="shimonoseki.html" class="slide-menu__top-link">下関営業所</a>
+                <a href="fukuoka.html" class="slide-menu__top-link">福岡営業所</a>
+              </div>
+              <a href="beetecs.html" class="slide-menu__top-link">株式会社ビーテクス</a>
+            </div>
+            <div class="slide-menu__top-item">
+              <a href="newsrelease.html" class="slide-menu__top-ttl">ニュース</a>
+              <a href="newsrelease.html" class="slide-menu__top-link">お知らせ</a>
+              <a href="newsrelease.html" class="slide-menu__top-link">イベント</a>
+              <a href="newsrelease.html" class="slide-menu__top-link">リクルート</a>
+            </div>
+            <div class="slide-menu__top-item">
+              <a href="inquiry.html" class="slide-menu__top-ttl">お問い合わせ</a>
+              <a href="employment.html" class="slide-menu__top-link">採用に関するお問い合わせ</a>
+              <a href="business.html" class="slide-menu__top-link">法人様向けお問い合わせ</a>
+              <a href="personal.html" class="slide-menu__top-link">一般向けお問い合わせ</a>
+            </div>
+            <div class="slide-menu__top-item">
+              <a href="recruit.html" class="slide-menu__top-ttl">採用情報</a>
+              <a href="movie.html" class="slide-menu__top-link">リクルート動画</a>
+            </div>
+          </div>
+          <div class="slide-menu__bottom">
+            <a href="usersguide.html" class="slide-menu__bottom-link">サイトについて</a>
+            <a href="privacy.html" class="slide-menu__bottom-link">プライバシーポリシー</a>
+            <a href="sitemap.html" class="slide-menu__bottom-link">サイトマップ</a>
+            <a href="link.html" class="slide-menu__bottom-link">リンクレノファ</a>
+            <a href="renofa.html" class="slide-menu__bottom-link">山口 FC オフィシャルパートナー</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="main sub-page page-talk">
+    <div class="page-movie__section-bg02 top-bg">
+      <img src="assets/img/company/company-dec.png">
+    </div>
+    <div class="page-movie__section-bg03 top-bg">
+      <img src="assets/img/company/company-dec.png">
+    </div>
+    <div class="page-movie__section-bg04 top-bg">
+      <img src="assets/img/company/company-dec.png">
+    </div>
+    <div class="page-movie__section-bg05 top-bg">
+      <img src="assets/img/company/company-dec.png">
+    </div>
+    <div class="page-movie__section-bg06 top-bg">
+      <img src="assets/img/company/company-dec.png">
+    </div>
+    <div class="page-movie__top">
+      <div class="page-movie__top-dec">
+        <img src="assets/img/recruit/recruit-top-dec.png">
+      </div>
+      <h1 class="sub-page__ttl">社員同士で対談</h1>
+    </div>
+
+    <div class="page-talk__section01-wrap">
+      <section class="page-talk__section01">
+        <p class="page-talk__section01-lead">営業所が違う同期入社の二人に<br>
+          あれこれ語ってもらいました。</p>
+        <div class="page-talk__section01-flex">
+          <div class="page-talk__section01-item">
+            <div class="page-talk__section01-img">
+              <img src="assets/img/recruit/talk-section01-img01.png" alt="N.T">
+            </div>
+            <div class="page-talk__section01-name-wrap">
+              <p class="page-talk__section01-name-left">
+                小郡営業所<br>
+                [営業職]
+              </p>
+              <p class="page-talk__section01-name-right">
+                N.T
+              </p>
+            </div>
+          </div>
+          <div class="page-talk__section01-item">
+            <div class="page-talk__section01-img">
+              <img src="assets/img/recruit/talk-section01-img02.png" alt="M.M">
+            </div>
+            <div class="page-talk__section01-name-wrap">
+              <p class="page-talk__section01-name-left">
+                防府営業所<br>
+                [マテリア職]
+              </p>
+              <p class="page-talk__section01-name-right">
+                M.M
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="page-talk__section01-text">同期入社だけれども<br>
+          働く場所も職種も異なる二人。<br>
+          そんな二人がお互いのことや<br>
+          会社のことなどを<br>
+          さまざまな視点で語ります。</p>
+      </section>
+    </div>
+
+    <section class="page-talk__section02">
+      <div class="page-talk__content">
+        <h2 class="page-talk__conten-ttl"><span>SESSION 1</span>初対面の印象</h2>
+        <p class="page-talk__section02-lead">お互いの初対面での印象は？</p>
+        <div class="page-talk__section02-item">
+          <div class="page-talk__section02-item-text">
+          
+          </div>
+          <div class="page-talk__section02-item-img">
+          
+          </div>
+          
+        </div>
+      
+      </div>
+    </section>
+
+    <section class="recruit-section02">
+      <div class="recruit-section02__box">
+        <div class="recruit-section02__item recruit-section02__item--gray">
+          <div class="recruit-section02__img">
+            <img src="assets/img/recruit/recruit-section02-img04.png" alt="">
+          </div>
+          <p class="recruit-section02__ttl">インターンシップ</p>
+          <p class="recruit-section02__text">仕事の疑問を実際に体験して解決しましょう。</p>
+          <div class="recruit-section02__btn">
+            <a href="newsrelease.html" class="arrow-button arrow-button--recruit">詳しく見る</a>
+          </div>
+        </div>
+        <div class="recruit-section02__item recruit-section02__item--gray">
+          <div class="recruit-section02__img">
+            <img src="assets/img/recruit/recruit-section02-img05.png" alt="">
+          </div>
+          <p class="recruit-section02__ttl">採用募集要項</p>
+          <p class="recruit-section02__text">やる気あふれる社員募集中。</p>
+          <div class="recruit-section02__btn">
+            <a href="newsrelease.html" class="arrow-button arrow-button--recruit">詳しく見る</a>
+          </div>
+        </div>
+        <div class="recruit-section02__item recruit-section02__item--gray">
+          <div class="recruit-section02__img">
+            <img src="assets/img/recruit/recruit-section02-img06.png" alt="">
+          </div>
+          <p class="recruit-section02__ttl">中途採用を希望の方へ</p>
+          <p class="recruit-section02__text">求む即戦力！<br>
+            三和で一緒に働きませんか？</p>
+          <div class="recruit-section02__btn">
+            <a href="newsrelease.html" class="arrow-button arrow-button--recruit">詳しく見る</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-recruit__news-link-wrap">
+        <a href="" class="page-recruit__news-link"><img src="assets/img/top/top-recruit02.png" alt="マイナビ2026年卒"></a>
+        <a href="" class="page-recruit__news-link"><img src="assets/img/top/top-recruit03.png" alt="マイナビ2027年卒"></a>
+      </div>
+    </section>
+  </div><!-- main -->
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__top-item">
+          <a href="company.html" class="footer__top-ttl">会社案内</a>
+          <div class="footer__top-content">
+            <div class="footer__top-content-item">
+              <a href="message.html" class="footer__top-link">社長メッセージ</a>
+              <a href="outline.html" class="footer__top-link">会社概要</a>
+              <a href="vision.html" class="footer__top-link">企業理念</a>
+              <a href="history.html" class="footer__top-link">沿革</a>
+            </div>
+            <div class="footer__top-content-item">
+              <a href="services.html" class="footer__top-link">事業案内</a>
+              <div class="footer__top-link-box">
+                <a href="materials.html" class="footer__top-link">建材販売</a>
+                <a href="interior.html" class="footer__top-link">家具・インテリア</a>
+                <a href="logistics.html" class="footer__top-link">物流</a>
+                <a href="construction.html" class="footer__top-link">施工</a>
+              </div>
+            </div>
+            <div class="footer__top-content-item">
+              <a href="office.html" class="footer__top-link">営業所</a>
+              <div class="footer__top-link-box">
+                <a href="office.html" class="footer__top-link">一覧</a>
+                <a href="head.html" class="footer__top-link">本社</a>
+                <a href="tokuyama.html" class="footer__top-link">徳山営業所</a>
+                <a href="hofu.html" class="footer__top-link">防府営業所</a>
+                <a href="ogori.html" class="footer__top-link">小郡営業所</a>
+                <a href="ube.html" class="footer__top-link">宇部営業所</a>
+                <a href="gallery_ube.html" class="footer__top-link">Gallery 宇部</a>
+                <a href="shimonoseki.html" class="footer__top-link">下関営業所</a>
+                <a href="fukuoka.html" class="footer__top-link">福岡営業所</a>
+              </div>
+              <a href="beetecs.html" class="footer__top-link">株式会社ビーテクス</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__top-item">
+          <a href="newsrelease.html" class="footer__top-ttl">ニュース</a>
+          <a href="newsrelease.html" class="footer__top-link">お知らせ</a>
+          <a href="newsrelease.html" class="footer__top-link">イベント</a>
+          <a href="newsrelease.html" class="footer__top-link footer__top-link--margin">リクルート</a>
+          <a href="newsrelease.html" class="footer__top-link">2025年</a>
+          <a href="newsrelease.html" class="footer__top-link">2024年</a>
+          <a href="newsrelease.html" class="footer__top-link">2023年</a>
+          <a href="newsrelease.html" class="footer__top-link">2022年</a>
+          <a href="newsrelease.html" class="footer__top-link">2021年</a>
+
+
+        </div>
+        <div class="footer__top-item">
+          <a href="inquiry.html" class="footer__top-ttl">お問い合わせ</a>
+          <a href="employment.html" class="footer__top-link">採用に関するお問い合わせ</a>
+          <a href="business.html" class="footer__top-link">法人様向けお問い合わせ</a>
+          <a href="personal.html" class="footer__top-link">一般向けお問い合わせ</a>
+        </div>
+        <div class="footer__top-item">
+          <a href="recruit.html" class="footer__top-ttl">採用情報</a>
+          <a href="movie.html" class="footer__top-link">リクルート動画</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <a href="usersguide.html" class="footer__bottom-link">サイトについて</a>
+        <a href="privacy.html" class="footer__bottom-link">プライバシーポリシー</a>
+        <a href="sitemap.html" class="footer__bottom-link">サイトマップ</a>
+        <a href="link.html" class="footer__bottom-link">リンク</a>
+        <a href=".html" class="footer__bottom-link">レノファ山口FCオフィシャルパートナー</a>
+      </div>
+    </div>
+
+
+    <div class="footer__scroll-btn"><img src="assets/img/top/scroll-btn.png" alt="TOPへ"></div>
+  </footer>
+
+
+
+
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/main.js">
+  </script>
+
+</body>
+
+
+
+</html>
