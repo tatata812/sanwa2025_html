@@ -3717,6 +3717,42 @@ CMつくりました
   z-index: 2;
 }
 /* =================================
+社員の声
+ ================================= */
+.page-voice__section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.page-voice__img {
+  display: block;
+  margin: 0 0 120px;
+}
+@media (max-width: 780px) {
+  .page-voice__img {
+    display: none;
+  }
+}
+.page-voice__img-sp {
+  display: none;
+}
+@media (max-width: 780px) {
+  .page-voice__img-sp {
+    display: block;
+    display: block;
+    margin: 0 0 60px;
+  }
+}
+/* =================================
+
+ ================================= */
+/* =================================
+
+ ================================= */
+/* =================================
+
+ ================================= */
+/* =================================
 お知らせ一覧
  ================================= */
 .page-newsrelease {
