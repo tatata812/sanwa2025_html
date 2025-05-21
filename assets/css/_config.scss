@@ -341,6 +341,28 @@ input[type="text"] {
       padding: 60px 0;
     }
   }
+
+  &__recruit-lead {
+    position: absolute;
+    z-index: 1;
+    top: 180px;
+    left: 150px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    @include pc {
+      font-size: 20px;
+      top: 150px;
+      left: 120px;
+      }
+
+    @include tab {
+      font-size: 16px;
+      top: 110px;
+      left: 40px;
+    }
+  }
 }
 
 // 下層タイトル

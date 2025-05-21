@@ -828,8 +828,7 @@ CMつくりました
 社員の声
  ================================= */
 
- .page-voice {
-
+.page-voice {
   &__section {
     max-width: 980px;
     margin: 0 auto;
@@ -840,20 +839,240 @@ CMつくりました
     display: block;
     margin: 0 0 120px;
 
-    @include tab{
-    display: none;
+    @include tab {
+      display: none;
     }
   }
 
   &__img-sp {
     display: none;
 
-    @include tab{
-    display: block;
-    display: block;
-    margin: 0 0 60px;
+    @include tab {
+      display: block;
+      display: block;
+      margin: 0 0 60px;
 
     }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+
+/* =================================
+数字で見る三和
+ ================================= */
+
+.page-data {
+
+
+
+  &__section-bg03 {
+    top: 10%;
+    right: 0;
+  }
+
+  &__section-bg04 {
+    top: 30%;
+    left: -5%;
+  }
+
+  &__section-bg05 {
+    top: 58%;
+    right: 0;
+  }
+
+  &__section-bg06 {
+    top: 75%;
+    left: -5%;
+  }
+
+
+
+  &__section01 {
+    margin: 120px 0 0;
+
+    &--bottom {
+      margin: 0 0 160px;
+
+      @include tab{
+        margin: 0 0 12px;
+      }
+    }
+  }
+
+  &__section01-content {
+    padding: 80px 16px;
+
+    &--blue {
+      background-color: rgb(214 240 241 / 50%);
+    }
+
+    @include tab {
+      padding: 40px 16px;
+    }
+  }
+
+  &__section01-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    &--reverse {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+    }
+
+    @include pc {
+      gap: 24px;
+    }
+
+    @include tab {
+
+      flex-direction: column;
+      gap: 40px;
+
+    }
+  }
+
+  &__section01-img {
+    max-width: 500px;
+
+    @include pc {
+      max-width: 300px;
+    }
+
+
+    @include tab {
+      max-width: 400px;
+    }
+  }
+
+  &__section01-text-wrap {
+    width: 500px;
+
+    @include tab {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  &__section01-text01 {
+    color: #3071b9;
+    font-size: 72px;
+    font-weight: bold;
+    margin: 0 0 24px;
+    white-space: nowrap;
+
+    @include tab {
+      font-size: 44px;
+    }
+  }
+
+  &__section01-small {
+    font-size: 40px;
+
+    @include tab {
+      font-size: 24px;
+    }
+  }
+
+  &__section01-middle {
+    font-size: 52px;
+    display: inline-block;
+    margin: 0 0 0 10px;
+
+    @include tab {
+      font-size: 34px;
+    }
+  }
+
+  &__section01-text02 {
+    color: #3071b9;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 20px;
+
+
+  }
+
+  &__section02 {
+    padding: 160px 16px;
+    text-align: center;
+    background-image: url(../img/recruit/data-bg01.png),url(../img/recruit/data-bg02.png);
+    background-repeat:no-repeat,no-repeat;;
+    background-position:top,bottom;
+    background-size: contain;
+
+    @include tab{
+      padding: 40px 16px 4px;
+    }
+
+
+  }
+
+  &__section02-ttl {
+    text-align: center;
+    font-size: 13px;
+    margin: 0 0 60px;
+
+
+    span {
+      color: #3071b9;
+      font-size: 52px;
+      font-weight: bold;
+      display: block;
+      margin: 0 0 24px;
+
+
+    @include tab{
+      font-size: 32px;
+    }
+    }
+  }
+
+  &__section02-text {
+    color: #3071b9;
+    font-size: 72px;
+    font-weight: bold;
+    margin: 0 0 24px;
+    white-space: nowrap;
+    border-bottom: 3px #3071b9 dotted;
+    padding: 0 0 4px;
+    max-width: 540px;
+    margin: 0 auto 60px;
+
+    @include tab {
+      font-size: 44px;
+    }
+  }
+
+  &__section02-span-yen {
+    font-size: 52px;
+    display: inline-block;
+    margin: 0 0 0 10px;
+
+    @include tab {
+      font-size: 34px;
+    }
+  }
+
+  &__section02-span-year {
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: right;
+    margin: 12px 0 0;
   }
 
   &__ {}
@@ -882,17 +1101,14 @@ CMつくりました
 
   &__ {}
 
-  &__ {}
-
 
 }
-
 
 /* =================================
 
  ================================= */
 
- .aaa {
+.aaa {
 
   &__ {}
 
@@ -935,50 +1151,7 @@ CMつくりました
 
  ================================= */
 
- .aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
- .aaa {
+.aaa {
 
   &__ {}
 
