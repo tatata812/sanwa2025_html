@@ -3879,6 +3879,7 @@ CMつくりました
 @media (max-width: 780px) {
   .page-data__section01-middle {
     font-size: 34px;
+    margin: 0 0 0 4px;
   }
 }
 .page-data__section01-text02 {
