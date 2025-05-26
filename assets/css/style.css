@@ -7693,6 +7693,7 @@ TOP
   display: flex;
   gap: 32px;
   margin: 0 0 60px;
+  flex-wrap: wrap;
 }
 .top-bnr__link-wrap--bottom {
   margin: 0;
@@ -7701,7 +7702,6 @@ TOP
   .top-bnr__link-wrap {
     justify-content: center;
     gap: 16px;
-    flex-wrap: wrap;
   }
 }
 .top-bnr__link {
