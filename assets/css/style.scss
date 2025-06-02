@@ -712,15 +712,28 @@ TOP
   // スライダー
 
   &__slider-wrap {
-    max-width: 1020px;
+    width: 1240px;
     margin: 0 auto 180px;
     border-radius: 30px;
     position: relative;
+
+
+    @media screen and (max-width: 1300px) {
+      width: 100%;
+
+    }
 
     @include pc {
       max-width: 880px;
       margin: 0 auto 40px;
     }
+  }
+
+  &__slider-item-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &__slider {
@@ -766,9 +779,14 @@ TOP
       width: 100% !important;
       height: 100% !important;
       position: absolute;
-      bottom: -350px;
+      bottom: -413px;
       left: 0;
       opacity: 1 !important;
+
+      @media screen and (max-width: 1300px) {
+        bottom: -410px;
+
+      }
 
       @include pc {
         bottom: -20px;
@@ -785,7 +803,12 @@ TOP
     }
 
     .slick-prev:before {
-      left: 860px;
+      left: 980px;
+
+      @media screen and (max-width: 1300px) {
+        left: 920px;
+
+      }
 
       @include pc {
         left: 10px;
@@ -2030,7 +2053,7 @@ TOP
     display: flex;
     gap: 32px;
     max-width: 980px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
     justify-content: center;
 
 
@@ -2038,7 +2061,9 @@ TOP
     @include tab {
       justify-content: center;
       gap: 16px;
-      flex-wrap: wrap;
+      flex-wrap: wrap;    
+      margin: 0 auto 40px;
+
     }
   }
 
@@ -2055,6 +2080,49 @@ TOP
     img {
       filter: drop-shadow(5px 5px 5px #aaa);
     }
+  }
+
+  &__3k {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #001467;
+    border-radius: 24px;
+    padding: 20px;
+
+  }
+
+  &__3k-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include tab{
+    flex-direction: column;
+    }
+  }
+
+  &__3k-left {
+    width: 52%;
+
+    @include tab{
+    width: 100%;
+    max-width: 500px;
+    }
+  }
+
+  &__3k-right {
+    flex: 1;
+  }
+
+  &__3k-ttl {
+    margin: 0 0 24px;
+    max-width: 280px;
+  }
+
+  &__3k-text {
+    margin: 0 0 24px;
+  color: #fff;
+  text-decoration: underline;
   }
 }
 
@@ -2112,6 +2180,9 @@ TOP
   &__img {
     border-radius: 12px 12px 0 0;
   }
+
+
+
 }
 
 /* =================================
