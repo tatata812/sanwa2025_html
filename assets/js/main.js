@@ -356,6 +356,30 @@ $(function () {
   });
 
 
+  // トップページ三和の役割
+$(document).ready(function () {
+  $('.accordion-header').on('click', function () {
+    const item = $(this).closest('.accordion-item');
+    const header = $(this);
+    const content = header.next('.accordion-content');
+    const iconImg = item.find('.accordion-header__icon > img');
+    const isActive = item.hasClass('active');
+
+    if (isActive) {
+      item.removeClass('active');
+      header.removeClass('active');
+      content.removeClass('active'); // ← ここで .accordion-content の active 削除
+      iconImg.attr('src', item.data('default'));
+    } else {
+      item.addClass('active');
+      header.addClass('active');
+      content.addClass('active'); // ← ここで .accordion-content に active 追加
+      iconImg.attr('src', item.data('active'));
+    }
+  });
+});
+
+
 
   // スクロースするときえていく　メインビジュアルGSAPの背景
   // $(window).on("scroll", function () {

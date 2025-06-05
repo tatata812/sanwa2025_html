@@ -1024,23 +1024,29 @@ TOP
 // 背景のグラデーション
 
 .l-hero-wrapper {
-  width: 300vw;   /* 画面3つ分 */
+  width: 300vw;
+  /* 画面3つ分 */
   height: 100vh;
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 
   /* ここがグラデーションのポイント */
-  background: linear-gradient(
-    to right,
-    #effcfe 0%,       /* 左端の色 */
-    #75c3f8 33.3333%, /* 1/3 */
-    #2ba8e2 33.3334%, /* ここで色を切り替え */
-    #005f99 66.6666%, /* 2/3 */
-    #005f99 66.6667%,
-    #003366 100%      /* 右端の色 */
-  );
-  background-size: 300vw 100vh; /* 横に3倍のサイズを指定 */
+  background: linear-gradient(to right,
+      #effcfe 0%,
+      /* 左端の色 */
+      #75c3f8 33.3333%,
+      /* 1/3 */
+      #2ba8e2 33.3334%,
+      /* ここで色を切り替え */
+      #005f99 66.6666%,
+      /* 2/3 */
+      #005f99 66.6667%,
+      #003366 100%
+      /* 右端の色 */
+    );
+  background-size: 300vw 100vh;
+  /* 横に3倍のサイズを指定 */
   background-repeat: no-repeat;
 }
 
@@ -1048,7 +1054,8 @@ TOP
   flex: 0 0 100vw;
   height: 100vh;
   scroll-snap-align: start;
-  background: transparent; /* 透過にして親のグラデーションを見せる */
+  background: transparent;
+  /* 透過にして親のグラデーションを見せる */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1609,10 +1616,14 @@ TOP
   }
 
   &__bg {
-    background-image: url(../img/top/top-hope-bg.png);
     padding: 140px 0 0;
-    background-size: cover;
-    background-position: center;
+     background-image: 
+    url("../img/top/top-hope-bg-top.png"),   /* 上側の背景 */
+    url("../img/top/top-hope-bg-bottom.png");/* 下側の背景 */
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center, bottom center;
+  background-size: contain, contain;
 
     @include tab {
       padding: 80px 0 80px;
@@ -1681,156 +1692,376 @@ TOP
     }
   }
 
-  // パララックス
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    max-width: 880px;
-    margin: 0 auto;
-    gap: 40px;
-    padding: 0 12px;
+  &__content {
+    padding: 0 16px;
 
-    @include pc {
-      gap: 24px;
-      padding: 0;
+    .accordion {
+      width: 100%;
+      max-width: 780px;
+      background-color: #fff;
+      margin: 0 auto;
+      border-left: 2px solid #3071b9;
+      border-right: 2px solid #3071b9;
+      border-top: 2px solid #3071b9;
+      border-radius: 0 0 12px 12px;
+      overflow: hidden;
+    }
+
+    .accordion-item {}
+
+    .accordion-header {
+      padding: 4px 40px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.3s;
+      border-radius: 0 0 12px 12px;
+      border-bottom: 2px solid #3071b9;
+      justify-content: space-between;
+      position: relative;
+
+      @include tab {
+        flex-wrap: wrap;
+        padding: 8px 12px;
+      }
+
+      &::after {
+        content: "";
+        display: none;
+        /* ← 初期状態では非表示 */
+        position: absolute;
+        margin-left: auto;
+        width: 0;
+        height: 0;
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-top: 14px solid #3071b9;
+        bottom: -15px;
+        left: 64px;
+
+        @include tab {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+      }
+
+      &.active::after {
+        display: inline-block; // 開いたときだけ表示
+      }
+
+
+
+
+      &__ttl {
+        font-size: 22px;
+        color: #f17624;
+        font-weight: bold;
+
+        @include tab {
+          width: 100%;
+        }
+      }
+
+      &__img {
+        max-width: 400px;
+
+        @include tab {
+          width: 85%;
+        }
+
+      }
+
+      &__icon {
+        max-width: 30px;
+
+        @include tab {
+          width: 10%;
+          max-width: 24px;
+
+        }
+
+        img {
+          vertical-align: middle;
+        }
+      }
+
+      &__ {}
+
+      &__ {}
+    }
+
+    .accordion-header:hover,
+    .accordion-item.active .accordion-header {
+      background: #3071b9;
+      color: #fff;
+    }
+
+
+
+    .accordion-content {
+      display: none;
+      padding: 40px;
+      animation: fadeIn 0.3s ease-in-out;
+
+      @include tab {
+        padding: 24px;
+      }
+
+      &.active {
+        border-bottom: 2px solid #3071b9;
+      }
+
+      &__flex {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+      }
+
+      &__left {
+        width: 50px;
+
+        @include tab {
+          display: none;
+        }
+      }
+
+      &__right {
+        flex: 1;
+      }
+
+      &__text {}
+
+      &__lead {
+        margin: 40px 0;
+        color: #3071b9;
+      }
+
+      &__bnr-wrap {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        padding: 0 0 0 60px;
+
+
+        &--bottom {
+          padding: 0 0 0 20px;
+
+        }
+
+        @include tab {
+          flex-direction: column;
+          padding: 0;
+
+        }
+      }
+
+      &__bnr {
+        flex: 1;
+
+                @include tab {
+          max-width: 340px;
+
+        }
+      }
+
+      &__link {
+        max-width: 300px;
+
+        @include tab {
+          max-width: 240px;
+
+        }
+      }
+
 
     }
-  }
 
-  .contents {
-    width: 50%;
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
 
+    /* Optional animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
 
-    @include tab {
-      &:-webkit-scrollbar {
-        display: none;
+      to {
+        opacity: 1;
       }
     }
   }
 
-  .contents div {
-    padding-top: 50vh;
-  }
-
-  .contents div:last-child {
-    padding-bottom: 50vh;
-  }
 
 
-  @include tab {
-    .contents {
-      width: 100%;
-    }
+  &__ {}
 
-    .contents div {
-      padding-top: 16px;
-    }
+  &__ {}
 
-    .contents div:last-child {
-      padding-bottom: 0;
-    }
+  &__ {}
 
-    .scroll-box {
-      scroll-snap-align: start;
-      height: auto;
-      width: 100%;
-      padding: 16px 12px 0;
-    }
+  &__ {}
 
-    .scroll-box-img-sp {
-      margin: -24px 0 40px;
-    }
+  &__ {}
 
-  }
-
-  .images {
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 100px
-  }
-
-  @include pc {
-    .images {
-      width: 40%;
-    }
-  }
-
-  @include tab {
-    .images {
-      display: none;
-    }
-  }
-
-  .images p {
-    margin: auto;
-    display: block;
-    visibility: hidden;
-    position: absolute;
-    top: 100px;
-    transition: .4s;
-    opacity: 0;
+  &__ {}
 
 
-    &:first-child {
-      visibility: visible;
-      opacity: 1;
-    }
 
-    &.active {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
 
-  .scroll-box-lead {
-    font-size: 24px;
-    color: #9d9b9b;
-    margin: 0 0 32px;
 
-    @include tab {
-      display: none;
-    }
-  }
 
-  .scroll-box-ttl {
-    font-size: 38px;
-    color: #3071b9;
-    margin: 0 0 32px;
-    font-weight: bold;
+  // パララックス
+  // .wrapper {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   position: relative;
+  //   max-width: 880px;
+  //   margin: 0 auto;
+  //   gap: 40px;
+  //   padding: 0 12px;
 
-    @include tab {
-      font-size: 24px;
-      margin: 0 0 24px;
-      text-align: center;
-    }
-  }
+  //   @include pc {
+  //     gap: 24px;
+  //     padding: 0;
 
-  .scroll-box-ttl-en {
-    max-width: 170px;
-    margin: -20px 0 32px 4px;
+  //   }
+  // }
 
-    @include tab {
-      max-width: 120px;
-      margin: -16px auto 24px;
-    }
-  }
+  // .contents {
+  //   width: 50%;
 
-  .scroll-box-text {
-    color: #3071b9;
-    margin: 0 0 24px;
 
-    &:last-child {
-      margin: 0;
-    }
+  //   @include tab {
+  //     &:-webkit-scrollbar {
+  //       display: none;
+  //     }
+  //   }
+  // }
 
-    @include tab {
-      padding: 0 20px;
-    }
-  }
+  // .contents div {
+  //   padding-top: 50vh;
+  // }
+
+  // .contents div:last-child {
+  //   padding-bottom: 50vh;
+  // }
+
+
+  // @include tab {
+  //   .contents {
+  //     width: 100%;
+  //   }
+
+  //   .contents div {
+  //     padding-top: 16px;
+  //   }
+
+  //   .contents div:last-child {
+  //     padding-bottom: 0;
+  //   }
+
+  //   .scroll-box {
+  //     scroll-snap-align: start;
+  //     height: auto;
+  //     width: 100%;
+  //     padding: 16px 12px 0;
+  //   }
+
+  //   .scroll-box-img-sp {
+  //     margin: -24px 0 40px;
+  //   }
+
+  // }
+
+  // .images {
+  //   width: 50%;
+  //   height: 100vh;
+  //   display: flex;
+  //   align-items: center;
+  //   position: sticky;
+  //   top: 100px
+  // }
+
+  // @include pc {
+  //   .images {
+  //     width: 40%;
+  //   }
+  // }
+
+  // @include tab {
+  //   .images {
+  //     display: none;
+  //   }
+  // }
+
+  // .images p {
+  //   margin: auto;
+  //   display: block;
+  //   visibility: hidden;
+  //   position: absolute;
+  //   top: 100px;
+  //   transition: .4s;
+  //   opacity: 0;
+
+
+  //   &:first-child {
+  //     visibility: visible;
+  //     opacity: 1;
+  //   }
+
+  //   &.active {
+  //     visibility: visible;
+  //     opacity: 1;
+  //   }
+  // }
+
+  // .scroll-box-lead {
+  //   font-size: 24px;
+  //   color: #9d9b9b;
+  //   margin: 0 0 32px;
+
+  //   @include tab {
+  //     display: none;
+  //   }
+  // }
+
+  // .scroll-box-ttl {
+  //   font-size: 38px;
+  //   color: #3071b9;
+  //   margin: 0 0 32px;
+  //   font-weight: bold;
+
+  //   @include tab {
+  //     font-size: 24px;
+  //     margin: 0 0 24px;
+  //     text-align: center;
+  //   }
+  // }
+
+  // .scroll-box-ttl-en {
+  //   max-width: 170px;
+  //   margin: -20px 0 32px 4px;
+
+  //   @include tab {
+  //     max-width: 120px;
+  //     margin: -16px auto 24px;
+  //   }
+  // }
+
+  // .scroll-box-text {
+  //   color: #3071b9;
+  //   margin: 0 0 24px;
+
+  //   &:last-child {
+  //     margin: 0;
+  //   }
+
+  //   @include tab {
+  //     padding: 0 20px;
+  //   }
+  // }
 }
 
 
@@ -2061,7 +2292,7 @@ TOP
     @include tab {
       justify-content: center;
       gap: 16px;
-      flex-wrap: wrap;    
+      flex-wrap: wrap;
       margin: 0 auto 40px;
 
     }
@@ -2096,17 +2327,17 @@ TOP
     align-items: center;
     gap: 40px;
 
-    @include tab{
-    flex-direction: column;
+    @include tab {
+      flex-direction: column;
     }
   }
 
   &__3k-left {
     width: 52%;
 
-    @include tab{
-    width: 100%;
-    max-width: 500px;
+    @include tab {
+      width: 100%;
+      max-width: 500px;
     }
   }
 
@@ -2121,8 +2352,7 @@ TOP
 
   &__3k-text {
     margin: 0 0 24px;
-  color: #fff;
-  text-decoration: underline;
+    color: #fff;
   }
 }
 

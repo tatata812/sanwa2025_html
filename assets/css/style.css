@@ -6644,14 +6644,16 @@ TOP
 }
 
 .l-hero-wrapper {
-  width: 300vw; /* 画面3つ分 */
+  width: 300vw;
+  /* 画面3つ分 */
   height: 100vh;
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   /* ここがグラデーションのポイント */
   background: linear-gradient(to right, #effcfe 0%, #75c3f8 33.3333%, #2ba8e2 33.3334%, #005f99 66.6666%, #005f99 66.6667%, #003366 100%);
-  background-size: 300vw 100vh; /* 横に3倍のサイズを指定 */
+  background-size: 300vw 100vh;
+  /* 横に3倍のサイズを指定 */
   background-repeat: no-repeat;
 }
 
@@ -6659,7 +6661,8 @@ TOP
   flex: 0 0 100vw;
   height: 100vh;
   scroll-snap-align: start;
-  background: transparent; /* 透過にして親のグラデーションを見せる */
+  background: transparent;
+  /* 透過にして親のグラデーションを見せる */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7174,10 +7177,11 @@ TOP
   }
 }
 .top-role__bg {
-  background-image: url(../img/top/top-hope-bg.png);
   padding: 140px 0 0;
-  background-size: cover;
-  background-position: center;
+  background-image: url("../img/top/top-hope-bg-top.png"), url("../img/top/top-hope-bg-bottom.png"); /* 下側の背景 */
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center, bottom center;
+  background-size: contain, contain;
 }
 @media (max-width: 780px) {
   .top-role__bg {
@@ -7247,136 +7251,171 @@ TOP
     margin: 40px 0 0;
   }
 }
-.top-role .wrapper {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  max-width: 880px;
+.top-role__content {
+  padding: 0 16px;
+  /* Optional animation */
+}
+.top-role__content .accordion {
+  width: 100%;
+  max-width: 780px;
+  background-color: #fff;
   margin: 0 auto;
-  gap: 40px;
-  padding: 0 12px;
+  border-left: 2px solid #3071b9;
+  border-right: 2px solid #3071b9;
+  border-top: 2px solid #3071b9;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
 }
-@media (max-width: 1120px) {
-  .top-role .wrapper {
-    gap: 24px;
-    padding: 0;
-  }
-}
-.top-role .contents {
-  width: 50%;
-}
-@media (max-width: 780px) {
-  .top-role .contents:-webkit-scrollbar {
-    display: none;
-  }
-}
-.top-role .contents div {
-  padding-top: 50vh;
-}
-.top-role .contents div:last-child {
-  padding-bottom: 50vh;
-}
-@media (max-width: 780px) {
-  .top-role .contents {
-    width: 100%;
-  }
-  .top-role .contents div {
-    padding-top: 16px;
-  }
-  .top-role .contents div:last-child {
-    padding-bottom: 0;
-  }
-  .top-role .scroll-box {
-    scroll-snap-align: start;
-    height: auto;
-    width: 100%;
-    padding: 16px 12px 0;
-  }
-  .top-role .scroll-box-img-sp {
-    margin: -24px 0 40px;
-  }
-}
-.top-role .images {
-  width: 50%;
-  height: 100vh;
+.top-role__content .accordion-header {
+  padding: 4px 40px;
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 100px;
-}
-@media (max-width: 1120px) {
-  .top-role .images {
-    width: 40%;
-  }
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 0 0 12px 12px;
+  border-bottom: 2px solid #3071b9;
+  justify-content: space-between;
+  position: relative;
 }
 @media (max-width: 780px) {
-  .top-role .images {
-    display: none;
+  .top-role__content .accordion-header {
+    flex-wrap: wrap;
+    padding: 8px 12px;
   }
 }
-.top-role .images p {
-  margin: auto;
-  display: block;
-  visibility: hidden;
+.top-role__content .accordion-header::after {
+  content: "";
+  display: none;
+  /* ← 初期状態では非表示 */
   position: absolute;
-  top: 100px;
-  transition: 0.4s;
-  opacity: 0;
-}
-.top-role .images p:first-child {
-  visibility: visible;
-  opacity: 1;
-}
-.top-role .images p.active {
-  visibility: visible;
-  opacity: 1;
-}
-.top-role .scroll-box-lead {
-  font-size: 24px;
-  color: #9d9b9b;
-  margin: 0 0 32px;
+  margin-left: auto;
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 14px solid #3071b9;
+  bottom: -15px;
+  left: 64px;
 }
 @media (max-width: 780px) {
-  .top-role .scroll-box-lead {
-    display: none;
+  .top-role__content .accordion-header::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
-.top-role .scroll-box-ttl {
-  font-size: 38px;
-  color: #3071b9;
-  margin: 0 0 32px;
+.top-role__content .accordion-header.active::after {
+  display: inline-block;
+}
+.top-role__content .accordion-header__ttl {
+  font-size: 22px;
+  color: #f17624;
   font-weight: bold;
 }
 @media (max-width: 780px) {
-  .top-role .scroll-box-ttl {
-    font-size: 24px;
-    margin: 0 0 24px;
-    text-align: center;
+  .top-role__content .accordion-header__ttl {
+    width: 100%;
   }
 }
-.top-role .scroll-box-ttl-en {
-  max-width: 170px;
-  margin: -20px 0 32px 4px;
+.top-role__content .accordion-header__img {
+  max-width: 400px;
 }
 @media (max-width: 780px) {
-  .top-role .scroll-box-ttl-en {
-    max-width: 120px;
-    margin: -16px auto 24px;
+  .top-role__content .accordion-header__img {
+    width: 85%;
   }
 }
-.top-role .scroll-box-text {
+.top-role__content .accordion-header__icon {
+  max-width: 30px;
+}
+@media (max-width: 780px) {
+  .top-role__content .accordion-header__icon {
+    width: 10%;
+    max-width: 24px;
+  }
+}
+.top-role__content .accordion-header__icon img {
+  vertical-align: middle;
+}
+.top-role__content .accordion-header:hover,
+.top-role__content .accordion-item.active .accordion-header {
+  background: #3071b9;
+  color: #fff;
+}
+.top-role__content .accordion-content {
+  display: none;
+  padding: 40px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@media (max-width: 780px) {
+  .top-role__content .accordion-content {
+    padding: 24px;
+  }
+}
+.top-role__content .accordion-content.active {
+  border-bottom: 2px solid #3071b9;
+}
+.top-role__content .accordion-content__flex {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.top-role__content .accordion-content__left {
+  width: 50px;
+}
+@media (max-width: 780px) {
+  .top-role__content .accordion-content__left {
+    display: none;
+  }
+}
+.top-role__content .accordion-content__right {
+  flex: 1;
+}
+.top-role__content .accordion-content__lead {
+  margin: 40px 0;
   color: #3071b9;
-  margin: 0 0 24px;
 }
-.top-role .scroll-box-text:last-child {
-  margin: 0;
+.top-role__content .accordion-content__bnr-wrap {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 0 0 0 60px;
+}
+.top-role__content .accordion-content__bnr-wrap--bottom {
+  padding: 0 0 0 20px;
 }
 @media (max-width: 780px) {
-  .top-role .scroll-box-text {
-    padding: 0 20px;
+  .top-role__content .accordion-content__bnr-wrap {
+    flex-direction: column;
+    padding: 0;
   }
 }
-
+.top-role__content .accordion-content__bnr {
+  flex: 1;
+}
+@media (max-width: 780px) {
+  .top-role__content .accordion-content__bnr {
+    max-width: 340px;
+  }
+}
+.top-role__content .accordion-content__link {
+  max-width: 300px;
+}
+@media (max-width: 780px) {
+  .top-role__content .accordion-content__link {
+    max-width: 240px;
+  }
+}
+.top-role__content .accordion-item.active .accordion-content {
+  display: block;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* =================================
 事業案内
  ================================= */
@@ -7645,7 +7684,6 @@ TOP
 .top-recruit__3k-text {
   margin: 0 0 24px;
   color: #fff;
-  text-decoration: underline;
 }
 
 /* =================================
