@@ -7370,6 +7370,9 @@ TOP
 .top-role__content .accordion-content__right {
   flex: 1;
 }
+.top-role__content .accordion-content__text--margin {
+  margin: 0 0 40px;
+}
 .top-role__content .accordion-content__lead {
   margin: 40px 0;
   color: #3071b9;
