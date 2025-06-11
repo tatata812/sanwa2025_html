@@ -6245,7 +6245,7 @@ TOP
 メインビジュアル
  ================================= */
 .main-visual {
-  padding: 120px 12px;
+  padding: 108px 12px 120px;
   position: relative;
   background-image: url(../img/top/main-visual-gb.jpg);
   background-repeat: no-repeat;
