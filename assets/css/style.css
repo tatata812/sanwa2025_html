@@ -90,7 +90,7 @@ h3 {
 
 .section-ttl {
   color: #3071b9;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   position: relative;
   padding: 0 0 0 80px;
@@ -100,7 +100,7 @@ h3 {
   position: absolute;
   top: -54px;
   left: -29px;
-  transform: scale(0.4);
+  transform: scale(0.32);
 }
 @media (max-width: 780px) {
   .section-ttl {
@@ -7097,7 +7097,7 @@ TOP
   }
 }
 .top-hope__lead {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bold;
   margin: 0 0 80px 80px;
   color: #808080;
@@ -7206,7 +7206,7 @@ TOP
   }
 }
 .top-role__lead {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bold;
   margin: 0 0 80px 80px;
   color: #808080;

@@ -113,7 +113,7 @@ h3 {
 // トップページのセクションタイトル
 .section-ttl {
   color: #3071b9;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   position: relative;
   padding: 0 0 0 80px;
@@ -123,7 +123,7 @@ h3 {
     position: absolute;
     top: -54px;
     left: -29px;
-    transform: scale(0.4);
+    transform: scale(0.32);
   }
 
   @include tab {
