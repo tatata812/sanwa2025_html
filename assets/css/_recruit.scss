@@ -24,10 +24,10 @@
 
   &__lead-wrap {
     position: relative;
-    padding: 120px 0 40px;
+    padding: 120px 0 0;
 
     @include tab {
-      padding: 60px 0 40px;
+      padding: 60px 0 12px;
     }
   }
 
@@ -107,91 +107,104 @@
     bottom: 20%;
   }
 
-  &__bnr-wrap {
-    padding: 0 16px 180px;
-    background-image: url(../img/recruit/recruit-bnr-bg.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-
-    @include tab {
-      padding: 0 16px 80px;
-    }
-  }
-
-  &__bnr-top {
-    display: block;
-    max-width: 780px;
-    margin: 0 auto 60px;
-
-    @include tab {
-      margin: 0 auto 32px;
-    }
-
-    img {
-      filter: drop-shadow(5px 5px 5px #aaa);
-    }
-  }
-
-  &__bnr-flex {
-    display: flex;
-    gap: 40px;
-    max-width: 640px;
-    margin: 0 auto;
-
-    @include tab {
-      gap: 16px;
-    }
-  }
-
-  &__bnr-item {
-
-    img {
-      filter: drop-shadow(5px 5px 5px #aaa);
-    }
-  }
-
-  &__news-ttl {
-    color: #3071b9;
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0 0 32px 12px;
-
-    @include tab {
-      font-size: 20px;
-      margin: 0 0 24px 12px;
-
-    }
-  }
-
-  &__news-link-wrap {
-    display: flex;
-    gap: 32px;
-    margin: 60px auto 0;
-    max-width: 780px;
+  &__section {
     padding: 0 16px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
 
+  &__section-lead {
+
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 100px;
+
+    line-height: 1.5;
+
+    @include pc {
+      font-size: 30px;
+    }
 
     @include tab {
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin: 40px auto 0;
-
+      font-size: 18px;
+      margin: 0 0 24px;
     }
   }
 
-  &__news-link {
+  &__section-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 0 0 60px;
+        position: relative;
+    z-index: 2;
 
+    &--second {
+      transform: translateX(100px);
+
+      @include pc {
+        transform: translateX(0);
+      }
+    }
+
+    &--third {
+      transform: translateX(200px);
+      margin: 0 0 80px;
+
+      @include pc {
+        transform: translateX(0);
+      }
+    }
 
     @include tab {
-      max-width: 380px;
-    }
-
-    img {
-      filter: drop-shadow(5px 5px 5px #aaa);
+      flex-direction: column;
+      gap: 24px;
+      margin: 0 0 40px;
     }
   }
+
+  &__section-left {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  &__section-right {
+    width: 400px;
+
+    @include tab {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 0 0 40px;
+    }
+  }
+
+  &__section-ttl {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 24px;
+    color: #3071b9;
+    line-height: 1.2;
+
+    @include pc {
+      font-size: 22px;
+    }
+
+    @include tab {
+      font-size: 16px;
+      margin: 0 0 24px;
+    }
+  }
+
+  &__link-wrap {
+    text-align: center;
+    margin: 0 0 120px;
+
+    @include tab{
+    margin: 0 0 80px;
+    }
+  }
+
+
 
   &__dec-wrap {
     position: relative;
@@ -285,7 +298,7 @@
     }
 
     @include tab {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   }
 
@@ -336,9 +349,35 @@
 
   }
 
-  &__ {}
+  &__bnr-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 0 16px;
 
-  &__ {}
+    @include tab {
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+
+  &__bnr {
+    position: relative;
+    z-index: 2;
+    width: calc((100% - 24px) / 2);
+
+    @include tab {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    img {
+      filter: drop-shadow(5px 5px 5px #aaa);
+    }
+  }
 
   &__ {}
 
@@ -903,7 +942,7 @@ CMつくりました
     &--bottom {
       margin: 0 0 160px;
 
-      @include tab{
+      @include tab {
         margin: 0 0 12px;
       }
     }
@@ -1011,12 +1050,13 @@ CMつくりました
   &__section02 {
     padding: 160px 16px;
     text-align: center;
-    background-image: url(../img/recruit/data-bg01.png),url(../img/recruit/data-bg02.png);
-    background-repeat:no-repeat,no-repeat;;
-    background-position:top,bottom;
+    background-image: url(../img/recruit/data-bg01.png), url(../img/recruit/data-bg02.png);
+    background-repeat: no-repeat, no-repeat;
+    ;
+    background-position: top, bottom;
     background-size: contain;
 
-    @include tab{
+    @include tab {
       padding: 40px 16px 4px;
     }
 
@@ -1037,9 +1077,9 @@ CMつくりました
       margin: 0 0 24px;
 
 
-    @include tab{
-      font-size: 32px;
-    }
+      @include tab {
+        font-size: 32px;
+      }
     }
   }
 
